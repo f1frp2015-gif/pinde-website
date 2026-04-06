@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { products } from "@/data/products";
@@ -52,20 +53,23 @@ export default async function ProductDetailPage({ params }: Props) {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16">
-            {/* Image Gallery Placeholder */}
+            {/* Product Image */}
             <div>
-              <div className="aspect-[4/3] bg-gray-100 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-gray-400">[Main Product Image]</span>
-              </div>
-              <div className="grid grid-cols-4 gap-2">
-                {[1, 2, 3, 4].map((i) => (
-                  <div
-                    key={i}
-                    className="aspect-square bg-gray-100 rounded flex items-center justify-center"
-                  >
-                    <span className="text-gray-400 text-xs">[{i}]</span>
+              <div className="aspect-[4/3] bg-gray-100 rounded-lg overflow-hidden relative mb-4">
+                {product.images.length > 0 ? (
+                  <Image
+                    src={product.images[0]}
+                    alt={product.name}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    priority
+                  />
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-gray-400">[Main Product Image]</span>
                   </div>
-                ))}
+                )}
               </div>
             </div>
 

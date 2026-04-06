@@ -39,7 +39,7 @@ export const products: Product[] = [
       { label: "Seals", value: "EPDM" },
       { label: "Hardware", value: "304 Stainless Steel" },
     ],
-    images: [],
+    images: ["/images/products/a65-casement-window.jpg"],
   },
   {
     slug: "a110-casement-window",
@@ -67,7 +67,7 @@ export const products: Product[] = [
       { label: "Seals", value: "EPDM" },
       { label: "Hardware", value: "304 Stainless Steel" },
     ],
-    images: [],
+    images: ["/images/products/a110-casement-window.jpg"],
   },
   {
     slug: "a120-casement-window",
@@ -94,7 +94,7 @@ export const products: Product[] = [
       { label: "Thermal Break", value: "PA66GF25" },
       { label: "Hardware", value: "304 Stainless Steel" },
     ],
-    images: [],
+    images: ["/images/products/a120-casement-window.jpg"],
   },
   {
     slug: "s96n-inward-casement-window",
@@ -145,7 +145,7 @@ export const products: Product[] = [
       { label: "Seals", value: "EPDM" },
       { label: "Hardware", value: "304 Stainless Steel" },
     ],
-    images: [],
+    images: ["/images/products/s175-push-out-window.jpg"],
   },
   {
     slug: "s115-sliding-window",
@@ -226,7 +226,7 @@ export const products: Product[] = [
       { label: "Seals", value: "EPDM" },
       { label: "Hardware", value: "304 Stainless Steel" },
     ],
-    images: [],
+    images: ["/images/products/s132-side-pressed-window.jpg"],
   },
   {
     slug: "s150-vertical-lifting-window",
@@ -287,7 +287,7 @@ export const products: Product[] = [
       { label: "Lock System", value: "IDL020341" },
       { label: "Surface", value: "PPG Powder Coating" },
     ],
-    images: [],
+    images: ["/images/products/a65-swing-door.jpg"],
   },
   {
     slug: "ap187-50-sliding-door",
@@ -314,7 +314,7 @@ export const products: Product[] = [
       { label: "Thermal Break", value: "PA66GF25" },
       { label: "Hardware", value: "304 Stainless Steel" },
     ],
-    images: [],
+    images: ["/images/products/ap187-50-sliding-door.jpg"],
   },
   {
     slug: "ap187-88-sliding-door",
@@ -342,7 +342,7 @@ export const products: Product[] = [
       { label: "Thermal Break", value: "PA66GF25" },
       { label: "Hardware", value: "304 Stainless Steel" },
     ],
-    images: [],
+    images: ["/images/products/ap187-88-sliding-door.jpg"],
   },
   {
     slug: "s150-sliding-door",
@@ -369,7 +369,7 @@ export const products: Product[] = [
       { label: "Thermal Break", value: "PA66GF25" },
       { label: "Seals", value: "EPDM" },
     ],
-    images: [],
+    images: ["/images/products/s150-sliding-door.jpg"],
   },
   {
     slug: "s93-heavy-duty-folding-door",
@@ -425,7 +425,7 @@ export const products: Product[] = [
       { label: "Type", value: "Non-interlocking / Interlocking" },
       { label: "Application", value: "Interior" },
     ],
-    images: [],
+    images: ["/images/products/perfect-system-non-interlocking-door.jpg"],
   },
   {
     slug: "perfect-system-opposite-direction-linkage",
@@ -473,7 +473,7 @@ export const products: Product[] = [
       { label: "Safety", value: "Anti-collision" },
       { label: "Application", value: "Interior" },
     ],
-    images: [],
+    images: ["/images/products/perfect-system-phantom-door.jpg"],
   },
   {
     slug: "perfect-system-folding-door",
@@ -523,7 +523,7 @@ export const products: Product[] = [
       { label: "Water Resistance", value: "Waterproof" },
       { label: "Application", value: "Bathroom / Wet areas" },
     ],
-    images: [],
+    images: ["/images/products/1645-bathroom-door.jpg"],
   },
 ];
 
