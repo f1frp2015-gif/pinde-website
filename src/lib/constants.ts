@@ -44,24 +44,44 @@ export const CERTIFICATIONS = [
 ];
 
 export const STATS = {
-  investment: "500M+ RMB",
+  investment: "300M+ RMB",
   factoryArea: "100,000 m²",
   annualCapacity: "1,800,000 m²",
-  experience: "22+",
+  experience: "23+",
   patents: "60+",
   subsidiaries: 5,
+  groupTotalArea: "100,000+ m²",
 };
 
 export const PARTNERS = [
   "SIEGENIA",
   "G-U",
   "Roto",
-  "KIN LONG",
+  "HAND (合和建筑五金)",
+  "KIN LONG (坚朗)",
   "VAIKE",
-  "Keypoint",
-  "Haida",
+  "Key Point",
+  "硅宝",
+  "BAI YUN",
+  "信义玻璃 (XINYI GLASS)",
+  "Haida (海达)",
   "华建铝业",
-  "光友铝材",
-  "TOBY",
-  "RUNAS",
+  "兴发铝材",
+  "TODN (塔奥帝诺)",
+  "RUNAS (瑞纳斯)",
+];
+
+export const TOP_CLIENTS = [
+  "JINMAO 中国金茂",
+  "招商蛇口",
+  "中渝地产",
+  "越秀地产",
+  "两江置业",
+  "华利发展控股",
+  "保利置业",
+  "中梁·壹品",
+  "爱玛",
+  "中交建筑集团",
+  "中交三公局",
+  "中国葛洲坝集团",
 ];
