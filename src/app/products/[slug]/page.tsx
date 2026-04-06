@@ -72,7 +72,7 @@ export default async function ProductDetailPage({ params }: Props) {
             {/* Product Info */}
             <div>
               <p className="text-sm font-medium text-accent uppercase tracking-wider mb-2">
-                {product.category}
+                {product.series} Series
               </p>
               <h1 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
                 {product.name}
@@ -162,7 +162,7 @@ export default async function ProductDetailPage({ params }: Props) {
                   className="group block bg-light rounded-lg p-6 hover:bg-gray-100 transition-colors"
                 >
                   <p className="text-xs text-accent font-medium uppercase tracking-wider mb-1">
-                    {p.category}
+                    {p.series} Series
                   </p>
                   <h3 className="text-lg font-semibold text-primary group-hover:text-accent transition-colors">
                     {p.name}

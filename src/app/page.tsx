@@ -24,10 +24,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: Building2, value: "XX+", label: "Years of Experience" },
-              { icon: Globe, value: "XX+", label: "Countries Served" },
-              { icon: Users, value: "XXXX+", label: "Projects Completed" },
-              { icon: Award, value: "XX+", label: "Certifications" },
+              { icon: Building2, value: "22+", label: "Years of Experience" },
+              { icon: Globe, value: "30+", label: "Countries Served" },
+              { icon: Users, value: "10,000+", label: "Projects Completed" },
+              { icon: Award, value: "60+", label: "Patents & Certifications" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
                 <stat.icon
@@ -57,16 +57,19 @@ export default function Home() {
                 Precision-Engineered for Global Markets
               </h2>
               <p className="text-gray-500 leading-relaxed mb-4">
-                Based in Chongqing, China, PINDE is a leading manufacturer of
-                premium aluminum system windows and doors. We combine advanced
-                European engineering principles with world-class manufacturing
-                capabilities to deliver products that meet the highest
+                PINDE is a fully
+                integrated manufacturer of premium aluminum system windows and
+                doors. Based in Chongqing, China, our 100,000m&sup2; smart
+                factory combines advanced German and Italian CNC equipment with
+                Industry 4.0 manufacturing to deliver products that exceed
                 international standards.
               </p>
               <p className="text-gray-500 leading-relaxed mb-8">
-                Our systems are trusted by architects, builders, and homeowners
-                across Australia, New Zealand, North America, Europe, and the
-                Middle East.
+                From aluminum extrusion to glass processing to final assembly,
+                we control every step of the production chain. Our systems are
+                trusted by architects, builders, and distributors across
+                Australia, New Zealand, North America, Europe, and the Middle
+                East.
               </p>
               <Link
                 href="/about"

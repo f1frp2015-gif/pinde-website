@@ -15,7 +15,7 @@ export default function ProductCard({ product }: { product: Product }) {
 
       <div className="p-6">
         <p className="text-xs font-medium text-accent uppercase tracking-wider mb-2">
-          {product.category}
+          {product.series}
         </p>
         <h3 className="text-lg font-semibold text-primary mb-2 group-hover:text-accent transition-colors">
           {product.name}
