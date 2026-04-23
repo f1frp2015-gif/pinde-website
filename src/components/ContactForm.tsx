@@ -4,34 +4,60 @@ import { useState } from "react";
 import { Send } from "lucide-react";
 
 export default function ContactForm() {
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // TODO: Integrate with email service or API
-    setSubmitted(true);
+    setStatus("sending");
+
+    const form = e.currentTarget;
+    const data = {
+      name: (form.elements.namedItem("name") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      country: (form.elements.namedItem("country") as HTMLSelectElement).value,
+      product: (form.elements.namedItem("product") as HTMLSelectElement).value,
+      company: (form.elements.namedItem("company") as HTMLInputElement).value,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (res.ok) {
+        setStatus("sent");
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   };
 
-  if (submitted) {
+  if (status === "sent") {
     return (
-      <div className="bg-green-50 border border-green-200 rounded-lg p-8 text-center">
-        <h3 className="text-xl font-semibold text-green-800 mb-2">
-          Thank You!
+      <div className="bg-surface border border-line rounded-[2px] p-[34px] text-center">
+        <span className="inline-block w-[5px] h-[5px] rounded-full bg-red mb-[13px]" />
+        <h3 className="font-[family-name:var(--font-serif)] text-[22px] font-light text-alabaster mb-[8px]">
+          Thank you
         </h3>
-        <p className="text-green-600">
-          We&apos;ve received your inquiry and will get back to you within 24 hours.
+        <p className="text-warm text-[13px]">
+          We&apos;ve received your inquiry and will get back to you within 24
+          hours.
         </p>
       </div>
     );
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    <form onSubmit={handleSubmit} className="space-y-[21px]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-[21px]">
         <div>
           <label
             htmlFor="name"
-            className="block text-sm font-medium text-gray-700 mb-2"
+            className="block text-[10px] font-medium tracking-[2px] uppercase text-muted mb-[8px]"
           >
             Full Name *
           </label>
@@ -40,14 +66,14 @@ export default function ContactForm() {
             id="name"
             name="name"
             required
-            className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-accent/20 focus:border-accent outline-none transition-colors"
+            className="w-full px-[21px] py-[13px] bg-surface border border-line text-alabaster text-[14px] rounded-[1px] focus:ring-1 focus:ring-bronze/30 focus:border-bronze outline-none transition-colors placeholder:text-muted"
             placeholder="Your name"
           />
         </div>
         <div>
           <label
             htmlFor="email"
-            className="block text-sm font-medium text-gray-700 mb-2"
+            className="block text-[10px] font-medium tracking-[2px] uppercase text-muted mb-[8px]"
           >
             Email Address *
           </label>
@@ -56,17 +82,17 @@ export default function ContactForm() {
             id="email"
             name="email"
             required
-            className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-accent/20 focus:border-accent outline-none transition-colors"
+            className="w-full px-[21px] py-[13px] bg-surface border border-line text-alabaster text-[14px] rounded-[1px] focus:ring-1 focus:ring-bronze/30 focus:border-bronze outline-none transition-colors placeholder:text-muted"
             placeholder="your@email.com"
           />
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-[21px]">
         <div>
           <label
             htmlFor="country"
-            className="block text-sm font-medium text-gray-700 mb-2"
+            className="block text-[10px] font-medium tracking-[2px] uppercase text-muted mb-[8px]"
           >
             Country / Region *
           </label>
@@ -74,40 +100,39 @@ export default function ContactForm() {
             id="country"
             name="country"
             required
-            className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-accent/20 focus:border-accent outline-none transition-colors"
+            className="w-full px-[21px] py-[13px] bg-surface border border-line text-alabaster text-[14px] rounded-[1px] focus:ring-1 focus:ring-bronze/30 focus:border-bronze outline-none transition-colors"
           >
             <option value="">Select your region</option>
-            <option value="australia">Australia</option>
-            <option value="new-zealand">New Zealand</option>
-            <option value="usa">United States</option>
-            <option value="canada">Canada</option>
-            <option value="uk">United Kingdom</option>
-            <option value="europe">Europe</option>
-            <option value="middle-east">Middle East</option>
-            <option value="other">Other</option>
+            <option value="Australia">Australia</option>
+            <option value="New Zealand">New Zealand</option>
+            <option value="United States">United States</option>
+            <option value="Canada">Canada</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="Europe">Europe</option>
+            <option value="Middle East">Middle East</option>
+            <option value="Other">Other</option>
           </select>
         </div>
         <div>
           <label
             htmlFor="product"
-            className="block text-sm font-medium text-gray-700 mb-2"
+            className="block text-[10px] font-medium tracking-[2px] uppercase text-muted mb-[8px]"
           >
             Product Interest
           </label>
           <select
             id="product"
             name="product"
-            className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-accent/20 focus:border-accent outline-none transition-colors"
+            className="w-full px-[21px] py-[13px] bg-surface border border-line text-alabaster text-[14px] rounded-[1px] focus:ring-1 focus:ring-bronze/30 focus:border-bronze outline-none transition-colors"
           >
             <option value="">Select a product</option>
-            <option value="sliding">Sliding Windows & Doors</option>
-            <option value="casement">Casement Windows</option>
-            <option value="tilt-turn">Tilt & Turn Windows</option>
-            <option value="bi-fold">Bi-fold Doors</option>
-            <option value="hinged">Hinged Doors</option>
-            <option value="curtain-wall">Curtain Wall Systems</option>
-            <option value="fixed">Fixed Windows</option>
-            <option value="multiple">Multiple Products</option>
+            <option value="Casement Windows">Casement Windows</option>
+            <option value="Sliding Windows & Doors">Sliding Windows & Doors</option>
+            <option value="Push-Out Windows">Push-Out Windows</option>
+            <option value="Folding Doors">Folding Doors</option>
+            <option value="Swing Doors">Swing Doors</option>
+            <option value="Interior Doors">Interior Doors</option>
+            <option value="Multiple Products">Multiple Products</option>
           </select>
         </div>
       </div>
@@ -115,7 +140,7 @@ export default function ContactForm() {
       <div>
         <label
           htmlFor="company"
-          className="block text-sm font-medium text-gray-700 mb-2"
+          className="block text-[10px] font-medium tracking-[2px] uppercase text-muted mb-[8px]"
         >
           Company Name
         </label>
@@ -123,7 +148,7 @@ export default function ContactForm() {
           type="text"
           id="company"
           name="company"
-          className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-accent/20 focus:border-accent outline-none transition-colors"
+          className="w-full px-[21px] py-[13px] bg-surface border border-line text-alabaster text-[14px] rounded-[1px] focus:ring-1 focus:ring-bronze/30 focus:border-bronze outline-none transition-colors placeholder:text-muted"
           placeholder="Your company (optional)"
         />
       </div>
@@ -131,7 +156,7 @@ export default function ContactForm() {
       <div>
         <label
           htmlFor="message"
-          className="block text-sm font-medium text-gray-700 mb-2"
+          className="block text-[10px] font-medium tracking-[2px] uppercase text-muted mb-[8px]"
         >
           Message *
         </label>
@@ -140,17 +165,24 @@ export default function ContactForm() {
           name="message"
           required
           rows={5}
-          className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-accent/20 focus:border-accent outline-none transition-colors resize-vertical"
+          className="w-full px-[21px] py-[13px] bg-surface border border-line text-alabaster text-[14px] rounded-[1px] focus:ring-1 focus:ring-bronze/30 focus:border-bronze outline-none transition-colors resize-vertical placeholder:text-muted"
           placeholder="Tell us about your project requirements..."
         />
       </div>
 
+      {status === "error" && (
+        <p className="text-red text-[13px]">
+          Failed to send. Please try again or email us directly at doris.li@pinde-alu.com
+        </p>
+      )}
+
       <button
         type="submit"
-        className="inline-flex items-center gap-2 px-8 py-3.5 bg-accent text-white font-medium rounded-lg hover:bg-accent-light transition-colors"
+        disabled={status === "sending"}
+        className="inline-flex items-center gap-[10px] px-[34px] py-4 bg-red text-white text-[11px] font-medium tracking-[3px] uppercase rounded-[1px] hover:brightness-90 transition-all disabled:opacity-50"
       >
-        <Send size={18} />
-        Send Inquiry
+        <Send size={14} />
+        {status === "sending" ? "Sending..." : "Send inquiry"}
       </button>
     </form>
   );

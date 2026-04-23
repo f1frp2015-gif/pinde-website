@@ -3,7 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { products } from "@/data/products";
-import { ArrowLeft, Check } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
+import PindeMark from "@/components/PindeMark";
+import { productJsonLd, breadcrumbJsonLd } from "@/lib/jsonld";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -21,8 +23,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!product) return { title: "Product Not Found" };
 
   return {
-    title: product.name,
-    description: product.description,
+    title: `${product.name} — ${product.series} Series`,
+    description: product.description.slice(0, 160),
+    alternates: {
+      canonical: `/products/${product.slug}`,
+    },
+    openGraph: {
+      title: `${product.name} | PINDÉ`,
+      description: product.description.slice(0, 160),
+      type: "website",
+      url: `/products/${product.slug}`,
+      images: product.images.length > 0
+        ? [{ url: product.images[0], alt: product.name }]
+        : undefined,
+    },
   };
 }
 
@@ -34,73 +48,82 @@ export default async function ProductDetailPage({ params }: Props) {
     notFound();
   }
 
+  const crumbs = breadcrumbJsonLd([
+    { name: "Home", url: "https://pinde-alu.com" },
+    { name: "Systems", url: "https://pinde-alu.com/products" },
+    { name: product.name, url: `https://pinde-alu.com/products/${product.slug}` },
+  ]);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd(product)) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }}
+      />
+
       {/* Breadcrumb */}
-      <section className="py-4 bg-light border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link
-            href="/products"
-            className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-accent transition-colors"
-          >
-            <ArrowLeft size={14} />
-            Back to Products
-          </Link>
+      <nav aria-label="Breadcrumb" className="pt-20 py-4 bg-obsidian border-b border-line">
+        <div className="max-w-[1200px] mx-auto px-[55px] max-lg:px-6 pt-[13px] flex items-center gap-2 text-[11px] tracking-[2px] uppercase text-muted">
+          <Link href="/" className="hover:text-alabaster transition-colors">Home</Link>
+          <span>/</span>
+          <Link href="/products" className="hover:text-alabaster transition-colors">Systems</Link>
+          <span>/</span>
+          <span className="text-warm">{product.series}</span>
         </div>
-      </section>
+      </nav>
 
       {/* Product Hero */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16">
+      <section className="py-[89px] bg-obsidian">
+        <div className="max-w-[1200px] mx-auto px-[55px] max-lg:px-6">
+          <div className="grid lg:grid-cols-2 gap-[89px]">
             {/* Product Image */}
-            <div>
-              <div className="aspect-[4/3] bg-gray-100 rounded-lg overflow-hidden relative mb-4">
-                {product.images.length > 0 ? (
-                  <Image
-                    src={product.images[0]}
-                    alt={product.name}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                    priority
-                  />
-                ) : (
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-gray-400">[Main Product Image]</span>
-                  </div>
-                )}
-              </div>
+            <div className="aspect-[4/3] bg-surface border border-line rounded-[2px] overflow-hidden relative">
+              {product.images.length > 0 ? (
+                <Image
+                  src={product.images[0]}
+                  alt={`${product.name} — ${product.series} Series aluminium ${product.category.replace("-", " ")}`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
+                />
+              ) : (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <PindeMark size={55} frame="#E5E2DC" />
+                </div>
+              )}
             </div>
 
             {/* Product Info */}
             <div>
-              <p className="text-sm font-medium text-accent uppercase tracking-wider mb-2">
+              <p className="text-[10px] font-medium tracking-[3px] uppercase text-bronze mb-[13px]">
                 {product.series} Series
               </p>
-              <h1 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
+              <h1 className="font-[family-name:var(--font-serif)] font-light text-[clamp(32px,4vw,44px)] leading-[1.15] text-alabaster mb-[21px]">
                 {product.name}
+                <span className="text-red">.</span>
               </h1>
-              <p className="text-gray-500 leading-relaxed mb-8">
+              <p className="text-warm text-[15px] leading-[1.9] mb-[34px]">
                 {product.description}
               </p>
 
               {/* Features */}
-              <div className="mb-8">
-                <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-700 mb-4">
-                  Key Features
-                </h3>
-                <ul className="space-y-3">
+              <div className="mb-[34px]">
+                <h2 className="text-[10px] font-medium tracking-[3px] uppercase text-muted mb-[21px]">
+                  Key features
+                </h2>
+                <ul className="space-y-[13px]">
                   {product.features.map((feature) => (
                     <li
                       key={feature}
-                      className="flex items-center gap-3 text-gray-600"
+                      className="flex items-start gap-[13px] text-warm text-[13px]"
                     >
-                      <Check
-                        size={16}
-                        className="text-accent shrink-0"
-                      />
-                      <span className="text-sm">{feature}</span>
+                      <span className="inline-block w-[5px] h-[5px] rounded-full bg-red mt-1.5 shrink-0" />
+                      <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -108,9 +131,10 @@ export default async function ProductDetailPage({ params }: Props) {
 
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-8 py-3.5 bg-accent text-white font-medium rounded hover:bg-accent-light transition-colors"
+                className="inline-flex items-center gap-[10px] px-[34px] py-4 bg-red text-white text-[11px] font-medium tracking-[3px] uppercase rounded-[1px] hover:brightness-90 transition-all"
               >
-                Request a Quote
+                <span className="inline-block w-[5px] h-[5px] rounded-full bg-white" />
+                Request a quote
               </Link>
             </div>
           </div>
@@ -118,23 +142,25 @@ export default async function ProductDetailPage({ params }: Props) {
       </section>
 
       {/* Technical Specs */}
-      <section className="py-16 bg-light">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-primary mb-8">
-            Technical Specifications
+      <section className="py-[89px] bg-surface">
+        <div className="max-w-[1200px] mx-auto px-[55px] max-lg:px-6">
+          <h2 className="font-[family-name:var(--font-serif)] font-light text-[28px] text-alabaster mb-[34px]">
+            Technical specifications<span className="text-red">.</span>
           </h2>
-          <div className="bg-white rounded-lg border border-gray-100 overflow-hidden">
+          <div className="bg-obsidian border border-line rounded-[2px] overflow-hidden">
             <table className="w-full">
               <tbody>
                 {product.specs.map((spec, index) => (
                   <tr
                     key={spec.label}
-                    className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}
+                    className={
+                      index % 2 === 0 ? "bg-obsidian" : "bg-surface/30"
+                    }
                   >
-                    <td className="px-6 py-4 text-sm font-medium text-gray-700 w-1/3">
+                    <td className="px-[34px] py-[13px] text-[13px] font-medium text-muted w-1/3">
                       {spec.label}
                     </td>
-                    <td className="px-6 py-4 text-sm text-gray-500">
+                    <td className="px-[34px] py-[13px] text-[13px] text-warm">
                       {spec.value}
                     </td>
                   </tr>
@@ -142,7 +168,7 @@ export default async function ProductDetailPage({ params }: Props) {
               </tbody>
             </table>
           </div>
-          <p className="mt-4 text-xs text-gray-400">
+          <p className="mt-[13px] text-[10px] text-muted tracking-[1px]">
             * Specifications may vary. Contact us for detailed technical data
             sheets.
           </p>
@@ -150,12 +176,12 @@ export default async function ProductDetailPage({ params }: Props) {
       </section>
 
       {/* Related Products */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-primary mb-8">
-            Other Systems You May Like
+      <section className="py-[89px] bg-obsidian">
+        <div className="max-w-[1200px] mx-auto px-[55px] max-lg:px-6">
+          <h2 className="font-[family-name:var(--font-serif)] font-light text-[28px] text-alabaster mb-[34px]">
+            Other systems<span className="text-red">.</span>
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-[13px]">
             {products
               .filter((p) => p.slug !== product.slug)
               .slice(0, 3)
@@ -163,12 +189,12 @@ export default async function ProductDetailPage({ params }: Props) {
                 <Link
                   key={p.slug}
                   href={`/products/${p.slug}`}
-                  className="group block bg-light rounded-lg p-6 hover:bg-gray-100 transition-colors"
+                  className="group block bg-surface border border-line rounded-[2px] p-[34px] hover:border-warm/20 transition-all"
                 >
-                  <p className="text-xs text-accent font-medium uppercase tracking-wider mb-1">
+                  <p className="text-[9px] tracking-[2px] uppercase text-bronze mb-[8px]">
                     {p.series} Series
                   </p>
-                  <h3 className="text-lg font-semibold text-primary group-hover:text-accent transition-colors">
+                  <h3 className="font-[family-name:var(--font-serif)] text-[20px] font-normal text-alabaster group-hover:text-bronze transition-colors">
                     {p.name}
                   </h3>
                 </Link>

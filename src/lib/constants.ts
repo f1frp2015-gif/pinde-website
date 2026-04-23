@@ -1,12 +1,12 @@
 export const BRAND = {
-  name: "PINDE",
+  name: "PINDÉ",
   fullName: "Pinde Doors and Windows (Chongqing) Co., LTD",
   chineseName: "品得门窗（重庆）有限公司",
-  group: "PINDE Group",
-  tagline: "High-End System Windows and Doors",
-  slogan: "Good Quality, Good Windows & Doors",
+  group: "PINDÉ Group",
+  tagline: "Architectural Aluminium Systems",
+  slogan: "Precision Defined",
   description:
-    "With over 20 years of expertise in aluminum system windows and doors, PINDE delivers premium products engineered to meet the highest international standards for architects, builders, and homeowners worldwide.",
+    "Architectural aluminium systems engineered with the precision of a red dot on the corner of a perfect square.",
   phone: "+86 138 8333 3993",
   email: "doris.li@pinde-alu.com",
   whatsapp: "+86 138 8333 3993",
@@ -16,22 +16,45 @@ export const BRAND = {
 };
 
 export const NAV_LINKS = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Products", href: "/products" },
+  { label: "Systems", href: "/products" },
   { label: "Projects", href: "/projects" },
+  { label: "Atelier", href: "/about" },
   { label: "Technology", href: "/technology" },
   { label: "Quality", href: "/quality" },
+  { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
 
+/* φ-cascade: 8 colors only
+ * L0 Obsidian   #0A0A0C  61.80%  canvas
+ * L1 Surface    #111113  14.59%  cards / alt sections
+ * L2 Alabaster  #F5F0EB   9.02%  headlines / primary text
+ * L3 Warm       #B5AFA8   5.57%  body text
+ * L4 Bronze     #C4956A   3.44%  editorial accent
+ * L5 Red        #D42B2B   2.13%  dot + CTA only
+ * L6 Muted      #555555   1.32%  labels / meta
+ * L7 Line       #1A1A1E   0.81%  all borders
+ */
+export const L = {
+  0: "#0A0A0C",
+  1: "#111113",
+  2: "#F5F0EB",
+  3: "#B5AFA8",
+  4: "#C4956A",
+  5: "#D42B2B",
+  6: "#555555",
+  7: "#1A1A1E",
+} as const;
+
 export const COLORS = {
-  primary: "#1a1a2e",
-  accent: "#c8a45c",
-  accentLight: "#d4b876",
-  dark: "#0f0f1a",
-  light: "#f8f8f8",
-  gray: "#6b7280",
+  obsidian: L[0],
+  surface: L[1],
+  alabaster: L[2],
+  warm: L[3],
+  bronze: L[4],
+  red: L[5],
+  muted: L[6],
+  line: L[7],
 };
 
 export const CERTIFICATIONS = [

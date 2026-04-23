@@ -2,14 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import type { Product } from "@/data/products";
+import PindeMark from "./PindeMark";
 
 export default function ProductCard({ product }: { product: Product }) {
   return (
     <Link
       href={`/products/${product.slug}`}
-      className="group block bg-white rounded-lg overflow-hidden border border-gray-100 hover:border-accent/30 hover:shadow-lg transition-all"
+      className="group block bg-surface border border-line rounded-[2px] overflow-hidden transition-all duration-400 hover:border-warm/20 hover:-translate-y-0.5"
     >
-      <div className="aspect-[4/3] bg-gray-100 relative overflow-hidden">
+      <div className="aspect-[4/3] bg-obsidian relative overflow-hidden">
         {product.images.length > 0 ? (
           <Image
             src={product.images[0]}
@@ -20,23 +21,27 @@ export default function ProductCard({ product }: { product: Product }) {
           />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-gray-400 text-sm">[Product Image]</span>
+            <PindeMark size={34} frame="#E5E2DC" />
           </div>
         )}
       </div>
 
-      <div className="p-6">
-        <p className="text-xs font-medium text-accent uppercase tracking-wider mb-2">
-          {product.series}
+      <div className="p-[34px]">
+        <p className="text-[9px] font-medium tracking-[2px] uppercase text-bronze mb-[8px]">
+          {product.series} Series
         </p>
-        <h3 className="text-lg font-semibold text-primary mb-2 group-hover:text-accent transition-colors">
+        <h3 className="font-[family-name:var(--font-serif)] text-[22px] font-normal text-alabaster mb-[8px] tracking-[0.01em] group-hover:text-bronze transition-colors">
           {product.name}
         </h3>
-        <p className="text-sm text-gray-500 line-clamp-2 mb-4">
+        <p className="text-[13px] text-warm line-clamp-2 mb-[21px]">
           {product.description}
         </p>
-        <span className="inline-flex items-center gap-1 text-sm font-medium text-accent">
-          Learn More <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+        <span className="inline-flex items-center gap-2 text-[11px] tracking-[2px] uppercase text-bronze">
+          Specifications{" "}
+          <ArrowRight
+            size={12}
+            className="group-hover:translate-x-1 transition-transform"
+          />
         </span>
       </div>
     </Link>

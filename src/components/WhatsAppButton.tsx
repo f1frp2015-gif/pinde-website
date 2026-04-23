@@ -4,7 +4,7 @@ import { MessageCircle } from "lucide-react";
 import { BRAND } from "@/lib/constants";
 
 export default function WhatsAppButton() {
-  const whatsappUrl = `https://wa.me/${BRAND.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent("Hello, I'm interested in PINDE windows & doors. Could you provide more information?")}`;
+  const whatsappUrl = `https://wa.me/${BRAND.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent("Hello, I'm interested in PINDÉ architectural aluminium systems. Could you provide more information?")}`;
 
   return (
     <a

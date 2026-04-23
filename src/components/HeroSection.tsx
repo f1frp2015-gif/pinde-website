@@ -5,43 +5,47 @@ interface HeroSectionProps {
   subtitle: string;
   ctaText?: string;
   ctaHref?: string;
-  overlay?: boolean;
 }
 
 export default function HeroSection({
   title,
   subtitle,
-  ctaText = "Explore Products",
+  ctaText = "Explore systems",
   ctaHref = "/products",
-  overlay = true,
 }: HeroSectionProps) {
   return (
-    <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center bg-primary">
-      {/* Placeholder for hero image - replace with actual image */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary-light to-primary/80" />
-      {overlay && (
-        <div className="absolute inset-0 bg-black/30" />
-      )}
+    <section className="relative min-h-[70vh] flex items-center bg-obsidian pt-20">
+      <div className="relative z-10 max-w-[960px] mx-auto px-[55px] max-lg:px-6 w-full py-[89px] text-center">
+        <div className="flex items-center justify-center gap-[13px] mb-[55px]">
+          <span className="w-[21px] h-px bg-muted opacity-40" />
+          <span className="text-[10px] tracking-[4px] uppercase text-muted font-medium">
+            PINDÉ · Architectural Aluminium
+          </span>
+          <span className="w-[21px] h-px bg-muted opacity-40" />
+        </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+        <h1 className="font-[family-name:var(--font-serif)] font-light text-[clamp(40px,6vw,72px)] leading-[1.05] tracking-[0.02em] text-alabaster mb-[34px]">
           {title}
+          <span className="text-red">.</span>
         </h1>
-        <p className="text-lg sm:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+
+        <p className="text-warm text-[16px] leading-[1.8] max-w-[560px] mx-auto mb-[55px]">
           {subtitle}
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+        <div className="flex flex-wrap gap-[13px] justify-center">
           <Link
             href={ctaHref}
-            className="inline-flex items-center justify-center px-8 py-3.5 bg-accent text-white font-medium rounded hover:bg-accent-light transition-colors"
+            className="inline-flex items-center gap-[10px] px-[34px] py-4 bg-red text-white text-[11px] font-medium tracking-[3px] uppercase rounded-[1px] hover:brightness-90 transition-all"
           >
+            <span className="inline-block w-[5px] h-[5px] rounded-full bg-white" />
             {ctaText}
           </Link>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center px-8 py-3.5 border-2 border-white text-white font-medium rounded hover:bg-white/10 transition-colors"
+            className="inline-flex items-center px-[34px] py-4 border border-line text-alabaster text-[11px] font-medium tracking-[3px] uppercase rounded-[1px] hover:border-warm transition-all"
           >
-            Request a Quote
+            Request a quote
           </Link>
         </div>
       </div>

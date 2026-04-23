@@ -1,12 +1,24 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import CertificationBanner from "@/components/CertificationBanner";
-import { Factory, Target, Eye, Users, Award, Wrench, Shield, Clock } from "lucide-react";
+import {
+  CNCIcon,
+  FactoryIcon,
+  TeamIcon,
+  PatentIcon,
+} from "@/components/BrandIcons";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "About PINDÉ — 23+ Years of Architectural Aluminium Excellence",
   description:
-    "Learn about PINDE — a leading manufacturer of premium aluminum system windows and doors based in Chongqing, China. Over 22+ years of expertise in high-end system windows and doors.",
+    "PINDÉ: 100,000 m² smart factory in Chongqing, 1,800+ professionals, 60+ patents. Fully integrated from aluminium extrusion to final assembly.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About PINDÉ — Architectural Aluminium Manufacturer",
+    description: "23+ years of expertise. 100,000 m² smart factory. Serving 30+ countries with premium aluminium windows and doors.",
+    url: "/about",
+  },
 };
 
 const milestones = [
@@ -14,76 +26,76 @@ const milestones = [
     year: "2002",
     title: "Foundation",
     description:
-      "PINDE Group founded in Chongqing, marking the beginning of our journey in premium aluminum windows and doors. Group R&D Center established in the same year.",
+      "PINDÉ Group founded in Chongqing. Group R&D Center established.",
   },
   {
     year: "2003–2008",
-    title: "Licenses & Qualifications",
+    title: "Licences & Qualifications",
     description:
-      "Obtained production licenses, safety production permits, and Grade B qualification for curtain wall construction — building a solid foundation for growth.",
+      "Obtained production licences, safety permits, and Grade B curtain wall qualification.",
   },
   {
     year: "2009–2014",
     title: "Quality Recognition",
     description:
-      'Established Chongqing E-Ge Tempered Glass Co. Passed ISO 9001 & ISO 14001 certifications. Won "Quality Trustworthy" and "Contract-Abiding" industry awards.',
+      "Established E-Ge Tempered Glass Co. Passed ISO 9001 & ISO 14001.",
   },
   {
     year: "2015–2018",
     title: "Industry Leadership",
     description:
-      'Established Chongqing E-Ge Building Materials Co. Won "Green Building Materials" and "Top 10 Door & Window Brand" awards, solidifying our reputation in the industry.',
+      'Won "Green Building Materials" and "Top 10 Door & Window Brand" awards.',
   },
   {
     year: "2019–2021",
     title: "Smart Manufacturing",
     description:
-      "Invested heavily in smart manufacturing equipment. Built an Industry 4.0 factory, becoming one of the few fully integrated manufacturers of aluminum profiles, glass, and system doors & windows.",
+      "Built an Industry 4.0 factory — fully integrated aluminium, glass, and systems.",
   },
   {
     year: "2022",
     title: "New R&D Headquarters",
     description:
-      "Invested in a new R&D headquarters and display center totaling 25,000 m², creating a world-class innovation hub.",
+      "Invested in 25,000 m² R&D headquarters and display centre.",
   },
   {
     year: "2023",
-    title: "PINDE Brand Launch",
+    title: "PINDÉ Brand Launch",
     description:
-      "Established Pinde Doors and Windows (Chongqing) Co., Ltd. Positioned as a high-end brand with 1 R&D center, 1 experience center, and a TPKS production center with 500,000 m² capacity across 3 major production lines.",
+      "Established PINDÉ as a high-end brand with 500,000 m² production capacity.",
   },
   {
     year: "2024",
     title: "Technology-Driven Service",
     description:
-      "Continued product iteration with a focus on technology-driven customer service, bringing cutting-edge solutions to global markets.",
+      "Continued product iteration with a focus on technology-driven global service.",
   },
 ];
 
 const strengths = [
   {
-    icon: Wrench,
-    title: "German & Italian CNC Equipment",
+    title: "German & Italian CNC",
+    Icon: CNCIcon,
     description:
-      "Full suite of imported precision CNC equipment from Germany and Italy, ensuring every product meets the highest manufacturing standards.",
+      "Full suite of imported precision CNC equipment ensuring the highest manufacturing standards.",
   },
   {
-    icon: Factory,
-    title: "Refined Factory Management",
+    title: "Industry 4.0 Factory",
+    Icon: FactoryIcon,
     description:
-      "Advanced Industry 4.0 smart factory with digitized management systems, from raw material intake to finished product delivery.",
+      "Advanced smart factory with digitised management from raw material to finished product.",
   },
   {
-    icon: Users,
-    title: "1,800+ Field Professionals",
+    title: "1,800+ Professionals",
+    Icon: TeamIcon,
     description:
-      "A dedicated workforce of over 1,800 professionals across R&D, manufacturing, quality control, and customer service.",
+      "A dedicated workforce across R&D, manufacturing, quality control, and customer service.",
   },
   {
-    icon: Shield,
-    title: "Quality Beyond Standards",
+    title: "60+ Patents",
+    Icon: PatentIcon,
     description:
-      "Product quality that far exceeds industry standards, backed by 60+ patents and rigorous testing at every stage of production.",
+      "Quality that exceeds industry standards, backed by rigorous testing at every stage.",
   },
 ];
 
@@ -91,63 +103,68 @@ export default function AboutPage() {
   return (
     <>
       {/* Page Header */}
-      <section className="py-20 bg-primary text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4">About PINDE</h1>
-          <p className="text-gray-300 max-w-2xl mx-auto text-lg">
-            With 22+ years of expertise in high-end system windows and doors,
-            PINDE delivers precision-engineered aluminum systems for the
-            world&apos;s most discerning markets.
+      <section className="pt-20 py-[89px] bg-obsidian">
+        <div className="max-w-[1200px] mx-auto px-[55px] max-lg:px-6 pt-[55px]">
+          <div className="flex items-center gap-[13px] mb-[34px]">
+            <span className="w-[21px] h-px bg-muted opacity-40" />
+            <span className="text-[10px] tracking-[4px] uppercase text-muted font-medium">
+              Atelier
+            </span>
+          </div>
+          <h1 className="font-[family-name:var(--font-serif)] font-light text-[clamp(40px,6vw,64px)] leading-[0.95] tracking-[0.04em] text-alabaster mb-[21px]">
+            About PINDÉ<span className="text-red">.</span>
+          </h1>
+          <p className="text-warm text-[15px] leading-[1.9] max-w-[520px]">
+            With 23+ years of expertise in architectural aluminium, PINDÉ
+            delivers precision-engineered systems for the world&apos;s most
+            discerning markets.
           </p>
         </div>
       </section>
 
       {/* Company Story */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <section className="py-[144px] bg-surface">
+        <div className="max-w-[1200px] mx-auto px-[55px] max-lg:px-6">
+          <div className="grid lg:grid-cols-[61.8%_38.2%] gap-[89px] items-center">
             <div>
-              <p className="text-sm font-medium text-accent uppercase tracking-wider mb-4">
-                Our Story
-              </p>
-              <h2 className="text-3xl font-bold text-primary mb-6">
-                From Chongqing to the World
+              <div className="flex items-center gap-[13px] mb-[34px]">
+                <span className="w-[21px] h-px bg-muted opacity-40" />
+                <span className="text-[10px] tracking-[4px] uppercase text-muted font-medium">
+                  Our story
+                </span>
+              </div>
+              <h2 className="font-[family-name:var(--font-serif)] font-light text-[36px] leading-[1.15] text-alabaster mb-[34px]">
+                From Chongqing to the world<span className="text-red">.</span>
               </h2>
-              <div className="space-y-4 text-gray-500 leading-relaxed">
+              <div className="space-y-[21px] text-warm text-[15px] leading-[1.9]">
                 <p>
                   Founded in 2002 with a singular focus: the research,
-                  development, and manufacturing of premium aluminum system
+                  development, and manufacturing of premium aluminium system
                   windows and doors. Over 22 years, the group has grown into a
-                  powerhouse with 5 subsidiaries and 60+ patents across product
-                  categories.
+                  powerhouse with 5 subsidiaries and 60+ patents.
                 </p>
                 <p>
-                  In 2023, PINDE was established to bring this two-decade legacy
+                  In 2023, PINDÉ was established to bring this two-decade legacy
                   to global markets. With a total investment exceeding 500
                   million RMB, we built an integrated manufacturing campus
-                  spanning over 100,000 m² — one of the few facilities in the
-                  industry that controls the entire production chain from
-                  aluminum extrusion and powder coating to glass processing and
-                  final assembly.
+                  spanning over 100,000 m².
                 </p>
                 <p>
-                  What sets PINDE apart is our commitment to vertical
+                  What sets PINDÉ apart is our commitment to vertical
                   integration. By managing every stage in-house — profile
                   extrusion, spraying, glass tempering, insulated glass
                   production, and system assembly — we maintain uncompromising
-                  quality control and deliver products that meet the highest
-                  international standards for architects, builders, and
-                  homeowners worldwide.
+                  quality control.
                 </p>
               </div>
             </div>
-            <div className="rounded-lg overflow-hidden">
+            <div className="rounded-[2px] overflow-hidden">
               <Image
                 src="/images/factory-aerial.jpg"
-                alt="PINDE Manufacturing Campus - Chongqing, China"
+                alt="PINDÉ Manufacturing Campus"
                 width={4137}
                 height={1228}
-                className="w-full h-auto rounded-lg"
+                className="w-full h-auto"
               />
             </div>
           </div>
@@ -155,39 +172,31 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-light">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8">
+      <section className="py-[144px] bg-obsidian">
+        <div className="max-w-[1200px] mx-auto px-[55px] max-lg:px-6">
+          <div className="grid md:grid-cols-3 gap-[13px]">
             {[
               {
-                icon: Target,
                 title: "Our Mission",
-                text: "To deliver world-class aluminum system windows and doors by leveraging our global supply chain and independent R&D capabilities. We are committed to excellence, with quality as our foundation — crafting products with ingenuity and mastering a lifetime's craft.",
+                text: "To deliver world-class aluminium system windows and doors by leveraging our global supply chain and independent R&D capabilities.",
               },
               {
-                icon: Eye,
                 title: "Our Vision",
-                text: "To be the preferred global partner for premium aluminum system windows and doors, recognized for our fully integrated manufacturing, Industry 4.0 smart production, and products that consistently exceed international standards.",
+                text: "To be the preferred global partner for premium aluminium systems, recognised for our fully integrated manufacturing and Industry 4.0 smart production.",
               },
               {
-                icon: Users,
                 title: "Our Values",
-                text: "Global Supply Chain with High Quality at the Cornerstone. Independent R&D and Digitized Management. Crafted with Ingenuity, Mastering a Lifetime's Craft. Commitment to Excellence, Quality as Foundation. Quality Service, Customer-Oriented, Worry-Free Experience.",
+                text: "Global supply chain with quality at the cornerstone. Independent R&D, digitised management. Crafted with ingenuity, mastering a lifetime's craft.",
               },
             ].map((item) => (
               <div
                 key={item.title}
-                className="bg-white p-8 rounded-lg border border-gray-100"
+                className="bg-surface p-[34px] border border-line rounded-[2px]"
               >
-                <item.icon
-                  size={32}
-                  className="text-accent mb-4"
-                  strokeWidth={1.5}
-                />
-                <h3 className="text-xl font-semibold text-primary mb-3">
+                <h3 className="font-[family-name:var(--font-serif)] text-[22px] font-normal text-alabaster mb-[13px]">
                   {item.title}
                 </h3>
-                <p className="text-gray-500 text-sm leading-relaxed">
+                <p className="text-warm text-[13px] leading-[1.9]">
                   {item.text}
                 </p>
               </div>
@@ -197,58 +206,56 @@ export default function AboutPage() {
       </section>
 
       {/* Manufacturing Base */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="rounded-lg overflow-hidden order-2 lg:order-1">
+      <section className="py-[144px] bg-surface">
+        <div className="max-w-[1200px] mx-auto px-[55px] max-lg:px-6">
+          <div className="grid lg:grid-cols-2 gap-[89px] items-center">
+            <div className="rounded-[2px] overflow-hidden order-2 lg:order-1">
               <Image
                 src="/images/factory-aerial.jpg"
-                alt="PINDE Factory Aerial View - 100,000m² Smart Manufacturing Campus in Chongqing"
+                alt="PINDÉ Factory Aerial View"
                 width={4137}
                 height={1228}
-                className="w-full h-auto rounded-lg"
+                className="w-full h-auto"
                 priority
               />
             </div>
             <div className="order-1 lg:order-2">
-              <p className="text-sm font-medium text-accent uppercase tracking-wider mb-4">
-                Manufacturing
-              </p>
-              <h2 className="text-3xl font-bold text-primary mb-6">
-                Industry 4.0 Smart Factory in Chongqing
+              <div className="flex items-center gap-[13px] mb-[34px]">
+                <span className="w-[21px] h-px bg-muted opacity-40" />
+                <span className="text-[10px] tracking-[4px] uppercase text-muted font-medium">
+                  Manufacturing
+                </span>
+              </div>
+              <h2 className="font-[family-name:var(--font-serif)] font-light text-[36px] leading-[1.15] text-alabaster mb-[34px]">
+                Industry 4.0<span className="text-red">.</span>
               </h2>
-              <div className="space-y-4 text-gray-500 leading-relaxed">
+              <div className="space-y-[21px] text-warm text-[15px] leading-[1.9]">
                 <p>
-                  Our state-of-the-art manufacturing campus features a fully
-                  integrated production chain: from aluminum extrusion with
-                  3,600-ton presses and automated cutting (precision within
-                  0.5mm), to a fully automated spray line using Akzo Nobel
-                  powder coatings, to advanced glass processing with CNC
-                  cutting, auto-feed tempering (3C certified), and insulated
-                  glass production with molecular sieve drying and butyl rubber
-                  sealing.
+                  Our state-of-the-art campus features a fully integrated
+                  production chain: from aluminium extrusion with 3,600-ton
+                  presses, to a fully automated Akzo Nobel powder coating line,
+                  to CNC glass cutting and auto-feed tempering.
                 </p>
                 <p>
-                  Equipped with German and Italian imported CNC machinery, our
-                  factory operates under refined Industry 4.0 management
-                  systems. This allows us to maintain exceptional quality
-                  consistency while achieving an annual production capacity of
-                  over 1,800,000 m² of finished windows and doors.
+                  Equipped with German and Italian imported CNC machinery,
+                  achieving an annual production capacity of over 1,800,000 m².
                 </p>
               </div>
 
-              <div className="mt-8 grid grid-cols-2 gap-6">
+              <div className="mt-[34px] grid grid-cols-2 gap-[21px]">
                 {[
-                  { value: "100,000+ m²", label: "Factory Area" },
-                  { value: "1,800+", label: "Field Professionals" },
-                  { value: "3", label: "Major Production Lines" },
-                  { value: "1,800,000+ m²", label: "Annual Capacity" },
+                  { value: "100,000+ m²", label: "Factory area" },
+                  { value: "1,800+", label: "Professionals" },
+                  { value: "3", label: "Production lines" },
+                  { value: "1,800,000+ m²", label: "Annual capacity" },
                 ].map((stat) => (
                   <div key={stat.label}>
-                    <div className="text-2xl font-bold text-primary">
+                    <div className="font-[family-name:var(--font-serif)] text-[26px] font-light text-bronze">
                       {stat.value}
                     </div>
-                    <div className="text-sm text-gray-500">{stat.label}</div>
+                    <div className="text-[10px] tracking-[2px] uppercase text-muted mt-1">
+                      {stat.label}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -258,66 +265,54 @@ export default function AboutPage() {
       </section>
 
       {/* Brand Strengths */}
-      <section className="py-20 bg-light">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="text-sm font-medium text-accent uppercase tracking-wider mb-4">
-              Why PINDE
-            </p>
-            <h2 className="text-3xl font-bold text-primary mb-4">
-              Our Core Strengths
-            </h2>
-            <p className="text-gray-500 max-w-2xl mx-auto">
-              With over two decades of expertise and a fully integrated
-              manufacturing chain, PINDE stands at the forefront of premium
-              aluminum system windows and doors.
-            </p>
+      <section className="py-[144px] bg-obsidian">
+        <div className="max-w-[1200px] mx-auto px-[55px] max-lg:px-6">
+          <div className="flex items-center gap-[13px] mb-[55px]">
+            <span className="w-[21px] h-px bg-muted opacity-40" />
+            <span className="text-[10px] tracking-[4px] uppercase text-muted font-medium">
+              Core strengths
+            </span>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {strengths.map((item) => (
-              <div
-                key={item.title}
-                className="bg-white p-6 rounded-lg border border-gray-100 text-center"
-              >
-                <item.icon
-                  size={36}
-                  className="text-accent mx-auto mb-4"
-                  strokeWidth={1.5}
-                />
-                <h3 className="text-lg font-semibold text-primary mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-gray-500 text-sm leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
-            ))}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-[13px]">
+            {strengths.map((item) => {
+              const Icon = item.Icon;
+              return (
+                <div
+                  key={item.title}
+                  className="group bg-surface p-[34px] border border-line rounded-[2px] transition-all hover:border-warm/30"
+                >
+                  <div className="mb-[21px] text-alabaster transition-transform group-hover:-translate-y-[2px]">
+                    <Icon size={34} />
+                  </div>
+                  <h3 className="text-[15px] font-medium text-alabaster mb-[8px]">
+                    {item.title}
+                  </h3>
+                  <p className="text-warm text-[13px] leading-[1.8]">
+                    {item.description}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* Development History / Timeline */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="text-sm font-medium text-accent uppercase tracking-wider mb-4">
-              Our Journey
-            </p>
-            <h2 className="text-3xl font-bold text-primary mb-4">
-              22+ Years of Innovation
-            </h2>
-            <p className="text-gray-500 max-w-2xl mx-auto">
-              From a single factory in Chongqing to a fully integrated
-              manufacturing group with 5 subsidiaries and 60+ patents.
-            </p>
+      {/* Timeline */}
+      <section className="py-[144px] bg-surface">
+        <div className="max-w-[1200px] mx-auto px-[55px] max-lg:px-6">
+          <div className="flex items-center gap-[13px] mb-[55px]">
+            <span className="w-[21px] h-px bg-muted opacity-40" />
+            <span className="text-[10px] tracking-[4px] uppercase text-muted font-medium">
+              Our journey · 23+ years
+            </span>
           </div>
 
           <div className="relative">
             {/* Timeline line */}
-            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-200 -translate-x-1/2" />
+            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-line -translate-x-1/2" />
 
-            <div className="space-y-12">
+            <div className="space-y-[55px]">
               {milestones.map((milestone, index) => (
                 <div
                   key={milestone.year}
@@ -330,21 +325,21 @@ export default function AboutPage() {
                       index % 2 === 0 ? "md:text-right" : "md:text-left"
                     }`}
                   >
-                    <div className="bg-light p-6 rounded-lg inline-block">
-                      <span className="text-accent font-bold text-lg">
+                    <div className="bg-obsidian p-[34px] border border-line rounded-[2px] inline-block">
+                      <span className="font-[family-name:var(--font-mono)] text-bronze text-[14px]">
                         {milestone.year}
                       </span>
-                      <h3 className="text-lg font-semibold text-primary mt-1">
+                      <h3 className="text-[15px] font-medium text-alabaster mt-[8px]">
                         {milestone.title}
                       </h3>
-                      <p className="text-gray-500 text-sm mt-2 leading-relaxed max-w-md">
+                      <p className="text-warm text-[13px] mt-[8px] leading-[1.8] max-w-[360px]">
                         {milestone.description}
                       </p>
                     </div>
                   </div>
 
                   {/* Center dot */}
-                  <div className="hidden md:flex items-center justify-center w-4 h-4 bg-accent rounded-full ring-4 ring-white z-10 shrink-0" />
+                  <div className="hidden md:flex items-center justify-center w-3 h-3 bg-red rounded-full ring-4 ring-surface z-10 shrink-0" />
 
                   <div className="flex-1" />
                 </div>
@@ -355,51 +350,34 @@ export default function AboutPage() {
       </section>
 
       {/* Group Subsidiaries */}
-      <section className="py-20 bg-light">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-sm font-medium text-accent uppercase tracking-wider mb-4">
-            PINDE Group
-          </p>
-          <h2 className="text-3xl font-bold text-primary mb-4">
-            A Group Built on Integration
-          </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto mb-12">
-            PINDE Group is a comprehensive enterprise with 5 specialized
-            subsidiaries covering every aspect of the door, window, and curtain
-            wall industry.
-          </p>
+      <section className="py-[89px] bg-obsidian">
+        <div className="max-w-[1200px] mx-auto px-[55px] max-lg:px-6 text-center">
+          <div className="flex items-center gap-[13px] justify-center mb-[55px]">
+            <span className="w-[21px] h-px bg-muted opacity-40" />
+            <span className="text-[10px] tracking-[4px] uppercase text-muted font-medium">
+              PINDÉ Group
+            </span>
+            <span className="w-[21px] h-px bg-muted opacity-40" />
+          </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-[13px]">
             {[
-              {
-                name: "PINDE Commercial",
-                focus: "Commercial Projects",
-              },
-              {
-                name: "PINDE Doors & Windows",
-                focus: "High-End Brand",
-              },
-              {
-                name: "E-Ge Glass",
-                focus: "Glass Processing",
-              },
-              {
-                name: "Numiger Curtain Wall",
-                focus: "Curtain Wall Systems",
-              },
-              {
-                name: "PINDE Standard",
-                focus: "Standard Products",
-              },
+              { name: "PINDÉ Commercial", focus: "Commercial Projects" },
+              { name: "PINDÉ Doors & Windows", focus: "High-End Brand" },
+              { name: "E-Ge Glass", focus: "Glass Processing" },
+              { name: "Numiger Curtain Wall", focus: "Curtain Wall Systems" },
+              { name: "PINDÉ Standard", focus: "Standard Products" },
             ].map((sub) => (
               <div
                 key={sub.name}
-                className="bg-white p-6 rounded-lg border border-gray-100"
+                className="bg-surface p-[21px] border border-line rounded-[2px]"
               >
-                <h4 className="font-semibold text-primary text-sm">
+                <h4 className="text-[13px] font-medium text-alabaster">
                   {sub.name}
                 </h4>
-                <p className="text-xs text-gray-500 mt-1">{sub.focus}</p>
+                <p className="text-[10px] text-muted tracking-[1px] uppercase mt-1">
+                  {sub.focus}
+                </p>
               </div>
             ))}
           </div>
@@ -407,6 +385,33 @@ export default function AboutPage() {
       </section>
 
       <CertificationBanner />
+
+      {/* Cross-link CTA */}
+      <section className="py-[89px] bg-surface">
+        <div className="max-w-[800px] mx-auto px-[55px] max-lg:px-6 text-center">
+          <h2 className="font-[family-name:var(--font-serif)] font-light text-[28px] leading-[1.15] text-alabaster mb-[21px]">
+            Partner with PINDÉ<span className="text-red">.</span>
+          </h2>
+          <p className="text-warm text-[15px] leading-[1.9] mb-[34px]">
+            Whether you need OEM supply, project-specific engineering, or a distribution partnership — let&apos;s talk.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-[21px] justify-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-[10px] px-[34px] py-4 bg-red text-white text-[11px] font-medium tracking-[3px] uppercase rounded-[1px] hover:brightness-90 transition-all"
+            >
+              <span className="inline-block w-[5px] h-[5px] rounded-full bg-white" />
+              Contact us
+            </Link>
+            <Link
+              href="/products"
+              className="inline-flex items-center gap-[8px] px-[34px] py-4 border border-line text-alabaster text-[11px] font-medium tracking-[3px] uppercase rounded-[1px] hover:border-warm transition-all"
+            >
+              View systems
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

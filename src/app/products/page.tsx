@@ -1,53 +1,65 @@
 import type { Metadata } from "next";
-import ProductCard from "@/components/ProductCard";
+import ProductFilter from "@/components/ProductFilter";
 import { products } from "@/data/products";
 
 export const metadata: Metadata = {
-  title: "Products",
+  title: "Aluminium Window & Door Systems — Casement, Sliding, Folding",
   description:
-    "Explore PINDE's complete range of premium aluminum system windows and doors — sliding, casement, tilt & turn, bi-fold, hinged, curtain wall, and fixed systems.",
+    "PINDÉ's 19 aluminium systems: casement (A65–A120), sliding, push-out, folding, interior doors. PA66GF25 thermal break, EPDM seals, 6063-T5 alloy.",
+  alternates: { canonical: "/products" },
+  openGraph: {
+    title: "PINDÉ Systems — Premium Aluminium Windows & Doors",
+    description:
+      "19 systems: casement, sliding, push-out, folding, interior. PA66GF25 thermal break, AS2047/NFRC certified.",
+    url: "/products",
+  },
 };
 
 export default function ProductsPage() {
   return (
     <>
       {/* Page Header */}
-      <section className="py-20 bg-primary text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4">Our Systems</h1>
-          <p className="text-gray-300 max-w-2xl mx-auto text-lg">
-            A comprehensive range of aluminum window and door systems engineered
+      <section className="pt-20 py-[89px] bg-obsidian">
+        <div className="max-w-[1200px] mx-auto px-[55px] max-lg:px-6 pt-[55px]">
+          <div className="flex items-center gap-[13px] mb-[34px]">
+            <span className="w-[21px] h-px bg-muted opacity-40" />
+            <span className="text-[10px] tracking-[4px] uppercase text-muted font-medium">
+              Product range
+            </span>
+          </div>
+          <h1 className="font-[family-name:var(--font-serif)] font-light text-[clamp(40px,6vw,64px)] leading-[0.95] tracking-[0.04em] text-alabaster mb-[21px]">
+            Our systems<span className="text-red">.</span>
+          </h1>
+          <p className="text-warm text-[15px] leading-[1.9] max-w-[520px]">
+            A comprehensive range of aluminium window and door systems engineered
             for performance, security, and beauty.
           </p>
         </div>
       </section>
 
-      {/* Product Grid */}
-      <section className="py-20 bg-light">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {products.map((product) => (
-              <ProductCard key={product.slug} product={product} />
-            ))}
-          </div>
+      {/* Filterable Product Grid */}
+      <section className="py-[89px] bg-surface">
+        <div className="max-w-[1200px] mx-auto px-[55px] max-lg:px-6">
+          <ProductFilter products={products} />
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-2xl font-bold text-primary mb-4">
-            Need Help Choosing the Right System?
+      <section className="py-[89px] bg-obsidian">
+        <div className="max-w-[800px] mx-auto px-[55px] max-lg:px-6 text-center">
+          <h2 className="font-[family-name:var(--font-serif)] font-light text-[28px] leading-[1.15] text-alabaster mb-[21px]">
+            Need help choosing<span className="text-red">?</span>
           </h2>
-          <p className="text-gray-500 mb-6">
-            Our technical team can help you select the ideal window and door
-            systems for your specific project requirements.
+          <p className="text-warm text-[15px] leading-[1.9] mb-[34px]">
+            Our technical team can help you select the ideal systems for your
+            specific project requirements.
           </p>
           <a
             href="/contact"
-            className="inline-flex items-center justify-center px-8 py-3.5 bg-accent text-white font-medium rounded hover:bg-accent-light transition-colors"
+            className="inline-flex items-center gap-[10px] px-[34px] py-4 bg-red text-white text-[11px] font-medium tracking-[3px] uppercase rounded-[1px] hover:brightness-90 transition-all"
           >
-            Contact Our Team
+            <span className="inline-block w-[5px] h-[5px] rounded-full bg-white" />
+            Contact our team
           </a>
         </div>
       </section>

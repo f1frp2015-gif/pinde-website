@@ -1,12 +1,34 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-primary: #1a1a2e;
-  --color-primary-light: #2d2d4a;
-  --color-accent: #c8a45c;
-  --color-accent-light: #d4b876;
-  --color-dark: #0f0f1a;
-  --color-light: #f8f8f8;
+  /* φ-cascade — INVERTED: light canvas, dark ink, red accent */
+  /* Class names preserved for backward compat; values are inverted */
+
+  --color-obsidian: #FAFAF8;   /* L0 — primary canvas (was dark) */
+  --color-surface: #F0EDE7;    /* L1 — alt sections, cards (light cream) */
+  --color-alabaster: #0A0A0C;  /* L2 — primary text/headlines (now ink black) */
+  --color-warm: #4A4A4E;       /* L3 — body text (dark gray) */
+  --color-bronze: #B87C3F;     /* L4 — editorial accent (slightly deeper for contrast on white) */
+  --color-red: #D42B2B;        /* L5 — dot + CTA (UNCHANGED — the brand signature) */
+  --color-muted: #888888;      /* L6 — labels, metadata */
+  --color-line: #E5E2DC;       /* L7 — borders (light) */
+
+  /* Legacy aliases */
+  --color-primary: #0A0A0C;
+  --color-primary-light: #4A4A4E;
+  --color-accent: #B87C3F;
+  --color-accent-light: #C4956A;
+  --color-dark: #0A0A0C;
+  --color-light: #FAFAF8;
+
+  /* Fibonacci spacing scale */
+  --spacing-fib-xs: 8px;
+  --spacing-fib-sm: 13px;
+  --spacing-fib-md: 21px;
+  --spacing-fib-lg: 34px;
+  --spacing-fib-xl: 55px;
+  --spacing-fib-2xl: 89px;
+  --spacing-fib-hero: 144px;
 }
 
 html {
@@ -14,7 +36,12 @@ html {
 }
 
 body {
-  font-family: "Inter", system-ui, -apple-system, sans-serif;
-  color: #1a1a2e;
-  background: #ffffff;
+  font-family: "DM Sans", "Helvetica Neue", sans-serif;
+  color: #0A0A0C;
+  background: #FAFAF8;
+}
+
+::selection {
+  background: rgba(212, 43, 43, 0.15);
+  color: #0A0A0C;
 }

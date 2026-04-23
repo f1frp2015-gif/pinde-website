@@ -9,7 +9,7 @@ export interface Product {
   images: string[];
 }
 
-export const products: Product[] = [
+const _products: Product[] = [
   // ==========================================
   // EXTERIOR WINDOWS
   // ==========================================
@@ -526,6 +526,13 @@ export const products: Product[] = [
     images: ["/images/products/1645-bathroom-door.jpg"],
   },
 ];
+
+// Sort: products with images first
+export const products = _products.sort((a, b) => {
+  const aHas = a.images.length > 0 ? 0 : 1;
+  const bHas = b.images.length > 0 ? 0 : 1;
+  return aHas - bHas;
+});
 
 export const productCategories = [
   {

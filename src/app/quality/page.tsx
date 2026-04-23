@@ -1,56 +1,65 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import CertificationBanner from "@/components/CertificationBanner";
 import {
-  ClipboardCheck,
-  Microscope,
-  PackageCheck,
-  Truck,
-  FileCheck,
-  RefreshCw,
-} from "lucide-react";
+  InspectionIcon,
+  ProcessIcon,
+  TestingIcon,
+  DocumentIcon,
+  PackingIcon,
+  ImprovementIcon,
+  LabRigIllustration,
+} from "@/components/BrandIcons";
 
 export const metadata: Metadata = {
-  title: "Quality Assurance",
+  title: "Quality Assurance — AS2047, NFRC, CE, ISO 9001 Certified",
   description:
-    "PINDE's commitment to quality — certified to AS2047, NFRC, CE, ISO 9001, and more. Rigorous testing and quality control at every stage.",
+    "PINDÉ 6-step quality control from raw material to delivery. Certified AS2047, AS1288, NFRC, CE, ISO 9001, ISO 14001. In-house testing lab.",
+  alternates: { canonical: "/quality" },
+  openGraph: {
+    title: "PINDÉ Quality — International Certifications & Testing",
+    description: "6-step QC system. Certified AS2047, NFRC, CE, ISO 9001. In-house testing laboratory.",
+    url: "/quality",
+  },
 };
 
 const qcSteps = [
   {
-    icon: ClipboardCheck,
     title: "Incoming Material Inspection",
+    Icon: InspectionIcon,
     description:
-      "All raw materials including aluminum billets, hardware, and sealing components are inspected and tested upon arrival before entering production.",
+      "All raw materials including aluminium billets, hardware, and sealing components are inspected and tested upon arrival.",
   },
   {
-    icon: Microscope,
     title: "In-Process Quality Control",
+    Icon: ProcessIcon,
     description:
       "Real-time quality monitoring at every production stage — extrusion, cutting, machining, surface treatment, and assembly.",
   },
   {
-    icon: PackageCheck,
     title: "Finished Product Testing",
+    Icon: TestingIcon,
     description:
-      "Complete systems undergo performance testing including air, water, and structural tests before approval for shipment.",
+      "Complete systems undergo air, water, and structural tests before approval for shipment.",
   },
   {
-    icon: FileCheck,
     title: "Documentation & Traceability",
+    Icon: DocumentIcon,
     description:
-      "Full traceability from raw material to finished product. Every batch is documented with test certificates and inspection reports.",
+      "Full traceability from raw material to finished product. Every batch documented with test certificates.",
   },
   {
-    icon: Truck,
-    title: "Packing & Shipping Inspection",
+    title: "Packing & Shipping",
+    Icon: PackingIcon,
     description:
-      "Products are carefully packed with protective materials and inspected before loading to ensure they arrive in perfect condition.",
+      "Products carefully packed with protective materials and inspected before loading.",
   },
   {
-    icon: RefreshCw,
     title: "Continuous Improvement",
+    Icon: ImprovementIcon,
     description:
-      "Regular quality reviews, customer feedback analysis, and process optimization ensure our standards continuously improve.",
+      "Regular quality reviews, customer feedback analysis, and process optimisation.",
   },
 ];
 
@@ -58,12 +67,18 @@ export default function QualityPage() {
   return (
     <>
       {/* Page Header */}
-      <section className="py-20 bg-primary text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-            Quality Assurance
+      <section className="pt-20 py-[89px] bg-obsidian">
+        <div className="max-w-[1200px] mx-auto px-[55px] max-lg:px-6 pt-[55px]">
+          <div className="flex items-center gap-[13px] mb-[34px]">
+            <span className="w-[21px] h-px bg-muted opacity-40" />
+            <span className="text-[10px] tracking-[4px] uppercase text-muted font-medium">
+              Quality assurance
+            </span>
+          </div>
+          <h1 className="font-[family-name:var(--font-serif)] font-light text-[clamp(40px,6vw,64px)] leading-[0.95] tracking-[0.04em] text-alabaster mb-[21px]">
+            Quality<span className="text-red">.</span>
           </h1>
-          <p className="text-gray-300 max-w-2xl mx-auto text-lg">
+          <p className="text-warm text-[15px] leading-[1.9] max-w-[520px]">
             Uncompromising quality at every stage — from raw materials to
             delivered product.
           </p>
@@ -71,84 +86,77 @@ export default function QualityPage() {
       </section>
 
       {/* QC Process */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="text-sm font-medium text-accent uppercase tracking-wider mb-4">
-              Quality Process
-            </p>
-            <h2 className="text-3xl font-bold text-primary mb-4">
-              Our 6-Step Quality Control System
-            </h2>
-            <p className="text-gray-500 max-w-2xl mx-auto">
-              Every PINDE product passes through a rigorous multi-stage quality
-              control system before reaching our customers.
-            </p>
+      <section className="py-[89px] bg-surface">
+        <div className="max-w-[1200px] mx-auto px-[55px] max-lg:px-6">
+          <div className="flex items-center gap-[13px] mb-[55px]">
+            <span className="w-[21px] h-px bg-muted opacity-40" />
+            <span className="text-[10px] tracking-[4px] uppercase text-muted font-medium">
+              6-step quality control
+            </span>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {qcSteps.map((step, index) => (
-              <div
-                key={step.title}
-                className="relative p-8 rounded-lg border border-gray-100 hover:border-accent/20 hover:shadow-md transition-all"
-              >
-                <div className="absolute top-4 right-4 text-4xl font-bold text-gray-100">
-                  {String(index + 1).padStart(2, "0")}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-[13px]">
+            {qcSteps.map((step, index) => {
+              const Icon = step.Icon;
+              return (
+                <div
+                  key={step.title}
+                  className="group relative bg-obsidian p-[34px] border border-line rounded-[2px] transition-all hover:border-warm/30"
+                >
+                  <div className="absolute top-[21px] right-[21px] font-[family-name:var(--font-mono)] text-[34px] font-light text-line">
+                    {String(index + 1).padStart(2, "0")}
+                  </div>
+                  <div className="mb-[21px] text-alabaster transition-transform group-hover:-translate-y-[2px]">
+                    <Icon size={34} />
+                  </div>
+                  <h3 className="text-[15px] font-medium text-alabaster mb-[8px]">
+                    {step.title}
+                  </h3>
+                  <p className="text-[13px] text-warm leading-relaxed">
+                    {step.description}
+                  </p>
                 </div>
-                <step.icon
-                  size={32}
-                  className="text-accent mb-4"
-                  strokeWidth={1.5}
-                />
-                <h3 className="text-lg font-semibold text-primary mb-2">
-                  {step.title}
-                </h3>
-                <p className="text-sm text-gray-500 leading-relaxed">
-                  {step.description}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Certifications Detail */}
-      <section className="py-20 bg-light">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="text-sm font-medium text-accent uppercase tracking-wider mb-4">
+      <section className="py-[89px] bg-obsidian">
+        <div className="max-w-[1200px] mx-auto px-[55px] max-lg:px-6">
+          <div className="flex items-center gap-[13px] mb-[55px]">
+            <span className="w-[21px] h-px bg-muted opacity-40" />
+            <span className="text-[10px] tracking-[4px] uppercase text-muted font-medium">
               Certifications
-            </p>
-            <h2 className="text-3xl font-bold text-primary mb-4">
-              International Standards & Certifications
-            </h2>
+            </span>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-[13px]">
             {[
               {
                 name: "AS2047",
                 title: "Australian Standard",
                 description:
-                  "Windows and external glazed doors in buildings. Covers design, testing, and installation requirements for the Australian market.",
+                  "Windows and external glazed doors in buildings. Design, testing, and installation for the Australian market.",
               },
               {
                 name: "AS1288",
                 title: "Glass in Buildings",
                 description:
-                  "Selection and installation of glass in buildings. Ensures safety and performance of glazing solutions.",
+                  "Selection and installation of glass in buildings. Safety and performance of glazing solutions.",
               },
               {
                 name: "NFRC",
-                title: "National Fenestration Rating Council",
+                title: "Fenestration Rating",
                 description:
-                  "Independent rating system for the energy performance of windows, doors, and skylights in North America.",
+                  "Independent rating for energy performance of windows, doors, and skylights in North America.",
               },
               {
-                name: "CE Marking",
+                name: "CE",
                 title: "European Conformity",
                 description:
-                  "Indicates conformity with health, safety, and environmental protection standards for the European Economic Area.",
+                  "Conformity with health, safety, and environmental protection standards for the European Economic Area.",
               },
               {
                 name: "ISO 9001",
@@ -160,20 +168,22 @@ export default function QualityPage() {
                 name: "ISO 14001",
                 title: "Environmental Management",
                 description:
-                  "Framework for environmental management systems, demonstrating commitment to reducing environmental impact.",
+                  "Framework for environmental management systems, demonstrating commitment to sustainability.",
               },
             ].map((cert) => (
               <div
                 key={cert.name}
-                className="bg-white p-6 rounded-lg border border-gray-100"
+                className="bg-surface p-[34px] border border-line rounded-[2px]"
               >
-                <div className="text-2xl font-bold text-accent mb-2">
+                <div className="font-[family-name:var(--font-serif)] text-[28px] font-light text-bronze mb-[8px]">
                   {cert.name}
                 </div>
-                <h4 className="font-semibold text-primary mb-2">
+                <h4 className="text-[13px] font-medium text-alabaster mb-[8px]">
                   {cert.title}
                 </h4>
-                <p className="text-sm text-gray-500">{cert.description}</p>
+                <p className="text-[13px] text-warm leading-relaxed">
+                  {cert.description}
+                </p>
               </div>
             ))}
           </div>
@@ -183,31 +193,62 @@ export default function QualityPage() {
       <CertificationBanner />
 
       {/* Testing Lab */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <section className="py-[144px] bg-surface">
+        <div className="max-w-[1200px] mx-auto px-[55px] max-lg:px-6">
+          <div className="grid lg:grid-cols-[61.8%_38.2%] gap-[89px] items-center">
             <div>
-              <p className="text-sm font-medium text-accent uppercase tracking-wider mb-4">
-                Testing Facility
-              </p>
-              <h2 className="text-3xl font-bold text-primary mb-6">
-                In-House Testing Laboratory
+              <div className="flex items-center gap-[13px] mb-[34px]">
+                <span className="w-[21px] h-px bg-muted opacity-40" />
+                <span className="text-[10px] tracking-[4px] uppercase text-muted font-medium">
+                  Testing facility
+                </span>
+              </div>
+              <h2 className="font-[family-name:var(--font-serif)] font-light text-[36px] leading-[1.15] text-alabaster mb-[34px]">
+                In-house laboratory<span className="text-red">.</span>
               </h2>
-              <div className="space-y-4 text-gray-500 leading-relaxed">
+              <div className="space-y-[21px] text-warm text-[15px] leading-[1.9]">
                 <p>
-                  [Placeholder: Describe the in-house testing lab — equipment,
-                  capabilities, what tests are performed (air, water, wind,
-                  structural, thermal, acoustic).]
+                  Our in-house testing laboratory provides comprehensive
+                  performance evaluation — air permeability, water tightness,
+                  wind resistance, structural, thermal, and acoustic testing.
                 </p>
                 <p>
-                  [Placeholder: Mention any third-party testing partnerships or
-                  accreditation of the lab facility.]
+                  Accredited testing partnerships ensure our results meet
+                  international standards and third-party verification
+                  requirements.
                 </p>
               </div>
             </div>
-            <div className="aspect-[4/3] bg-gray-100 rounded-lg flex items-center justify-center">
-              <span className="text-gray-400">[Testing Lab Image]</span>
+            <div className="aspect-[4/3] bg-obsidian border border-line rounded-[2px] flex items-center justify-center text-alabaster p-[34px]">
+              <LabRigIllustration size={240} />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Cross-link CTA */}
+      <section className="py-[89px] bg-obsidian">
+        <div className="max-w-[800px] mx-auto px-[55px] max-lg:px-6 text-center">
+          <h2 className="font-[family-name:var(--font-serif)] font-light text-[28px] leading-[1.15] text-alabaster mb-[21px]">
+            Quality you can specify<span className="text-red">.</span>
+          </h2>
+          <p className="text-warm text-[15px] leading-[1.9] mb-[34px]">
+            Request test certificates, technical data sheets, or a project-specific quote from our engineering team.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-[21px] justify-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-[10px] px-[34px] py-4 bg-red text-white text-[11px] font-medium tracking-[3px] uppercase rounded-[1px] hover:brightness-90 transition-all"
+            >
+              <span className="inline-block w-[5px] h-[5px] rounded-full bg-white" />
+              Get a quote
+            </Link>
+            <Link
+              href="/products"
+              className="inline-flex items-center gap-[8px] px-[34px] py-4 border border-line text-alabaster text-[11px] font-medium tracking-[3px] uppercase rounded-[1px] hover:border-warm transition-all"
+            >
+              Browse systems <ArrowRight size={12} />
+            </Link>
           </div>
         </div>
       </section>
