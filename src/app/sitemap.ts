@@ -5,22 +5,26 @@ import { posts } from "@/data/blog";
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://pinde-alu.com";
 
-  const localizedLandingPages: MetadataRoute.Sitemap = ["en", "ru"].map((locale) => ({
-    url: `${baseUrl}/${locale}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly" as const,
-    priority: 1,
-    alternates: {
-      languages: {
-        en: `${baseUrl}/en`,
-        ru: `${baseUrl}/ru`,
-        "x-default": `${baseUrl}/en`,
+  const localizedPages: MetadataRoute.Sitemap = [
+    { path: "", frequency: "weekly" as const, priority: 1 },
+    { path: "/about", frequency: "monthly" as const, priority: 0.8 },
+  ].flatMap((page) =>
+    ["en", "ru"].map((locale) => ({
+      url: `${baseUrl}/${locale}${page.path}`,
+      lastModified: new Date(),
+      changeFrequency: page.frequency,
+      priority: page.priority,
+      alternates: {
+        languages: {
+          en: `${baseUrl}/en${page.path}`,
+          ru: `${baseUrl}/ru${page.path}`,
+          "x-default": `${baseUrl}/en${page.path}`,
+        },
       },
-    },
-  }));
+    })),
+  );
 
   const staticPages = [
-    "/about",
     "/products",
     "/projects",
     "/technology",
@@ -48,5 +52,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...localizedLandingPages, ...staticPages, ...productPages, ...blogPages];
+  return [...localizedPages, ...staticPages, ...productPages, ...blogPages];
 }

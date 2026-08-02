@@ -14,12 +14,14 @@ export default function Footer() {
   const content = locale ? marketChrome[locale] : null;
 
   if (content && locale) {
+    const languageSuffix = pathname.replace(/^\/(?:en|ru)/, "");
     const systemsLinks = [
       { label: content.nav[0].label, href: `/${locale}#systems` },
       { label: content.nav[1].label, href: `/${locale}#formats` },
       { label: content.nav[3].label, href: `/${locale}#engineering` },
     ];
     const workingLinks = [
+      { label: content.nav[4].label, href: `/${locale}/about` },
       { label: content.nav[2].label, href: `/${locale}#process` },
       { label: content.rfqEyebrow, href: `/${locale}#rfq` },
       { label: locale === "ru" ? "Вопросы и ответы" : "Questions and answers", href: `/${locale}#faq` },
@@ -94,9 +96,9 @@ export default function Footer() {
           <div className="mt-12 flex flex-col gap-4 border-t border-white/15 pt-5 text-[10px] text-white/40 sm:flex-row sm:items-center sm:justify-between">
             <span>&copy; {new Date().getFullYear()} {content.footer.copyright}</span>
             <div className="flex items-center gap-3">
-              <Link href="/en" hrefLang="en" lang="en" className={locale === "en" ? "font-bold text-white" : "hover:text-white"}>English</Link>
+              <Link href={`/en${languageSuffix}`} hrefLang="en" lang="en" className={locale === "en" ? "font-bold text-white" : "hover:text-white"}>English</Link>
               <span>/</span>
-              <Link href="/ru" hrefLang="ru" lang="ru" className={locale === "ru" ? "font-bold text-white" : "hover:text-white"}>Русский</Link>
+              <Link href={`/ru${languageSuffix}`} hrefLang="ru" lang="ru" className={locale === "ru" ? "font-bold text-white" : "hover:text-white"}>Русский</Link>
               <span className="ml-2 hidden sm:inline">{content.footer.tagline}</span>
             </div>
           </div>
