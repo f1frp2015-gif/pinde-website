@@ -121,7 +121,7 @@ export async function POST(request: Request) {
       subject: `Technical RFQ — ${inquiry.company || inquiry.name} — ${inquiry.country}`,
       attachments,
       html: `
-        <h2>New technical RFQ from pinde-alu.com</h2>
+        <h2>New technical RFQ from pindesys.com</h2>
         <table style="border-collapse:collapse;width:100%;max-width:720px">
           ${tableRow("Name", inquiry.name)}
           ${tableRow("Email", inquiry.email)}

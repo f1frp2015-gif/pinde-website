@@ -3,7 +3,7 @@ import { products } from "@/data/products";
 import { posts } from "@/data/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://pinde-alu.com";
+  const baseUrl = "https://pindesys.com";
 
   const localizedPages: MetadataRoute.Sitemap = [
     { path: "", frequency: "weekly" as const, priority: 1 },

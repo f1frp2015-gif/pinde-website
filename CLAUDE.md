@@ -4,7 +4,7 @@
 
 ## Brand
 - **Brand Name**: PINDÉ (品德)
-- **Domain**: pinde-alu.com
+- **Domain**: pindesys.com
 - **Industry**: Premium Architectural Aluminium Systems
 - **Benchmarks**: Schuco (旭格), YKK
 - **Manufacturing Base**: Chongqing, China
@@ -93,4 +93,4 @@ npm run build  # Production build
 ## Deployment Status
 - GitHub repo: Not yet created (pending `gh auth login`)
 - Vercel: Not yet connected
-- Domain: pinde-alu.com (to be configured in Vercel)
+- Domain: pindesys.com (configured in Vercel)

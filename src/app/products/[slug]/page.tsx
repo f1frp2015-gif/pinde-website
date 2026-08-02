@@ -48,9 +48,9 @@ export default async function ProductDetailPage({ params }: Props) {
   }
 
   const crumbs = breadcrumbJsonLd([
-    { name: "Home", url: "https://pinde-alu.com" },
-    { name: "Systems", url: "https://pinde-alu.com/products" },
-    { name: product.name, url: `https://pinde-alu.com/products/${product.slug}` },
+    { name: "Home", url: "https://pindesys.com" },
+    { name: "Systems", url: "https://pindesys.com/products" },
+    { name: product.name, url: `https://pindesys.com/products/${product.slug}` },
   ]);
 
   return (
