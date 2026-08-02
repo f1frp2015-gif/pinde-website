@@ -1,46 +1,154 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
+export const runtime = "nodejs";
+
+const maxAttachmentSize = 8 * 1024 * 1024;
+const allowedExtensions = new Set(["pdf", "dwg", "dxf", "xls", "xlsx", "csv", "zip"]);
+
+type Inquiry = {
+  name: string;
+  email: string;
+  country: string;
+  product: string;
+  company: string;
+  role: string;
+  supplyFormat: string;
+  annualVolume: string;
+  targetStandard: string;
+  message: string;
+  locale: string;
+  website: string;
+};
+
+function cleanLine(value: unknown) {
+  return typeof value === "string" ? value.replace(/[\r\n]+/g, " ").trim() : "";
+}
+
+function escapeHtml(value: string) {
+  return value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+function fromRecord(record: Record<string, unknown>): Inquiry {
+  return {
+    name: cleanLine(record.name),
+    email: cleanLine(record.email),
+    country: cleanLine(record.country),
+    product: cleanLine(record.product),
+    company: cleanLine(record.company),
+    role: cleanLine(record.role),
+    supplyFormat: cleanLine(record.supplyFormat),
+    annualVolume: cleanLine(record.annualVolume),
+    targetStandard: cleanLine(record.targetStandard),
+    message: typeof record.message === "string" ? record.message.trim() : "",
+    locale: cleanLine(record.locale) || "en",
+    website: cleanLine(record.website),
+  };
+}
+
+function tableRow(label: string, value: string) {
+  if (!value) return "";
+  return `<tr><td style="padding:8px;border-bottom:1px solid #eee;font-weight:bold;vertical-align:top">${escapeHtml(
+    label
+  )}</td><td style="padding:8px;border-bottom:1px solid #eee">${escapeHtml(value)}</td></tr>`;
+}
+
 export async function POST(request: Request) {
   try {
-    const body = await request.json();
-    const { name, email, country, product, company, message } = body;
+    const contentType = request.headers.get("content-type") ?? "";
+    let inquiry: Inquiry;
+    let attachment: File | null = null;
 
-    if (!name || !email || !country || !message) {
-      return NextResponse.json(
-        { error: "Missing required fields" },
-        { status: 400 }
-      );
+    if (contentType.includes("multipart/form-data")) {
+      const formData = await request.formData();
+      const record: Record<string, unknown> = {};
+
+      for (const [key, value] of formData.entries()) {
+        if (typeof value === "string") record[key] = value;
+      }
+
+      inquiry = fromRecord(record);
+      const fileEntry = formData.get("attachment");
+      if (fileEntry && typeof fileEntry !== "string" && fileEntry.size > 0) {
+        attachment = fileEntry;
+      }
+    } else {
+      const body = (await request.json()) as Record<string, unknown>;
+      inquiry = fromRecord(body);
+    }
+
+    if (inquiry.website) {
+      return NextResponse.json({ success: true });
+    }
+
+    if (!inquiry.name || !inquiry.email || !inquiry.country || !inquiry.message) {
+      return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
+    }
+
+    if (!/^\S+@\S+\.\S+$/.test(inquiry.email)) {
+      return NextResponse.json({ error: "Invalid email" }, { status: 400 });
+    }
+
+    let attachments:
+      | Array<{ filename: string; content: Buffer; contentType?: string }>
+      | undefined;
+
+    if (attachment) {
+      const extension = attachment.name.split(".").pop()?.toLowerCase() ?? "";
+      if (attachment.size > maxAttachmentSize || !allowedExtensions.has(extension)) {
+        return NextResponse.json({ error: "Invalid attachment" }, { status: 400 });
+      }
+
+      attachments = [
+        {
+          filename: cleanLine(attachment.name),
+          content: Buffer.from(await attachment.arrayBuffer()),
+          contentType: attachment.type || undefined,
+        },
+      ];
     }
 
     const resend = new Resend(process.env.RESEND_API_KEY);
-    await resend.emails.send({
+    const { error } = await resend.emails.send({
       from: "PINDÉ Website <noreply@pinde-alu.com>",
       to: ["doris.li@pinde-alu.com"],
-      replyTo: email,
-      subject: `New Inquiry from ${name} — ${country}`,
+      replyTo: inquiry.email,
+      subject: `Technical RFQ — ${inquiry.company || inquiry.name} — ${inquiry.country}`,
+      attachments,
       html: `
-        <h2>New Inquiry from pinde-alu.com</h2>
-        <table style="border-collapse:collapse;width:100%;max-width:600px">
-          <tr><td style="padding:8px;border-bottom:1px solid #eee;font-weight:bold">Name</td><td style="padding:8px;border-bottom:1px solid #eee">${name}</td></tr>
-          <tr><td style="padding:8px;border-bottom:1px solid #eee;font-weight:bold">Email</td><td style="padding:8px;border-bottom:1px solid #eee"><a href="mailto:${email}">${email}</a></td></tr>
-          <tr><td style="padding:8px;border-bottom:1px solid #eee;font-weight:bold">Country</td><td style="padding:8px;border-bottom:1px solid #eee">${country}</td></tr>
-          ${product ? `<tr><td style="padding:8px;border-bottom:1px solid #eee;font-weight:bold">Product Interest</td><td style="padding:8px;border-bottom:1px solid #eee">${product}</td></tr>` : ""}
-          ${company ? `<tr><td style="padding:8px;border-bottom:1px solid #eee;font-weight:bold">Company</td><td style="padding:8px;border-bottom:1px solid #eee">${company}</td></tr>` : ""}
+        <h2>New technical RFQ from pinde-alu.com</h2>
+        <table style="border-collapse:collapse;width:100%;max-width:720px">
+          ${tableRow("Name", inquiry.name)}
+          ${tableRow("Email", inquiry.email)}
+          ${tableRow("Company", inquiry.company)}
+          ${tableRow("Country / market", inquiry.country)}
+          ${tableRow("Company role", inquiry.role)}
+          ${tableRow("System interest", inquiry.product)}
+          ${tableRow("Supply format", inquiry.supplyFormat)}
+          ${tableRow("Estimated annual volume", inquiry.annualVolume)}
+          ${tableRow("Target standard / tests", inquiry.targetStandard)}
+          ${tableRow("Page language", inquiry.locale)}
+          ${tableRow("Attachment", attachment?.name ?? "")}
         </table>
-        <h3 style="margin-top:24px">Message</h3>
-        <p style="white-space:pre-wrap;background:#f9f9f9;padding:16px;border-radius:4px">${message}</p>
+        <h3 style="margin-top:24px">Project and fabrication requirements</h3>
+        <p style="white-space:pre-wrap;background:#f9f9f9;padding:16px;border-radius:4px">${escapeHtml(
+          inquiry.message
+        )}</p>
         <hr style="margin-top:32px;border:none;border-top:1px solid #eee">
-        <p style="font-size:12px;color:#999">Sent from pinde-alu.com contact form</p>
+        <p style="font-size:12px;color:#999">Sent from the PINDÉ English/Russian fabricator landing page.</p>
       `,
     });
+
+    if (error) throw new Error("Email provider rejected the request");
 
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Contact form error:", error);
-    return NextResponse.json(
-      { error: "Failed to send email" },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: "Failed to send email" }, { status: 500 });
   }
 }

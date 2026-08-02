@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { products } from "@/data/products";
-import { ArrowLeft } from "lucide-react";
 import PindeMark from "@/components/PindeMark";
 import { productJsonLd, breadcrumbJsonLd } from "@/lib/jsonld";
 

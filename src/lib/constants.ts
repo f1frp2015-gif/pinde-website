@@ -3,10 +3,10 @@ export const BRAND = {
   fullName: "Pinde Doors and Windows (Chongqing) Co., LTD",
   chineseName: "品得门窗（重庆）有限公司",
   group: "PINDÉ Group",
-  tagline: "Architectural Aluminium Systems",
+  tagline: "Window System Materials & CKD",
   slogan: "Precision Defined",
   description:
-    "Architectural aluminium systems engineered with the precision of a red dot on the corner of a perfect square.",
+    "Aluminium and FRP window-system materials, machined components and glass-free CKD kits from Chongqing for local fabrication.",
   phone: "+86 138 8333 3993",
   email: "doris.li@pinde-alu.com",
   whatsapp: "+86 138 8333 3993",
@@ -69,7 +69,7 @@ export const CERTIFICATIONS = [
 export const STATS = {
   investment: "300M+ RMB",
   factoryArea: "100,000 m²",
-  annualCapacity: "1,800,000 m²",
+  annualCapacity: "1,000,000 m²",
   experience: "23+",
   patents: "60+",
   subsidiaries: 5,

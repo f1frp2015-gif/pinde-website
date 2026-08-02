@@ -6,14 +6,10 @@ export const organizationJsonLd = {
   name: "PINDÉ",
   legalName: "Pinde Doors and Windows (Chongqing) Co., LTD",
   url: siteUrl,
-  logo: `${siteUrl}/og-image.png`,
+  logo: `${siteUrl}/icon.svg`,
   description:
-    "Premium architectural aluminium windows and doors manufacturer. 23+ years of expertise, 100,000 m² smart factory, serving 30+ countries.",
+    "Aluminium and FRP window-system materials, machined components and glass-free CKD kits from Chongqing for local fabrication.",
   foundingDate: "2002",
-  numberOfEmployees: {
-    "@type": "QuantitativeValue",
-    minValue: 1800,
-  },
   address: {
     "@type": "PostalAddress",
     streetAddress: "No. 68 Chanye Avenue",
@@ -27,25 +23,17 @@ export const organizationJsonLd = {
       telephone: "+86-138-8333-3993",
       contactType: "sales",
       email: "doris.li@pinde-alu.com",
-      availableLanguage: ["English", "Chinese"],
+      availableLanguage: ["English", "Russian", "Chinese"],
     },
   ],
   sameAs: [],
   areaServed: [
-    "Australia",
-    "New Zealand",
-    "United States",
-    "Canada",
-    "United Kingdom",
-    "United Arab Emirates",
-    "Europe",
-  ],
-  hasCredential: [
-    { "@type": "EducationalOccupationalCredential", credentialCategory: "ISO 9001" },
-    { "@type": "EducationalOccupationalCredential", credentialCategory: "ISO 14001" },
-    { "@type": "EducationalOccupationalCredential", credentialCategory: "CE" },
-    { "@type": "EducationalOccupationalCredential", credentialCategory: "AS2047" },
-    { "@type": "EducationalOccupationalCredential", credentialCategory: "NFRC" },
+    "Russia",
+    "Kazakhstan",
+    "Belarus",
+    "Uzbekistan",
+    "Armenia",
+    "Kyrgyzstan",
   ],
 };
 
@@ -53,8 +41,8 @@ export const localBusinessJsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "@id": `${siteUrl}/#localbusiness`,
-  name: "PINDÉ Architectural Aluminium Systems",
-  image: `${siteUrl}/og-image.png`,
+  name: "PINDÉ Window System Supply",
+  image: `${siteUrl}/images/factory-aerial.jpg`,
   url: siteUrl,
   telephone: "+86-138-8333-3993",
   email: "doris.li@pinde-alu.com",
@@ -112,7 +100,7 @@ export function productJsonLd(product: {
     url: `${siteUrl}/products/${product.slug}`,
     image: product.images.length > 0
       ? `${siteUrl}${product.images[0]}`
-      : `${siteUrl}/og-image.png`,
+      : `${siteUrl}/og.png`,
     category: "Architectural Aluminium Systems",
     additionalProperty: product.specs.map((s) => ({
       "@type": "PropertyValue",

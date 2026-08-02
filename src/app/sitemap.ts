@@ -5,8 +5,21 @@ import { posts } from "@/data/blog";
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://pinde-alu.com";
 
+  const localizedLandingPages: MetadataRoute.Sitemap = ["en", "ru"].map((locale) => ({
+    url: `${baseUrl}/${locale}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 1,
+    alternates: {
+      languages: {
+        en: `${baseUrl}/en`,
+        ru: `${baseUrl}/ru`,
+        "x-default": `${baseUrl}/en`,
+      },
+    },
+  }));
+
   const staticPages = [
-    "",
     "/about",
     "/products",
     "/projects",
@@ -18,7 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}${path}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
-    priority: path === "" ? 1.0 : 0.8,
+    priority: 0.7,
   }));
 
   const productPages = products.map((product) => ({
@@ -35,5 +48,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...productPages, ...blogPages];
+  return [...localizedLandingPages, ...staticPages, ...productPages, ...blogPages];
 }
