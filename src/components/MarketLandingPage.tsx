@@ -133,7 +133,7 @@ function SectionHeading({
 
 export default function MarketLandingPage({ locale, content }: Props) {
   const ui = marketUi[locale];
-  const pageUrl = `https://pinde-alu.com/${locale}`;
+  const pageUrl = `https://pindesys.com/${locale}`;
   const serviceJsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -147,7 +147,7 @@ export default function MarketLandingPage({ locale, content }: Props) {
     provider: {
       "@type": "Organization",
       name: "PINDÉ",
-      url: "https://pinde-alu.com",
+      url: "https://pindesys.com",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Chongqing",

@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://pinde-alu.com/sitemap.xml",
+    sitemap: "https://pindesys.com/sitemap.xml",
   };
 }

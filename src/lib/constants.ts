@@ -11,7 +11,7 @@ export const BRAND = {
   email: "doris.li@pinde-alu.com",
   whatsapp: "+86 138 8333 3993",
   address: "No. 68 Chanye Avenue, Tongliang District, Chongqing, China",
-  website: "https://www.pinde-alu.com",
+  website: "https://pindesys.com",
   groupWebsite: "http://www.cq-md.com",
 };
 

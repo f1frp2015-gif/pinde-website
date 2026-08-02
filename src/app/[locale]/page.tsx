@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!isLandingLocale(locale)) notFound();
 
   const content = landingContent[locale];
-  const canonical = `https://pinde-alu.com/${locale}`;
+  const canonical = `https://pindesys.com/${locale}`;
 
   return {
     title: {
@@ -31,9 +31,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       canonical,
       languages: {
-        en: "https://pinde-alu.com/en",
-        ru: "https://pinde-alu.com/ru",
-        "x-default": "https://pinde-alu.com/en",
+        en: "https://pindesys.com/en",
+        ru: "https://pindesys.com/ru",
+        "x-default": "https://pindesys.com/en",
       },
     },
     openGraph: {

@@ -50,7 +50,7 @@ function SectionHeading({
 }
 
 export default function AboutPindePage({ locale, content }: Props) {
-  const pageUrl = `https://pinde-alu.com/${locale}/about`;
+  const pageUrl = `https://pindesys.com/${locale}/about`;
   const aboutJsonLd = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
@@ -62,7 +62,7 @@ export default function AboutPindePage({ locale, content }: Props) {
     mainEntity: {
       "@type": "Organization",
       name: "PINDÉ",
-      url: "https://pinde-alu.com",
+      url: "https://pindesys.com",
       location: {
         "@type": "Place",
         name: locale === "ru" ? "Чунцин, Китай" : "Chongqing, China",

@@ -40,9 +40,9 @@ export default async function BlogPostPage({ params }: Props) {
   }
 
   const crumbs = breadcrumbJsonLd([
-    { name: "Home", url: "https://pinde-alu.com" },
-    { name: "Blog", url: "https://pinde-alu.com/blog" },
-    { name: post.title, url: `https://pinde-alu.com/blog/${post.slug}` },
+    { name: "Home", url: "https://pindesys.com" },
+    { name: "Blog", url: "https://pindesys.com/blog" },
+    { name: post.title, url: `https://pindesys.com/blog/${post.slug}` },
   ]);
 
   // Simple markdown-like rendering: ## headers, **bold**, | tables
@@ -164,12 +164,12 @@ export default async function BlogPostPage({ params }: Props) {
             author: {
               "@type": "Organization",
               name: "PINDÉ",
-              url: "https://pinde-alu.com",
+              url: "https://pindesys.com",
             },
             publisher: {
               "@type": "Organization",
               name: "PINDÉ",
-              url: "https://pinde-alu.com",
+              url: "https://pindesys.com",
             },
           }),
         }}

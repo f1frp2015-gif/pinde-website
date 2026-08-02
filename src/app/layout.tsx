@@ -27,7 +27,7 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-mono",
 });
 
-const siteUrl = "https://pinde-alu.com";
+const siteUrl = "https://pindesys.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

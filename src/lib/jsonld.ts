@@ -1,4 +1,4 @@
-const siteUrl = "https://pinde-alu.com";
+const siteUrl = "https://pindesys.com";
 
 export const organizationJsonLd = {
   "@context": "https://schema.org",
