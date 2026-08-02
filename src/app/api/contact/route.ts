@@ -115,8 +115,8 @@ export async function POST(request: Request) {
 
     const resend = new Resend(process.env.RESEND_API_KEY);
     const { error } = await resend.emails.send({
-      from: "PINDÉ Website <noreply@pinde-alu.com>",
-      to: ["doris.li@pinde-alu.com"],
+      from: "PINDÉ Website <noreply@pindesys.com>",
+      to: ["doris.li@pindesys.com"],
       replyTo: inquiry.email,
       subject: `Technical RFQ — ${inquiry.company || inquiry.name} — ${inquiry.country}`,
       attachments,

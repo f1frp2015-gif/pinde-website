@@ -269,7 +269,7 @@ export const landingContent = {
       text:
         "Tell us what your factory can do and what must arrive from Chongqing. We will respond with the information gaps, recommended pilot level and the documents needed for a comparable quote.",
       response: "Technical review target: within 2 business days",
-      email: "doris.li@pinde-alu.com",
+      email: "doris.li@pindesys.com",
       fields: {
         name: "Contact name",
         namePlaceholder: "Your name",
@@ -333,7 +333,7 @@ export const landingContent = {
       successText:
         "Thank you. Our team will review the destination, system and attachments and respond by email.",
       error:
-        "The RFQ could not be sent. Please try again or email the files directly to doris.li@pinde-alu.com.",
+        "The RFQ could not be sent. Please try again or email the files directly to doris.li@pindesys.com.",
       fileError: "The attachment must be an allowed file type and no larger than 8 MB.",
     },
     footer: {
@@ -609,7 +609,7 @@ export const landingContent = {
       text:
         "Укажите, какие операции выполняет ваше производство и что должно прибыть из Чунцина. В ответ мы обозначим недостающие данные, рекомендуемый уровень опытной партии и документы для сопоставимого предложения.",
       response: "Целевой срок технического разбора — 2 рабочих дня",
-      email: "doris.li@pinde-alu.com",
+      email: "doris.li@pindesys.com",
       fields: {
         name: "Контактное лицо",
         namePlaceholder: "Имя и фамилия",
@@ -673,7 +673,7 @@ export const landingContent = {
       successText:
         "Спасибо. Мы проверим рынок назначения, систему и вложения и ответим по электронной почте.",
       error:
-        "Не удалось отправить запрос. Повторите попытку или отправьте файлы напрямую на doris.li@pinde-alu.com.",
+        "Не удалось отправить запрос. Повторите попытку или отправьте файлы напрямую на doris.li@pindesys.com.",
       fileError: "Допустимы только указанные форматы файлов размером не более 8 МБ.",
     },
     footer: {

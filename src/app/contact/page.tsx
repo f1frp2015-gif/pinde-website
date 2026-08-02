@@ -6,7 +6,7 @@ import { Mail, Phone, MapPin, Clock, MessageCircle } from "lucide-react";
 export const metadata: Metadata = {
   title: "Contact — Get a Quote for Aluminium Windows & Doors",
   description:
-    "Contact PINDÉ for quotes, specs, and OEM enquiries. WhatsApp: +86 138 8333 3993. Email: doris.li@pinde-alu.com. Response in 24h.",
+    "Contact PINDÉ for quotes, specs, and OEM enquiries. WhatsApp: +86 138 8333 3993. Email: doris.li@pindesys.com. Response in 24h.",
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "Contact PINDÉ — Free Quote & Technical Support",
