@@ -24,6 +24,7 @@ export default function Header() {
 
   if (content && locale) {
     const navLinks = content.nav.map((link) => ({ ...link, href: `/${locale}${link.href}` }));
+    const languageSuffix = pathname.replace(/^\/(?:en|ru)/, "");
     const utilityText =
       locale === "ru"
         ? "Системные материалы и полуфабрикаты из Чунцина"
@@ -40,11 +41,11 @@ export default function Header() {
                 {BRAND.email}
               </a>
               <div className="flex items-center gap-2 border-l border-white/20 pl-4 font-bold">
-                <Link href="/en" hrefLang="en" lang="en" className={locale === "en" ? "text-white" : "text-white/45 hover:text-white"} aria-current={locale === "en" ? "page" : undefined}>
+                <Link href={`/en${languageSuffix}`} hrefLang="en" lang="en" className={locale === "en" ? "text-white" : "text-white/45 hover:text-white"} aria-current={locale === "en" ? "page" : undefined}>
                   EN
                 </Link>
                 <span className="text-white/25">/</span>
-                <Link href="/ru" hrefLang="ru" lang="ru" className={locale === "ru" ? "text-white" : "text-white/45 hover:text-white"} aria-current={locale === "ru" ? "page" : undefined}>
+                <Link href={`/ru${languageSuffix}`} hrefLang="ru" lang="ru" className={locale === "ru" ? "text-white" : "text-white/45 hover:text-white"} aria-current={locale === "ru" ? "page" : undefined}>
                   RU
                 </Link>
               </div>
@@ -66,7 +67,7 @@ export default function Header() {
 
             <nav className="hidden items-center gap-7 lg:flex" aria-label={locale === "ru" ? "Основная навигация" : "Main navigation"}>
               {navLinks.map((link) => (
-                <Link key={link.href} href={link.href} className="border-b-2 border-transparent py-2 text-[12px] font-bold text-[#3F596A] transition-colors hover:border-[#D62832] hover:text-[#102F45]">
+                <Link key={link.href} href={link.href} aria-current={pathname === link.href ? "page" : undefined} className={`border-b-2 py-2 text-[12px] font-bold transition-colors ${pathname === link.href ? "border-[#D62832] text-[#102F45]" : "border-transparent text-[#3F596A] hover:border-[#D62832] hover:text-[#102F45]"}`}>
                   {link.label}
                 </Link>
               ))}
