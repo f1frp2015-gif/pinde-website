@@ -2,42 +2,40 @@ import type { MetadataRoute } from "next";
 import { products } from "@/data/products";
 import { posts } from "@/data/blog";
 
+const localizedRoutes = [
+  { path: "", frequency: "weekly" as const, priority: 1 },
+  { path: "/about", frequency: "monthly" as const, priority: 0.8 },
+  { path: "/systems", frequency: "weekly" as const, priority: 0.85 },
+  { path: "/systems/aluminium", frequency: "weekly" as const, priority: 0.85 },
+  { path: "/systems/frp", frequency: "weekly" as const, priority: 0.8 },
+  { path: "/supply", frequency: "weekly" as const, priority: 0.85 },
+  { path: "/engineering", frequency: "monthly" as const, priority: 0.8 },
+  { path: "/process", frequency: "monthly" as const, priority: 0.75 },
+  { path: "/certification", frequency: "monthly" as const, priority: 0.8 },
+  { path: "/cases", frequency: "monthly" as const, priority: 0.75 },
+  { path: "/contact", frequency: "monthly" as const, priority: 0.7 },
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://pindesys.com";
 
-  const localizedPages: MetadataRoute.Sitemap = [
-    { path: "", frequency: "weekly" as const, priority: 1 },
-    { path: "/about", frequency: "monthly" as const, priority: 0.8 },
-  ].flatMap((page) =>
+  const localizedPages: MetadataRoute.Sitemap = localizedRoutes.flatMap((route) =>
     ["en", "ru"].map((locale) => ({
-      url: `${baseUrl}/${locale}${page.path}`,
+      url: `${baseUrl}/${locale}${route.path}`,
       lastModified: new Date(),
-      changeFrequency: page.frequency,
-      priority: page.priority,
+      changeFrequency: route.frequency,
+      priority: route.priority,
       alternates: {
         languages: {
-          en: `${baseUrl}/en${page.path}`,
-          ru: `${baseUrl}/ru${page.path}`,
-          "x-default": `${baseUrl}/en${page.path}`,
+          en: `${baseUrl}/en${route.path}`,
+          ru: `${baseUrl}/ru${route.path}`,
+          "x-default": `${baseUrl}/en${route.path}`,
         },
       },
     })),
   );
 
-  const staticPages = [
-    "/products",
-    "/projects",
-    "/technology",
-    "/quality",
-    "/contact",
-    "/blog",
-  ].map((path) => ({
-    url: `${baseUrl}${path}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
-  }));
-
+  // Product catalog (non-localized)
   const productPages = products.map((product) => ({
     url: `${baseUrl}/products/${product.slug}`,
     lastModified: new Date(),
@@ -45,6 +43,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  // Products index
+  const staticPages = [
+    { url: `${baseUrl}/products`, frequency: "monthly" as const, priority: 0.7 },
+  ];
+
+  // Blog
   const blogPages = posts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
     lastModified: new Date(post.date),
@@ -52,5 +56,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...localizedPages, ...staticPages, ...productPages, ...blogPages];
+  const blogIndex = { url: `${baseUrl}/blog`, changeFrequency: "monthly" as const, priority: 0.65 };
+
+  return [
+    ...localizedPages,
+    ...staticPages,
+    ...productPages,
+    blogIndex,
+    ...blogPages,
+  ];
 }

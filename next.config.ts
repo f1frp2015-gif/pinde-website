@@ -33,6 +33,37 @@ const nextConfig: NextConfig = {
         destination: "/en",
         permanent: true,
       },
+      // Old projects page → cases
+      {
+        source: "/projects",
+        destination: "/en/cases",
+        permanent: true,
+      },
+      // Old technology page → engineering
+      {
+        source: "/technology",
+        destination: "/en/engineering",
+        permanent: true,
+      },
+      // Old quality page → certification
+      {
+        source: "/quality",
+        destination: "/en/certification",
+        permanent: true,
+      },
+      // Old about page → localized
+      {
+        source: "/about",
+        destination: "/en/about",
+        permanent: true,
+      },
+      // Products catalog (keep non-localized for now)
+      // Legacy contact → localized
+      {
+        source: "/contact",
+        destination: "/en/contact",
+        permanent: true,
+      },
     ];
   },
 };

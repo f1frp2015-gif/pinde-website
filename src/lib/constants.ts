@@ -8,7 +8,7 @@ export const BRAND = {
   description:
     "Aluminium and FRP window-system materials, machined components and glass-free CKD kits from Chongqing for local fabrication.",
   phone: "+86 138 8333 3993",
-  email: "inqury@pindesys.com",
+  email: "inquiry@pindesys.com",
   whatsapp: "+86 138 8333 3993",
   address: "No. 68 Chanye Avenue, Tongliang District, Chongqing, China",
   website: "https://pindesys.com",
@@ -16,13 +16,14 @@ export const BRAND = {
 };
 
 export const NAV_LINKS = [
-  { label: "Systems", href: "/products" },
-  { label: "Projects", href: "/projects" },
-  { label: "Atelier", href: "/about" },
-  { label: "Technology", href: "/technology" },
-  { label: "Quality", href: "/quality" },
+  { label: "Systems", href: "/en/systems" },
+  { label: "Supply", href: "/en/supply" },
+  { label: "Engineering", href: "/en/engineering" },
+  { label: "Process", href: "/en/process" },
+  { label: "Certification", href: "/en/certification" },
+  { label: "Cases", href: "/en/cases" },
   { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "/contact" },
+  { label: "Contact", href: "/en/contact" },
 ];
 
 /* φ-cascade: 8 colors only

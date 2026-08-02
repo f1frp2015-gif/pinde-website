@@ -1,10 +1,11 @@
 export const marketChrome = {
   en: {
     nav: [
-      { label: "Systems", href: "#systems" },
-      { label: "Supply formats", href: "#formats" },
-      { label: "How it works", href: "#process" },
-      { label: "Engineering", href: "#engineering" },
+      { label: "Systems", href: "/systems" },
+      { label: "Supply formats", href: "/supply" },
+      { label: "How it works", href: "/process" },
+      { label: "Engineering", href: "/engineering" },
+      { label: "Certification", href: "/certification" },
       { label: "About PINDÉ", href: "/about" },
     ],
     headerCta: "Send an RFQ",
@@ -21,10 +22,11 @@ export const marketChrome = {
   },
   ru: {
     nav: [
-      { label: "Системы", href: "#systems" },
-      { label: "Форматы поставки", href: "#formats" },
-      { label: "Порядок работы", href: "#process" },
-      { label: "Техподдержка", href: "#engineering" },
+      { label: "Системы", href: "/systems" },
+      { label: "Форматы поставки", href: "/supply" },
+      { label: "Порядок работы", href: "/process" },
+      { label: "Техподдержка", href: "/engineering" },
+      { label: "Сертификация", href: "/certification" },
       { label: "О компании", href: "/about" },
     ],
     headerCta: "Отправить запрос",

@@ -22,7 +22,7 @@ export const organizationJsonLd = {
       "@type": "ContactPoint",
       telephone: "+86-138-8333-3993",
       contactType: "sales",
-      email: "inqury@pindesys.com",
+      email: "inquiry@pindesys.com",
       availableLanguage: ["English", "Russian", "Chinese"],
     },
   ],
@@ -45,7 +45,7 @@ export const localBusinessJsonLd = {
   image: `${siteUrl}/images/factory-aerial.jpg`,
   url: siteUrl,
   telephone: "+86-138-8333-3993",
-  email: "inqury@pindesys.com",
+  email: "inquiry@pindesys.com",
   address: {
     "@type": "PostalAddress",
     streetAddress: "No. 68 Chanye Avenue",
