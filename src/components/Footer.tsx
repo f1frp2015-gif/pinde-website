@@ -2,40 +2,108 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 import { BRAND, CERTIFICATIONS } from "@/lib/constants";
-import { isLandingLocale, landingContent } from "@/content/landing";
+import { isMarketLocale, marketChrome } from "@/content/marketChrome";
 import PindeMark from "./PindeMark";
 
 export default function Footer() {
   const pathname = usePathname();
   const pathLocale = pathname.split("/")[1];
-  const locale = isLandingLocale(pathLocale) ? pathLocale : null;
-  const content = locale ? landingContent[locale] : null;
-  const systemsLinks = content
-    ? [
-        { label: content.nav[0].label, href: `/${locale}#systems` },
-        { label: content.nav[1].label, href: `/${locale}#formats` },
-        { label: content.nav[3].label, href: `/${locale}#engineering` },
-      ]
-    : ["Casement", "Sliding", "Push-out", "Folding", "Interior"].map((label) => ({
-        label,
-        href: "/products",
-      }));
-  const companyLinks = content
-    ? [
-        { label: content.nav[2].label, href: `/${locale}#process` },
-        { label: content.rfq.eyebrow, href: `/${locale}#rfq` },
-        { label: content.languageName, href: `/${locale}` },
-      ]
-    : [
-        { label: "About", href: "/about" },
-        { label: "Projects", href: "/projects" },
-        { label: "Technology", href: "/technology" },
-        { label: "Quality", href: "/quality" },
-        { label: "Contact", href: "/contact" },
-      ];
-  const tags = content ? ["ALUMINIUM", "FRP", "MACHINING", "CKD"] : CERTIFICATIONS;
+  const locale = isMarketLocale(pathLocale) ? pathLocale : null;
+  const content = locale ? marketChrome[locale] : null;
+
+  if (content && locale) {
+    const systemsLinks = [
+      { label: content.nav[0].label, href: `/${locale}#systems` },
+      { label: content.nav[1].label, href: `/${locale}#formats` },
+      { label: content.nav[3].label, href: `/${locale}#engineering` },
+    ];
+    const workingLinks = [
+      { label: content.nav[2].label, href: `/${locale}#process` },
+      { label: content.rfqEyebrow, href: `/${locale}#rfq` },
+      { label: locale === "ru" ? "Вопросы и ответы" : "Questions and answers", href: `/${locale}#faq` },
+    ];
+
+    return (
+      <footer className="border-t-4 border-[#D62832] bg-[#0B2639] text-white">
+        <div className="mx-auto max-w-[1280px] px-5 py-14 sm:px-8 lg:px-10 lg:py-16">
+          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.35fr_0.8fr_0.8fr_1.15fr]">
+            <div>
+              <div className="flex items-center gap-3">
+                <PindeMark size={24} frame="#FFFFFF" dot="#E63740" />
+                <span className="text-[19px] font-extrabold tracking-[0.22em]">PINDÉ</span>
+              </div>
+              <p className="mt-5 max-w-[330px] text-[13px] leading-[1.75] text-white/60">{content.footer.description}</p>
+              <div className="mt-6 flex flex-wrap gap-2">
+                {["ALUMINIUM", "FRP", "MACHINING", "CKD"].map((tag) => (
+                  <span key={tag} className="border border-white/15 px-3 py-2 text-[9px] font-bold tracking-[0.08em] text-white/50">{tag}</span>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h2 className="border-b border-white/15 pb-3 text-[10px] font-bold uppercase tracking-[0.08em] text-[#8CC2E2]">{content.footer.systems}</h2>
+              <ul className="mt-4 space-y-3">
+                {systemsLinks.map((item) => (
+                  <li key={item.label}>
+                    <Link href={item.href} className="text-[12px] font-semibold text-white/65 transition-colors hover:text-white">{item.label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h2 className="border-b border-white/15 pb-3 text-[10px] font-bold uppercase tracking-[0.08em] text-[#8CC2E2]">{content.footer.company}</h2>
+              <ul className="mt-4 space-y-3">
+                {workingLinks.map((item) => (
+                  <li key={item.label}>
+                    <Link href={item.href} className="text-[12px] font-semibold text-white/65 transition-colors hover:text-white">{item.label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h2 className="border-b border-white/15 pb-3 text-[10px] font-bold uppercase tracking-[0.08em] text-[#8CC2E2]">{content.footer.contact}</h2>
+              <ul className="mt-4 space-y-4 text-[12px] text-white/65">
+                <li className="flex items-start gap-3">
+                  <MapPin size={15} className="mt-0.5 shrink-0 text-[#E94A53]" />
+                  <span className="leading-[1.6]">{BRAND.address}</span>
+                </li>
+                <li>
+                  <a href={`tel:${BRAND.phone.replace(/\s/g, "")}`} className="flex items-center gap-3 transition-colors hover:text-white">
+                    <Phone size={15} className="shrink-0 text-[#E94A53]" />
+                    {BRAND.phone}
+                  </a>
+                </li>
+                <li>
+                  <a href={`mailto:${BRAND.email}`} className="flex items-center gap-3 break-all transition-colors hover:text-white">
+                    <Mail size={15} className="shrink-0 text-[#E94A53]" />
+                    {BRAND.email}
+                  </a>
+                </li>
+              </ul>
+              <Link href={`/${locale}#rfq`} className="mt-6 inline-flex items-center gap-2 border border-white/25 px-4 py-3 text-[11px] font-bold text-white transition-colors hover:bg-white hover:text-[#102F45]">
+                {content.headerCta}
+                <ArrowUpRight size={14} />
+              </Link>
+            </div>
+          </div>
+
+          <div className="mt-12 flex flex-col gap-4 border-t border-white/15 pt-5 text-[10px] text-white/40 sm:flex-row sm:items-center sm:justify-between">
+            <span>&copy; {new Date().getFullYear()} {content.footer.copyright}</span>
+            <div className="flex items-center gap-3">
+              <Link href="/en" hrefLang="en" lang="en" className={locale === "en" ? "font-bold text-white" : "hover:text-white"}>English</Link>
+              <span>/</span>
+              <Link href="/ru" hrefLang="ru" lang="ru" className={locale === "ru" ? "font-bold text-white" : "hover:text-white"}>Русский</Link>
+              <span className="ml-2 hidden sm:inline">{content.footer.tagline}</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    );
+  }
 
   return (
     <footer className="border-t border-line bg-obsidian">
@@ -44,94 +112,21 @@ export default function Footer() {
           <div>
             <div className="mb-[21px] flex items-center gap-[13px]">
               <PindeMark size={20} />
-              <span className="font-[family-name:var(--font-serif)] text-lg font-light tracking-[0.28em]">
-                {BRAND.name}
-              </span>
+              <span className="font-[family-name:var(--font-serif)] text-lg font-light tracking-[0.28em]">{BRAND.name}</span>
             </div>
-            <p className="max-w-[260px] text-[13px] leading-[1.8] text-warm">
-              {content?.footer.description ?? BRAND.description}
-            </p>
+            <p className="max-w-[260px] text-[13px] leading-[1.8] text-warm">{BRAND.description}</p>
           </div>
-
-          <div>
-            <h4 className="mb-[21px] text-[10px] font-medium uppercase tracking-[3px] text-muted">
-              {content?.footer.systems ?? "Systems"}
-            </h4>
-            <ul className="space-y-[13px]">
-              {systemsLinks.map((item) => (
-                <li key={item.label}>
-                  <Link
-                    href={item.href}
-                    className="text-[13px] text-warm transition-colors hover:text-alabaster"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
+          <div className="lg:col-span-2">
+            <h2 className="mb-[21px] text-[10px] font-medium uppercase tracking-[3px] text-muted">Systems</h2>
+            <div className="flex flex-wrap gap-2">
+              {CERTIFICATIONS.map((tag) => (
+                <span key={tag} className="border border-line px-3 py-1.5 text-[10px] font-medium tracking-[1px] text-muted">{tag}</span>
               ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="mb-[21px] text-[10px] font-medium uppercase tracking-[3px] text-muted">
-              {content?.footer.company ?? "Company"}
-            </h4>
-            <ul className="space-y-[13px]">
-              {companyLinks.map((item) => (
-                <li key={item.label}>
-                  <Link
-                    href={item.href}
-                    className="text-[13px] text-warm transition-colors hover:text-alabaster"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="mb-[21px] text-[10px] font-medium uppercase tracking-[3px] text-muted">
-              {content?.footer.contact ?? "Contact"}
-            </h4>
-            <ul className="space-y-[13px] text-[13px] text-warm">
-              <li className="flex items-start gap-3">
-                <MapPin size={14} className="mt-1 shrink-0 text-bronze" />
-                <span>{BRAND.address}</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Phone size={14} className="shrink-0 text-bronze" />
-                <span>{BRAND.phone}</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Mail size={14} className="shrink-0 text-bronze" />
-                <span>{BRAND.email}</span>
-              </li>
-            </ul>
-
-            <div className="mt-[21px]">
-              <div className="flex flex-wrap gap-2">
-                {tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="inline-block border border-line px-3 py-1.5 text-[10px] font-medium tracking-[1px] text-muted"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
             </div>
           </div>
-        </div>
-
-        <div className="mt-[55px] flex flex-col items-center justify-between gap-4 border-t border-line pt-[21px] sm:flex-row">
-          <span className="text-[11px] text-muted">
-            &copy; {new Date().getFullYear()} {content?.footer.copyright ?? `${BRAND.name} Architectural Systems`}
-          </span>
-          <div className="flex items-center gap-[8px]">
-            <span className="inline-block h-1 w-1 rounded-full bg-red" />
-            <span className="text-[9px] uppercase tracking-[3px] text-muted">
-              {content?.footer.tagline ?? "Precision defined"}
-            </span>
+          <div>
+            <h2 className="mb-[21px] text-[10px] font-medium uppercase tracking-[3px] text-muted">Contact</h2>
+            <a href={`mailto:${BRAND.email}`} className="text-[13px] text-warm hover:text-alabaster">{BRAND.email}</a>
           </div>
         </div>
       </div>

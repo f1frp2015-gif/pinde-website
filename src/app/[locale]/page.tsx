@@ -46,10 +46,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: content.seo.description,
       images: [
         {
-          url: "/og.png",
+          url: "/og-ru-market.png",
           width: 1200,
           height: 630,
-          alt: "PINDÉ — Aluminium and FRP Window System Supply",
+          alt:
+            locale === "ru"
+              ? "PINDÉ — Системы для оконного производства"
+              : "PINDÉ — Aluminium and FRP Window System Supply",
         },
       ],
     },
@@ -57,7 +60,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title: content.seo.title,
       description: content.seo.description,
-      images: ["/og.png"],
+      images: ["/og-ru-market.png"],
     },
   };
 }
