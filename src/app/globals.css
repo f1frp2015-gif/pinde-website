@@ -54,6 +54,30 @@ body {
   background-size: 21px 21px;
 }
 
+.market-shell {
+  font-family: "Manrope", "Arial", sans-serif;
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+.market-shell h1,
+.market-shell h2,
+.market-shell h3 {
+  text-wrap: balance;
+}
+
+.market-shell p,
+.market-shell li,
+.market-shell dd {
+  text-wrap: pretty;
+}
+
+.landing-blueprint-grid {
+  background-image:
+    linear-gradient(rgba(140, 194, 226, 0.065) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(140, 194, 226, 0.065) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
 details > summary::-webkit-details-marker {
   display: none;
 }

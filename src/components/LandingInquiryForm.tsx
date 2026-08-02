@@ -13,10 +13,10 @@ type Props = {
 };
 
 const fieldClass =
-  "w-full rounded-[2px] border border-line bg-obsidian px-[17px] py-[14px] text-[14px] text-alabaster outline-none transition-colors placeholder:text-muted focus:border-bronze focus:ring-1 focus:ring-bronze/20";
+  "w-full border border-[#BFCED7] bg-white px-4 py-3.5 text-[14px] text-[#142C3D] outline-none transition-colors placeholder:text-[#8596A1] focus:border-[#0E527D] focus:ring-2 focus:ring-[#0E527D]/10";
 
 const labelClass =
-  "mb-[8px] block text-[10px] font-semibold uppercase tracking-[0.16em] text-muted";
+  "mb-2 block text-[10px] font-bold uppercase tracking-[0.06em] text-[#526878]";
 
 export default function LandingInquiryForm({ locale, content }: Props) {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
@@ -82,14 +82,14 @@ export default function LandingInquiryForm({ locale, content }: Props) {
   if (status === "sent") {
     return (
       <div
-        className="flex min-h-[440px] flex-col items-center justify-center border border-line bg-obsidian p-[34px] text-center"
+        className="flex min-h-[440px] flex-col items-center justify-center border border-[#BFCED7] bg-[#F3F7F9] p-8 text-center"
         role="status"
       >
         <span className="mb-[21px] h-[8px] w-[8px] rounded-full bg-red" />
-        <h3 className="font-[family-name:var(--font-serif)] text-[32px] font-light text-alabaster">
+        <h3 className="text-[30px] font-extrabold text-[#102F45]">
           {content.successTitle}
         </h3>
-        <p className="mt-[13px] max-w-[440px] text-[14px] leading-[1.8] text-warm">
+        <p className="mt-3 max-w-[440px] text-[14px] leading-[1.8] text-[#526878]">
           {content.successText}
         </p>
       </div>
@@ -255,15 +255,15 @@ export default function LandingInquiryForm({ locale, content }: Props) {
         <span className={labelClass}>{content.fields.file}</span>
         <label
           htmlFor={`${locale}-attachment`}
-          className="flex min-h-[92px] cursor-pointer items-center justify-between gap-[21px] border border-dashed border-line bg-surface px-[21px] py-[17px] transition-colors hover:border-bronze"
+          className="flex min-h-[92px] cursor-pointer items-center justify-between gap-5 border border-dashed border-[#9FB4C1] bg-[#F3F7F9] px-5 py-4 transition-colors hover:border-[#0E527D]"
         >
           <span className="flex min-w-0 items-center gap-[13px]">
-            <FileUp size={20} className="shrink-0 text-bronze" />
+            <FileUp size={20} className="shrink-0 text-[#0E527D]" />
             <span className="min-w-0">
-              <span className="block truncate text-[13px] font-medium text-alabaster">
+              <span className="block truncate text-[13px] font-bold text-[#102F45]">
                 {selectedFile ? selectedFile.name : content.fields.file}
               </span>
-              <span className="mt-[3px] block text-[11px] text-muted">
+              <span className="mt-1 block text-[11px] text-[#607684]">
                 {content.fields.fileHelp}
               </span>
             </span>
@@ -277,7 +277,7 @@ export default function LandingInquiryForm({ locale, content }: Props) {
                 handleFile(null);
                 if (fileInputRef.current) fileInputRef.current.value = "";
               }}
-              className="shrink-0 p-[8px] text-muted hover:text-alabaster"
+              className="shrink-0 p-2 text-[#607684] hover:text-[#102F45]"
             >
               <X size={16} />
             </button>
@@ -299,7 +299,7 @@ export default function LandingInquiryForm({ locale, content }: Props) {
         )}
       </div>
 
-      <label className="flex items-start gap-[10px] text-[11px] leading-[1.6] text-muted">
+      <label className="flex items-start gap-2.5 text-[11px] leading-[1.6] text-[#607684]">
         <input
           name="consent"
           type="checkbox"
@@ -319,7 +319,7 @@ export default function LandingInquiryForm({ locale, content }: Props) {
       <button
         type="submit"
         disabled={status === "sending" || fileError}
-        className="inline-flex w-full items-center justify-center gap-[10px] rounded-[2px] bg-red px-[34px] py-[17px] text-[11px] font-semibold uppercase tracking-[0.18em] text-white transition-all hover:brightness-90 disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
+        className="inline-flex min-h-12 w-full items-center justify-center gap-2.5 bg-[#D62832] px-7 py-3.5 text-[12px] font-bold text-white transition-colors hover:bg-[#B91F28] disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
       >
         <Send size={15} />
         {status === "sending" ? content.sending : content.submit}

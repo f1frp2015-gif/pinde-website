@@ -2,10 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
+  Boxes,
   Check,
   ChevronRight,
+  CircleDot,
   Factory,
   FileCheck2,
+  Layers3,
   PackageCheck,
   Route,
   ShieldCheck,
@@ -19,44 +22,106 @@ type Props = {
   content: LandingContent;
 };
 
-const sectionPadding = "py-[89px] lg:py-[120px]";
-const container = "mx-auto max-w-[1240px] px-6 lg:px-[55px]";
+const sectionPadding = "py-16 lg:py-24";
+const container = "mx-auto max-w-[1280px] px-5 sm:px-8 lg:px-10";
+
+const marketUi = {
+  en: {
+    buyerLabel: "For manufacturers and project procurement",
+    panelEyebrow: "Direct system supply",
+    panelTitle: "Production-ready scope",
+    panelMeta: "Chongqing · China / Russian-speaking markets",
+    sourceLabel: "Manufacturing base",
+    facts: [
+      ["100,000 m²", "Integrated manufacturing base"],
+      ["P1—P3", "Three supply-readiness levels"],
+      ["2 days", "Technical RFQ review target"],
+      ["6 markets", "Russian-speaking market focus"],
+    ],
+    systemScope: "System scope",
+    supplyStatus: "Supply status",
+    packageLabel: "Included in the launch package",
+    formatMatrix: "Supply responsibility matrix",
+    tableScope: "Scope",
+    localBadge: "Local fabrication",
+    chinaBadge: "Prepared in Chongqing",
+    processMeta: "Qualification → pilot → repeat supply",
+    responsibility: "Responsibility split",
+    documentRegister: "Technical package",
+    complianceTag: "Important before import",
+    factoryFacts: [
+      ["100,000 m²", "integrated base"],
+      ["Chongqing", "production and dispatch"],
+      ["P1—P3", "supply configurations"],
+    ],
+    rfqKicker: "Engineering desk",
+  },
+  ru: {
+    buyerLabel: "Для производителей и проектного снабжения",
+    panelEyebrow: "Прямые системные поставки",
+    panelTitle: "Комплектация для производства",
+    panelMeta: "Чунцин · Китай / Русскоязычные рынки",
+    sourceLabel: "Производственная база",
+    facts: [
+      ["100 000 м²", "Интегрированная производственная база"],
+      ["P1—P3", "Три уровня готовности поставки"],
+      ["2 дня", "Целевой срок разбора запроса"],
+      ["6 рынков", "Фокус на русскоязычных странах"],
+    ],
+    systemScope: "Состав системы",
+    supplyStatus: "Статус поставки",
+    packageLabel: "Что входит в пакет запуска",
+    formatMatrix: "Матрица ответственности по поставке",
+    tableScope: "Зона работ",
+    localBadge: "Локальное производство",
+    chinaBadge: "Подготовка в Чунцине",
+    processMeta: "Квалификация → опытная партия → регулярные поставки",
+    responsibility: "Разделение ответственности",
+    documentRegister: "Технический пакет",
+    complianceTag: "Важно до начала импорта",
+    factoryFacts: [
+      ["100 000 м²", "интегрированная база"],
+      ["Чунцин", "производство и отгрузка"],
+      ["P1—P3", "варианты комплектации"],
+    ],
+    rfqKicker: "Инженерный отдел",
+  },
+} as const;
 
 function SectionHeading({
   eyebrow,
   title,
   intro,
-  dark = false,
+  inverted = false,
 }: {
   eyebrow: string;
   title: string;
   intro?: string;
-  dark?: boolean;
+  inverted?: boolean;
 }) {
   return (
-    <div className="max-w-[780px]">
-      <div className="mb-[21px] flex items-center gap-[13px]">
-        <span className={`h-px w-[34px] ${dark ? "bg-obsidian/35" : "bg-bronze"}`} />
+    <div className="max-w-[860px]">
+      <div className="mb-4 flex items-center gap-3">
+        <span className="h-5 w-1 bg-[#D62832]" />
         <span
-          className={`text-[10px] font-semibold uppercase tracking-[0.22em] ${
-            dark ? "text-obsidian/60" : "text-muted"
+          className={`text-[11px] font-bold uppercase tracking-[0.08em] ${
+            inverted ? "text-white/65" : "text-[#526878]"
           }`}
         >
           {eyebrow}
         </span>
       </div>
       <h2
-        className={`font-[family-name:var(--font-serif)] text-[clamp(34px,4.5vw,56px)] font-light leading-[1.02] ${
-          dark ? "text-obsidian" : "text-alabaster"
+        className={`max-w-[820px] text-[clamp(32px,4.2vw,54px)] font-extrabold leading-[1.06] tracking-[-0.035em] ${
+          inverted ? "text-white" : "text-[#102F45]"
         }`}
       >
         {title}
-        <span className="text-red">.</span>
       </h2>
       {intro && (
         <p
-          className={`mt-[21px] max-w-[680px] text-[15px] leading-[1.85] ${
-            dark ? "text-obsidian/70" : "text-warm"
+          className={`mt-5 max-w-[760px] text-[15px] leading-[1.75] ${
+            inverted ? "text-white/68" : "text-[#4E6473]"
           }`}
         >
           {intro}
@@ -67,6 +132,7 @@ function SectionHeading({
 }
 
 export default function MarketLandingPage({ locale, content }: Props) {
+  const ui = marketUi[locale];
   const pageUrl = `https://pinde-alu.com/${locale}`;
   const serviceJsonLd = {
     "@context": "https://schema.org",
@@ -117,7 +183,7 @@ export default function MarketLandingPage({ locale, content }: Props) {
   };
 
   return (
-    <article lang={content.lang} className="overflow-hidden">
+    <article lang={content.lang} className="market-shell overflow-hidden bg-white text-[#142C3D]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
@@ -127,101 +193,133 @@ export default function MarketLandingPage({ locale, content }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      <section className="relative border-b border-line bg-obsidian pt-20">
-        <div className={`${container} grid min-h-[760px] items-center gap-[55px] py-[72px] lg:grid-cols-[1.08fr_0.92fr] lg:py-[89px]`}>
-          <div className="relative z-10">
-            <div className="mb-[34px] flex items-center gap-[13px]">
-              <span className="h-px w-[34px] bg-bronze" />
-              <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-muted">
-                {content.hero.eyebrow}
-              </span>
+      <section className="border-b border-[#CDD9E0] bg-white pt-[96px] lg:pt-[104px]">
+        <div className={`${container} grid lg:grid-cols-[1.06fr_0.94fr]`}>
+          <div className="flex flex-col justify-center py-14 pr-0 lg:min-h-[680px] lg:py-20 lg:pr-16">
+            <div className="mb-5 flex flex-wrap items-center gap-3 text-[11px] font-bold uppercase tracking-[0.08em] text-[#4E6473]">
+              <span className="bg-[#E7EFF4] px-3 py-2 text-[#0E527D]">B2B</span>
+              <span>{ui.buyerLabel}</span>
             </div>
 
-            <h1 className="max-w-[760px] font-[family-name:var(--font-serif)] text-[clamp(44px,6.2vw,78px)] font-light leading-[0.98] tracking-[-0.02em] text-alabaster">
+            <p className="mb-5 flex items-center gap-2 text-[12px] font-semibold text-[#526878]">
+              <CircleDot size={14} className="text-[#D62832]" />
+              {content.hero.eyebrow}
+            </p>
+
+            <h1 className="max-w-[760px] text-[clamp(42px,5.5vw,70px)] font-extrabold leading-[1.01] tracking-[-0.045em] text-[#102F45]">
               {content.hero.title}
-              <span className="text-red">.</span>
             </h1>
 
-            <p className="mt-[34px] max-w-[650px] text-[16px] leading-[1.85] text-warm">
+            <p className="mt-6 max-w-[700px] text-[16px] leading-[1.75] text-[#4A6170]">
               {content.hero.description}
             </p>
 
-            <div className="mt-[34px] flex flex-col gap-[13px] sm:flex-row">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
                 href={`/${locale}#rfq`}
-                className="inline-flex items-center justify-center gap-[10px] rounded-[2px] bg-red px-[28px] py-[16px] text-[11px] font-semibold uppercase tracking-[0.16em] text-white transition-all hover:brightness-90"
+                className="inline-flex min-h-12 items-center justify-center gap-3 bg-[#D62832] px-6 py-3 text-[12px] font-bold text-white transition-colors hover:bg-[#B91F28]"
               >
                 {content.hero.primaryCta}
-                <ArrowRight size={14} />
+                <ArrowRight size={16} />
               </Link>
               <Link
                 href={`/${locale}#formats`}
-                className="inline-flex items-center justify-center gap-[10px] rounded-[2px] border border-line px-[28px] py-[16px] text-[11px] font-semibold uppercase tracking-[0.16em] text-alabaster transition-colors hover:border-bronze"
+                className="inline-flex min-h-12 items-center justify-center gap-3 border border-[#0E527D] px-6 py-3 text-[12px] font-bold text-[#0E527D] transition-colors hover:bg-[#E7EFF4]"
               >
                 {content.hero.secondaryCta}
+                <ChevronRight size={16} />
               </Link>
             </div>
 
-            <p className="mt-[21px] flex max-w-[620px] items-start gap-[10px] text-[12px] leading-[1.7] text-muted">
-              <ShieldCheck size={15} className="mt-[2px] shrink-0 text-bronze" />
+            <p className="mt-6 flex max-w-[650px] items-start gap-3 border-l-4 border-[#F0B429] bg-[#FFF8DF] px-4 py-3 text-[12px] leading-[1.65] text-[#536571]">
+              <ShieldCheck size={17} className="mt-0.5 shrink-0 text-[#A66B00]" />
               {content.hero.note}
             </p>
           </div>
 
-          <div className="relative border border-line bg-alabaster p-[13px] text-obsidian shadow-[0_34px_89px_rgba(10,10,12,0.14)] lg:ml-auto lg:w-full lg:max-w-[500px]">
-            <div className="landing-technical-grid relative overflow-hidden border border-obsidian/15 p-[21px] sm:p-[34px]">
-              <div className="mb-[55px] flex items-center justify-between border-b border-obsidian/15 pb-[13px]">
-                <span className="font-[family-name:var(--font-mono)] text-[10px] uppercase tracking-[0.18em] text-obsidian/55">
-                  PINDÉ / SYSTEM SUPPLY
+          <div className="relative -mx-5 bg-[#102F45] text-white sm:-mx-8 lg:mx-0 lg:min-h-[680px]">
+            <div className="relative h-[230px] overflow-hidden border-b border-white/15 lg:h-[285px]">
+              <Image
+                src="/images/factory-aerial.jpg"
+                alt={content.factory.imageAlt}
+                fill
+                priority
+                sizes="(min-width: 1024px) 47vw, 100vw"
+                className="object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#102F45]/90 via-[#102F45]/15 to-transparent" />
+              <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-4 lg:bottom-7 lg:left-7 lg:right-7">
+                <div>
+                  <span className="block text-[10px] font-bold uppercase tracking-[0.1em] text-white/65">
+                    {ui.sourceLabel}
+                  </span>
+                  <span className="mt-1 block text-[20px] font-extrabold">Chongqing · China</span>
+                </div>
+                <span className="bg-white px-3 py-2 text-[11px] font-extrabold text-[#102F45]">
+                  100,000 m²
                 </span>
-                <span className="h-[7px] w-[7px] rounded-full bg-red" />
+              </div>
+            </div>
+
+            <div className="landing-blueprint-grid p-5 sm:p-8 lg:p-9">
+              <div className="flex items-start justify-between gap-5 border-b border-white/15 pb-5">
+                <div>
+                  <span className="text-[10px] font-bold uppercase tracking-[0.1em] text-[#8CC2E2]">
+                    {ui.panelEyebrow}
+                  </span>
+                  <h2 className="mt-2 text-[26px] font-extrabold leading-tight">{ui.panelTitle}</h2>
+                </div>
+                <Boxes size={28} className="shrink-0 text-[#E94A53]" />
               </div>
 
-              <div className="space-y-[13px]">
+              <div className="mt-5 grid gap-3">
                 {content.hero.cards.map((card, index) => (
                   <div
                     key={card.code}
-                    className="group grid grid-cols-[72px_1fr] gap-[17px] border border-obsidian/15 bg-obsidian/5 p-[17px] transition-colors hover:bg-obsidian/10"
+                    className="grid grid-cols-[62px_1fr_auto] items-center gap-4 border border-white/15 bg-white/[0.045] p-4"
                   >
-                    <div className="flex aspect-square items-center justify-center border border-obsidian/25 font-[family-name:var(--font-mono)] text-[13px] font-medium tracking-[0.08em]">
+                    <span className="flex h-12 items-center justify-center border border-[#71A9CA] bg-[#0B466D] text-[12px] font-extrabold tracking-[0.04em]">
                       {card.code}
+                    </span>
+                    <div>
+                      <h3 className="text-[14px] font-bold">{card.name}</h3>
+                      <p className="mt-1 text-[11px] leading-[1.5] text-white/60">{card.detail}</p>
                     </div>
-                    <div className="self-center">
-                      <div className="mb-[5px] flex items-center gap-[8px]">
-                        <span className="font-[family-name:var(--font-mono)] text-[9px] text-obsidian/45">
-                          0{index + 1}
-                        </span>
-                        <h2 className="text-[14px] font-semibold text-obsidian">
-                          {card.name}
-                        </h2>
-                      </div>
-                      <p className="text-[11px] leading-[1.55] text-obsidian/60">
-                        {card.detail}
-                      </p>
-                    </div>
+                    <span className="text-[10px] font-semibold text-white/35">0{index + 1}</span>
                   </div>
                 ))}
               </div>
 
-              <div className="mt-[55px] grid grid-cols-3 gap-[8px] font-[family-name:var(--font-mono)] text-[8px] uppercase tracking-[0.12em] text-obsidian/45">
-                <span>CN · CKG</span>
-                <span className="text-center">SYSTEM → KIT</span>
-                <span className="text-right">LOCAL BUILD</span>
-              </div>
+              <p className="mt-5 text-[10px] font-semibold uppercase tracking-[0.08em] text-white/45">
+                {ui.panelMeta}
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="border-b border-line bg-surface py-[21px]">
-        <div className={`${container} flex flex-col gap-[17px] lg:flex-row lg:items-center`}>
-          <span className="shrink-0 text-[10px] font-semibold uppercase tracking-[0.2em] text-muted">
+      <section className="border-b border-[#CDD9E0] bg-[#F3F7F9]">
+        <div className={`${container} grid grid-cols-2 divide-x divide-y divide-[#CDD9E0] border-x border-[#CDD9E0] lg:grid-cols-4 lg:divide-y-0`}>
+          {ui.facts.map(([value, label]) => (
+            <div key={label} className="min-h-[112px] px-4 py-5 sm:px-6">
+              <strong className="block text-[22px] font-extrabold tracking-[-0.03em] text-[#0E527D]">
+                {value}
+              </strong>
+              <span className="mt-2 block text-[11px] leading-[1.5] text-[#5C7180]">{label}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="border-b border-[#C9D7E0] bg-[#E7EFF4] py-5">
+        <div className={`${container} flex flex-col gap-4 lg:flex-row lg:items-center`}>
+          <span className="shrink-0 bg-[#0E527D] px-3 py-2 text-[10px] font-bold uppercase tracking-[0.08em] text-white">
             {content.audience.label}
           </span>
-          <div className="flex flex-wrap gap-x-[28px] gap-y-[10px]">
+          <div className="flex flex-wrap gap-x-7 gap-y-3">
             {content.audience.items.map((item) => (
-              <span key={item} className="flex items-center gap-[8px] text-[12px] text-warm">
-                <span className="h-[4px] w-[4px] rounded-full bg-red" />
+              <span key={item} className="flex items-center gap-2 text-[12px] font-semibold text-[#29465A]">
+                <Check size={14} className="text-[#D62832]" />
                 {item}
               </span>
             ))}
@@ -229,7 +327,7 @@ export default function MarketLandingPage({ locale, content }: Props) {
         </div>
       </section>
 
-      <section id="systems" className={`${sectionPadding} scroll-mt-20 bg-obsidian`}>
+      <section id="systems" className={`${sectionPadding} scroll-mt-28 bg-[#F3F7F9]`}>
         <div className={container}>
           <SectionHeading
             eyebrow={content.systems.eyebrow}
@@ -237,150 +335,200 @@ export default function MarketLandingPage({ locale, content }: Props) {
             intro={content.systems.intro}
           />
 
-          <div className="mt-[55px] grid gap-[21px] lg:grid-cols-2">
+          <div className="mt-10 grid gap-6 lg:grid-cols-2">
             {content.systems.items.map((system, index) => (
-              <article
-                key={system.number}
-                className={`relative border border-line p-[28px] sm:p-[34px] ${
-                  index === 0 ? "bg-surface" : "bg-obsidian"
-                }`}
-              >
-                <div className="mb-[34px] flex items-center justify-between gap-[21px]">
-                  <span className="font-[family-name:var(--font-mono)] text-[12px] text-bronze">
+              <article key={system.number} className="flex h-full flex-col border border-[#C9D6DE] bg-white shadow-[0_10px_30px_rgba(16,47,69,0.06)]">
+                <div className={`flex min-h-[118px] items-start justify-between gap-5 p-6 ${index === 0 ? "bg-[#0E527D]" : "bg-[#102F45]"}`}>
+                  <div>
+                    <span className="text-[10px] font-bold uppercase tracking-[0.08em] text-white/60">
+                      {ui.supplyStatus}
+                    </span>
+                    <p className="mt-2 text-[13px] font-bold text-white">{system.label}</p>
+                  </div>
+                  <span className="border border-white/25 px-3 py-2 text-[20px] font-extrabold text-white">
                     {system.number}
                   </span>
-                  <span className="text-right text-[9px] font-semibold uppercase tracking-[0.18em] text-muted">
-                    {system.label}
-                  </span>
                 </div>
-                <h3 className="max-w-[520px] font-[family-name:var(--font-serif)] text-[32px] font-light leading-[1.08] text-alabaster">
-                  {system.title}
-                </h3>
-                <p className="mt-[17px] text-[14px] leading-[1.8] text-warm">
-                  {system.description}
-                </p>
-                <ul className="mt-[28px] space-y-[13px] border-t border-line pt-[21px]">
-                  {system.included.map((item) => (
-                    <li key={item} className="flex items-start gap-[10px] text-[12px] leading-[1.7] text-warm">
-                      <Check size={14} className="mt-[3px] shrink-0 text-red" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <p className="mt-[28px] border-l-2 border-bronze pl-[13px] text-[11px] leading-[1.7] text-muted">
-                  {system.keywords}
-                </p>
+
+                <div className="flex flex-1 flex-col p-6 sm:p-8">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.08em] text-[#5C7180]">
+                    {ui.systemScope}
+                  </p>
+                  <h3 className="mt-3 text-[26px] font-extrabold leading-[1.15] tracking-[-0.025em] text-[#102F45]">
+                    {system.title}
+                  </h3>
+                  <p className="mt-4 text-[14px] leading-[1.75] text-[#526878]">{system.description}</p>
+
+                  <div className="mt-6 border-t border-[#D5DFE5] pt-5">
+                    <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.08em] text-[#0E527D]">
+                      {ui.packageLabel}
+                    </p>
+                    <ul className="grid gap-3">
+                      {system.included.map((item) => (
+                        <li key={item} className="flex items-start gap-3 text-[12px] leading-[1.65] text-[#3F596A]">
+                          <Check size={15} className="mt-0.5 shrink-0 text-[#D62832]" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <p className="mt-6 border-l-4 border-[#0E527D] bg-[#EAF2F6] px-4 py-3 text-[11px] leading-[1.65] text-[#4D6574]">
+                    {system.keywords}
+                  </p>
+                </div>
               </article>
             ))}
           </div>
 
-          <div className="mt-[21px] flex items-start gap-[13px] border border-line bg-surface p-[21px] text-[12px] leading-[1.75] text-warm">
-            <FileCheck2 size={18} className="mt-[2px] shrink-0 text-bronze" />
+          <div className="mt-6 flex items-start gap-4 border border-[#E1C477] bg-[#FFF8DF] p-5 text-[12px] leading-[1.7] text-[#5C593E]">
+            <FileCheck2 size={20} className="mt-0.5 shrink-0 text-[#A66B00]" />
             {content.systems.evidence}
           </div>
         </div>
       </section>
 
-      <section id="formats" className={`${sectionPadding} scroll-mt-20 bg-surface`}>
+      <section id="formats" className={`${sectionPadding} scroll-mt-28 border-y border-[#CDD9E0] bg-white`}>
         <div className={container}>
-          <SectionHeading
-            eyebrow={content.formats.eyebrow}
-            title={content.formats.title}
-            intro={content.formats.intro}
-          />
+          <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+            <SectionHeading
+              eyebrow={content.formats.eyebrow}
+              title={content.formats.title}
+              intro={content.formats.intro}
+            />
+            <span className="shrink-0 border border-[#C9D6DE] bg-[#F3F7F9] px-4 py-3 text-[10px] font-bold uppercase tracking-[0.08em] text-[#526878]">
+              {ui.formatMatrix}
+            </span>
+          </div>
 
-          <div className="mt-[55px] grid gap-[13px] lg:grid-cols-3">
+          <div className="mt-10 grid gap-4 lg:hidden">
             {content.formats.items.map((format) => (
-              <article key={format.level} className="flex h-full flex-col border border-line bg-obsidian p-[28px]">
-                <div className="mb-[34px] flex items-center justify-between">
-                  <span className="font-[family-name:var(--font-mono)] text-[20px] font-light text-alabaster">
-                    {format.level}
-                  </span>
-                  <span className="border border-line px-[10px] py-[5px] text-[9px] font-semibold uppercase tracking-[0.14em] text-muted">
+              <article key={format.level} className="border border-[#C9D6DE] bg-white">
+                <div className="flex items-center justify-between bg-[#102F45] px-5 py-4 text-white">
+                  <span className="text-[22px] font-extrabold">{format.level}</span>
+                  <span className="border border-white/25 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.06em]">
                     {format.tag}
                   </span>
                 </div>
-                <h3 className="min-h-[58px] font-[family-name:var(--font-serif)] text-[27px] font-light leading-[1.08] text-alabaster">
-                  {format.title}
-                </h3>
-                <dl className="mt-[28px] space-y-[21px] border-t border-line pt-[21px]">
-                  <div>
-                    <dt className="mb-[6px] text-[9px] font-semibold uppercase tracking-[0.16em] text-bronze">
-                      {content.formats.labels.chongqing}
-                    </dt>
-                    <dd className="text-[12px] leading-[1.7] text-warm">{format.from}</dd>
-                  </div>
-                  <div>
-                    <dt className="mb-[6px] text-[9px] font-semibold uppercase tracking-[0.16em] text-bronze">
-                      {content.formats.labels.local}
-                    </dt>
-                    <dd className="text-[12px] leading-[1.7] text-warm">{format.local}</dd>
-                  </div>
-                  <div>
-                    <dt className="mb-[6px] text-[9px] font-semibold uppercase tracking-[0.16em] text-bronze">
-                      {content.formats.labels.fit}
-                    </dt>
-                    <dd className="text-[12px] leading-[1.7] text-warm">{format.fit}</dd>
-                  </div>
-                </dl>
+                <div className="p-5">
+                  <h3 className="text-[21px] font-extrabold leading-tight text-[#102F45]">{format.title}</h3>
+                  <dl className="mt-5 grid gap-5">
+                    {[
+                      [content.formats.labels.chongqing, format.from],
+                      [content.formats.labels.local, format.local],
+                      [content.formats.labels.fit, format.fit],
+                    ].map(([label, value]) => (
+                      <div key={label}>
+                        <dt className="text-[10px] font-bold uppercase tracking-[0.07em] text-[#0E527D]">{label}</dt>
+                        <dd className="mt-2 text-[12px] leading-[1.65] text-[#526878]">{value}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                </div>
               </article>
             ))}
+          </div>
+
+          <div className="mt-10 hidden overflow-hidden border border-[#C9D6DE] lg:block">
+            <div className="grid grid-cols-[180px_repeat(3,minmax(0,1fr))]">
+              <div className="flex items-end bg-[#E7EFF4] p-5 text-[10px] font-bold uppercase tracking-[0.08em] text-[#526878]">
+                {ui.tableScope}
+              </div>
+              {content.formats.items.map((format) => (
+                <div key={format.level} className="border-l border-white/15 bg-[#102F45] p-5 text-white">
+                  <div className="flex items-start justify-between gap-4">
+                    <span className="text-[25px] font-extrabold">{format.level}</span>
+                    <span className="border border-white/25 px-2 py-1 text-[9px] font-bold uppercase tracking-[0.05em]">
+                      {format.tag}
+                    </span>
+                  </div>
+                  <h3 className="mt-5 min-h-[54px] text-[18px] font-extrabold leading-[1.2]">{format.title}</h3>
+                </div>
+              ))}
+
+              {[
+                [content.formats.labels.chongqing, "from"],
+                [content.formats.labels.local, "local"],
+                [content.formats.labels.fit, "fit"],
+              ].map(([label, key], rowIndex) => (
+                <div key={key} className="contents">
+                  <div className={`border-t border-[#C9D6DE] p-5 text-[11px] font-bold text-[#0E527D] ${rowIndex % 2 ? "bg-white" : "bg-[#F3F7F9]"}`}>
+                    {label}
+                  </div>
+                  {content.formats.items.map((format) => (
+                    <div key={`${format.level}-${key}`} className={`border-l border-t border-[#C9D6DE] p-5 text-[12px] leading-[1.65] text-[#526878] ${rowIndex % 2 ? "bg-white" : "bg-[#F3F7F9]"}`}>
+                      {format[key as "from" | "local" | "fit"]}
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="process" className={`${sectionPadding} scroll-mt-20 bg-alabaster text-obsidian`}>
+      <section id="process" className={`${sectionPadding} scroll-mt-28 bg-[#102F45]`}>
         <div className={container}>
-          <SectionHeading eyebrow={content.process.eyebrow} title={content.process.title} dark />
-          <div className="mt-[55px] grid gap-px bg-obsidian/15 md:grid-cols-2 lg:grid-cols-4">
-            {content.process.items.map((step) => (
-              <article key={step.number} className="min-h-[280px] bg-alabaster p-[28px]">
-                <span className="font-[family-name:var(--font-mono)] text-[12px] text-red">
+          <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+            <SectionHeading eyebrow={content.process.eyebrow} title={content.process.title} inverted />
+            <p className="max-w-[360px] text-[11px] font-bold uppercase tracking-[0.08em] text-[#8BBBD6]">
+              {ui.processMeta}
+            </p>
+          </div>
+
+          <div className="relative mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4 lg:gap-0">
+            <div className="absolute left-[12.5%] right-[12.5%] top-8 hidden h-px bg-white/20 lg:block" />
+            {content.process.items.map((step, index) => (
+              <article key={step.number} className="relative border border-white/15 bg-white/[0.045] p-6 lg:border-r-0 lg:last:border-r">
+                <span className="relative z-10 flex h-16 w-16 items-center justify-center border-4 border-[#102F45] bg-[#D62832] text-[14px] font-extrabold text-white">
                   {step.number}
                 </span>
-                <h3 className="mt-[55px] text-[16px] font-semibold text-obsidian">{step.title}</h3>
-                <p className="mt-[13px] text-[13px] leading-[1.75] text-obsidian/65">{step.text}</p>
+                <span className="absolute right-5 top-5 text-[10px] font-bold text-white/30">0{index + 1}/04</span>
+                <h3 className="mt-7 text-[17px] font-extrabold text-white">{step.title}</h3>
+                <p className="mt-3 text-[12px] leading-[1.7] text-white/62">{step.text}</p>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className={`${sectionPadding} bg-obsidian`}>
+      <section className={`${sectionPadding} bg-[#F3F7F9]`}>
         <div className={container}>
-          <SectionHeading eyebrow={content.split.eyebrow} title={content.split.title} />
+          <SectionHeading eyebrow={ui.responsibility} title={content.split.title} />
 
-          <div className="mt-[55px] grid items-stretch gap-[13px] lg:grid-cols-[1fr_80px_1fr]">
-            <div className="border border-line bg-surface p-[28px] sm:p-[34px]">
-              <div className="mb-[28px] flex items-center gap-[13px]">
-                <Factory size={20} className="text-bronze" />
-                <h3 className="text-[16px] font-semibold text-alabaster">{content.split.chongqing.title}</h3>
+          <div className="mt-10 grid items-stretch gap-4 lg:grid-cols-[1fr_72px_1fr]">
+            <div className="border border-[#C9D6DE] bg-white">
+              <div className="flex items-center gap-3 border-b border-[#C9D6DE] bg-[#0E527D] p-5 text-white">
+                <Factory size={21} />
+                <h3 className="text-[15px] font-extrabold">{content.split.chongqing.title}</h3>
+                <span className="ml-auto text-[9px] font-bold uppercase tracking-[0.06em] text-white/60">{ui.chinaBadge}</span>
               </div>
-              <ul className="space-y-[13px]">
+              <ul className="grid gap-0">
                 {content.split.chongqing.items.map((item) => (
-                  <li key={item} className="flex items-start gap-[10px] text-[13px] leading-[1.7] text-warm">
-                    <ChevronRight size={14} className="mt-[4px] shrink-0 text-red" />
+                  <li key={item} className="flex items-start gap-3 border-b border-[#E1E8EC] px-5 py-4 text-[12px] leading-[1.65] text-[#405A6A] last:border-b-0">
+                    <Check size={15} className="mt-0.5 shrink-0 text-[#D62832]" />
                     {item}
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="flex items-center justify-center py-[13px]">
-              <div className="flex h-[56px] w-[56px] rotate-90 items-center justify-center rounded-full border border-line bg-surface text-bronze lg:rotate-0">
+            <div className="flex items-center justify-center py-2">
+              <div className="flex h-12 w-12 rotate-90 items-center justify-center bg-[#D62832] text-white lg:rotate-0">
                 <ArrowRight size={20} />
               </div>
             </div>
 
-            <div className="border border-line bg-surface p-[28px] sm:p-[34px]">
-              <div className="mb-[28px] flex items-center gap-[13px]">
-                <Wrench size={20} className="text-bronze" />
-                <h3 className="text-[16px] font-semibold text-alabaster">{content.split.destination.title}</h3>
+            <div className="border border-[#C9D6DE] bg-white">
+              <div className="flex items-center gap-3 border-b border-[#C9D6DE] bg-[#102F45] p-5 text-white">
+                <Wrench size={21} />
+                <h3 className="text-[15px] font-extrabold">{content.split.destination.title}</h3>
+                <span className="ml-auto text-[9px] font-bold uppercase tracking-[0.06em] text-white/60">{ui.localBadge}</span>
               </div>
-              <ul className="space-y-[13px]">
+              <ul className="grid gap-0">
                 {content.split.destination.items.map((item) => (
-                  <li key={item} className="flex items-start gap-[10px] text-[13px] leading-[1.7] text-warm">
-                    <ChevronRight size={14} className="mt-[4px] shrink-0 text-red" />
+                  <li key={item} className="flex items-start gap-3 border-b border-[#E1E8EC] px-5 py-4 text-[12px] leading-[1.65] text-[#405A6A] last:border-b-0">
+                    <Check size={15} className="mt-0.5 shrink-0 text-[#D62832]" />
                     {item}
                   </li>
                 ))}
@@ -388,120 +536,139 @@ export default function MarketLandingPage({ locale, content }: Props) {
             </div>
           </div>
 
-          <p className="mt-[13px] flex items-start gap-[13px] border border-line p-[21px] text-[12px] leading-[1.75] text-muted">
-            <Route size={18} className="mt-[2px] shrink-0 text-bronze" />
+          <p className="mt-4 flex items-start gap-3 border border-[#C9D6DE] bg-white p-5 text-[12px] leading-[1.7] text-[#526878]">
+            <Route size={19} className="mt-0.5 shrink-0 text-[#0E527D]" />
             {content.split.route}
           </p>
         </div>
       </section>
 
-      <section id="engineering" className={`${sectionPadding} scroll-mt-20 bg-surface`}>
+      <section id="engineering" className={`${sectionPadding} scroll-mt-28 border-y border-[#CDD9E0] bg-white`}>
         <div className={container}>
-          <SectionHeading eyebrow={content.engineering.eyebrow} title={content.engineering.title} />
-          <div className="mt-[55px] grid gap-[13px] sm:grid-cols-2">
-            {content.engineering.items.map((item, index) => (
-              <article key={item.title} className="border border-line bg-obsidian p-[28px] sm:p-[34px]">
-                <div className="mb-[34px] flex items-center justify-between">
-                  {index === 0 && <PackageCheck size={20} className="text-bronze" />}
-                  {index === 1 && <Wrench size={20} className="text-bronze" />}
-                  {index === 2 && <FileCheck2 size={20} className="text-bronze" />}
-                  {index === 3 && <ShieldCheck size={20} className="text-bronze" />}
-                  <span className="font-[family-name:var(--font-mono)] text-[10px] text-muted">
-                    0{index + 1}
-                  </span>
-                </div>
-                <h3 className="text-[16px] font-semibold text-alabaster">{item.title}</h3>
-                <p className="mt-[10px] text-[13px] leading-[1.75] text-warm">{item.text}</p>
-              </article>
-            ))}
+          <div className="grid gap-10 lg:grid-cols-[0.68fr_1.32fr]">
+            <div>
+              <SectionHeading eyebrow={content.engineering.eyebrow} title={content.engineering.title} />
+              <div className="mt-7 flex items-center gap-3 border-l-4 border-[#0E527D] bg-[#EAF2F6] px-4 py-4 text-[11px] font-bold uppercase tracking-[0.06em] text-[#0E527D]">
+                <Layers3 size={19} />
+                {ui.documentRegister}
+              </div>
+            </div>
+
+            <div className="border border-[#C9D6DE]">
+              {content.engineering.items.map((item, index) => {
+                const icons = [PackageCheck, Wrench, FileCheck2, ShieldCheck];
+                const Icon = icons[index];
+                return (
+                  <article key={item.title} className="grid gap-4 border-b border-[#C9D6DE] p-5 last:border-b-0 sm:grid-cols-[54px_180px_1fr] sm:items-center sm:p-6">
+                    <span className="flex h-12 w-12 items-center justify-center bg-[#E7EFF4] text-[#0E527D]">
+                      <Icon size={22} />
+                    </span>
+                    <h3 className="text-[14px] font-extrabold text-[#102F45]">{item.title}</h3>
+                    <p className="text-[12px] leading-[1.65] text-[#526878]">{item.text}</p>
+                  </article>
+                );
+              })}
+            </div>
           </div>
-          <p className="mt-[21px] border-l-2 border-red pl-[17px] text-[12px] leading-[1.75] text-muted">
+          <p className="mt-6 border-l-4 border-[#D62832] bg-[#F3F7F9] px-5 py-4 text-[12px] leading-[1.7] text-[#526878]">
             {content.engineering.note}
           </p>
         </div>
       </section>
 
-      <section className="bg-red py-[55px] text-white">
-        <div className={`${container} grid gap-[21px] lg:grid-cols-[0.42fr_1fr] lg:items-start`}>
+      <section className="border-b border-[#E2CC8B] bg-[#FFF8DF] py-10">
+        <div className={`${container} grid gap-5 lg:grid-cols-[0.4fr_1fr] lg:items-start`}>
           <div>
-            <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white/70">
-              {content.compliance.label}
+            <span className="inline-flex items-center gap-2 bg-[#F0B429] px-3 py-2 text-[10px] font-extrabold uppercase tracking-[0.07em] text-[#3D340F]">
+              <ShieldCheck size={15} />
+              {ui.complianceTag}
             </span>
-            <h2 className="mt-[13px] font-[family-name:var(--font-serif)] text-[32px] font-light leading-[1.08]">
-              {content.compliance.title}
-            </h2>
+            <p className="mt-4 text-[11px] font-bold uppercase tracking-[0.07em] text-[#7A6727]">
+              {content.compliance.label}
+            </p>
+            <h2 className="mt-2 text-[26px] font-extrabold leading-[1.15] text-[#493F1F]">{content.compliance.title}</h2>
           </div>
-          <p className="text-[14px] leading-[1.85] text-white/85">{content.compliance.text}</p>
+          <p className="text-[14px] leading-[1.8] text-[#5F573D]">{content.compliance.text}</p>
         </div>
       </section>
 
-      <section className="relative min-h-[540px] overflow-hidden bg-alabaster text-obsidian">
+      <section className="relative min-h-[560px] overflow-hidden bg-[#102F45] text-white">
         <Image
           src="/images/factory-aerial.jpg"
           alt={content.factory.imageAlt}
           fill
           sizes="100vw"
-          className="object-cover object-center opacity-75"
+          className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-alabaster via-alabaster/85 to-alabaster/20" />
-        <div className={`${container} relative z-10 flex min-h-[540px] items-center py-[72px]`}>
-          <div className="max-w-[620px] border border-obsidian/15 bg-alabaster/90 p-[28px] backdrop-blur-sm sm:p-[42px]">
-            <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-obsidian/55">
+        <div className="absolute inset-0 bg-gradient-to-r from-[#102F45] via-[#102F45]/90 to-[#102F45]/35" />
+        <div className={`${container} relative z-10 grid min-h-[560px] items-center gap-10 py-16 lg:grid-cols-[0.72fr_1.28fr]`}>
+          <div className="max-w-[570px] border border-white/20 bg-[#102F45]/90 p-6 backdrop-blur-sm sm:p-9">
+            <span className="text-[10px] font-bold uppercase tracking-[0.08em] text-[#8CC2E2]">
               {content.factory.eyebrow}
             </span>
-            <h2 className="mt-[17px] font-[family-name:var(--font-serif)] text-[clamp(34px,4.5vw,50px)] font-light leading-[1.02]">
+            <h2 className="mt-4 text-[clamp(32px,4vw,50px)] font-extrabold leading-[1.06] tracking-[-0.035em]">
               {content.factory.title}
-              <span className="text-red">.</span>
             </h2>
-            <p className="mt-[21px] text-[13px] leading-[1.8] text-obsidian/65">{content.factory.text}</p>
+            <p className="mt-5 text-[13px] leading-[1.75] text-white/68">{content.factory.text}</p>
+          </div>
+
+          <div className="grid self-end border border-white/20 bg-[#102F45]/90 sm:grid-cols-3 lg:self-center">
+            {ui.factoryFacts.map(([value, label]) => (
+              <div key={label} className="border-b border-white/15 p-5 last:border-b-0 sm:border-b-0 sm:border-r sm:last:border-r-0">
+                <strong className="block text-[24px] font-extrabold">{value}</strong>
+                <span className="mt-2 block text-[10px] font-semibold uppercase tracking-[0.06em] text-white/55">{label}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className={`${sectionPadding} bg-obsidian`}>
+      <section id="faq" className={`${sectionPadding} scroll-mt-28 bg-white`}>
         <div className={container}>
           <SectionHeading eyebrow={content.faq.eyebrow} title={content.faq.title} />
-          <div className="mt-[55px] grid gap-x-[55px] lg:grid-cols-2">
+          <div className="mt-10 grid gap-x-10 lg:grid-cols-2">
             {content.faq.items.map((item, index) => (
-              <details key={item.q} className="group border-t border-line py-[21px] last:border-b">
-                <summary className="flex cursor-pointer list-none items-start justify-between gap-[21px] text-[14px] font-semibold leading-[1.5] text-alabaster marker:hidden">
-                  <span className="flex gap-[13px]">
-                    <span className="font-[family-name:var(--font-mono)] text-[10px] font-normal text-bronze">
-                      0{index + 1}
-                    </span>
+              <details key={item.q} className="group border-t border-[#C9D6DE] py-5 last:border-b">
+                <summary className="flex cursor-pointer list-none items-start justify-between gap-5 text-[14px] font-extrabold leading-[1.5] text-[#102F45] marker:hidden">
+                  <span className="flex gap-3">
+                    <span className="text-[10px] font-bold text-[#0E527D]">0{index + 1}</span>
                     {item.q}
                   </span>
-                  <span className="mt-[2px] text-[18px] font-light text-red transition-transform group-open:rotate-45">
+                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center bg-[#E7EFF4] text-[18px] font-normal text-[#D62832] transition-transform group-open:rotate-45">
                     +
                   </span>
                 </summary>
-                <p className="mt-[13px] pl-[35px] text-[12px] leading-[1.8] text-warm">{item.a}</p>
+                <p className="mt-4 pl-7 text-[12px] leading-[1.75] text-[#526878]">{item.a}</p>
               </details>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="rfq" className={`${sectionPadding} scroll-mt-20 bg-surface`}>
-        <div className={`${container} grid gap-[55px] lg:grid-cols-[0.72fr_1.28fr]`}>
-          <div>
-            <SectionHeading eyebrow={content.rfq.eyebrow} title={content.rfq.title} />
-            <p className="mt-[21px] text-[14px] leading-[1.85] text-warm">{content.rfq.text}</p>
-            <div className="mt-[34px] space-y-[13px] border-t border-line pt-[21px]">
-              <p className="flex items-start gap-[10px] text-[12px] leading-[1.6] text-warm">
-                <Check size={14} className="mt-[2px] shrink-0 text-red" />
+      <section id="rfq" className={`${sectionPadding} scroll-mt-28 border-t border-[#CDD9E0] bg-[#E7EFF4]`}>
+        <div className={`${container} grid gap-0 overflow-hidden border border-[#BFCED7] bg-white shadow-[0_18px_50px_rgba(16,47,69,0.08)] lg:grid-cols-[0.72fr_1.28fr]`}>
+          <div className="landing-blueprint-grid bg-[#102F45] p-6 text-white sm:p-9 lg:p-10">
+            <span className="text-[10px] font-bold uppercase tracking-[0.08em] text-[#8CC2E2]">{ui.rfqKicker}</span>
+            <div className="mt-5 h-1 w-12 bg-[#D62832]" />
+            <h2 className="mt-6 text-[clamp(32px,4vw,48px)] font-extrabold leading-[1.06] tracking-[-0.035em]">
+              {content.rfq.title}
+            </h2>
+            <p className="mt-5 text-[14px] leading-[1.75] text-white/68">{content.rfq.text}</p>
+            <div className="mt-8 space-y-4 border-t border-white/15 pt-6">
+              <p className="flex items-start gap-3 text-[12px] font-semibold leading-[1.6] text-white/75">
+                <Check size={15} className="mt-0.5 shrink-0 text-[#E94A53]" />
                 {content.rfq.response}
               </p>
               <a
                 href={`mailto:${content.rfq.email}`}
-                className="inline-flex items-center gap-[8px] text-[12px] text-bronze hover:text-alabaster"
+                className="inline-flex items-center gap-2 text-[13px] font-bold text-white hover:text-[#8CC2E2]"
               >
                 {content.rfq.email}
-                <ArrowRight size={12} />
+                <ArrowRight size={14} />
               </a>
             </div>
           </div>
-          <div className="border border-line bg-obsidian p-[21px] sm:p-[34px]">
+          <div className="p-5 sm:p-8 lg:p-10">
             <LandingInquiryForm locale={locale} content={content.rfq} />
           </div>
         </div>
