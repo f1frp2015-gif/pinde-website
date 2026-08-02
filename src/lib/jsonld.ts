@@ -22,7 +22,7 @@ export const organizationJsonLd = {
       "@type": "ContactPoint",
       telephone: "+86-138-8333-3993",
       contactType: "sales",
-      email: "doris.li@pindesys.com",
+      email: "inqury@pindesys.com",
       availableLanguage: ["English", "Russian", "Chinese"],
     },
   ],
@@ -45,7 +45,7 @@ export const localBusinessJsonLd = {
   image: `${siteUrl}/images/factory-aerial.jpg`,
   url: siteUrl,
   telephone: "+86-138-8333-3993",
-  email: "doris.li@pindesys.com",
+  email: "inqury@pindesys.com",
   address: {
     "@type": "PostalAddress",
     streetAddress: "No. 68 Chanye Avenue",
@@ -175,7 +175,7 @@ export const faqJsonLd = {
       name: "How can I get a quote from PINDÉ?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "You can request a free quote via our website contact form, email (doris.li@pindesys.com), WhatsApp (+86 138 8333 3993), or phone. Our team responds within 24 hours with technical specifications, pricing, and lead times. We support OEM/ODM enquiries and custom configurations.",
+        text: "You can request a free quote via our website contact form, email (inqury@pindesys.com), WhatsApp (+86 138 8333 3993), or phone. Our team responds within 24 hours with technical specifications, pricing, and lead times. We support OEM/ODM enquiries and custom configurations.",
       },
     },
   ],
