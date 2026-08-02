@@ -8,7 +8,7 @@ export const BRAND = {
   description:
     "Aluminium and FRP window-system materials, machined components and glass-free CKD kits from Chongqing for local fabrication.",
   phone: "+86 138 8333 3993",
-  email: "doris.li@pinde-alu.com",
+  email: "doris.li@pindesys.com",
   whatsapp: "+86 138 8333 3993",
   address: "No. 68 Chanye Avenue, Tongliang District, Chongqing, China",
   website: "https://pindesys.com",

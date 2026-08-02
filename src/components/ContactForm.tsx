@@ -172,7 +172,7 @@ export default function ContactForm() {
 
       {status === "error" && (
         <p className="text-red text-[13px]">
-          Failed to send. Please try again or email us directly at doris.li@pinde-alu.com
+          Failed to send. Please try again or email us directly at doris.li@pindesys.com
         </p>
       )}
 
