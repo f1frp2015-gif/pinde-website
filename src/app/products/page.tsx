@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ProductFilter from "@/components/ProductFilter";
 import { products } from "@/data/products";
 
@@ -54,13 +55,13 @@ export default function ProductsPage() {
             Our technical team can help you select the ideal systems for your
             specific project requirements.
           </p>
-          <a
+          <Link
             href="/contact"
             className="inline-flex items-center gap-[10px] px-[34px] py-4 bg-red text-white text-[11px] font-medium tracking-[3px] uppercase rounded-[1px] hover:brightness-90 transition-all"
           >
             <span className="inline-block w-[5px] h-[5px] rounded-full bg-white" />
             Contact our team
-          </a>
+          </Link>
         </div>
       </section>
     </>

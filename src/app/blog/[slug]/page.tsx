@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { posts } from "@/data/blog";
-import { ArrowLeft } from "lucide-react";
 import { breadcrumbJsonLd } from "@/lib/jsonld";
 
 interface Props {

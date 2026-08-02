@@ -33,10 +33,11 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
-  font-family: "DM Sans", "Helvetica Neue", sans-serif;
+  font-family: "Manrope", "Arial", sans-serif;
   color: #0A0A0C;
   background: #FAFAF8;
 }
@@ -44,4 +45,30 @@ body {
 ::selection {
   background: rgba(212, 43, 43, 0.15);
   color: #0A0A0C;
+}
+
+.landing-technical-grid {
+  background-image:
+    linear-gradient(rgba(250, 250, 248, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(250, 250, 248, 0.045) 1px, transparent 1px);
+  background-size: 21px 21px;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }

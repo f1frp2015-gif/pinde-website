@@ -4,6 +4,14 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
+        source: "/en",
+        headers: [{ key: "Content-Language", value: "en" }],
+      },
+      {
+        source: "/ru",
+        headers: [{ key: "Content-Language", value: "ru" }],
+      },
+      {
         source: "/(.*)",
         headers: [
           { key: "X-Content-Type-Options", value: "nosniff" },
@@ -22,7 +30,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/home",
-        destination: "/",
+        destination: "/en",
         permanent: true,
       },
     ];
