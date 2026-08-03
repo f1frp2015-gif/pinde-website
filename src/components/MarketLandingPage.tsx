@@ -240,7 +240,7 @@ export default function MarketLandingPage({ locale, content }: Props) {
           <div className="relative -mx-5 bg-[#102F45] text-white sm:-mx-8 lg:mx-0 lg:min-h-[680px]">
             <div className="relative h-[230px] overflow-hidden border-b border-white/15 lg:h-[285px]">
               <Image
-                src="/images/factory-aerial.jpg"
+                src="/images/factory-aerial.webp"
                 alt={content.factory.imageAlt}
                 fill
                 priority
@@ -594,7 +594,7 @@ export default function MarketLandingPage({ locale, content }: Props) {
 
       <section className="relative min-h-[560px] overflow-hidden bg-[#102F45] text-white">
         <Image
-          src="/images/factory-aerial.jpg"
+          src="/images/factory-aerial.webp"
           alt={content.factory.imageAlt}
           fill
           sizes="100vw"
