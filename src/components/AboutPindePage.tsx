@@ -117,7 +117,7 @@ export default function AboutPindePage({ locale, content }: Props) {
           </div>
 
           <div className="relative -mx-5 min-h-[390px] overflow-hidden sm:-mx-8 lg:mx-0 lg:min-h-[650px]">
-            <Image src="/images/about-hero.jpg" alt={content.hero.imageAlt} fill priority sizes="(min-width: 1024px) 49vw, 100vw" className="object-cover object-center" />
+            <Image src="/images/pinde-aluminium-window-manufacturing-plant-chongqing.webp" alt={content.hero.imageAlt} fill priority sizes="(min-width: 1024px) 49vw, 100vw" className="object-cover object-center" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#102F45]/90 via-[#102F45]/10 to-transparent" />
             <div className="absolute inset-x-5 bottom-5 border-l-4 border-[#D62832] bg-[#0B2639]/90 p-5 text-white backdrop-blur-sm sm:inset-x-8 lg:inset-x-8 lg:bottom-8">
               <span className="block text-[10px] font-bold uppercase tracking-[0.1em] text-white/55">PINDÉ · CHONGQING</span>
@@ -170,7 +170,7 @@ export default function AboutPindePage({ locale, content }: Props) {
         <div className={`${container} mt-12`}>
           <div className="relative aspect-[21/9] overflow-hidden border border-[#D5DFE5]">
             <Image
-              src="/images/about-campus.jpg"
+              src="/images/pinde-integrated-manufacturing-campus-chongqing.webp"
               alt={locale === "ru" ? "Производственная база PINDÉ в Чунцине" : "PINDÉ manufacturing campus in Chongqing"}
               fill
               sizes="(max-width: 1280px) 100vw, 1200px"
@@ -220,7 +220,7 @@ export default function AboutPindePage({ locale, content }: Props) {
           <div className="mt-10 grid gap-[13px] md:grid-cols-2">
             <div className="relative aspect-[3/2] overflow-hidden border border-[#C9D6DE]">
               <Image
-                src="/images/about-extrusion.jpg"
+                src="/images/aluminium-profile-extrusion-production-line.webp"
                 alt={locale === "ru" ? "Экструзия алюминиевого профиля" : "Aluminium profile extrusion"}
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -234,7 +234,7 @@ export default function AboutPindePage({ locale, content }: Props) {
             </div>
             <div className="relative aspect-[3/2] overflow-hidden border border-[#C9D6DE]">
               <Image
-                src="/images/about-cnc.jpg"
+                src="/images/cnc-aluminium-profile-precision-machining.webp"
                 alt={locale === "ru" ? "CNC-обработка алюминиевого профиля" : "CNC aluminium profile machining"}
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -288,7 +288,7 @@ export default function AboutPindePage({ locale, content }: Props) {
           {/* Assembly line image */}
           <div className="mt-10 relative aspect-[21/9] overflow-hidden border border-white/15">
             <Image
-              src="/images/about-assembly.jpg"
+              src="/images/pinde-window-door-assembly-line.webp"
               alt={locale === "ru" ? "Сборочная линия PINDÉ" : "PINDÉ assembly line"}
               fill
               sizes="(max-width: 1280px) 100vw, 1200px"
@@ -308,7 +308,7 @@ export default function AboutPindePage({ locale, content }: Props) {
             {/* Quality inspection image */}
             <div className="mt-8 relative aspect-[16/9] overflow-hidden border border-[#C9D6DE]">
               <Image
-                src="/images/about-quality.jpg"
+                src="/images/aluminium-window-quality-inspection-factory.webp"
                 alt={locale === "ru" ? "Контроль качества на производстве PINDÉ" : "Quality inspection at PINDÉ"}
                 fill
                 sizes="(max-width: 768px) 100vw, 600px"
@@ -353,7 +353,7 @@ export default function AboutPindePage({ locale, content }: Props) {
       <div className={`${container}`}>
         <div className="relative aspect-[21/9] overflow-hidden border border-[#D5DFE5]">
           <Image
-            src="/images/about-factory.jpg"
+            src="/images/pinde-factory-aerial-view-chongqing.webp"
             alt={locale === "ru" ? "Панорама завода PINDÉ в Чунцине" : "Aerial view of PINDÉ factory in Chongqing"}
             fill
             sizes="(max-width: 1280px) 100vw, 1200px"
