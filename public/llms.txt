@@ -1,0 +1,51 @@
+# PINDÉ Window System Supply
+> Aluminium and FRP window-system materials, machined components and glass-free CKD kits from Chongqing for local fabrication in Russian-speaking markets.
+
+## Systems
+- /en/systems: Aluminium & FRP window profile systems — overview and comparison
+- /en/systems/aluminium: Thermally broken aluminium window-and-door systems — profiles, components, BOM, launch package. For buyers searching "aluminium window profile systems China", "thermally broken aluminium profiles"
+- /en/systems/frp: FRP / glass-fibre composite pultruded window profile systems — low-conductivity platform, defined BOM, joint methods, project test plans. For buyers searching "FRP window profiles", "pultruded window profiles"
+
+## Product Catalog
+- /products: 19 aluminium window & door products — casement, sliding, folding, push-out, swing doors, interior systems
+- /products/a65-casement-window: A65 Casement Window — 65mm profile, PA66GF25 thermal break, EPDM seals
+- /products/a110-casement-window: A110 Casement Window — 110.5mm profile, glazing up to 120mm
+- /products/a120-casement-window: A120 Casement Window — flagship, 35.3mm thermal break, triple glazing up to 130mm
+
+## Supply Formats
+- /en/supply: P1 (Complete system kit), P2 (Cut-to-length & machined), P3 (Glass-free CKD kit) — comparison and responsibility matrix
+- /en/supply#p3: CKD window kits — glass-free, machined profiles packed by opening, for buyers searching "CKD window kits", "glass-free window kits"
+
+## Engineering & Quality
+- /en/engineering: Engineering before volume — system definition, fabrication package, evidence register, launch support
+- /en/process: Fabricator enablement — 4-step controlled route: qualify → reference build → paid pilot → scale
+- /quality: ISO 9001, ISO 14001, CE, AS2047, NFRC certifications, in-house testing laboratory
+
+## Market Compliance
+- /en/certification: Country-specific conformity — EAEU/EAC certification requirements for Russia, Kazakhstan, Belarus separately (no single universal certificate)
+
+## About
+- /en/about: Company & manufacturing base — 100,000 m² integrated campus, Chongqing, since 2002
+
+## Contact & RFQ
+- /en/contact: Technical RFQ form — 2-business-day review target
+- Email: inquiry@pindesys.com
+- WhatsApp: +86 138 8333 3993
+- Address: No. 68 Chanye Avenue, Tongliang District, Chongqing, China
+
+## Blog
+- /blog: Technical insights — thermal break technology, aluminium vs uPVC, climate zone window selection
+
+## Russian (Русский)
+- /ru: Главная страница — системные материалы для локального производства окон
+- /ru/systems: Алюминиевые и стеклокомпозитные оконные системы
+- /ru/supply: Форматы поставки P1/P2/P3
+- /ru/certification: Сертификация и соответствие требованиям ЕАЭС
+
+## Key Facts
+- Manufacturing: 100,000 m² integrated base, Chongqing, China
+- Supply levels: P1 (system kit), P2 (machined), P3 (glass-free CKD)
+- Markets: Russia, Kazakhstan, Belarus, Uzbekistan, Armenia, Kyrgyzstan
+- Certifications: ISO 9001, ISO 14001, CE, AS2047, NFRC, 60+ patents
+- Target: B2B only — window manufacturers, fabricators, importers, project procurement (NOT retail)
+- Review: Technical RFQ review within 2 business days

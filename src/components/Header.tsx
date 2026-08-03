@@ -78,7 +78,7 @@ export default function Header() {
                 <Phone size={14} />
                 {BRAND.phone}
               </a>
-              <Link href={`/${locale}#rfq`} className="hidden min-h-11 items-center bg-[#D62832] px-5 text-[11px] font-bold text-white transition-colors hover:bg-[#B91F28] sm:inline-flex">
+              <Link href={`/${locale}/contact`} className="hidden min-h-11 items-center bg-[#D62832] px-5 text-[11px] font-bold text-white transition-colors hover:bg-[#B91F28] sm:inline-flex">
                 {content.headerCta}
               </Link>
               <button
@@ -103,7 +103,7 @@ export default function Header() {
                   <span className="text-[#D62832]">→</span>
                 </Link>
               ))}
-              <Link href={`/${locale}#rfq`} onClick={() => setMobileOpen(false)} className="mt-4 flex min-h-12 items-center justify-center bg-[#D62832] px-5 text-[12px] font-bold text-white">
+              <Link href={`/${locale}/contact`} onClick={() => setMobileOpen(false)} className="mt-4 flex min-h-12 items-center justify-center bg-[#D62832] px-5 text-[12px] font-bold text-white">
                 {content.headerCta}
               </Link>
             </nav>

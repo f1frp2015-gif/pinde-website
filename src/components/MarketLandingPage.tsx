@@ -216,14 +216,14 @@ export default function MarketLandingPage({ locale, content }: Props) {
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
-                href={`/${locale}#rfq`}
+                href={`/${locale}/contact`}
                 className="inline-flex min-h-12 items-center justify-center gap-3 bg-[#D62832] px-6 py-3 text-[12px] font-bold text-white transition-colors hover:bg-[#B91F28]"
               >
                 {content.hero.primaryCta}
                 <ArrowRight size={16} />
               </Link>
               <Link
-                href={`/${locale}#formats`}
+                href={`/${locale}/supply`}
                 className="inline-flex min-h-12 items-center justify-center gap-3 border border-[#0E527D] px-6 py-3 text-[12px] font-bold text-[#0E527D] transition-colors hover:bg-[#E7EFF4]"
               >
                 {content.hero.secondaryCta}

@@ -1,0 +1,103 @@
+# PINDÉ Window System Supply — Full Content
+
+## Company Overview
+PINDÉ (Pinde Doors and Windows (Chongqing) Co., LTD) is a B2B window system material supplier based in Chongqing, China. We supply aluminium and FRP window-and-door profile systems, machined components, and glass-free CKD (completely knocked down) kits to window manufacturers, profile-system fabricators, importers, and project procurement teams across Russian-speaking markets (Russia, Kazakhstan, Belarus, Uzbekistan, Armenia, Kyrgyzstan).
+
+NOT a retail window shop. Glazing, final assembly, testing, and installation stay local in the destination market.
+
+Manufacturing base: 100,000 m² integrated campus in Tongliang District, Chongqing. The manufacturing group's roots date to 2002.
+
+## Two Material Platforms
+
+### Aluminium Systems (Commercial Mainline)
+Thermally broken aluminium window-and-door systems using 6063-T5 alloy with PA66GF25 (polyamide 66 with 25% glass fibre) thermal break strips. Surface-finished profiles supplied as complete system kits for local cutting and fabrication, or upgraded to project-specific machined and CKD kits.
+
+Launch package includes:
+- Frame, sash, mullion, and glazing-bead profiles
+- Thermal breaks, EPDM gaskets, cleats, and connectors
+- Drainage parts, compatible hardware schedule, and complete BOM
+- Processing drawings, assembly instructions, and spare-parts list
+
+Key specifications:
+- PA66GF25 thermal conductivity: 0.3 W/m·K (vs aluminium 160 W/m·K — 500x reduction)
+- 6063-T5 aluminium alloy, minimum wall thickness 1.4mm
+- Surface finishes: Akzo Nobel powder coating, anodising, wood-grain
+- EPDM rubber seals
+- Compatible hardware: SIEGENIA, G-U, Roto, KIN LONG
+- Extrusion: 3,600-ton press, automated cutting at ±0.5mm tolerance
+
+### FRP / Glass-Fibre Composite Systems (Engineering Programme)
+Pultruded FRP profile sets for fabricators evaluating a low-conductivity material platform. Each programme is released against a defined BOM, joint method, and project test plan.
+
+Package includes:
+- Frame, sash, mullion, and glazing-bead profile set
+- Corner joints, seals, and approved fastening interfaces
+- Cutting, drilling, bonding, and dust-control parameters
+- Pilot kits, first-article inspection, and fabrication training
+
+IMPORTANT: Thermal, structural, and weather-performance values are stated only for a verified specimen, glazing build-up, and test scope. Unverified values remain project targets — not sales claims.
+
+## Supply Formats (P1—P3)
+
+### P1 — Complete System Kit (Default)
+From Chongqing: Finished profiles, gaskets, cleats, connectors, drainage parts, BOM, and fabrication documents.
+Kept local: Cutting, machining, hardware, glazing, assembly, QA, and installation.
+Best fit: Established fabricators with cutting and corner-joining capability.
+
+### P2 — Cut-to-Length & Machined (Upgrade)
+From Chongqing: Optimised cutting, drainage and lock machining, CNC work, and part identification.
+Kept local: Corner joining, hardware, glazing, adjustment, final inspection, and installation.
+Best fit: Factories that need capacity relief or controlled first production.
+
+### P3 — Glass-Free CKD Kit (Project)
+From Chongqing: Machined profiles packed by opening with seals, joints, selected hardware, and a spares pack.
+Kept local: Final dimensions, assembly, insulating-glass units, commissioning, compliance, and site work.
+Best fit: Paid pilot runs, time-sensitive projects, and lower-capability production cells.
+
+## Fabricator Enablement Process
+1. Qualify the system — Review equipment, annual volume, current systems, window schedule, glazing, target-country requirements
+2. Freeze the reference build — Agree system code, representative sizes, BOM, interfaces, performance evidence, responsibility matrix
+3. Run a paid pilot — Section samples and corner joints, then 3-10 glass-free kits for local fabrication and testing
+4. Scale by evidence — Micro-batch → project batch → repeat programme, only after yield, fit, logistics, and claims data are accepted
+
+## Responsibility Split
+PINDÉ Chongqing: System engineering and BOM control, profile production/finishing/batch QA, optional cutting/CNC/kit identification, packing/documentation/replacement parts.
+Local fabricator: Final opening and dimension confirmation, locally sourced glazing and approved hardware, assembly/adjustment/finished-window QA, national conformity/installation/first-line service.
+
+Shipping: Rail-compatible export packing from Chongqing. FCA, CIP, DAP quoted per shipment. Freight and import charges never presented as fixed long-term rates.
+
+## Engineering Deliverables
+- System definition: Profile sections, kg/m, BOM, colour/batch rules, gasket/connector mapping
+- Fabrication package: Cutting/machining drawings, drainage, joint method, tooling, process parameters, inspection points
+- Evidence register: Report number, laboratory, specimen size, glazing, hardware, date, exact scope a result supports
+- Launch support: Samples, first-article review, remote training, issue traceability, change control, replenishment planning
+
+Cold-climate suitability is confirmed system by system. Frame depth, thermal-break width, or material conductivity alone is not used to infer whole-window performance.
+
+## Certifications & Testing
+- ISO 9001: Quality Management
+- ISO 14001: Environmental Management
+- CE: European Conformity
+- AS2047: Australian Standard — windows and external glazed doors
+- AS1288: Glass in Buildings
+- NFRC: North American Fenestration Rating
+- 60+ Patents
+- Testing standards: AS/NZS 4420 (air/water/wind), EN 12207/12208/12210, EN ISO 10077 (thermal), NFRC
+
+In-house testing laboratory: Air permeability, water tightness, wind resistance, structural, thermal, acoustic.
+
+## EAEU / EAC Certification
+Russia, Kazakhstan, and Belarus require separate confirmation of the applicable national route, importer/applicant, sample scope, and labelling. No single generic EAEU certificate serves as universal approval for all countries. Classification and documentation are aligned with the actual supply form before first shipment.
+
+## Commercial Terms
+Initial quotations: FCA, CIP, or DAP terms with freight, duty, and tax shown separately. New programmes start with prepayment; credit terms considered only after successful repeat business.
+
+## Target Markets
+Russia, Kazakhstan, Belarus, Uzbekistan, Armenia, Kyrgyzstan, and other CIS/Eurasia markets.
+
+## Contact
+- Email: inquiry@pindesys.com
+- Phone/WhatsApp: +86 138 8333 3993
+- Address: No. 68 Chanye Avenue, Tongliang District, Chongqing, China
+- Business hours: Mon-Fri 9:00-18:00 CST, Sat 9:00-12:00 CST
+- Technical RFQ review target: within 2 business days

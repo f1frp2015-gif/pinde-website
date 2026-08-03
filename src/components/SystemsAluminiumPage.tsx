@@ -1,0 +1,75 @@
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import type { PageLocale } from "@/content/pages";
+import { breadcrumbJsonLd } from "@/lib/jsonld";
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type Props = { locale: PageLocale; content: any };
+
+const container = "mx-auto max-w-[1200px] px-[55px] max-lg:px-6";
+
+export default function SystemsAluminiumPage({ locale, content }: Props) {
+  const crumbs = breadcrumbJsonLd([
+    { name: "Home", url: `https://pindesys.com/${locale}` },
+    { name: "Systems", url: `https://pindesys.com/${locale}/systems` },
+    { name: "Aluminium", url: `https://pindesys.com/${locale}/systems/aluminium` },
+  ]);
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }} />
+      <nav aria-label="Breadcrumb" className="pt-20 py-4 bg-obsidian border-b border-line">
+        <div className={`${container} pt-[13px] flex items-center gap-2 text-[11px] tracking-[2px] uppercase text-muted`}>
+          <Link href={`/${locale}`} className="hover:text-alabaster transition-colors">Home</Link>
+          <span>/</span>
+          <Link href={`/${locale}/systems`} className="hover:text-alabaster transition-colors">Systems</Link>
+          <span>/</span>
+          <span className="text-warm">Aluminium</span>
+        </div>
+      </nav>
+      <section className="py-[89px] bg-obsidian">
+        <div className={container}>
+          <span className="inline-block bg-[#0E527D] px-3 py-2 text-[10px] font-bold uppercase tracking-[0.08em] text-white mb-[21px]">{content.supplyStatus}</span>
+          <h1 className="font-[family-name:var(--font-serif)] font-light text-[clamp(40px,6vw,64px)] leading-[0.95] text-alabaster mb-[21px]">
+            {content.title}<span className="text-red">.</span>
+          </h1>
+          <p className="text-warm text-[15px] leading-[1.9] max-w-[680px]">{content.intro}</p>
+          <div className="mt-[34px] grid grid-cols-2 sm:grid-cols-4 gap-[13px]">
+            {content.heroCards.map((c: { label: string; value: string }) => (
+              <div key={c.label} className="border border-line bg-surface p-5">
+                <span className="block text-[22px] font-extrabold text-alabaster">{c.value}</span>
+                <span className="mt-2 block text-[10px] font-semibold uppercase tracking-[0.06em] text-muted">{c.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="py-[89px] bg-surface">
+        <div className={`${container} max-w-[860px]`}>
+          {content.sections.map((s: { title: string; content: string }, i: number) => (
+            <div key={i} className="mb-[55px] last:mb-0">
+              <h2 className="font-[family-name:var(--font-serif)] text-[28px] font-light text-alabaster mb-[13px]">{s.title}<span className="text-red">.</span></h2>
+              <p className="text-[14px] leading-[1.9] text-warm">{s.content}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section className="py-[89px] bg-obsidian">
+        <div className={`${container} text-center`}>
+          <h2 className="font-[family-name:var(--font-serif)] font-light text-[28px] text-alabaster mb-[21px]">
+            Ready to evaluate the system<span className="text-red">?</span>
+          </h2>
+          <div className="flex flex-col sm:flex-row gap-[13px] justify-center">
+            <Link href={`/${locale}/contact`} className="inline-flex items-center gap-[10px] px-[34px] py-4 bg-red text-white text-[11px] font-medium tracking-[3px] uppercase rounded-[1px] hover:brightness-90">
+              <span className="inline-block w-[5px] h-[5px] rounded-full bg-white" />
+              {content.cta}
+            </Link>
+            <Link href="/products" className="inline-flex items-center gap-[8px] px-[34px] py-4 border border-line text-alabaster text-[11px] font-medium tracking-[3px] uppercase rounded-[1px] hover:border-warm transition-all">
+              {content.productLinkLabel} <ArrowRight size={12} />
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
