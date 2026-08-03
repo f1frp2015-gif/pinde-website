@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: content.seo.description,
       images: [
         {
-          url: "/og-ru-market.png",
+          url: "/og-ru-market.webp",
           width: 1200,
           height: 630,
           alt:
@@ -60,7 +60,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title: content.seo.title,
       description: content.seo.description,
-      images: ["/og-ru-market.png"],
+      images: ["/og-ru-market.webp"],
     },
   };
 }

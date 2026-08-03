@@ -80,7 +80,7 @@ export const metadata: Metadata = {
       "Aluminium and FRP profile systems, machined components and glass-free CKD kits for local window fabrication.",
     images: [
       {
-        url: "/og-ru-market.png",
+        url: "/og-ru-market.webp",
         width: 1200,
         height: 630,
         alt: "PINDÉ — Window System Materials from Chongqing",
@@ -92,7 +92,7 @@ export const metadata: Metadata = {
     title: "PINDÉ | Window System Materials from Chongqing",
     description:
       "Aluminium and FRP profile systems, machined components and glass-free CKD kits for local window fabrication.",
-    images: ["/og-ru-market.png"],
+    images: ["/og-ru-market.webp"],
   },
 };
 

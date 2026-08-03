@@ -42,7 +42,7 @@ export const localBusinessJsonLd = {
   "@type": "LocalBusiness",
   "@id": `${siteUrl}/#localbusiness`,
   name: "PINDÉ Window System Supply",
-  image: `${siteUrl}/images/factory-aerial.jpg`,
+  image: `${siteUrl}/images/factory-aerial.webp`,
   url: siteUrl,
   telephone: "+86-138-8333-3993",
   email: "inquiry@pindesys.com",
@@ -100,7 +100,7 @@ export function productJsonLd(product: {
     url: `${siteUrl}/products/${product.slug}`,
     image: product.images.length > 0
       ? `${siteUrl}${product.images[0]}`
-      : `${siteUrl}/og.png`,
+      : `${siteUrl}/og-ru-market.webp`,
     category: "Architectural Aluminium Systems",
     additionalProperty: product.specs.map((s) => ({
       "@type": "PropertyValue",

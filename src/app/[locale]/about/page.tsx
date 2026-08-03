@@ -38,13 +38,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       alternateLocale: locale === "en" ? ["ru_RU"] : ["en_US"],
       title: content.seo.title,
       description: content.seo.description,
-      images: [{ url: "/og-about-pinde.png", width: 1200, height: 630, alt: content.hero.title }],
+      images: [{ url: "/og-about-pinde.webp", width: 1200, height: 630, alt: content.hero.title }],
     },
     twitter: {
       card: "summary_large_image",
       title: content.seo.title,
       description: content.seo.description,
-      images: ["/og-about-pinde.png"],
+      images: ["/og-about-pinde.webp"],
     },
   };
 }
