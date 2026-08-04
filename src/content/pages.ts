@@ -50,16 +50,16 @@ export const systemsIndexContent = {
       {
         code: "FRP",
         label: "Engineering programme",
-        title: "Pultruded FRP / glass-fibre composite",
+        title: "FRP & aluminium-GRPU composite",
         description:
-          "Pultruded glass-fibre reinforced profiles for fabricators evaluating a low-conductivity alternative to aluminium. Released against a defined BOM, mechanical joint method and project-specific test plan. Includes cutting, drilling, bonding and dust-control parameters, pilot kits and first-article inspection.",
+          "The XD75 hybrid platform combines aluminium shells with a 45mm pultruded GRPU structural thermal core, while the full-FRP route uses pultruded glass-fibre profiles throughout. Both are released against a defined BOM, connection method and project test plan.",
         features: [
-          "GFRP thermal conductivity ~0.3 W/m·K — no thermal break required",
-          "≥60% glass fibre by weight, pultruded profiles",
-          "Mechanical fastening + structural adhesive corner joints",
+          "XD75: 75mm aluminium-GRPU hybrid window platform",
+          "45mm pultruded glass-fibre reinforced polyurethane thermal core",
+          "Outward-opening and inward tilt-turn XD75 configurations",
+          "Full-FRP profile route remains available by engineering qualification",
           "Pilot programme: 3–10 glass-free units for local testing",
-          "Full fabrication parameters (cutting, drilling, bonding, dust control)",
-          "First-article inspection and remote fabrication training included",
+          "Composite traceability, connection testing and first-article inspection",
         ],
         href: "/systems/frp",
         cta: "Explore FRP systems",
@@ -107,16 +107,16 @@ export const systemsIndexContent = {
       {
         code: "FRP",
         label: "Инженерная программа",
-        title: "Пултрузионный стеклокомпозит / FRP",
+        title: "FRP и гибридный алюминий-GRPU",
         description:
-          "Пултрузионные профили из стеклопластика для производств, внедряющих материал с низкой теплопроводностью как альтернативу алюминию. Каждая система привязана к конкретному BOM, способу механического соединения и плану испытаний. Включает режимы резки, сверления, склеивания, удаления пыли, пробные комплекты и приёмку первого изделия.",
+          "Гибридная платформа XD75 сочетает алюминиевые оболочки с несущим пултрузионным термомостом GRPU шириной 45 мм, а полностью FRP-маршрут использует стеклокомпозитные профили по всему сечению. Обе системы выпускаются с определённым BOM, технологией соединений и планом испытаний.",
         features: [
-          "Теплопроводность стеклокомпозита ~0,3 Вт/м·K — термовставка не требуется",
-          "Содержание стекловолокна ≥60% по массе, пултрузионные профили",
-          "Угловые соединения: механический крепёж + конструкционный клей",
+          "XD75: гибридная оконная платформа алюминий-GRPU глубиной 75 мм",
+          "Пултрузионный стеклокомпозитный термомост GRPU шириной 45 мм",
+          "XD75 с наружным открыванием и поворотно-откидной конфигурацией",
+          "Полностью FRP-профили доступны по инженерной квалификации",
           "Пробная программа: 3–10 комплектов без стеклопакетов для локальных испытаний",
-          "Полные технологические параметры (резка, сверление, склеивание, удаление пыли)",
-          "Приёмка первого изделия и дистанционное обучение производству включены",
+          "Прослеживаемость композита, испытания соединений и приёмка первого изделия",
         ],
         href: "/systems/frp",
         cta: "Стеклокомпозитные системы",
@@ -188,6 +188,9 @@ export const systemsAluminiumContent = {
           "Systems are tested and certified to AS2047 (Australian windows), NFRC 100/200 (North American thermal rating), CE/EN 14351-1 (European product standard), and ISO 9001/14001. For EAEU markets, GOST 23166 and GOST 30673 testing can be arranged with a local applicant and agreed sample scope before first shipment.",
       },
     ],
+    catalogTitle: "PINDÉ aluminium system catalogue",
+    catalogIntro:
+      "All 19 original PINDÉ aluminium window-and-door products now live inside the Aluminium family. Filter by application, then open the system page for its configuration, features and reference specifications.",
     cta: "Request aluminium system technical pack",
     productLinkLabel: "Browse 19 aluminium systems",
   },
@@ -249,6 +252,9 @@ export const systemsAluminiumContent = {
           "Системы испытаны и сертифицированы по AS2047 (австралийский стандарт на окна), NFRC 100/200 (североамериканский тепловой рейтинг), CE/EN 14351-1 (европейский стандарт на продукцию), а также ISO 9001/14001. Для рынков ЕАЭС испытания по ГОСТ 23166 и ГОСТ 30673 могут быть организованы с локальным заявителем и согласованным объёмом образцов до первой отгрузки.",
       },
     ],
+    catalogTitle: "Каталог алюминиевых систем PINDÉ",
+    catalogIntro:
+      "Все 19 исходных алюминиевых оконно-дверных продуктов PINDÉ теперь находятся внутри семейства Aluminium. Отфильтруйте системы по применению и откройте страницу нужной конфигурации с характеристиками и справочными параметрами.",
     cta: "Запросить технический пакет по алюминиевым системам",
     productLinkLabel: "Смотреть 19 алюминиевых систем",
   },
@@ -262,9 +268,9 @@ export const systemsFrpContent = {
     lang: "en",
     locale: "en_US",
     seo: {
-      title: "FRP Window Profiles — Pultruded Glass-Fibre Composite Systems | PINDÉ",
+      title: "XD75 & FRP Composite Window Systems | PINDÉ",
       description:
-        "Pultruded FRP window profile systems for fabricators evaluating low-conductivity alternatives to aluminium. Glass-fibre composite profiles, mechanical joints, pilot kits and fabrication training from Chongqing. For extreme cold climates.",
+        "XD75 aluminium-GRPU hybrid window system and full pultruded FRP profile programmes for qualified fabricators. Composite traceability, connection testing, pilot kits and project-specific verification from Chongqing.",
       keywords: [
         "FRP window profiles",
         "pultruded window profiles",
@@ -272,33 +278,35 @@ export const systemsFrpContent = {
         "glass-fibre composite window systems",
         "pultruded profiles for window fabrication",
         "FRP window system supplier",
+        "XD75 window system",
+        "aluminium GRPU window profile",
       ],
     },
-    title: "FRP / glass-fibre composite window profile systems.",
+    title: "FRP and aluminium-GRPU composite window systems.",
     intro:
-      "Pultruded FRP profile sets for fabricators evaluating a low-conductivity material platform. Each programme is released against a defined BOM, joint method and project test plan. FRP eliminates the need for a separate thermal break — the entire profile is the insulator.",
+      "Two composite routes sit in this family. XD75 is a hybrid 75mm system with aluminium shells joined by a 45mm pultruded GRPU structural thermal core. The full-FRP route uses pultruded glass-fibre profiles throughout. Each programme is released against a defined BOM, connection method and project test plan.",
     supplyStatus: "Engineering programme — released by project qualification",
     heroCards: [
-      { label: "Thermal Conductivity", value: "~0.3 W/m·K (no break needed)" },
-      { label: "Glass Content", value: "≥60% by weight" },
-      { label: "Process", value: "Pultrusion" },
-      { label: "Supply", value: "Pilot → project → repeat" },
+      { label: "Featured system", value: "XD75" },
+      { label: "XD75 composite core", value: "45 mm GRPU" },
+      { label: "XD75 opening modes", value: "Outward + tilt-turn" },
+      { label: "Supply", value: "Qualification → pilot → project" },
     ],
     sections: [
       {
-        title: "Why FRP for window profiles",
+        title: "XD75 hybrid composite platform",
         content:
-          "Glass-fibre reinforced polymer (FRP) offers a fundamental advantage over aluminium for thermal performance: the entire profile is a thermal insulator, not just a narrow break strip. With thermal conductivity around 0.3 W/m·K — comparable to the PA66GF25 break in aluminium systems — FRP achieves comparable whole-window U-values without the complexity of a separate thermal break component. This makes FRP especially suitable for extreme cold climates (Siberia, northern Kazakhstan) where every watt of heat loss matters.",
+          "XD75 retains aluminium inner and outer shells for familiar finishing, hardware interfaces and fabrication logic, but structurally joins them with a 45mm pultruded glass-fibre reinforced polyurethane core. It is not a full-FRP frame. The system belongs in the FRP engineering family because composite material traceability, connection strength, thermal cycling and whole-window verification govern its release.",
       },
       {
-        title: "Material & manufacturing",
+        title: "Full-FRP route",
         content:
-          "PINDÉ FRP profiles are manufactured by pultrusion — continuous glass-fibre rovings and mats pulled through a resin bath and heated die. Glass content is ≥60% by weight, with a polyester or vinyl ester matrix depending on the application. The unidirectional fibre alignment gives pultruded profiles high longitudinal strength (comparable to steel by weight) with significantly lower thermal expansion than uPVC.",
+          "For projects that require composite profiles throughout the frame, PINDÉ also supports a full pultruded FRP route. Continuous glass-fibre rovings and mats are pulled through a resin system and heated die, producing low-conductivity profiles without a separate metal thermal bridge. Full-FRP systems use their own BOM, corner-joint method, tooling parameters and validation plan and are not represented by XD75 catalogue values.",
       },
       {
-        title: "Joint technology & fabrication",
+        title: "Composite manufacturing & connection control",
         content:
-          "FRP corner joints use a combination of mechanical fastening and structural adhesive — different from aluminium corner crimping or screwing. The fabrication package includes: cutting parameters (blade type, speed, feed rate for glass-fibre), drilling guidelines (carbide tooling, speeds to avoid delamination), bonding procedures (surface preparation, adhesive type, cure time, clamping), and dust control (glass-fibre dust requires HEPA extraction — not standard wood/aluminium dust collection).",
+          "XD75 requires controlled aluminium-to-GRPU composite assembly, batch traceability and connection testing before profiles reach a fabricator. The full-FRP route uses mechanical fastening plus structural adhesive at corner joints and adds composite-specific cutting, drilling, bonding and HEPA dust-control parameters. The fabrication package identifies which process applies to each system rather than treating all composite windows alike.",
       },
       {
         title: "Pilot programme",
@@ -313,19 +321,19 @@ export const systemsFrpContent = {
       {
         title: "Standards & compliance",
         content:
-          "FRP profiles are tested to EN 13706-3 (pultruded structural profiles) and GOST R 57790 (composite polymer profiles for windows). Weather performance testing follows EN 12207/12208/12210 or GOST equivalents. EAEU conformity is confirmed separately for Russia, Kazakhstan, and Belarus with a local applicant and agreed sample scope.",
+          "Full-FRP profiles are qualified against the agreed composite-profile and whole-window standards for the destination market. XD75, as an aluminium-composite window system, requires a separate material and product route plus whole-window testing for its ordered size, glazing, hardware and installation node. EAEU conformity is confirmed separately for Russia, Kazakhstan and Belarus with a local applicant and an agreed sample scope.",
       },
     ],
     cta: "Enquire about FRP pilot programme",
-    note: "FRP window systems are supplied through an engineering programme, not off-the-shelf. Thermal, structural and weather-performance values are stated only for verified specimens. Unverified values remain project targets — not sales claims.",
+    note: "XD75 and full-FRP systems are supplied through an engineering programme, not as interchangeable off-the-shelf profiles. Catalogue and test values apply only to the identified specimen, glazing and scope. Destination-market claims require project-specific verification.",
   },
   ru: {
     lang: "ru",
     locale: "ru_RU",
     seo: {
-      title: "Стеклокомпозитные оконные профили — пултрузионные системы FRP | PINDÉ",
+      title: "XD75 и стеклокомпозитные оконные системы FRP | PINDÉ",
       description:
-        "Пултрузионные стеклокомпозитные оконные профильные системы FRP для производств, оценивающих альтернативу алюминию с низкой теплопроводностью. Профили из стеклопластика, механические соединения, пробные комплекты и обучение из Чунцина.",
+        "Гибридная оконная система XD75 алюминий-GRPU и программы полностью пултрузионных профилей FRP для квалифицированных производств. Прослеживаемость композита, испытания соединений и проектная проверка из Чунцина.",
       keywords: [
         "стеклокомпозитный оконный профиль",
         "стеклопластиковый профиль для окон",
@@ -333,33 +341,35 @@ export const systemsFrpContent = {
         "FRP оконные системы",
         "композитные оконные профили из Китая",
         "стеклокомпозитные оконные системы поставщик",
+        "оконная система XD75",
+        "оконный профиль алюминий GRPU",
       ],
     },
-    title: "Оконные системы из стеклокомпозита / FRP.",
+    title: "Оконные системы FRP и гибридный алюминий-GRPU.",
     intro:
-      "Комплекты пултрузионных профилей из стеклопластика для производств, внедряющих материал с низкой теплопроводностью. Каждая система привязана к конкретному BOM, способу соединения и плану испытаний. FRP не нуждается в отдельной термовставке — весь профиль является теплоизолятором.",
+      "В этом семействе два композитных маршрута. XD75 — гибридная система глубиной 75 мм: алюминиевые оболочки соединены несущим пултрузионным термомостом GRPU шириной 45 мм. Полностью FRP-маршрут использует стеклокомпозитные профили по всему сечению. Каждая программа имеет свой BOM, технологию соединений и план испытаний.",
     supplyStatus: "Инженерная программа — поставка по проектной квалификации",
     heroCards: [
-      { label: "Теплопроводность", value: "~0,3 Вт/м·K (без терморазрыва)" },
-      { label: "Содержание стекла", value: "≥60% по массе" },
-      { label: "Процесс", value: "Пултрузия" },
-      { label: "Поставка", value: "Пилот → проект → программа" },
+      { label: "Основная система", value: "XD75" },
+      { label: "Композитный термомост XD75", value: "GRPU 45 мм" },
+      { label: "Открывание XD75", value: "Наружное + поворотно-откидное" },
+      { label: "Поставка", value: "Квалификация → пилот → проект" },
     ],
     sections: [
       {
-        title: "Почему FRP для оконных профилей",
+        title: "Гибридная композитная платформа XD75",
         content:
-          "Стеклопластик (FRP) даёт фундаментальное преимущество перед алюминием по теплотехнике: весь профиль является теплоизолятором, а не только узкая термовставка. При теплопроводности около 0,3 Вт/м·K — сравнимой с термовставкой PA66GF25 в алюминиевых системах — FRP достигает сопоставимых значений Uw готового окна без конструктивной сложности отдельного терморазрыва. Это делает FRP особенно подходящим для экстремально холодного климата (Сибирь, северный Казахстан), где важен каждый ватт теплопотерь.",
+          "XD75 сохраняет внутреннюю и наружную алюминиевые оболочки, привычную отделку и интерфейсы фурнитуры, но конструктивно соединяет их пултрузионным стеклокомпозитным элементом GRPU шириной 45 мм. Это не полностью FRP-рама. Система относится к инженерному семейству FRP, поскольку её выпуск определяется прослеживаемостью композита, прочностью соединений, термоциклированием и испытаниями готового окна.",
       },
       {
-        title: "Материал и производство",
+        title: "Полностью FRP-маршрут",
         content:
-          "Профили FRP PINDÉ изготавливаются методом пултрузии — непрерывные стеклянные ровинги и маты протягиваются через ванну со связующим и нагретую фильеру. Содержание стекла ≥60% по массе, связующее — полиэфирное или винилэфирное в зависимости от применения. Однонаправленная ориентация волокон придаёт пултрузионным профилям высокую продольную прочность (сравнимую со сталью по удельной массе) при значительно меньшем тепловом расширении, чем у ПВХ.",
+          "Для проектов, которым нужны композитные профили по всему сечению рамы, PINDÉ также поддерживает полностью пултрузионный маршрут FRP. Непрерывные стеклянные ровинги и маты протягиваются через связующее и нагретую фильеру, формируя низкотеплопроводные профили без металлического термомоста. Такие системы имеют собственные BOM, угловые соединения, режимы обработки и план испытаний; значения каталога XD75 на них не распространяются.",
       },
       {
-        title: "Технология соединений и изготовление",
+        title: "Контроль композита и соединений",
         content:
-          "Угловые соединения FRP выполняются комбинацией механического крепежа и конструкционного клея — в отличие от опрессовки или винтового соединения алюминиевых углов. Технологический пакет включает: параметры резки (тип диска, скорость, подача для стеклопластика), указания по сверлению (твердосплавный инструмент, режимы во избежание расслоения), процедуры склеивания (подготовка поверхности, тип клея, время отверждения, зажим) и удаление пыли (стеклянная пыль требует HEPA-фильтрации — нестандартная для дерево- и металлообработки).",
+          "XD75 требует контролируемой сборки алюминия с GRPU, прослеживаемости партий и испытаний соединений до передачи профиля изготовителю окон. Полностью FRP-маршрут использует механический крепёж с конструкционным клеем и добавляет специальные режимы резки, сверления, склеивания и HEPA-удаления стеклянной пыли. Технологический пакет явно разделяет процессы двух систем.",
       },
       {
         title: "Программа опытной партии",
@@ -374,11 +384,11 @@ export const systemsFrpContent = {
       {
         title: "Стандарты и соответствие",
         content:
-          "Профили FRP испытываются по EN 13706-3 (пултрузионные конструкционные профили) и ГОСТ Р 57790 (профили полимерные композитные для окон). Испытания на погодоустойчивость проводятся по EN 12207/12208/12210 или эквивалентам ГОСТ. Соответствие требованиям ЕАЭС подтверждается отдельно для России, Казахстана и Беларуси с локальным заявителем и согласованным объёмом образцов.",
+          "Полностью FRP-профили квалифицируются по согласованным для целевого рынка стандартам на композитные профили и готовые окна. Для XD75 как алюминиево-композитной оконной системы требуется отдельный путь по материалам и продукции, а также испытания готового окна для заказанного размера, стеклопакета, фурнитуры и монтажного узла. Соответствие ЕАЭС подтверждается отдельно для России, Казахстана и Беларуси с локальным заявителем и согласованным объёмом образцов.",
       },
     ],
     cta: "Запросить программу опытной партии FRP",
-    note: "Оконные системы FRP поставляются в рамках инженерной программы, а не со склада. Показатели теплотехники, прочности и герметичности указываются только для проверенных образцов. Непроверенные значения остаются целями проекта, а не рекламными обещаниями.",
+    note: "XD75 и полностью FRP-системы поставляются в рамках инженерной программы и не являются взаимозаменяемыми складскими профилями. Каталожные и испытательные значения относятся только к указанному образцу, стеклопакету и объёму проверки. Заявления для целевого рынка требуют проектного подтверждения.",
   },
 } as const;
 

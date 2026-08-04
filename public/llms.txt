@@ -4,13 +4,14 @@
 ## Systems
 - /en/systems: Aluminium & FRP window profile systems — overview and comparison
 - /en/systems/aluminium: Thermally broken aluminium window-and-door systems — profiles, components, BOM, launch package. For buyers searching "aluminium window profile systems China", "thermally broken aluminium profiles"
-- /en/systems/frp: FRP / glass-fibre composite pultruded window profile systems — low-conductivity platform, defined BOM, joint methods, project test plans. For buyers searching "FRP window profiles", "pultruded window profiles"
+- /en/systems/frp: XD75 aluminium-GRPU hybrid and full-FRP window systems — composite traceability, defined BOM, connection methods and project test plans
+- /en/systems/frp/xd75: XD75 75mm hybrid system — aluminium shells, 45mm pultruded GRPU thermal core, outward-opening and inward tilt-turn configurations
 
 ## Product Catalog
-- /products: 19 aluminium window & door products — casement, sliding, folding, push-out, swing doors, interior systems
-- /products/a65-casement-window: A65 Casement Window — 65mm profile, PA66GF25 thermal break, EPDM seals
-- /products/a110-casement-window: A110 Casement Window — 110.5mm profile, glazing up to 120mm
-- /products/a120-casement-window: A120 Casement Window — flagship, 35.3mm thermal break, triple glazing up to 130mm
+- /en/systems/aluminium: 19 aluminium window & door products — casement, sliding, folding, push-out, swing doors, interior systems
+- /en/systems/aluminium/a65-casement-window: A65 Casement Window — 65mm profile, PA66GF25 thermal break, EPDM seals
+- /en/systems/aluminium/a110-casement-window: A110 Casement Window — 110.5mm profile, glazing up to 120mm
+- /en/systems/aluminium/a120-casement-window: A120 Casement Window — flagship, 35.3mm thermal break, triple glazing up to 130mm
 
 ## Supply Formats
 - /en/supply: P1 (Complete system kit), P2 (Cut-to-length & machined), P3 (Glass-free CKD kit) — comparison and responsibility matrix

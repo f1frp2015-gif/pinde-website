@@ -4,10 +4,15 @@ import { ArrowRight } from "lucide-react";
 import type { Product } from "@/data/products";
 import PindeMark from "./PindeMark";
 
-export default function ProductCard({ product }: { product: Product }) {
+type Props = {
+  product: Product;
+  href?: string;
+};
+
+export default function ProductCard({ product, href }: Props) {
   return (
     <Link
-      href={`/products/${product.slug}`}
+      href={href ?? `/en/systems/aluminium/${product.slug}`}
       className="group block bg-surface border border-line rounded-[2px] overflow-hidden transition-all duration-400 hover:border-warm/20 hover:-translate-y-0.5"
     >
       <div className="aspect-[4/3] bg-obsidian relative overflow-hidden">

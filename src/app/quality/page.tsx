@@ -244,7 +244,7 @@ export default function QualityPage() {
               Get a quote
             </Link>
             <Link
-              href="/products"
+              href="/en/systems/aluminium"
               className="inline-flex items-center gap-[8px] px-[34px] py-4 border border-line text-alabaster text-[11px] font-medium tracking-[3px] uppercase rounded-[1px] hover:border-warm transition-all"
             >
               Browse systems <ArrowRight size={12} />

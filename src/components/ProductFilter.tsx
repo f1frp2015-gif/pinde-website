@@ -5,14 +5,36 @@ import ProductCard from "./ProductCard";
 import type { Product } from "@/data/products";
 
 const categories = [
-  { key: "all", label: "All Systems" },
-  { key: "exterior-windows", label: "Exterior Windows" },
-  { key: "exterior-doors", label: "Exterior Doors" },
-  { key: "interior-doors", label: "Interior Doors" },
+  { key: "all" },
+  { key: "exterior-windows" },
+  { key: "exterior-doors" },
+  { key: "interior-doors" },
 ] as const;
 
-export default function ProductFilter({ products }: { products: Product[] }) {
+const categoryLabels = {
+  en: {
+    all: "All systems",
+    "exterior-windows": "Exterior windows",
+    "exterior-doors": "Exterior doors",
+    "interior-doors": "Interior doors",
+  },
+  ru: {
+    all: "Все системы",
+    "exterior-windows": "Наружные окна",
+    "exterior-doors": "Наружные двери",
+    "interior-doors": "Межкомнатные двери",
+  },
+} as const;
+
+type Props = {
+  products: Product[];
+  locale?: "en" | "ru";
+  basePath?: string;
+};
+
+export default function ProductFilter({ products, locale = "en", basePath = "/en/systems/aluminium" }: Props) {
   const [active, setActive] = useState<string>("all");
+  const labels = categoryLabels[locale];
 
   const filtered =
     active === "all"
@@ -38,7 +60,7 @@ export default function ProductFilter({ products }: { products: Product[] }) {
                   : "bg-transparent text-muted border-line hover:text-alabaster hover:border-warm"
               }`}
             >
-              {cat.label}
+              {labels[cat.key]}
               <span className="ml-[8px] font-[family-name:var(--font-mono)] text-[10px] opacity-60">
                 {count}
               </span>
@@ -50,7 +72,11 @@ export default function ProductFilter({ products }: { products: Product[] }) {
       {/* Product Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[13px]">
         {filtered.map((product) => (
-          <ProductCard key={product.slug} product={product} />
+          <ProductCard
+            key={product.slug}
+            product={product}
+            href={`${basePath}/${product.slug}`}
+          />
         ))}
       </div>
     </>

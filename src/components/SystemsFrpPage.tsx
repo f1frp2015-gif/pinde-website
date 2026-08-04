@@ -1,6 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
-import { AlertTriangle } from "lucide-react";
+import { AlertTriangle, ArrowRight, Check } from "lucide-react";
 import type { PageLocale } from "@/content/pages";
+import { xd75Content } from "@/content/xd75";
 import { breadcrumbJsonLd } from "@/lib/jsonld";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -9,6 +11,7 @@ type Props = { locale: PageLocale; content: any };
 const container = "mx-auto max-w-[1200px] px-[55px] max-lg:px-6";
 
 export default function SystemsFrpPage({ locale, content }: Props) {
+  const xd75 = xd75Content[locale];
   const crumbs = breadcrumbJsonLd([
     { name: "Home", url: `https://pindesys.com/${locale}` },
     { name: "Systems", url: `https://pindesys.com/${locale}/systems` },
@@ -52,6 +55,38 @@ export default function SystemsFrpPage({ locale, content }: Props) {
               <p className="text-[14px] leading-[1.9] text-warm">{s.content}</p>
             </div>
           ))}
+        </div>
+      </section>
+      <section className="py-[89px] bg-obsidian">
+        <div className={`${container} grid items-center gap-[55px] lg:grid-cols-2`}>
+          <div className="relative aspect-square overflow-hidden border border-line bg-white">
+            <Image
+              src="/images/systems/xd75-aluminium-grpu-window-system.webp"
+              alt={locale === "ru" ? "Гибридная оконная система XD75 с термомостом GRPU" : "XD75 hybrid aluminium-GRPU window system"}
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-contain p-5"
+            />
+          </div>
+          <div>
+            <p className="mb-[13px] text-[10px] font-bold uppercase tracking-[0.16em] text-[#0E527D]">{xd75.eyebrow}</p>
+            <h2 className="font-[family-name:var(--font-serif)] text-[36px] font-light leading-[1.05] text-alabaster">
+              {xd75.title}<span className="text-red">.</span>
+            </h2>
+            <p className="mt-5 text-[14px] leading-[1.85] text-warm">{xd75.intro}</p>
+            <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+              {xd75.heroCards.map((card) => (
+                <li key={card.label} className="flex items-start gap-3 text-[12px] leading-[1.6] text-warm">
+                  <Check size={15} className="mt-0.5 shrink-0 text-red" />
+                  <span><strong className="block text-alabaster">{card.value}</strong>{card.label}</span>
+                </li>
+              ))}
+            </ul>
+            <Link href={`/${locale}/systems/frp/xd75`} className="mt-8 inline-flex items-center gap-2 bg-red px-[34px] py-4 text-[11px] font-medium uppercase tracking-[3px] text-white hover:brightness-90">
+              {locale === "ru" ? "Открыть серию XD75" : "Explore the XD75 series"}
+              <ArrowRight size={14} />
+            </Link>
+          </div>
         </div>
       </section>
       {content.note && (

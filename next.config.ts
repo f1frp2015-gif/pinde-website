@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  turbopack: {
+    root: process.cwd(),
+  },
   images: {
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 31536000, // 1 year — image URLs are content-hashed
@@ -81,7 +84,17 @@ const nextConfig: NextConfig = {
         destination: "/en/about",
         permanent: true,
       },
-      // Products catalog (keep non-localized for now)
+      // Legacy non-localized product catalog → localized Systems hierarchy
+      {
+        source: "/products",
+        destination: "/en/systems/aluminium",
+        permanent: true,
+      },
+      {
+        source: "/products/:slug",
+        destination: "/en/systems/aluminium/:slug",
+        permanent: true,
+      },
       // Legacy contact → localized
       {
         source: "/contact",
