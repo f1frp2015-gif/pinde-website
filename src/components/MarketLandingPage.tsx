@@ -237,10 +237,10 @@ export default function MarketLandingPage({ locale, content }: Props) {
             </p>
           </div>
 
-          <div className="relative -mx-5 bg-[#102F45] text-white sm:-mx-8 lg:mx-0 lg:min-h-[680px]">
-            <div className="relative h-[230px] overflow-hidden border-b border-white/15 lg:h-[285px]">
+          <div className="relative -mx-5 bg-[#102F45] text-white sm:-mx-8 lg:mx-0 lg:flex lg:min-h-[680px] lg:flex-col">
+            <div className="relative h-[230px] overflow-hidden border-b border-white/15 lg:h-auto lg:aspect-[2000/755] lg:shrink-0">
               <Image
-                src="/images/factory-aerial.webp"
+                src="/images/pinde-factory-aerial-view-chongqing.webp"
                 alt={content.factory.imageAlt}
                 fill
                 priority
@@ -261,7 +261,7 @@ export default function MarketLandingPage({ locale, content }: Props) {
               </div>
             </div>
 
-            <div className="landing-blueprint-grid p-5 sm:p-8 lg:p-9">
+            <div className="landing-blueprint-grid flex-1 p-5 sm:p-8 lg:p-9">
               <div className="flex items-start justify-between gap-5 border-b border-white/15 pb-5">
                 <div>
                   <span className="text-[10px] font-bold uppercase tracking-[0.1em] text-[#8CC2E2]">
