@@ -20,7 +20,7 @@
 ## Engineering & Quality
 - /en/engineering: Engineering before volume — system definition, fabrication package, evidence register, launch support
 - /en/process: Fabricator enablement — 4-step controlled route: qualify → reference build → paid pilot → scale
-- /quality: ISO 9001, ISO 14001, CE, AS2047, NFRC certifications, in-house testing laboratory
+- /en/certification: ISO 9001, ISO 14001, CE, AS2047, NFRC certifications and destination-market conformity planning
 
 ## Market Compliance
 - /en/certification: Country-specific conformity — EAEU/EAC certification requirements for Russia, Kazakhstan, Belarus separately (no single universal certificate)
@@ -33,9 +33,6 @@
 - Email: inquiry@pindesys.com
 - WhatsApp: +86 138 8333 3993
 - Address: No. 68 Chanye Avenue, Tongliang District, Chongqing, China
-
-## Blog
-- /blog: Technical insights — thermal break technology, aluminium vs uPVC, climate zone window selection
 
 ## Russian (Русский)
 - /ru: Главная страница — системные материалы для локального производства окон
