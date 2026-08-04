@@ -71,7 +71,7 @@ Best fit: Paid pilot runs, time-sensitive projects, and lower-capability product
 PINDÉ Chongqing: System engineering and BOM control, profile production/finishing/batch QA, optional cutting/CNC/kit identification, packing/documentation/replacement parts.
 Local fabricator: Final opening and dimension confirmation, locally sourced glazing and approved hardware, assembly/adjustment/finished-window QA, national conformity/installation/first-line service.
 
-Shipping: Rail-compatible export packing from Chongqing. FCA, CIP, DAP quoted per shipment. Freight and import charges never presented as fixed long-term rates.
+Shipping: The Yuxinou freight railway connects Chongqing with Kazakhstan, Uzbekistan, Turkmenistan, Tajikistan, Kyrgyzstan, and Russia. The homepage route map shows indicative rail transit of approximately 7-20 days by destination. Times are not guaranteed and vary with schedules, consolidation, customs, destination, and last-mile arrangements. Rail-compatible export packing is available; FCA, CIP, and DAP are quoted per shipment, and freight and import charges are never presented as fixed long-term rates.
 
 ## Engineering Deliverables
 - System definition: Profile sections, kg/m, BOM, colour/batch rules, gasket/connector mapping
