@@ -57,6 +57,7 @@ export default function Xd75SystemPage({ locale, content }: Props) {
               fill
               loading="eager"
               fetchPriority="high"
+              unoptimized
               sizes="(max-width: 1024px) 100vw, 45vw"
               className="object-contain p-5"
             />
