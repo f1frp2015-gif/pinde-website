@@ -21,6 +21,7 @@ export default function ProductCard({ product, href }: Props) {
             src={product.images[0]}
             alt={product.name}
             fill
+            unoptimized
             className="object-cover group-hover:scale-105 transition-transform duration-500"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />

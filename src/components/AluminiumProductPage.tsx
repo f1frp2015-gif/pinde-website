@@ -85,6 +85,7 @@ export default function AluminiumProductPage({ locale, product }: Props) {
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 loading="eager"
                 fetchPriority="high"
+                unoptimized
               />
             ) : (
               <div className="absolute inset-0 flex items-center justify-center">
