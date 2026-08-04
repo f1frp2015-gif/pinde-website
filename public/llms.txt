@@ -17,6 +17,9 @@
 - /en/supply: P1 (Complete system kit), P2 (Cut-to-length & machined), P3 (Glass-free CKD kit) — comparison and responsibility matrix
 - /en/supply#p3: CKD window kits — glass-free, machined profiles packed by opening, for buyers searching "CKD window kits", "glass-free window kits"
 
+## Logistics
+- /en#rail-route: Yuxinou railway freight corridor from Chongqing to five Central Asian countries and Russia — indicative rail transit approximately 7-20 days by destination; actual timing and freight are confirmed per shipment
+
 ## Engineering & Quality
 - /en/engineering: Engineering before volume — system definition, fabrication package, evidence register, launch support
 - /en/process: Fabricator enablement — 4-step controlled route: qualify → reference build → paid pilot → scale

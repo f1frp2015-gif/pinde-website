@@ -388,6 +388,68 @@ export default function MarketLandingPage({ locale, content }: Props) {
         </div>
       </section>
 
+      <section id="rail-route" className={`${sectionPadding} border-y border-[#CDD9E0] bg-white`}>
+        <div className={container}>
+          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+            <SectionHeading eyebrow={content.logistics.eyebrow} title={content.logistics.title} />
+            <div>
+              <p className="max-w-[680px] text-[15px] leading-[1.8] text-[#4E6473]">
+                {content.logistics.intro}
+              </p>
+              <dl className="mt-7 grid gap-px border border-[#C9D6DE] bg-[#C9D6DE] sm:grid-cols-3">
+                {content.logistics.facts.map((fact) => (
+                  <div key={fact.label} className="bg-[#F3F7F9] p-5">
+                    <dt className="text-[10px] font-bold uppercase tracking-[0.07em] text-[#667B89]">
+                      {fact.label}
+                    </dt>
+                    <dd className="mt-2 text-[22px] font-extrabold tracking-[-0.025em] text-[#0E527D]">
+                      {fact.value}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
+
+          <figure className="mt-10 overflow-hidden border border-[#C9D6DE] bg-[#F3F7F9] shadow-[0_18px_50px_rgba(16,47,69,0.08)]">
+            <a
+              href="/images/yuxinou-freight-route-map.webp"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={content.logistics.openMap}
+              className="group block"
+            >
+              <div className="relative aspect-[1672/941] w-full overflow-hidden bg-white">
+                <Image
+                  src="/images/yuxinou-freight-route-map.webp"
+                  alt={content.logistics.mapAlt}
+                  fill
+                  sizes="(min-width: 1280px) 1200px, calc(100vw - 40px)"
+                  className="object-contain transition-transform duration-500 group-hover:scale-[1.01]"
+                />
+              </div>
+            </a>
+            <figcaption className="flex flex-col gap-4 border-t border-[#C9D6DE] px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
+              <span className="text-[11px] font-semibold text-[#526878]">{content.logistics.mapCaption}</span>
+              <a
+                href="/images/yuxinou-freight-route-map.webp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex shrink-0 items-center gap-2 text-[11px] font-bold text-[#0E527D] hover:text-[#D62832]"
+              >
+                {content.logistics.openMap}
+                <ArrowRight size={14} />
+              </a>
+            </figcaption>
+          </figure>
+
+          <p className="mt-5 flex items-start gap-3 border-l-4 border-[#F0B429] bg-[#FFF8DF] px-5 py-4 text-[11px] leading-[1.7] text-[#5C593E]">
+            <Route size={18} className="mt-0.5 shrink-0 text-[#A66B00]" />
+            {content.logistics.note}
+          </p>
+        </div>
+      </section>
+
       <section id="formats" className={`${sectionPadding} scroll-mt-28 border-y border-[#CDD9E0] bg-white`}>
         <div className={container}>
           <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">

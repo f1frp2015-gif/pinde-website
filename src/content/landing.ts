@@ -109,6 +109,23 @@ export const landingContent = {
       evidence:
         "Thermal, structural and weather-performance values are stated only for a verified specimen, glazing build-up and test scope. Unverified values remain project targets—not sales claims.",
     },
+    logistics: {
+      eyebrow: "Chongqing rail connection",
+      title: "Fast rail access from Chongqing to Central Asia and Russia.",
+      intro:
+        "The Yuxinou freight railway connects our Chongqing manufacturing base with five Central Asian countries and Russia. Reference rail transit is approximately 7–20 days by destination, supporting responsive replenishment and project scheduling across the region.",
+      facts: [
+        { value: "Chongqing", label: "Origin and production dispatch" },
+        { value: "6 markets", label: "Five Central Asian countries + Russia" },
+        { value: "~7–20 days", label: "Indicative rail transit by destination" },
+      ],
+      mapAlt:
+        "Yuxinou railway freight route map from Chongqing to Kazakhstan, Uzbekistan, Turkmenistan, Tajikistan, Kyrgyzstan and Russia",
+      mapCaption: "Yuxinou freight route from Chongqing to Central Asia and Russia",
+      openMap: "Open full route map",
+      note:
+        "Transit times are indicative, not guaranteed. Actual timing depends on train schedules, consolidation, customs clearance, destination and last-mile arrangements; freight is confirmed for each shipment.",
+    },
     formats: {
       eyebrow: "Supply formats",
       title: "From system materials to assembly-ready semi-finished kits.",
@@ -448,6 +465,23 @@ export const landingContent = {
       ],
       evidence:
         "Показатели теплотехники, прочности и герметичности указываются только для проверенного образца, стеклопакета и объёма испытаний. Непроверенные значения остаются целями проекта, а не рекламными обещаниями.",
+    },
+    logistics: {
+      eyebrow: "Железнодорожная связь из Чунцина",
+      title: "Быстрый железнодорожный маршрут в Центральную Азию и Россию.",
+      intro:
+        "Грузовая железная дорога Юйсиньоу связывает нашу производственную базу в Чунцине с пятью странами Центральной Азии и Россией. Ориентировочное время перевозки составляет 7–20 дней в зависимости от направления, что упрощает пополнение запасов и планирование проектов в регионе.",
+      facts: [
+        { value: "Чунцин", label: "Производство и отправление" },
+        { value: "6 рынков", label: "Пять стран Центральной Азии + Россия" },
+        { value: "~7–20 дней", label: "Ориентировочный срок по железной дороге" },
+      ],
+      mapAlt:
+        "Схема железнодорожного грузового маршрута Юйсиньоу из Чунцина в Казахстан, Узбекистан, Туркменистан, Таджикистан, Кыргызстан и Россию",
+      mapCaption: "Грузовой маршрут Юйсиньоу из Чунцина в Центральную Азию и Россию",
+      openMap: "Открыть карту маршрута",
+      note:
+        "Сроки указаны ориентировочно и не гарантируются. Фактическое время зависит от графика поездов, консолидации, таможенного оформления, пункта назначения и последней мили; стоимость перевозки подтверждается для каждой партии.",
     },
     formats: {
       eyebrow: "Форматы поставки",
