@@ -1,30 +1,21 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, JetBrains_Mono, Manrope } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { organizationJsonLd, localBusinessJsonLd } from "@/lib/jsonld";
 
-const cormorant = Cormorant_Garamond({
+const montserrat = Montserrat({
   subsets: ["latin", "cyrillic"],
-  weight: ["300", "400", "500"],
-  style: ["normal", "italic"],
   display: "swap",
-  variable: "--font-serif",
+  variable: "--font-pinde-brand",
 });
 
-const manrope = Manrope({
+const inter = Inter({
   subsets: ["latin", "cyrillic"],
   display: "swap",
-  variable: "--font-sans",
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin", "cyrillic"],
-  weight: ["300", "400"],
-  display: "swap",
-  variable: "--font-mono",
+  variable: "--font-pinde-body",
 });
 
 const siteUrl = "https://pindesys.com";
@@ -104,7 +95,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cormorant.variable} ${manrope.variable} ${jetbrainsMono.variable} h-full`}
+      className={`${montserrat.variable} ${inter.variable} h-full`}
     >
       <body className="min-h-full flex flex-col antialiased bg-obsidian text-alabaster font-[family-name:var(--font-sans)] selection:bg-red/15">
         <script

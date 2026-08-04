@@ -1,40 +1,43 @@
 /**
- * PINDÉ Brand Mark — Square + Red Dot
- * Dot diameter = side / φ³ = side × 0.1459
- * Dot center = top-right vertex of square
- * 75% outside, 25% inside
+ * PINDÉ window mark.
+ *
+ * The open navy frame, gold sash and red corner accent follow the primary
+ * construction shown in the PINDÉ brand identity manual.
  */
 export default function PindeMark({
   size = 40,
-  frame = "#0A0A0C",
-  dot = "#D42B2B",
+  frame = "#0D2440",
+  sash = "#C7A154",
+  accent = "#D71920",
 }: {
   size?: number;
   frame?: string;
-  dot?: string;
+  sash?: string;
+  accent?: string;
 }) {
-  const d = size * 0.1459;
-  const pad = d * 1.3;
-  const sw = Math.max(size / 120, 0.6);
-
   return (
     <svg
-      width={size + pad * 2}
-      height={size + pad * 2}
-      viewBox={`${-pad} ${-pad} ${size + pad * 2} ${size + pad * 2}`}
-      style={{ overflow: "visible", display: "block" }}
-      aria-label="PINDÉ mark"
+      width={size}
+      height={size}
+      viewBox="0 0 64 64"
+      fill="none"
+      role="img"
+      aria-label="PINDÉ window mark"
     >
-      <rect
-        x="0"
-        y="0"
-        width={size}
-        height={size}
-        fill="none"
+      <path
+        d="M8 8H48M56 17V56H18"
         stroke={frame}
-        strokeWidth={sw}
+        strokeWidth="5"
+        strokeLinecap="square"
+        strokeLinejoin="miter"
       />
-      <circle cx={size} cy={0} r={d / 2} fill={dot} />
+      <path
+        d="M8 16L31 29V48L8 58V16Z"
+        stroke={sash}
+        strokeWidth="5"
+        strokeLinejoin="miter"
+      />
+      <rect x="52" y="6" width="9" height="9" fill={accent} />
     </svg>
   );
 }

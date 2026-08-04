@@ -40,7 +40,7 @@ export default function ContactForm() {
     return (
       <div className="bg-surface border border-line rounded-[2px] p-[34px] text-center">
         <span className="inline-block w-[5px] h-[5px] rounded-full bg-red mb-[13px]" />
-        <h3 className="font-[family-name:var(--font-serif)] text-[22px] font-light text-alabaster mb-[8px]">
+        <h3 className="font-[family-name:var(--font-serif)] text-[22px] font-semibold text-alabaster mb-[8px]">
           Thank you
         </h3>
         <p className="text-warm text-[13px]">
@@ -179,7 +179,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "sending"}
-        className="inline-flex items-center gap-[10px] px-[34px] py-4 bg-red text-white text-[11px] font-medium tracking-[3px] uppercase rounded-[1px] hover:brightness-90 transition-all disabled:opacity-50"
+        className="inline-flex items-center gap-[10px] px-[34px] py-4 bg-gold text-navy text-[11px] font-medium tracking-[3px] uppercase rounded-[1px] hover:brightness-90 transition-all disabled:opacity-50"
       >
         <Send size={14} />
         {status === "sending" ? "Sending..." : "Send inquiry"}

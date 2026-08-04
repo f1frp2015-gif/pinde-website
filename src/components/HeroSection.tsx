@@ -24,7 +24,7 @@ export default function HeroSection({
           <span className="w-[21px] h-px bg-muted opacity-40" />
         </div>
 
-        <h1 className="font-[family-name:var(--font-serif)] font-light text-[clamp(40px,6vw,72px)] leading-[1.05] tracking-[0.02em] text-alabaster mb-[34px]">
+        <h1 className="font-[family-name:var(--font-serif)] font-semibold text-[clamp(40px,6vw,72px)] leading-[1.05] tracking-[0.02em] text-alabaster mb-[34px]">
           {title}
           <span className="text-red">.</span>
         </h1>
@@ -36,7 +36,7 @@ export default function HeroSection({
         <div className="flex flex-wrap gap-[13px] justify-center">
           <Link
             href={ctaHref}
-            className="inline-flex items-center gap-[10px] px-[34px] py-4 bg-red text-white text-[11px] font-medium tracking-[3px] uppercase rounded-[1px] hover:brightness-90 transition-all"
+            className="inline-flex items-center gap-[10px] px-[34px] py-4 bg-gold text-navy text-[11px] font-medium tracking-[3px] uppercase rounded-[1px] hover:brightness-90 transition-all"
           >
             <span className="inline-block w-[5px] h-[5px] rounded-full bg-white" />
             {ctaText}

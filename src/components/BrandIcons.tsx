@@ -15,7 +15,7 @@ const base = {
   strokeLinejoin: "round" as const,
 };
 
-const RED = "#D42B2B";
+const RED = "#D71920";
 
 function Frame({ size = 24, className, children }: IconProps & { children: React.ReactNode }) {
   return (
@@ -270,7 +270,7 @@ export function LabRigIllustration({ size = 144 }: { size?: number }) {
       <circle cx="110" cy="42" r="18" stroke="currentColor" strokeWidth="1" fill="none" />
       <circle cx="110" cy="42" r="14" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.4" />
       <line x1="110" y1="42" x2="119" y2="33" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" />
-      <circle cx="110" cy="42" r="1.5" fill="#D42B2B" />
+      <circle cx="110" cy="42" r="1.5" fill="#D71920" />
       <line x1="110" y1="25" x2="110" y2="27" stroke="currentColor" strokeWidth="1" />
       <line x1="127" y1="42" x2="125" y2="42" stroke="currentColor" strokeWidth="1" />
       <line x1="110" y1="59" x2="110" y2="57" stroke="currentColor" strokeWidth="1" />

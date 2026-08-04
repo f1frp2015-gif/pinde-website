@@ -13,10 +13,10 @@ type Props = {
 };
 
 const fieldClass =
-  "w-full border border-[#BFCED7] bg-white px-4 py-3.5 text-[14px] text-[#142C3D] outline-none transition-colors placeholder:text-[#8596A1] focus:border-[#0E527D] focus:ring-2 focus:ring-[#0E527D]/10";
+  "w-full border border-[#DCE1E6] bg-white px-4 py-3.5 text-[14px] text-[#0D2440] outline-none transition-colors placeholder:text-[#7A828C] focus:border-[#C7A154] focus:ring-2 focus:ring-[#C7A154]/10";
 
 const labelClass =
-  "mb-2 block text-[10px] font-bold uppercase tracking-[0.06em] text-[#526878]";
+  "mb-2 block text-[10px] font-bold uppercase tracking-[0.06em] text-[#7A828C]";
 
 export default function LandingInquiryForm({ locale, content }: Props) {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
@@ -82,14 +82,14 @@ export default function LandingInquiryForm({ locale, content }: Props) {
   if (status === "sent") {
     return (
       <div
-        className="flex min-h-[440px] flex-col items-center justify-center border border-[#BFCED7] bg-[#F3F7F9] p-8 text-center"
+        className="flex min-h-[440px] flex-col items-center justify-center border border-[#DCE1E6] bg-[#F6F7F8] p-8 text-center"
         role="status"
       >
         <span className="mb-[21px] h-[8px] w-[8px] rounded-full bg-red" />
-        <h3 className="text-[30px] font-extrabold text-[#102F45]">
+        <h3 className="text-[30px] font-extrabold text-[#0D2440]">
           {content.successTitle}
         </h3>
-        <p className="mt-3 max-w-[440px] text-[14px] leading-[1.8] text-[#526878]">
+        <p className="mt-3 max-w-[440px] text-[14px] leading-[1.8] text-[#7A828C]">
           {content.successText}
         </p>
       </div>
@@ -255,15 +255,15 @@ export default function LandingInquiryForm({ locale, content }: Props) {
         <span className={labelClass}>{content.fields.file}</span>
         <label
           htmlFor={`${locale}-attachment`}
-          className="flex min-h-[92px] cursor-pointer items-center justify-between gap-5 border border-dashed border-[#9FB4C1] bg-[#F3F7F9] px-5 py-4 transition-colors hover:border-[#0E527D]"
+          className="flex min-h-[92px] cursor-pointer items-center justify-between gap-5 border border-dashed border-[#B9C0C8] bg-[#F6F7F8] px-5 py-4 transition-colors hover:border-[#C7A154]"
         >
           <span className="flex min-w-0 items-center gap-[13px]">
-            <FileUp size={20} className="shrink-0 text-[#0E527D]" />
+            <FileUp size={20} className="shrink-0 text-[#C7A154]" />
             <span className="min-w-0">
-              <span className="block truncate text-[13px] font-bold text-[#102F45]">
+              <span className="block truncate text-[13px] font-bold text-[#0D2440]">
                 {selectedFile ? selectedFile.name : content.fields.file}
               </span>
-              <span className="mt-1 block text-[11px] text-[#607684]">
+              <span className="mt-1 block text-[11px] text-[#7A828C]">
                 {content.fields.fileHelp}
               </span>
             </span>
@@ -277,7 +277,7 @@ export default function LandingInquiryForm({ locale, content }: Props) {
                 handleFile(null);
                 if (fileInputRef.current) fileInputRef.current.value = "";
               }}
-              className="shrink-0 p-2 text-[#607684] hover:text-[#102F45]"
+              className="shrink-0 p-2 text-[#7A828C] hover:text-[#0D2440]"
             >
               <X size={16} />
             </button>
@@ -299,7 +299,7 @@ export default function LandingInquiryForm({ locale, content }: Props) {
         )}
       </div>
 
-      <label className="flex items-start gap-2.5 text-[11px] leading-[1.6] text-[#607684]">
+      <label className="flex items-start gap-2.5 text-[11px] leading-[1.6] text-[#7A828C]">
         <input
           name="consent"
           type="checkbox"
@@ -319,7 +319,7 @@ export default function LandingInquiryForm({ locale, content }: Props) {
       <button
         type="submit"
         disabled={status === "sending" || fileError}
-        className="inline-flex min-h-12 w-full items-center justify-center gap-2.5 bg-[#D62832] px-7 py-3.5 text-[12px] font-bold text-white transition-colors hover:bg-[#B91F28] disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
+        className="inline-flex min-h-12 w-full items-center justify-center gap-2.5 bg-[#C7A154] px-7 py-3.5 text-[12px] font-bold text-[#0D2440] transition-[filter] hover:brightness-105 disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
       >
         <Send size={15} />
         {status === "sending" ? content.sending : content.submit}

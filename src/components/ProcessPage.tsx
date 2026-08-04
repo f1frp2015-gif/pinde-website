@@ -16,7 +16,7 @@ export default function ProcessPage({ locale, content }: Props) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }} />
-      <nav aria-label="Breadcrumb" className="pt-20 py-4 bg-obsidian border-b border-line">
+      <nav aria-label="Breadcrumb" className="pt-[104px] py-4 bg-obsidian border-b border-line">
         <div className={`${container} pt-[13px] flex items-center gap-2 text-[11px] tracking-[2px] uppercase text-muted`}>
           <Link href={`/${locale}`} className="hover:text-alabaster transition-colors">Home</Link>
           <span>/</span>
@@ -25,8 +25,8 @@ export default function ProcessPage({ locale, content }: Props) {
       </nav>
       <section className="py-[89px] bg-obsidian">
         <div className={container}>
-          <h1 className="font-[family-name:var(--font-serif)] font-light text-[clamp(40px,6vw,64px)] leading-[0.95] text-alabaster mb-[21px]">
-            {content.title}<span className="text-red">.</span>
+          <h1 className="font-[family-name:var(--font-serif)] font-semibold text-[clamp(40px,6vw,64px)] leading-[0.95] text-alabaster mb-[21px]">
+            {content.title.replace(/[.!?]+$/, "")}<span className="text-red">.</span>
           </h1>
           <p className="text-warm text-[15px] leading-[1.9] max-w-[680px]">{content.intro}</p>
         </div>
@@ -48,10 +48,10 @@ export default function ProcessPage({ locale, content }: Props) {
       </section>
       <section className="py-[89px] bg-obsidian">
         <div className={`${container} text-center`}>
-          <h2 className="font-[family-name:var(--font-serif)] font-light text-[28px] text-alabaster mb-[21px]">
+          <h2 className="font-[family-name:var(--font-serif)] font-semibold text-[28px] text-alabaster mb-[21px]">
             Ready to qualify your factory<span className="text-red">?</span>
           </h2>
-          <Link href={`/${locale}/contact`} className="inline-flex items-center gap-[10px] px-[34px] py-4 bg-red text-white text-[11px] font-medium tracking-[3px] uppercase rounded-[1px] hover:brightness-90">
+          <Link href={`/${locale}/contact`} className="inline-flex items-center gap-[10px] px-[34px] py-4 bg-gold text-navy text-[11px] font-medium tracking-[3px] uppercase rounded-[1px] hover:brightness-90">
             <span className="inline-block w-[5px] h-[5px] rounded-full bg-white" />
             {content.cta}
           </Link>
