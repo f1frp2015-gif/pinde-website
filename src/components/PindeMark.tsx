@@ -9,11 +9,13 @@ export default function PindeMark({
   frame = "#0D2440",
   sash = "#C7A154",
   accent = "#D71920",
+  decorative = false,
 }: {
   size?: number;
   frame?: string;
   sash?: string;
   accent?: string;
+  decorative?: boolean;
 }) {
   return (
     <svg
@@ -21,8 +23,10 @@ export default function PindeMark({
       height={size}
       viewBox="0 0 64 64"
       fill="none"
-      role="img"
-      aria-label="PINDÉ window mark"
+      role={decorative ? undefined : "img"}
+      aria-label={decorative ? undefined : "PINDÉ window mark"}
+      aria-hidden={decorative ? true : undefined}
+      focusable="false"
     >
       <path
         d="M8 8H48M56 17V56H18"
