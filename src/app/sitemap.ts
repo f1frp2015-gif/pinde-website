@@ -8,6 +8,7 @@ const localizedRoutes = [
   { path: "/systems", frequency: "weekly" as const, priority: 0.85 },
   { path: "/systems/aluminium", frequency: "weekly" as const, priority: 0.85 },
   { path: "/systems/frp", frequency: "weekly" as const, priority: 0.8 },
+  { path: "/systems/frp/xd75", frequency: "weekly" as const, priority: 0.8 },
   { path: "/supply", frequency: "weekly" as const, priority: 0.85 },
   { path: "/engineering", frequency: "monthly" as const, priority: 0.8 },
   { path: "/process", frequency: "monthly" as const, priority: 0.75 },
@@ -35,18 +36,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   );
 
-  // Product catalog (non-localized)
-  const productPages = products.map((product) => ({
-    url: `${baseUrl}/products/${product.slug}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
-  }));
-
-  // Products index
-  const staticPages = [
-    { url: `${baseUrl}/products`, frequency: "monthly" as const, priority: 0.7 },
-  ];
+  const productPages: MetadataRoute.Sitemap = products.flatMap((product) =>
+    ["en", "ru"].map((locale) => ({
+      url: `${baseUrl}/${locale}/systems/aluminium/${product.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+      alternates: {
+        languages: {
+          en: `${baseUrl}/en/systems/aluminium/${product.slug}`,
+          ru: `${baseUrl}/ru/systems/aluminium/${product.slug}`,
+          "x-default": `${baseUrl}/en/systems/aluminium/${product.slug}`,
+        },
+      },
+    })),
+  );
 
   // Blog
   const blogPages = posts.map((post) => ({
@@ -60,7 +64,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...localizedPages,
-    ...staticPages,
     ...productPages,
     blogIndex,
     ...blogPages,

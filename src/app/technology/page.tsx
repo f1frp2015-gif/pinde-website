@@ -274,7 +274,7 @@ export default function TechnologyPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-[21px] justify-center">
             <Link
-              href="/products"
+              href="/en/systems/aluminium"
               className="inline-flex items-center gap-[10px] px-[34px] py-4 bg-red text-white text-[11px] font-medium tracking-[3px] uppercase rounded-[1px] hover:brightness-90 transition-all"
             >
               <span className="inline-block w-[5px] h-[5px] rounded-full bg-white" />

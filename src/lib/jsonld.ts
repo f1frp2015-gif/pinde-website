@@ -82,7 +82,7 @@ export function productJsonLd(product: {
   description: string;
   images: string[];
   specs: { label: string; value: string }[];
-}) {
+}, productUrl = `${siteUrl}/en/systems/aluminium/${product.slug}`) {
   return {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -97,7 +97,7 @@ export function productJsonLd(product: {
       name: "PINDÉ",
       url: siteUrl,
     },
-    url: `${siteUrl}/products/${product.slug}`,
+    url: productUrl,
     image: product.images.length > 0
       ? `${siteUrl}${product.images[0]}`
       : `${siteUrl}/og-ru-market.webp`,

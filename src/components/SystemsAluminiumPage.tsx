@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import type { PageLocale } from "@/content/pages";
+import ProductFilter from "@/components/ProductFilter";
+import { products } from "@/data/products";
 import { breadcrumbJsonLd } from "@/lib/jsonld";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -54,20 +55,33 @@ export default function SystemsAluminiumPage({ locale, content }: Props) {
           ))}
         </div>
       </section>
-      <section className="py-[89px] bg-obsidian">
+      <section id="aluminium-catalog" className="py-[89px] bg-obsidian scroll-mt-24">
+        <div className={container}>
+          <div className="mb-[34px] max-w-[760px]">
+            <p className="mb-[13px] text-[10px] font-bold uppercase tracking-[0.16em] text-[#0E527D]">
+              {products.length} {locale === "ru" ? "систем" : "systems"}
+            </p>
+            <h2 className="font-[family-name:var(--font-serif)] text-[36px] font-light text-alabaster mb-[13px]">
+              {content.catalogTitle}<span className="text-red">.</span>
+            </h2>
+            <p className="text-[14px] leading-[1.9] text-warm">{content.catalogIntro}</p>
+          </div>
+          <ProductFilter
+            products={products}
+            locale={locale}
+            basePath={`/${locale}/systems/aluminium`}
+          />
+        </div>
+      </section>
+      <section className="py-[89px] bg-surface">
         <div className={`${container} text-center`}>
           <h2 className="font-[family-name:var(--font-serif)] font-light text-[28px] text-alabaster mb-[21px]">
-            Ready to evaluate the system<span className="text-red">?</span>
+            {locale === "ru" ? "Готовы квалифицировать систему" : "Ready to evaluate the system"}<span className="text-red">?</span>
           </h2>
-          <div className="flex flex-col sm:flex-row gap-[13px] justify-center">
-            <Link href={`/${locale}/contact`} className="inline-flex items-center gap-[10px] px-[34px] py-4 bg-red text-white text-[11px] font-medium tracking-[3px] uppercase rounded-[1px] hover:brightness-90">
-              <span className="inline-block w-[5px] h-[5px] rounded-full bg-white" />
-              {content.cta}
-            </Link>
-            <Link href="/products" className="inline-flex items-center gap-[8px] px-[34px] py-4 border border-line text-alabaster text-[11px] font-medium tracking-[3px] uppercase rounded-[1px] hover:border-warm transition-all">
-              {content.productLinkLabel} <ArrowRight size={12} />
-            </Link>
-          </div>
+          <Link href={`/${locale}/contact`} className="inline-flex items-center gap-[10px] px-[34px] py-4 bg-red text-white text-[11px] font-medium tracking-[3px] uppercase rounded-[1px] hover:brightness-90">
+            <span className="inline-block w-[5px] h-[5px] rounded-full bg-white" />
+            {content.cta}
+          </Link>
         </div>
       </section>
     </>

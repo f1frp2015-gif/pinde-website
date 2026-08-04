@@ -11,7 +11,7 @@ export default function HeroSection({
   title,
   subtitle,
   ctaText = "Explore systems",
-  ctaHref = "/products",
+  ctaHref = "/en/systems/aluminium",
 }: HeroSectionProps) {
   return (
     <section className="relative min-h-[70vh] flex items-center bg-obsidian pt-20">
