@@ -24,7 +24,7 @@ export default function Xd75SystemPage({ locale, content }: Props) {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }} />
 
-      <nav aria-label="Breadcrumb" className="pt-20 py-4 bg-obsidian border-b border-line">
+      <nav aria-label="Breadcrumb" className="pt-[104px] py-4 bg-obsidian border-b border-line">
         <div className={`${container} pt-[13px] flex flex-wrap items-center gap-2 text-[11px] tracking-[2px] uppercase text-muted`}>
           <Link href={`/${locale}`} className="hover:text-alabaster transition-colors">Home</Link>
           <span>/</span>
@@ -39,14 +39,14 @@ export default function Xd75SystemPage({ locale, content }: Props) {
       <section className="py-[89px] bg-obsidian">
         <div className={`${container} grid items-center gap-[55px] lg:grid-cols-[1.05fr_0.95fr]`}>
           <div>
-            <span className="inline-block bg-[#D62832] px-3 py-2 text-[10px] font-bold uppercase tracking-[0.08em] text-white mb-[21px]">
+            <span className="inline-block bg-[#D71920] px-3 py-2 text-[10px] font-bold uppercase tracking-[0.08em] text-white mb-[21px]">
               {content.supplyStatus}
             </span>
-            <p className="mb-[13px] text-[10px] font-bold uppercase tracking-[0.16em] text-[#0E527D]">
+            <p className="mb-[13px] text-[10px] font-bold uppercase tracking-[0.16em] text-[#C7A154]">
               {content.eyebrow}
             </p>
-            <h1 className="font-[family-name:var(--font-serif)] font-light text-[clamp(40px,6vw,64px)] leading-[0.95] text-alabaster mb-[21px]">
-              {content.title}<span className="text-red">.</span>
+            <h1 className="font-[family-name:var(--font-serif)] font-semibold text-[clamp(40px,6vw,64px)] leading-[0.95] text-alabaster mb-[21px]">
+              {content.title.replace(/[.!?]+$/, "")}<span className="text-red">.</span>
             </h1>
             <p className="text-warm text-[15px] leading-[1.9] max-w-[680px]">{content.intro}</p>
           </div>
@@ -73,7 +73,7 @@ export default function Xd75SystemPage({ locale, content }: Props) {
 
       <section className="py-[89px] bg-surface">
         <div className={`${container} max-w-[900px]`}>
-          <h2 className="font-[family-name:var(--font-serif)] text-[32px] font-light text-alabaster mb-[13px]">
+          <h2 className="font-[family-name:var(--font-serif)] text-[32px] font-semibold text-alabaster mb-[13px]">
             {content.identityTitle}<span className="text-red">.</span>
           </h2>
           <p className="text-[14px] leading-[1.9] text-warm">{content.identity}</p>
@@ -82,7 +82,7 @@ export default function Xd75SystemPage({ locale, content }: Props) {
 
       <section className="py-[89px] bg-obsidian">
         <div className={container}>
-          <h2 className="font-[family-name:var(--font-serif)] text-[32px] font-light text-alabaster mb-[34px]">
+          <h2 className="font-[family-name:var(--font-serif)] text-[32px] font-semibold text-alabaster mb-[34px]">
             {content.variantsTitle}<span className="text-red">.</span>
           </h2>
           <div className="grid gap-[13px] lg:grid-cols-2">
@@ -106,7 +106,7 @@ export default function Xd75SystemPage({ locale, content }: Props) {
 
       <section className="py-[89px] bg-surface">
         <div className={container}>
-          <h2 className="font-[family-name:var(--font-serif)] text-[32px] font-light text-alabaster mb-[34px]">
+          <h2 className="font-[family-name:var(--font-serif)] text-[32px] font-semibold text-alabaster mb-[34px]">
             {content.specsTitle}<span className="text-red">.</span>
           </h2>
           <div className="overflow-hidden border border-line bg-obsidian">
@@ -128,13 +128,13 @@ export default function Xd75SystemPage({ locale, content }: Props) {
 
       <section className="py-[89px] bg-obsidian">
         <div className={container}>
-          <h2 className="font-[family-name:var(--font-serif)] text-[32px] font-light text-alabaster mb-[13px]">
+          <h2 className="font-[family-name:var(--font-serif)] text-[32px] font-semibold text-alabaster mb-[13px]">
             {content.performanceTitle}<span className="text-red">.</span>
           </h2>
           <p className="max-w-[860px] text-[13px] leading-[1.8] text-warm">{content.performanceIntro}</p>
           <div className="mt-[34px] overflow-x-auto border border-line">
             <table className="min-w-[850px] w-full bg-surface text-left">
-              <thead className="bg-[#102F45] text-white">
+              <thead className="bg-[#0D2440] text-white">
                 <tr>
                   {Object.values(content.performanceColumns).map((label) => (
                     <th key={label} className="px-5 py-4 text-[10px] font-bold uppercase tracking-[0.08em]">{label}</th>
@@ -155,8 +155,8 @@ export default function Xd75SystemPage({ locale, content }: Props) {
               </tbody>
             </table>
           </div>
-          <div className="mt-6 flex items-start gap-4 border-l-4 border-[#F0B429] bg-[#FFF9E8] px-5 py-4">
-            <AlertTriangle size={20} className="mt-0.5 shrink-0 text-[#B07900]" />
+          <div className="mt-6 flex items-start gap-4 border-l-4 border-[#C7A154] bg-[#F8F4E9] px-5 py-4">
+            <AlertTriangle size={20} className="mt-0.5 shrink-0 text-[#C7A154]" />
             <p className="text-[12px] leading-[1.7] text-warm">{content.note}</p>
           </div>
         </div>
@@ -164,12 +164,12 @@ export default function Xd75SystemPage({ locale, content }: Props) {
 
       <section className="py-[89px] bg-surface">
         <div className={`${container} text-center`}>
-          <h2 className="font-[family-name:var(--font-serif)] font-light text-[32px] text-alabaster mb-[21px]">
+          <h2 className="font-[family-name:var(--font-serif)] font-semibold text-[32px] text-alabaster mb-[21px]">
             {content.ctaTitle}<span className="text-red">?</span>
           </h2>
           <div className="flex flex-col justify-center gap-[13px] sm:flex-row">
-            <Link href={`/${locale}/contact`} className="inline-flex items-center justify-center gap-[10px] bg-red px-[34px] py-4 text-[11px] font-medium uppercase tracking-[3px] text-white hover:brightness-90">
-              <span className="inline-block h-[5px] w-[5px] rounded-full bg-white" />
+            <Link href={`/${locale}/contact`} className="inline-flex items-center justify-center gap-[10px] bg-gold px-[34px] py-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-navy hover:brightness-105">
+              <span className="inline-block h-[5px] w-[5px] bg-red" />
               {content.cta}
             </Link>
             <Link href={`/${locale}/systems/frp`} className="inline-flex items-center justify-center gap-2 border border-line px-[34px] py-4 text-[11px] font-medium uppercase tracking-[3px] text-alabaster transition-colors hover:border-warm">

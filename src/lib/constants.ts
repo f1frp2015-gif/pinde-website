@@ -25,25 +25,16 @@ export const NAV_LINKS = [
   { label: "Contact", href: "/en/contact" },
 ];
 
-/* φ-cascade: 8 colors only
- * L0 Obsidian   #0A0A0C  61.80%  canvas
- * L1 Surface    #111113  14.59%  cards / alt sections
- * L2 Alabaster  #F5F0EB   9.02%  headlines / primary text
- * L3 Warm       #B5AFA8   5.57%  body text
- * L4 Bronze     #C4956A   3.44%  editorial accent
- * L5 Red        #D42B2B   2.13%  dot + CTA only
- * L6 Muted      #555555   1.32%  labels / meta
- * L7 Line       #1A1A1E   0.81%  all borders
- */
+/* PINDÉ VI palette. Legacy L/COLORS names remain for data consumers. */
 export const L = {
-  0: "#0A0A0C",
-  1: "#111113",
-  2: "#F5F0EB",
-  3: "#B5AFA8",
-  4: "#C4956A",
-  5: "#D42B2B",
-  6: "#555555",
-  7: "#1A1A1E",
+  0: "#FFFFFF",
+  1: "#F6F7F8",
+  2: "#0D2440",
+  3: "#4F5B69",
+  4: "#C7A154",
+  5: "#D71920",
+  6: "#7A828C",
+  7: "#DCE1E6",
 } as const;
 
 export const COLORS = {

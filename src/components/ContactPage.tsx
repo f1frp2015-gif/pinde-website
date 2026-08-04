@@ -18,7 +18,7 @@ export default function ContactPage({ locale }: Props) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }} />
-      <nav aria-label="Breadcrumb" className="pt-20 py-4 bg-obsidian border-b border-line">
+      <nav aria-label="Breadcrumb" className="pt-[104px] py-4 bg-obsidian border-b border-line">
         <div className={`${container} pt-[13px] flex items-center gap-2 text-[11px] tracking-[2px] uppercase text-muted`}>
           <Link href={`/${locale}`} className="hover:text-alabaster transition-colors">Home</Link>
           <span>/</span>
@@ -28,7 +28,7 @@ export default function ContactPage({ locale }: Props) {
       <section className="py-[89px] bg-obsidian">
         <div className={`${container} grid lg:grid-cols-[0.9fr_1.1fr] gap-[55px]`}>
           <div>
-            <h1 className="font-[family-name:var(--font-serif)] font-light text-[clamp(40px,6vw,64px)] leading-[0.95] text-alabaster mb-[21px]">
+            <h1 className="font-[family-name:var(--font-serif)] font-semibold text-[clamp(40px,6vw,64px)] leading-[0.95] text-alabaster mb-[21px]">
               {isRu ? "Свяжитесь с нами" : "Get in touch"}
               <span className="text-red">.</span>
             </h1>
@@ -69,7 +69,7 @@ export default function ContactPage({ locale }: Props) {
             </div>
           </div>
           <div className="bg-surface border border-line rounded-[2px] p-8">
-            <h2 className="font-[family-name:var(--font-serif)] text-[24px] font-light text-alabaster mb-[21px]">
+            <h2 className="font-[family-name:var(--font-serif)] text-[24px] font-semibold text-alabaster mb-[21px]">
               {isRu ? "Отправить запрос" : "Send an inquiry"}
               <span className="text-red">.</span>
             </h2>

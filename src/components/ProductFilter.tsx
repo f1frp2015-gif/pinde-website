@@ -56,7 +56,7 @@ export default function ProductFilter({ products, locale = "en", basePath = "/en
               onClick={() => setActive(cat.key)}
               className={`px-[21px] py-[8px] text-[11px] tracking-[2px] uppercase border rounded-[1px] transition-all ${
                 active === cat.key
-                  ? "bg-red text-white border-red"
+                  ? "bg-gold text-navy border-gold"
                   : "bg-transparent text-muted border-line hover:text-alabaster hover:border-warm"
               }`}
             >

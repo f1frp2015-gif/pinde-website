@@ -7,7 +7,7 @@ export default function NotFound() {
       <div className="text-center px-6">
         <PindeMark size={55} frame="rgba(10,10,12,0.06)" />
         <div className="mt-[34px]" />
-        <h1 className="font-[family-name:var(--font-serif)] font-light text-[64px] leading-[0.95] text-alabaster mb-[13px]">
+        <h1 className="font-[family-name:var(--font-serif)] font-semibold text-[64px] leading-[0.95] text-alabaster mb-[13px]">
           404<span className="text-red">.</span>
         </h1>
         <p className="text-warm text-[15px] leading-[1.9] mb-[55px] max-w-[400px] mx-auto">
@@ -17,7 +17,7 @@ export default function NotFound() {
         <div className="flex flex-col sm:flex-row gap-[21px] justify-center">
           <Link
             href="/"
-            className="inline-flex items-center gap-[10px] px-[34px] py-4 bg-red text-white text-[11px] font-medium tracking-[3px] uppercase rounded-[1px] hover:brightness-90 transition-all"
+            className="inline-flex items-center gap-[10px] px-[34px] py-4 bg-gold text-navy text-[11px] font-medium tracking-[3px] uppercase rounded-[1px] hover:brightness-90 transition-all"
           >
             <span className="inline-block w-[5px] h-[5px] rounded-full bg-white" />
             Back to home

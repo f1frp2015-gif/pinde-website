@@ -57,7 +57,7 @@ export default function FeatureGrid() {
           </span>
         </div>
 
-        <h2 className="font-[family-name:var(--font-serif)] font-light text-[clamp(32px,4vw,44px)] leading-[1.15] text-alabaster mb-[55px]">
+        <h2 className="font-[family-name:var(--font-serif)] font-semibold text-[clamp(32px,4vw,44px)] leading-[1.15] text-alabaster mb-[55px]">
           Precision in every detail<span className="text-red">.</span>
         </h2>
 

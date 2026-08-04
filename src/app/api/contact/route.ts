@@ -136,7 +136,7 @@ export async function POST(request: Request) {
           ${tableRow("Attachment", attachment?.name ?? "")}
         </table>
         <h3 style="margin-top:24px">Project and fabrication requirements</h3>
-        <p style="white-space:pre-wrap;background:#f9f9f9;padding:16px;border-radius:4px">${escapeHtml(
+        <p style="white-space:pre-wrap;background:#E9EDF2;padding:16px;border-left:4px solid #C7A154">${escapeHtml(
           inquiry.message
         )}</p>
         <hr style="margin-top:32px;border:none;border-top:1px solid #eee">

@@ -2,10 +2,10 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowUpRight, Globe2, Layers3, Mail, MapPin, Phone, ShieldCheck, Thermometer } from "lucide-react";
 import { BRAND, CERTIFICATIONS } from "@/lib/constants";
 import { isMarketLocale, marketChrome } from "@/content/marketChrome";
-import PindeMark from "./PindeMark";
+import PindeLogo from "./PindeLogo";
 
 export default function Footer() {
   const pathname = usePathname();
@@ -16,90 +16,116 @@ export default function Footer() {
   if (content && locale) {
     const languageSuffix = pathname.replace(/^\/(?:en|ru)/, "");
     const systemsLinks = [
-      { label: content.nav[0].label, href: `/${locale}#systems` },
-      { label: content.nav[1].label, href: `/${locale}#formats` },
-      { label: content.nav[3].label, href: `/${locale}#engineering` },
+      { label: content.nav[0].label, href: `/${locale}/systems` },
+      { label: content.nav[1].label, href: `/${locale}/supply` },
+      { label: content.nav[3].label, href: `/${locale}/engineering` },
     ];
     const workingLinks = [
-      { label: content.nav[4].label, href: `/${locale}/about` },
-      { label: content.nav[2].label, href: `/${locale}#process` },
-      { label: content.rfqEyebrow, href: `/${locale}#rfq` },
-      { label: locale === "ru" ? "Вопросы и ответы" : "Questions and answers", href: `/${locale}#faq` },
+      { label: content.nav[5].label, href: `/${locale}/about` },
+      { label: content.nav[2].label, href: `/${locale}/process` },
+      { label: content.nav[4].label, href: `/${locale}/certification` },
+      { label: content.rfqEyebrow, href: `/${locale}/contact` },
     ];
+    const promises = locale === "ru"
+      ? [
+          { Icon: ShieldCheck, title: "НАДЁЖНОСТЬ", subtitle: "Контроль качества" },
+          { Icon: Thermometer, title: "ТЕПЛОИЗОЛЯЦИЯ", subtitle: "Инженерные системы" },
+          { Icon: Layers3, title: "СИСТЕМНЫЕ РЕШЕНИЯ", subtitle: "Комплектная поставка" },
+          { Icon: Globe2, title: "ЦЕНТРАЛЬНАЯ АЗИЯ", subtitle: "Региональная логистика" },
+        ]
+      : [
+          { Icon: ShieldCheck, title: "RELIABILITY", subtitle: "Controlled quality" },
+          { Icon: Thermometer, title: "INSULATION", subtitle: "Engineered systems" },
+          { Icon: Layers3, title: "SYSTEM SOLUTIONS", subtitle: "Complete supply" },
+          { Icon: Globe2, title: "CENTRAL ASIA", subtitle: "Regional delivery" },
+        ];
 
     return (
-      <footer className="border-t-4 border-[#D62832] bg-[#0B2639] text-white">
-        <div className="mx-auto max-w-[1280px] px-5 py-14 sm:px-8 lg:px-10 lg:py-16">
-          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.35fr_0.8fr_0.8fr_1.15fr]">
-            <div>
-              <div className="flex items-center gap-3">
-                <PindeMark size={24} frame="#FFFFFF" dot="#E63740" />
-                <span className="text-[19px] font-extrabold tracking-[0.22em]">PINDÉ</span>
+      <footer>
+        <div className="border-y border-[#DCE1E6] bg-white">
+          <div className="mx-auto grid max-w-[1280px] grid-cols-2 px-5 sm:px-8 lg:grid-cols-4 lg:px-10">
+            {promises.map(({ Icon, title, subtitle }, index) => (
+              <div key={title} className={`flex min-h-[108px] items-center gap-3 border-[#DCE1E6] py-5 ${index % 2 === 0 ? "pr-4" : "border-l pl-4"} lg:border-l lg:px-6 lg:first:border-l-0`}>
+                <Icon size={30} strokeWidth={1.7} className="shrink-0 text-[#C7A154]" aria-hidden="true" />
+                <span>
+                  <strong className="block font-[family-name:var(--font-brand)] text-[10px] font-bold tracking-[0.04em] text-[#0D2440]">{title}</strong>
+                  <span className="mt-1 block text-[10px] text-[#7A828C]">{subtitle}</span>
+                </span>
               </div>
-              <p className="mt-5 max-w-[330px] text-[13px] leading-[1.75] text-white/60">{content.footer.description}</p>
-              <div className="mt-6 flex flex-wrap gap-2">
-                {["ALUMINIUM", "FRP", "MACHINING", "CKD"].map((tag) => (
-                  <span key={tag} className="border border-white/15 px-3 py-2 text-[9px] font-bold tracking-[0.08em] text-white/50">{tag}</span>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h2 className="border-b border-white/15 pb-3 text-[10px] font-bold uppercase tracking-[0.08em] text-[#8CC2E2]">{content.footer.systems}</h2>
-              <ul className="mt-4 space-y-3">
-                {systemsLinks.map((item) => (
-                  <li key={item.label}>
-                    <Link href={item.href} className="text-[12px] font-semibold text-white/65 transition-colors hover:text-white">{item.label}</Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h2 className="border-b border-white/15 pb-3 text-[10px] font-bold uppercase tracking-[0.08em] text-[#8CC2E2]">{content.footer.company}</h2>
-              <ul className="mt-4 space-y-3">
-                {workingLinks.map((item) => (
-                  <li key={item.label}>
-                    <Link href={item.href} className="text-[12px] font-semibold text-white/65 transition-colors hover:text-white">{item.label}</Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h2 className="border-b border-white/15 pb-3 text-[10px] font-bold uppercase tracking-[0.08em] text-[#8CC2E2]">{content.footer.contact}</h2>
-              <ul className="mt-4 space-y-4 text-[12px] text-white/65">
-                <li className="flex items-start gap-3">
-                  <MapPin size={15} className="mt-0.5 shrink-0 text-[#E94A53]" />
-                  <span className="leading-[1.6]">{BRAND.address}</span>
-                </li>
-                <li>
-                  <a href={`tel:${BRAND.phone.replace(/\s/g, "")}`} className="flex items-center gap-3 transition-colors hover:text-white">
-                    <Phone size={15} className="shrink-0 text-[#E94A53]" />
-                    {BRAND.phone}
-                  </a>
-                </li>
-                <li>
-                  <a href={`mailto:${BRAND.email}`} className="flex items-center gap-3 break-all transition-colors hover:text-white">
-                    <Mail size={15} className="shrink-0 text-[#E94A53]" />
-                    {BRAND.email}
-                  </a>
-                </li>
-              </ul>
-              <Link href={`/${locale}#rfq`} className="mt-6 inline-flex items-center gap-2 border border-white/25 px-4 py-3 text-[11px] font-bold text-white transition-colors hover:bg-white hover:text-[#102F45]">
-                {content.headerCta}
-                <ArrowUpRight size={14} />
-              </Link>
-            </div>
+            ))}
           </div>
+        </div>
 
-          <div className="mt-12 flex flex-col gap-4 border-t border-white/15 pt-5 text-[10px] text-white/40 sm:flex-row sm:items-center sm:justify-between">
-            <span>&copy; {new Date().getFullYear()} {content.footer.copyright}</span>
-            <div className="flex items-center gap-3">
-              <Link href={`/en${languageSuffix}`} hrefLang="en" lang="en" className={locale === "en" ? "font-bold text-white" : "hover:text-white"}>English</Link>
-              <span>/</span>
-              <Link href={`/ru${languageSuffix}`} hrefLang="ru" lang="ru" className={locale === "ru" ? "font-bold text-white" : "hover:text-white"}>Русский</Link>
-              <span className="ml-2 hidden sm:inline">{content.footer.tagline}</span>
+        <div className="border-t-[6px] border-[#C7A154] bg-[#0D2440] text-white">
+          <div className="mx-auto max-w-[1280px] px-5 py-14 sm:px-8 lg:px-10 lg:py-16">
+            <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.35fr_0.8fr_0.8fr_1.15fr]">
+              <div>
+                <PindeLogo variant="light" size="md" />
+                <p className="mt-5 max-w-[350px] text-[13px] leading-[1.75] text-white/62">{content.footer.description}</p>
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {["ALUMINIUM", "FRP", "MACHINING", "CKD"].map((tag) => (
+                    <span key={tag} className="border border-[#C7A154]/35 px-3 py-2 text-[9px] font-semibold tracking-[0.08em] text-white/60">{tag}</span>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h2 className="border-b border-white/15 pb-3 text-[10px] font-bold uppercase tracking-[0.08em] text-[#C7A154]">{content.footer.systems}</h2>
+                <ul className="mt-4 space-y-3">
+                  {systemsLinks.map((item) => (
+                    <li key={item.label}>
+                      <Link href={item.href} className="text-[12px] font-medium text-white/65 transition-colors hover:text-white">{item.label}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <h2 className="border-b border-white/15 pb-3 text-[10px] font-bold uppercase tracking-[0.08em] text-[#C7A154]">{content.footer.company}</h2>
+                <ul className="mt-4 space-y-3">
+                  {workingLinks.map((item) => (
+                    <li key={item.label}>
+                      <Link href={item.href} className="text-[12px] font-medium text-white/65 transition-colors hover:text-white">{item.label}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <h2 className="border-b border-white/15 pb-3 text-[10px] font-bold uppercase tracking-[0.08em] text-[#C7A154]">{content.footer.contact}</h2>
+                <ul className="mt-4 space-y-4 text-[12px] text-white/65">
+                  <li className="flex items-start gap-3">
+                    <MapPin size={15} className="mt-0.5 shrink-0 text-[#C7A154]" />
+                    <span className="leading-[1.6]">{BRAND.address}</span>
+                  </li>
+                  <li>
+                    <a href={`tel:${BRAND.phone.replace(/\s/g, "")}`} className="flex items-center gap-3 transition-colors hover:text-white">
+                      <Phone size={15} className="shrink-0 text-[#C7A154]" />
+                      {BRAND.phone}
+                    </a>
+                  </li>
+                  <li>
+                    <a href={`mailto:${BRAND.email}`} className="flex items-center gap-3 break-all transition-colors hover:text-white">
+                      <Mail size={15} className="shrink-0 text-[#C7A154]" />
+                      {BRAND.email}
+                    </a>
+                  </li>
+                </ul>
+                <Link href={`/${locale}/contact`} className="mt-6 inline-flex items-center gap-2 bg-[#C7A154] px-4 py-3 text-[11px] font-bold text-[#0D2440] transition-colors hover:bg-[#C7A154]">
+                  {content.headerCta}
+                  <ArrowUpRight size={14} />
+                </Link>
+              </div>
+            </div>
+
+            <div className="mt-12 flex flex-col gap-4 border-t border-white/15 pt-5 text-[10px] text-white/42 sm:flex-row sm:items-center sm:justify-between">
+              <span>&copy; {new Date().getFullYear()} {content.footer.copyright}</span>
+              <div className="flex items-center gap-3">
+                <Link href={`/en${languageSuffix}`} hrefLang="en" lang="en" className={locale === "en" ? "font-bold text-[#C7A154]" : "hover:text-white"}>English</Link>
+                <span>/</span>
+                <Link href={`/ru${languageSuffix}`} hrefLang="ru" lang="ru" className={locale === "ru" ? "font-bold text-[#C7A154]" : "hover:text-white"}>Русский</Link>
+                <span className="ml-2 hidden sm:inline">{content.footer.tagline}</span>
+              </div>
             </div>
           </div>
         </div>
@@ -108,28 +134,23 @@ export default function Footer() {
   }
 
   return (
-    <footer className="border-t border-line bg-obsidian">
-      <div className="mx-auto max-w-[1200px] px-[55px] py-[89px] max-lg:px-6">
-        <div className="grid grid-cols-1 gap-[55px] md:grid-cols-2 lg:grid-cols-4">
-          <div>
-            <div className="mb-[21px] flex items-center gap-[13px]">
-              <PindeMark size={20} />
-              <span className="font-[family-name:var(--font-serif)] text-lg font-light tracking-[0.28em]">{BRAND.name}</span>
-            </div>
-            <p className="max-w-[260px] text-[13px] leading-[1.8] text-warm">{BRAND.description}</p>
+    <footer className="border-t-[6px] border-[#C7A154] bg-[#0D2440] text-white">
+      <div className="mx-auto grid max-w-[1200px] gap-10 px-6 py-16 md:grid-cols-3 lg:px-[55px]">
+        <div>
+          <PindeLogo variant="light" size="md" />
+          <p className="mt-5 max-w-[300px] text-[13px] leading-[1.8] text-white/60">{BRAND.description}</p>
+        </div>
+        <div>
+          <h2 className="mb-5 text-[10px] font-bold uppercase tracking-[0.12em] text-[#C7A154]">Systems</h2>
+          <div className="flex flex-wrap gap-2">
+            {CERTIFICATIONS.map((tag) => (
+              <span key={tag} className="border border-white/15 px-3 py-1.5 text-[10px] text-white/55">{tag}</span>
+            ))}
           </div>
-          <div className="lg:col-span-2">
-            <h2 className="mb-[21px] text-[10px] font-medium uppercase tracking-[3px] text-muted">Systems</h2>
-            <div className="flex flex-wrap gap-2">
-              {CERTIFICATIONS.map((tag) => (
-                <span key={tag} className="border border-line px-3 py-1.5 text-[10px] font-medium tracking-[1px] text-muted">{tag}</span>
-              ))}
-            </div>
-          </div>
-          <div>
-            <h2 className="mb-[21px] text-[10px] font-medium uppercase tracking-[3px] text-muted">Contact</h2>
-            <a href={`mailto:${BRAND.email}`} className="text-[13px] text-warm hover:text-alabaster">{BRAND.email}</a>
-          </div>
+        </div>
+        <div>
+          <h2 className="mb-5 text-[10px] font-bold uppercase tracking-[0.12em] text-[#C7A154]">Contact</h2>
+          <a href={`mailto:${BRAND.email}`} className="text-[13px] text-white/65 hover:text-white">{BRAND.email}</a>
         </div>
       </div>
     </footer>

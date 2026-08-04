@@ -19,7 +19,7 @@ export default function CasesPage({ locale }: Props) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }} />
-      <nav aria-label="Breadcrumb" className="pt-20 py-4 bg-obsidian border-b border-line">
+      <nav aria-label="Breadcrumb" className="pt-[104px] py-4 bg-obsidian border-b border-line">
         <div className={`${container} pt-[13px] flex items-center gap-2 text-[11px] tracking-[2px] uppercase text-muted`}>
           <Link href={`/${locale}`} className="hover:text-alabaster transition-colors">Home</Link>
           <span>/</span>
@@ -34,7 +34,7 @@ export default function CasesPage({ locale }: Props) {
               {isRu ? "Демонстрация возможностей" : "Capability showcase"}
             </span>
           </div>
-          <h1 className="font-[family-name:var(--font-serif)] font-light text-[clamp(40px,6vw,64px)] leading-[0.95] text-alabaster mb-[21px]">
+          <h1 className="font-[family-name:var(--font-serif)] font-semibold text-[clamp(40px,6vw,64px)] leading-[0.95] text-alabaster mb-[21px]">
             {isRu ? "Конфигурации систем" : "System configurations"}
             <span className="text-red">.</span>
           </h1>
@@ -52,8 +52,8 @@ export default function CasesPage({ locale }: Props) {
           ))}
         </div>
         <div className={`${container} mt-6`}>
-          <div className="flex items-start gap-4 border border-[#E1C477] bg-[#1A1A0A] p-5 text-[12px] leading-[1.7] text-muted">
-            <ShieldCheck size={20} className="mt-0.5 shrink-0 text-[#A66B00]" />
+          <div className="flex items-start gap-4 border border-[#C7A154] bg-[#F8F4E9] p-5 text-[12px] leading-[1.7] text-muted">
+            <ShieldCheck size={20} className="mt-0.5 shrink-0 text-[#C7A154]" />
             {isRu
               ? "Эти конфигурации отражают то, что PINDÉ может поставить. Они не являются заявленными завершёнными проектами. Реальные спецификации проектов согласовываются в процессе квалификации и фиксации эталонной конструкции."
               : "These configurations represent what PINDÉ can supply. They are not claimed completed projects. Actual project specifications are agreed during the qualification and reference-build stages."}
@@ -62,11 +62,11 @@ export default function CasesPage({ locale }: Props) {
       </section>
       <section className="py-[89px] bg-obsidian">
         <div className={`${container} text-center`}>
-          <h2 className="font-[family-name:var(--font-serif)] font-light text-[28px] text-alabaster mb-[21px]">
+          <h2 className="font-[family-name:var(--font-serif)] font-semibold text-[28px] text-alabaster mb-[21px]">
             {isRu ? "Нужна конфигурация для вашего рынка" : "Need a configuration for your market"}
             <span className="text-red">?</span>
           </h2>
-          <Link href={`/${locale}/contact`} className="inline-flex items-center gap-[10px] px-[34px] py-4 bg-red text-white text-[11px] font-medium tracking-[3px] uppercase rounded-[1px] hover:brightness-90">
+          <Link href={`/${locale}/contact`} className="inline-flex items-center gap-[10px] px-[34px] py-4 bg-gold text-navy text-[11px] font-medium tracking-[3px] uppercase rounded-[1px] hover:brightness-90">
             <span className="inline-block w-[5px] h-[5px] rounded-full bg-white" />
             {isRu ? "Отправить технический запрос" : "Send technical RFQ"}
           </Link>

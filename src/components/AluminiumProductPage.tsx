@@ -61,7 +61,7 @@ export default function AluminiumProductPage({ locale, product }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd(product, canonical)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }} />
 
-      <nav aria-label="Breadcrumb" className="pt-20 py-4 bg-obsidian border-b border-line">
+      <nav aria-label="Breadcrumb" className="pt-[104px] py-4 bg-obsidian border-b border-line">
         <div className={`${container} pt-[13px] flex flex-wrap items-center gap-2 text-[11px] tracking-[2px] uppercase text-muted`}>
           <Link href={`/${locale}`} className="hover:text-alabaster transition-colors">{text.home}</Link>
           <span>/</span>
@@ -87,7 +87,7 @@ export default function AluminiumProductPage({ locale, product }: Props) {
               />
             ) : (
               <div className="absolute inset-0 flex items-center justify-center">
-                <PindeMark size={55} frame="#E5E2DC" />
+                <PindeMark size={55} frame="#DCE1E6" />
               </div>
             )}
           </div>
@@ -96,7 +96,7 @@ export default function AluminiumProductPage({ locale, product }: Props) {
             <p className="mb-[13px] text-[10px] font-medium uppercase tracking-[3px] text-bronze">
               {text.family} · {product.series}
             </p>
-            <h1 className="font-[family-name:var(--font-serif)] font-light text-[clamp(32px,4vw,48px)] leading-[1.1] text-alabaster mb-[21px]">
+            <h1 className="font-[family-name:var(--font-serif)] font-semibold text-[clamp(32px,4vw,48px)] leading-[1.1] text-alabaster mb-[21px]">
               {product.name}<span className="text-red">.</span>
             </h1>
             <p className="text-warm text-[15px] leading-[1.9] mb-[34px]">{product.description}</p>
@@ -113,8 +113,8 @@ export default function AluminiumProductPage({ locale, product }: Props) {
               </ul>
             </div>
 
-            <Link href={`/${locale}/contact`} className="inline-flex items-center gap-[10px] bg-red px-[34px] py-4 text-[11px] font-medium uppercase tracking-[3px] text-white hover:brightness-90">
-              <span className="inline-block h-[5px] w-[5px] rounded-full bg-white" />
+            <Link href={`/${locale}/contact`} className="inline-flex items-center gap-[10px] bg-gold px-[34px] py-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-navy hover:brightness-105">
+              <span className="inline-block h-[5px] w-[5px] bg-red" />
               {text.quote}
             </Link>
           </div>
@@ -123,7 +123,7 @@ export default function AluminiumProductPage({ locale, product }: Props) {
 
       <section className="py-[89px] bg-surface">
         <div className={container}>
-          <h2 className="font-[family-name:var(--font-serif)] font-light text-[32px] text-alabaster mb-[34px]">
+          <h2 className="font-[family-name:var(--font-serif)] font-semibold text-[32px] text-alabaster mb-[34px]">
             {text.specs}<span className="text-red">.</span>
           </h2>
           <div className="overflow-hidden border border-line bg-obsidian">
@@ -145,10 +145,10 @@ export default function AluminiumProductPage({ locale, product }: Props) {
       <section className="py-[89px] bg-obsidian">
         <div className={container}>
           <div className="mb-[34px] flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-            <h2 className="font-[family-name:var(--font-serif)] font-light text-[32px] text-alabaster">
+            <h2 className="font-[family-name:var(--font-serif)] font-semibold text-[32px] text-alabaster">
               {text.related}<span className="text-red">.</span>
             </h2>
-            <Link href={`/${locale}/systems/aluminium#aluminium-catalog`} className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.12em] text-[#0E527D] hover:text-red">
+            <Link href={`/${locale}/systems/aluminium#aluminium-catalog`} className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.12em] text-[#C7A154] hover:text-red">
               <ArrowLeft size={13} /> {text.back}
             </Link>
           </div>
