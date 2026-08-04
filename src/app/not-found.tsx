@@ -3,7 +3,7 @@ import PindeMark from "@/components/PindeMark";
 
 export default function NotFound() {
   return (
-    <section className="min-h-[80vh] flex items-center justify-center bg-obsidian pt-20">
+    <main className="min-h-[80vh] flex items-center justify-center bg-obsidian pt-20">
       <div className="text-center px-6">
         <PindeMark size={55} frame="rgba(10,10,12,0.06)" />
         <div className="mt-[34px]" />
@@ -30,6 +30,6 @@ export default function NotFound() {
           </Link>
         </div>
       </div>
-    </section>
+    </main>
   );
 }

@@ -5,10 +5,13 @@ const nextConfig: NextConfig = {
     root: process.cwd(),
   },
   images: {
-    formats: ["image/avif", "image/webp"],
-    minimumCacheTTL: 31536000, // 1 year — image URLs are content-hashed
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    // A single modern format avoids AVIF's slower cold encode and duplicate
+    // cache variants at edge locations serving Central Asia.
+    formats: ["image/webp"],
+    minimumCacheTTL: 31536000, // Keep transformed variants hot; rename assets when content changes.
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    maximumResponseBody: 1_000_000,
   },
   async headers() {
     return [

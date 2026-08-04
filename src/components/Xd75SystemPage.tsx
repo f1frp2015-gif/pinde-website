@@ -55,7 +55,8 @@ export default function Xd75SystemPage({ locale, content }: Props) {
               src="/images/systems/xd75-aluminium-grpu-window-system.webp"
               alt={locale === "ru" ? "Гибридная оконная система XD75 с термомостом GRPU" : "XD75 hybrid aluminium-GRPU window system"}
               fill
-              priority
+              loading="eager"
+              fetchPriority="high"
               sizes="(max-width: 1024px) 100vw, 45vw"
               className="object-contain p-5"
             />

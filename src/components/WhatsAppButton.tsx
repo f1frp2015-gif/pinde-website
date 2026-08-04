@@ -1,12 +1,9 @@
-"use client";
-
 import { MessageCircle } from "lucide-react";
-import { usePathname } from "next/navigation";
 import { BRAND } from "@/lib/constants";
+import type { MarketLocale } from "@/content/marketChrome";
 
-export default function WhatsAppButton() {
-  const pathname = usePathname();
-  const isRussian = pathname.startsWith("/ru");
+export default function WhatsAppButton({ locale }: { locale: MarketLocale }) {
+  const isRussian = locale === "ru";
   const message = isRussian
     ? "Здравствуйте! Интересуют профильные системы и комплекты PINDÉ для оконного производства."
     : "Hello! I am interested in PINDÉ profile systems and kits for window fabrication.";
