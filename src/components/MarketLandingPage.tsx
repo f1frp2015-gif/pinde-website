@@ -240,7 +240,8 @@ export default function MarketLandingPage({ locale, content }: Props) {
                 src="/images/pinde-factory-aerial-view-chongqing.webp"
                 alt={content.factory.imageAlt}
                 fill
-                priority
+                loading="eager"
+                fetchPriority="high"
                 sizes="(min-width: 1024px) 47vw, 100vw"
                 className="object-cover object-center"
               />

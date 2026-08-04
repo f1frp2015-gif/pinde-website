@@ -117,7 +117,7 @@ export default function AboutPindePage({ locale, content }: Props) {
           </div>
 
           <div className="relative -mx-5 min-h-[390px] overflow-hidden sm:-mx-8 lg:mx-0 lg:min-h-[650px]">
-            <Image src="/images/pinde-aluminium-window-manufacturing-plant-chongqing.webp" alt={content.hero.imageAlt} fill priority sizes="(min-width: 1024px) 49vw, 100vw" className="object-cover object-center" />
+            <Image src="/images/pinde-aluminium-window-manufacturing-plant-chongqing.webp" alt={content.hero.imageAlt} fill loading="eager" fetchPriority="high" sizes="(min-width: 1024px) 49vw, 100vw" className="object-cover object-center" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0D2440]/90 via-[#0D2440]/10 to-transparent" />
             <div className="absolute inset-x-5 bottom-5 border-l-4 border-[#D71920] bg-[#0D2440]/90 p-5 text-white backdrop-blur-sm sm:inset-x-8 lg:inset-x-8 lg:bottom-8">
               <span className="block text-[10px] font-bold uppercase tracking-[0.1em] text-white/55">PINDÉ · CHONGQING</span>

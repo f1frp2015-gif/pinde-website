@@ -1,20 +1,15 @@
-"use client";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { ArrowUpRight, Globe2, Layers3, Mail, MapPin, Phone, ShieldCheck, Thermometer } from "lucide-react";
-import { BRAND, CERTIFICATIONS } from "@/lib/constants";
-import { isMarketLocale, marketChrome } from "@/content/marketChrome";
+import { BRAND } from "@/lib/constants";
+import { marketChrome, type MarketLocale } from "@/content/marketChrome";
 import PindeLogo from "./PindeLogo";
 
-export default function Footer() {
-  const pathname = usePathname();
-  const pathLocale = pathname.split("/")[1];
-  const locale = isMarketLocale(pathLocale) ? pathLocale : null;
-  const content = locale ? marketChrome[locale] : null;
+type FooterProps = {
+  locale: MarketLocale;
+};
 
-  if (content && locale) {
-    const languageSuffix = pathname.replace(/^\/(?:en|ru)/, "");
+export default function Footer({ locale }: FooterProps) {
+    const content = marketChrome[locale];
     const systemsLinks = [
       { label: content.nav[0].label, href: `/${locale}/systems` },
       { label: content.nav[1].label, href: `/${locale}/supply` },
@@ -121,9 +116,9 @@ export default function Footer() {
             <div className="mt-12 flex flex-col gap-4 border-t border-white/15 pt-5 text-[10px] text-white/42 sm:flex-row sm:items-center sm:justify-between">
               <span>&copy; {new Date().getFullYear()} {content.footer.copyright}</span>
               <div className="flex items-center gap-3">
-                <Link href={`/en${languageSuffix}`} hrefLang="en" lang="en" className={locale === "en" ? "font-bold text-[#C7A154]" : "hover:text-white"}>English</Link>
+                <Link href="/en" hrefLang="en" lang="en" className={locale === "en" ? "font-bold text-[#C7A154]" : "hover:text-white"}>English</Link>
                 <span>/</span>
-                <Link href={`/ru${languageSuffix}`} hrefLang="ru" lang="ru" className={locale === "ru" ? "font-bold text-[#C7A154]" : "hover:text-white"}>Русский</Link>
+                <Link href="/ru" hrefLang="ru" lang="ru" className={locale === "ru" ? "font-bold text-[#C7A154]" : "hover:text-white"}>Русский</Link>
                 <span className="ml-2 hidden sm:inline">{content.footer.tagline}</span>
               </div>
             </div>
@@ -131,28 +126,4 @@ export default function Footer() {
         </div>
       </footer>
     );
-  }
-
-  return (
-    <footer className="border-t-[6px] border-[#C7A154] bg-[#0D2440] text-white">
-      <div className="mx-auto grid max-w-[1200px] gap-10 px-6 py-16 md:grid-cols-3 lg:px-[55px]">
-        <div>
-          <PindeLogo variant="light" size="md" />
-          <p className="mt-5 max-w-[300px] text-[13px] leading-[1.8] text-white/60">{BRAND.description}</p>
-        </div>
-        <div>
-          <h2 className="mb-5 text-[10px] font-bold uppercase tracking-[0.12em] text-[#C7A154]">Systems</h2>
-          <div className="flex flex-wrap gap-2">
-            {CERTIFICATIONS.map((tag) => (
-              <span key={tag} className="border border-white/15 px-3 py-1.5 text-[10px] text-white/55">{tag}</span>
-            ))}
-          </div>
-        </div>
-        <div>
-          <h2 className="mb-5 text-[10px] font-bold uppercase tracking-[0.12em] text-[#C7A154]">Contact</h2>
-          <a href={`mailto:${BRAND.email}`} className="text-[13px] text-white/65 hover:text-white">{BRAND.email}</a>
-        </div>
-      </div>
-    </footer>
-  );
 }
