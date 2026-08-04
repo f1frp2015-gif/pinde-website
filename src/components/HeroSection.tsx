@@ -42,7 +42,7 @@ export default function HeroSection({
             {ctaText}
           </Link>
           <Link
-            href="/contact"
+            href="/en/rfq"
             className="inline-flex items-center px-[34px] py-4 border border-line text-alabaster text-[11px] font-medium tracking-[3px] uppercase rounded-[1px] hover:border-warm transition-all"
           >
             Request a quote

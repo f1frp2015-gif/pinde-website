@@ -87,7 +87,7 @@ export default function SupplyPage({ locale, content }: Props) {
           <h2 className="font-[family-name:var(--font-serif)] font-semibold text-[28px] text-alabaster mb-[21px]">
             Not sure which format fits<span className="text-red">?</span>
           </h2>
-          <Link href={`/${locale}/contact`} className="inline-flex items-center gap-[10px] px-[34px] py-4 bg-gold text-navy text-[11px] font-medium tracking-[3px] uppercase rounded-[1px] hover:brightness-90">
+          <Link href={`/${locale}/rfq`} className="inline-flex items-center gap-[10px] px-[34px] py-4 bg-gold text-navy text-[11px] font-medium tracking-[3px] uppercase rounded-[1px] hover:brightness-90">
             <span className="inline-block w-[5px] h-[5px] rounded-full bg-white" />
             {content.cta}
           </Link>

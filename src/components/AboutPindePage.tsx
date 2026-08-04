@@ -101,7 +101,7 @@ export default function AboutPindePage({ locale, content }: Props) {
             <p className="mt-6 max-w-[720px] text-[16px] leading-[1.75] text-[#4F5B69]">{content.hero.intro}</p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link href={`/${locale}/contact`} className="inline-flex min-h-12 items-center justify-center gap-3 bg-[#C7A154] px-6 py-3 text-[12px] font-bold text-[#0D2440] transition-[filter] hover:brightness-105">
+              <Link href={`/${locale}/rfq`} className="inline-flex min-h-12 items-center justify-center gap-3 bg-[#C7A154] px-6 py-3 text-[12px] font-bold text-[#0D2440] transition-[filter] hover:brightness-105">
                 {content.hero.primaryCta}
                 <ArrowRight size={16} />
               </Link>
@@ -371,7 +371,7 @@ export default function AboutPindePage({ locale, content }: Props) {
             <p className="mt-4 max-w-[760px] text-[14px] leading-[1.7] text-white/75">{content.cta.text}</p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
-            <Link href={`/${locale}/contact`} className="inline-flex min-h-12 items-center justify-center gap-3 bg-[#C7A154] px-6 py-3 text-[12px] font-bold text-[#0D2440] transition-[filter] hover:brightness-105">
+            <Link href={`/${locale}/rfq`} className="inline-flex min-h-12 items-center justify-center gap-3 bg-[#C7A154] px-6 py-3 text-[12px] font-bold text-[#0D2440] transition-[filter] hover:brightness-105">
               {content.cta.primary}
               <ArrowRight size={16} />
             </Link>

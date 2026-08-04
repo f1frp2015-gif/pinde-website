@@ -113,7 +113,7 @@ export default function AluminiumProductPage({ locale, product }: Props) {
               </ul>
             </div>
 
-            <Link href={`/${locale}/contact`} className="inline-flex items-center gap-[10px] bg-gold px-[34px] py-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-navy hover:brightness-105">
+            <Link href={`/${locale}/rfq`} className="inline-flex items-center gap-[10px] bg-gold px-[34px] py-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-navy hover:brightness-105">
               <span className="inline-block h-[5px] w-[5px] bg-red" />
               {text.quote}
             </Link>

@@ -140,7 +140,7 @@ export async function POST(request: Request) {
           inquiry.message
         )}</p>
         <hr style="margin-top:32px;border:none;border-top:1px solid #eee">
-        <p style="font-size:12px;color:#999">Sent from the PINDÉ English/Russian fabricator landing page.</p>
+        <p style="font-size:12px;color:#999">Sent from the dedicated PINDÉ English/Russian technical RFQ page.</p>
       `,
     });
 

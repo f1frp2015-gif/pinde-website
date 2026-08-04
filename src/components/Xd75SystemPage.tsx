@@ -168,7 +168,7 @@ export default function Xd75SystemPage({ locale, content }: Props) {
             {content.ctaTitle}<span className="text-red">?</span>
           </h2>
           <div className="flex flex-col justify-center gap-[13px] sm:flex-row">
-            <Link href={`/${locale}/contact`} className="inline-flex items-center justify-center gap-[10px] bg-gold px-[34px] py-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-navy hover:brightness-105">
+            <Link href={`/${locale}/rfq`} className="inline-flex items-center justify-center gap-[10px] bg-gold px-[34px] py-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-navy hover:brightness-105">
               <span className="inline-block h-[5px] w-[5px] bg-red" />
               {content.cta}
             </Link>
