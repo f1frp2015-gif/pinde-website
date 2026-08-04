@@ -24,7 +24,7 @@ export default function Footer() {
       { label: content.nav[5].label, href: `/${locale}/about` },
       { label: content.nav[2].label, href: `/${locale}/process` },
       { label: content.nav[4].label, href: `/${locale}/certification` },
-      { label: content.rfqEyebrow, href: `/${locale}/contact` },
+      { label: content.rfqEyebrow, href: `/${locale}/rfq` },
     ];
     const promises = locale === "ru"
       ? [
@@ -111,7 +111,7 @@ export default function Footer() {
                     </a>
                   </li>
                 </ul>
-                <Link href={`/${locale}/contact`} className="mt-6 inline-flex items-center gap-2 bg-[#C7A154] px-4 py-3 text-[11px] font-bold text-[#0D2440] transition-colors hover:bg-[#C7A154]">
+                <Link href={`/${locale}/rfq`} className="mt-6 inline-flex items-center gap-2 bg-[#C7A154] px-4 py-3 text-[11px] font-bold text-[#0D2440] transition-[filter] hover:brightness-105">
                   {content.headerCta}
                   <ArrowUpRight size={14} />
                 </Link>

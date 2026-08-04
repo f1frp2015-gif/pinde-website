@@ -14,7 +14,6 @@ import {
   ShieldCheck,
   Wrench,
 } from "lucide-react";
-import LandingInquiryForm from "@/components/LandingInquiryForm";
 import type { LandingContent, LandingLocale } from "@/content/landing";
 
 type Props = {
@@ -54,7 +53,6 @@ const marketUi = {
       ["Chongqing", "production and dispatch"],
       ["P1—P3", "supply configurations"],
     ],
-    rfqKicker: "Engineering desk",
   },
   ru: {
     buyerLabel: "Для производителей и проектного снабжения",
@@ -84,7 +82,6 @@ const marketUi = {
       ["Чунцин", "производство и отгрузка"],
       ["P1—P3", "варианты комплектации"],
     ],
-    rfqKicker: "Инженерный отдел",
   },
 } as const;
 
@@ -216,7 +213,7 @@ export default function MarketLandingPage({ locale, content }: Props) {
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
-                href={`/${locale}/contact`}
+                href={`/${locale}/rfq`}
                 className="inline-flex min-h-12 items-center justify-center gap-3 bg-[#C7A154] px-6 py-3 text-[12px] font-bold text-[#0D2440] transition-[filter] hover:brightness-105"
               >
                 {content.hero.primaryCta}
@@ -703,35 +700,6 @@ export default function MarketLandingPage({ locale, content }: Props) {
                 <p className="mt-4 pl-7 text-[12px] leading-[1.75] text-[#7A828C]">{item.a}</p>
               </details>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="rfq" className={`${sectionPadding} scroll-mt-28 border-t border-[#DCE1E6] bg-[#E9EDF2]`}>
-        <div className={`${container} grid gap-0 overflow-hidden border border-[#DCE1E6] bg-white shadow-[0_18px_50px_rgba(16,47,69,0.08)] lg:grid-cols-[0.72fr_1.28fr]`}>
-          <div className="landing-blueprint-grid bg-[#0D2440] p-6 text-white sm:p-9 lg:p-10">
-            <span className="text-[10px] font-bold uppercase tracking-[0.08em] text-[#C7A154]">{ui.rfqKicker}</span>
-            <div className="mt-5 h-1 w-12 bg-[#D71920]" />
-            <h2 className="mt-6 text-[clamp(32px,4vw,48px)] font-extrabold leading-[1.06] tracking-[-0.035em]">
-              {content.rfq.title}
-            </h2>
-            <p className="mt-5 text-[14px] leading-[1.75] text-white/68">{content.rfq.text}</p>
-            <div className="mt-8 space-y-4 border-t border-white/15 pt-6">
-              <p className="flex items-start gap-3 text-[12px] font-semibold leading-[1.6] text-white/75">
-                <Check size={15} className="mt-0.5 shrink-0 text-[#D71920]" />
-                {content.rfq.response}
-              </p>
-              <a
-                href={`mailto:${content.rfq.email}`}
-                className="inline-flex items-center gap-2 text-[13px] font-bold text-white hover:text-[#C7A154]"
-              >
-                {content.rfq.email}
-                <ArrowRight size={14} />
-              </a>
-            </div>
-          </div>
-          <div className="p-5 sm:p-8 lg:p-10">
-            <LandingInquiryForm locale={locale} content={content.rfq} />
           </div>
         </div>
       </section>

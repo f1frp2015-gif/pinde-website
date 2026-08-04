@@ -271,7 +271,7 @@ export default function LandingInquiryForm({ locale, content }: Props) {
           {selectedFile && (
             <button
               type="button"
-              aria-label="Remove attachment"
+              aria-label={locale === "ru" ? "Удалить вложение" : "Remove attachment"}
               onClick={(event) => {
                 event.preventDefault();
                 handleFile(null);

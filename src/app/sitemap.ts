@@ -13,6 +13,7 @@ const localizedRoutes = [
   { path: "/process", frequency: "monthly" as const, priority: 0.75 },
   { path: "/certification", frequency: "monthly" as const, priority: 0.8 },
   { path: "/cases", frequency: "monthly" as const, priority: 0.75 },
+  { path: "/rfq", frequency: "monthly" as const, priority: 0.85 },
   { path: "/contact", frequency: "monthly" as const, priority: 0.7 },
 ];
 
