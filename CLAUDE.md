@@ -14,12 +14,12 @@
 ## Tech Stack
 - **Framework**: Next.js 16 (App Router, Turbopack)
 - **Styling**: Tailwind CSS (v4, @theme inline)
-- **Language**: TypeScript, English-only content
+- **Language**: TypeScript, English and Russian localized content
 - **Icons**: lucide-react
 - **Fonts**: Cormorant Garamond (serif display), DM Sans (body), JetBrains Mono (data)
 - **Animations**: framer-motion (installed, not yet used)
 - **CMS**: None — hardcoded content with placeholders
-- **Deployment**: Vercel (pending setup)
+- **Deployment**: GitHub-integrated Vercel production at `pindesys.com`
 
 ## Design — φ-Cascade VI System
 
@@ -55,14 +55,22 @@
 src/
 ├── app/                  # Pages (App Router)
 │   ├── layout.tsx        # Root layout (Header + Footer + WhatsApp)
-│   ├── page.tsx          # Home
-│   ├── about/page.tsx
-│   ├── products/page.tsx
-│   ├── products/[slug]/page.tsx
-│   ├── projects/page.tsx
-│   ├── technology/page.tsx
-│   ├── quality/page.tsx
-│   └── contact/page.tsx
+│   ├── page.tsx          # Redirects / to /en
+│   ├── [locale]/         # /en and /ru canonical pages
+│   │   ├── page.tsx
+│   │   ├── systems/
+│   │   │   ├── page.tsx
+│   │   │   ├── aluminium/[slug]/page.tsx
+│   │   │   └── frp/xd75/page.tsx
+│   │   ├── supply/page.tsx
+│   │   ├── engineering/page.tsx
+│   │   ├── process/page.tsx
+│   │   ├── certification/page.tsx
+│   │   ├── cases/page.tsx
+│   │   ├── about/page.tsx
+│   │   └── contact/page.tsx
+│   ├── blog/[[...slug]]/route.ts # 410 tombstone; blog content is retired
+│   └── api/contact/route.ts
 ├── components/           # Reusable components
 │   ├── PindeMark.tsx     # SVG logo mark (square + red dot)
 │   ├── Header.tsx        # Fixed dark nav with mark + wordmark
@@ -75,14 +83,21 @@ src/
 │   ├── FeatureGrid.tsx
 │   └── CertificationBanner.tsx
 ├── data/
-│   ├── products.ts       # 15 products with real specs
+│   ├── products.ts       # 19 aluminium systems with reference specs
 │   └── projects.ts       # 6 global project cases
+├── content/
+│   ├── pages.ts          # EN/RU systems and company content
+│   └── xd75.ts           # EN/RU XD75 source-catalogue content
 └── lib/
     └── constants.ts      # Brand info, L color system, nav links
 ```
 
-## Placeholders to Fill
-- `public/images/` — product photos, factory photos, project photos, team photos
+## Canonical URL Invariants
+- Canonical domain: `https://pindesys.com`
+- Aluminium: `/{locale}/systems/aluminium/{slug}`
+- FRP/XD75: `/{locale}/systems/frp/xd75`
+- `pinde-alu.com` is retired; `pindesye.com` is invalid.
+- Legacy non-localized pages are redirect-only. The blog and its article content are permanently removed and must not be restored.
 
 ## Commands
 ```bash
@@ -91,6 +106,6 @@ npm run build  # Production build
 ```
 
 ## Deployment Status
-- GitHub repo: Not yet created (pending `gh auth login`)
-- Vercel: Not yet connected
-- Domain: pindesys.com (configured in Vercel)
+- GitHub: `f1frp2015-gif/pinde-website` (`main`)
+- Vercel: `f1composite/pinde-website` (`prj_E3ap9L96Q7JF6wfUtjByU4sA9uX4`)
+- Production domain: `pindesys.com`

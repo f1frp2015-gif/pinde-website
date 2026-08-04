@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next";
 import { products } from "@/data/products";
-import { posts } from "@/data/blog";
 
 const localizedRoutes = [
   { path: "", frequency: "weekly" as const, priority: 1 },
@@ -52,20 +51,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   );
 
-  // Blog
-  const blogPages = posts.map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(post.date),
-    changeFrequency: "monthly" as const,
-    priority: 0.6,
-  }));
-
-  const blogIndex = { url: `${baseUrl}/blog`, changeFrequency: "monthly" as const, priority: 0.65 };
-
   return [
     ...localizedPages,
     ...productPages,
-    blogIndex,
-    ...blogPages,
   ];
 }

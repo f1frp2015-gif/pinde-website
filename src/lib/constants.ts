@@ -22,7 +22,6 @@ export const NAV_LINKS = [
   { label: "Process", href: "/en/process" },
   { label: "Certification", href: "/en/certification" },
   { label: "Cases", href: "/en/cases" },
-  { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/en/contact" },
 ];
 
