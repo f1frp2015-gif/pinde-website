@@ -6,7 +6,7 @@ export const organizationJsonLd = {
   name: "PINDÉ",
   legalName: "Pinde Doors and Windows (Chongqing) Co., LTD",
   url: siteUrl,
-  logo: `${siteUrl}/icon.svg`,
+  logo: `${siteUrl}/brand/pinde-logo-primary.svg`,
   description:
     "Aluminium and FRP window-system materials, machined components and glass-free CKD kits from Chongqing for local fabrication.",
   foundingDate: "2002",
