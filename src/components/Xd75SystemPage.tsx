@@ -13,9 +13,11 @@ type Props = {
 const container = "mx-auto max-w-[1200px] px-[55px] max-lg:px-6";
 
 export default function Xd75SystemPage({ locale, content }: Props) {
+  const homeLabel = locale === "ru" ? "Главная" : "Home";
+  const systemsLabel = locale === "ru" ? "Системы" : "Systems";
   const crumbs = breadcrumbJsonLd([
-    { name: "Home", url: `https://pindesys.com/${locale}` },
-    { name: "Systems", url: `https://pindesys.com/${locale}/systems` },
+    { name: homeLabel, url: `https://pindesys.com/${locale}` },
+    { name: systemsLabel, url: `https://pindesys.com/${locale}/systems` },
     { name: "FRP", url: `https://pindesys.com/${locale}/systems/frp` },
     { name: "XD75", url: `https://pindesys.com/${locale}/systems/frp/xd75` },
   ]);
@@ -24,11 +26,11 @@ export default function Xd75SystemPage({ locale, content }: Props) {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }} />
 
-      <nav aria-label="Breadcrumb" className="pt-[104px] py-4 bg-obsidian border-b border-line">
+      <nav aria-label={locale === "ru" ? "Хлебные крошки" : "Breadcrumb"} className="pt-[104px] py-4 bg-obsidian border-b border-line">
         <div className={`${container} pt-[13px] flex flex-wrap items-center gap-2 text-[11px] tracking-[2px] uppercase text-muted`}>
-          <Link href={`/${locale}`} className="hover:text-alabaster transition-colors">Home</Link>
+          <Link href={`/${locale}`} className="hover:text-alabaster transition-colors">{homeLabel}</Link>
           <span>/</span>
-          <Link href={`/${locale}/systems`} className="hover:text-alabaster transition-colors">Systems</Link>
+          <Link href={`/${locale}/systems`} className="hover:text-alabaster transition-colors">{systemsLabel}</Link>
           <span>/</span>
           <Link href={`/${locale}/systems/frp`} className="hover:text-alabaster transition-colors">FRP</Link>
           <span>/</span>

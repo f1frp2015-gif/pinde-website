@@ -10,19 +10,21 @@ const container = "mx-auto max-w-[1200px] px-[55px] max-lg:px-6";
 const icons = [PackageCheck, Wrench, FileCheck2, ShieldCheck];
 
 export default function EngineeringPage({ locale, content }: Props) {
+  const homeLabel = locale === "ru" ? "Главная" : "Home";
+  const sectionLabel = locale === "ru" ? "Инжиниринг" : "Engineering";
   const crumbs = breadcrumbJsonLd([
-    { name: "Home", url: `https://pindesys.com/${locale}` },
-    { name: "Engineering", url: `https://pindesys.com/${locale}/engineering` },
+    { name: homeLabel, url: `https://pindesys.com/${locale}` },
+    { name: sectionLabel, url: `https://pindesys.com/${locale}/engineering` },
   ]);
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }} />
-      <nav aria-label="Breadcrumb" className="pt-[104px] py-4 bg-obsidian border-b border-line">
+      <nav aria-label={locale === "ru" ? "Хлебные крошки" : "Breadcrumb"} className="pt-[104px] py-4 bg-obsidian border-b border-line">
         <div className={`${container} pt-[13px] flex items-center gap-2 text-[11px] tracking-[2px] uppercase text-muted`}>
-          <Link href={`/${locale}`} className="hover:text-alabaster transition-colors">Home</Link>
+          <Link href={`/${locale}`} className="hover:text-alabaster transition-colors">{homeLabel}</Link>
           <span>/</span>
-          <span className="text-warm">Engineering</span>
+          <span className="text-warm">{sectionLabel}</span>
         </div>
       </nav>
       <section className="py-[89px] bg-obsidian">

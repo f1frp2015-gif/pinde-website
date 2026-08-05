@@ -13,6 +13,7 @@ export default function ProductCard({ product, href }: Props) {
   return (
     <Link
       href={href ?? `/en/systems/aluminium/${product.slug}`}
+      prefetch={false}
       className="group block bg-surface border border-line rounded-[2px] overflow-hidden transition-all duration-400 hover:border-warm/20 hover:-translate-y-0.5"
     >
       <div className="aspect-[4/3] bg-obsidian relative overflow-hidden">

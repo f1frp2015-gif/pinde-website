@@ -1,9 +1,85 @@
 "use client";
 
 import { useState } from "react";
-import { Send } from "lucide-react";
 
-export default function ContactForm() {
+type ContactLocale = "en" | "ru";
+
+const copy = {
+  en: {
+    thanks: "Thank you",
+    received: "We've received your inquiry and will get back to you within 24 hours.",
+    name: "Full Name",
+    namePlaceholder: "Your name",
+    email: "Email Address",
+    country: "Country / Region",
+    countryPlaceholder: "Select your region",
+    product: "Product Interest",
+    productPlaceholder: "Select a product",
+    company: "Company Name",
+    companyPlaceholder: "Your company (optional)",
+    message: "Message",
+    messagePlaceholder: "Tell us about your project requirements...",
+    error: "Failed to send. Please try again or email us directly at inquiry@pindesys.com",
+    sending: "Sending...",
+    send: "Send inquiry",
+  },
+  ru: {
+    thanks: "Спасибо",
+    received: "Мы получили ваш запрос и ответим в течение 24 часов.",
+    name: "Имя и фамилия",
+    namePlaceholder: "Как к вам обращаться",
+    email: "Электронная почта",
+    country: "Страна / регион",
+    countryPlaceholder: "Выберите страну",
+    product: "Интересующая продукция",
+    productPlaceholder: "Выберите направление",
+    company: "Компания",
+    companyPlaceholder: "Название компании (необязательно)",
+    message: "Сообщение",
+    messagePlaceholder: "Опишите проект, требуемую систему и объём...",
+    error: "Не удалось отправить запрос. Повторите попытку или напишите на inquiry@pindesys.com",
+    sending: "Отправка...",
+    send: "Отправить запрос",
+  },
+} as const;
+
+const countries = [
+  ["Kazakhstan", "Казахстан"],
+  ["Uzbekistan", "Узбекистан"],
+  ["Kyrgyzstan", "Кыргызстан"],
+  ["Tajikistan", "Таджикистан"],
+  ["Turkmenistan", "Туркменистан"],
+  ["Russia", "Россия"],
+  ["Belarus", "Беларусь"],
+  ["Armenia", "Армения"],
+  ["Azerbaijan", "Азербайджан"],
+  ["Georgia", "Грузия"],
+  ["Europe", "Европа"],
+  ["Middle East", "Ближний Восток"],
+  ["Other", "Другая страна"],
+] as const;
+
+const productOptions = [
+  ["Casement Windows", "Поворотные окна"],
+  ["Sliding Windows & Doors", "Раздвижные окна и двери"],
+  ["Push-Out Windows", "Параллельно-выдвижные окна"],
+  ["Folding Doors", "Складные двери"],
+  ["Swing Doors", "Распашные двери"],
+  ["Interior Doors", "Межкомнатные двери"],
+  ["Multiple Products", "Несколько систем"],
+] as const;
+
+function SendIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="m22 2-7 20-4-9-9-4Z" />
+      <path d="M22 2 11 13" />
+    </svg>
+  );
+}
+
+export default function ContactForm({ locale }: { locale: ContactLocale }) {
+  const text = copy[locale];
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -18,6 +94,7 @@ export default function ContactForm() {
       product: (form.elements.namedItem("product") as HTMLSelectElement).value,
       company: (form.elements.namedItem("company") as HTMLInputElement).value,
       message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+      locale,
     };
 
     try {
@@ -41,11 +118,10 @@ export default function ContactForm() {
       <div className="bg-surface border border-line rounded-[2px] p-[34px] text-center">
         <span className="inline-block w-[5px] h-[5px] rounded-full bg-red mb-[13px]" />
         <h3 className="font-[family-name:var(--font-serif)] text-[22px] font-semibold text-alabaster mb-[8px]">
-          Thank you
+          {text.thanks}
         </h3>
         <p className="text-warm text-[13px]">
-          We&apos;ve received your inquiry and will get back to you within 24
-          hours.
+          {text.received}
         </p>
       </div>
     );
@@ -59,7 +135,7 @@ export default function ContactForm() {
             htmlFor="name"
             className="block text-[10px] font-medium tracking-[2px] uppercase text-muted mb-[8px]"
           >
-            Full Name *
+            {text.name} *
           </label>
           <input
             type="text"
@@ -67,7 +143,8 @@ export default function ContactForm() {
             name="name"
             required
             className="w-full px-[21px] py-[13px] bg-surface border border-line text-alabaster text-[14px] rounded-[1px] focus:ring-1 focus:ring-bronze/30 focus:border-bronze outline-none transition-colors placeholder:text-muted"
-            placeholder="Your name"
+            placeholder={text.namePlaceholder}
+            autoComplete="name"
           />
         </div>
         <div>
@@ -75,13 +152,14 @@ export default function ContactForm() {
             htmlFor="email"
             className="block text-[10px] font-medium tracking-[2px] uppercase text-muted mb-[8px]"
           >
-            Email Address *
+            {text.email} *
           </label>
           <input
             type="email"
             id="email"
             name="email"
             required
+            autoComplete="email"
             className="w-full px-[21px] py-[13px] bg-surface border border-line text-alabaster text-[14px] rounded-[1px] focus:ring-1 focus:ring-bronze/30 focus:border-bronze outline-none transition-colors placeholder:text-muted"
             placeholder="your@email.com"
           />
@@ -94,7 +172,7 @@ export default function ContactForm() {
             htmlFor="country"
             className="block text-[10px] font-medium tracking-[2px] uppercase text-muted mb-[8px]"
           >
-            Country / Region *
+            {text.country} *
           </label>
           <select
             id="country"
@@ -102,15 +180,10 @@ export default function ContactForm() {
             required
             className="w-full px-[21px] py-[13px] bg-surface border border-line text-alabaster text-[14px] rounded-[1px] focus:ring-1 focus:ring-bronze/30 focus:border-bronze outline-none transition-colors"
           >
-            <option value="">Select your region</option>
-            <option value="Australia">Australia</option>
-            <option value="New Zealand">New Zealand</option>
-            <option value="United States">United States</option>
-            <option value="Canada">Canada</option>
-            <option value="United Kingdom">United Kingdom</option>
-            <option value="Europe">Europe</option>
-            <option value="Middle East">Middle East</option>
-            <option value="Other">Other</option>
+            <option value="">{text.countryPlaceholder}</option>
+            {countries.map(([value, ruLabel]) => (
+              <option key={value} value={value}>{locale === "ru" ? ruLabel : value}</option>
+            ))}
           </select>
         </div>
         <div>
@@ -118,21 +191,17 @@ export default function ContactForm() {
             htmlFor="product"
             className="block text-[10px] font-medium tracking-[2px] uppercase text-muted mb-[8px]"
           >
-            Product Interest
+            {text.product}
           </label>
           <select
             id="product"
             name="product"
             className="w-full px-[21px] py-[13px] bg-surface border border-line text-alabaster text-[14px] rounded-[1px] focus:ring-1 focus:ring-bronze/30 focus:border-bronze outline-none transition-colors"
           >
-            <option value="">Select a product</option>
-            <option value="Casement Windows">Casement Windows</option>
-            <option value="Sliding Windows & Doors">Sliding Windows & Doors</option>
-            <option value="Push-Out Windows">Push-Out Windows</option>
-            <option value="Folding Doors">Folding Doors</option>
-            <option value="Swing Doors">Swing Doors</option>
-            <option value="Interior Doors">Interior Doors</option>
-            <option value="Multiple Products">Multiple Products</option>
+            <option value="">{text.productPlaceholder}</option>
+            {productOptions.map(([value, ruLabel]) => (
+              <option key={value} value={value}>{locale === "ru" ? ruLabel : value}</option>
+            ))}
           </select>
         </div>
       </div>
@@ -142,14 +211,15 @@ export default function ContactForm() {
           htmlFor="company"
           className="block text-[10px] font-medium tracking-[2px] uppercase text-muted mb-[8px]"
         >
-          Company Name
+          {text.company}
         </label>
         <input
           type="text"
           id="company"
           name="company"
           className="w-full px-[21px] py-[13px] bg-surface border border-line text-alabaster text-[14px] rounded-[1px] focus:ring-1 focus:ring-bronze/30 focus:border-bronze outline-none transition-colors placeholder:text-muted"
-          placeholder="Your company (optional)"
+          placeholder={text.companyPlaceholder}
+          autoComplete="organization"
         />
       </div>
 
@@ -158,7 +228,7 @@ export default function ContactForm() {
           htmlFor="message"
           className="block text-[10px] font-medium tracking-[2px] uppercase text-muted mb-[8px]"
         >
-          Message *
+          {text.message} *
         </label>
         <textarea
           id="message"
@@ -166,14 +236,18 @@ export default function ContactForm() {
           required
           rows={5}
           className="w-full px-[21px] py-[13px] bg-surface border border-line text-alabaster text-[14px] rounded-[1px] focus:ring-1 focus:ring-bronze/30 focus:border-bronze outline-none transition-colors resize-vertical placeholder:text-muted"
-          placeholder="Tell us about your project requirements..."
+          placeholder={text.messagePlaceholder}
         />
       </div>
 
       {status === "error" && (
-        <p className="text-red text-[13px]">
-          Failed to send. Please try again or email us directly at inquiry@pindesys.com
-        </p>
+        <div className="text-red text-[13px]" role="alert">
+          <p>{text.error}</p>
+          <p className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
+            <a className="font-bold underline underline-offset-4" href="mailto:inquiry@pindesys.com">inquiry@pindesys.com</a>
+            <a className="font-bold underline underline-offset-4" href="https://wa.me/8613883333993" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          </p>
+        </div>
       )}
 
       <button
@@ -181,8 +255,8 @@ export default function ContactForm() {
         disabled={status === "sending"}
         className="inline-flex items-center gap-[10px] px-[34px] py-4 bg-gold text-navy text-[11px] font-medium tracking-[3px] uppercase rounded-[1px] hover:brightness-90 transition-all disabled:opacity-50"
       >
-        <Send size={14} />
-        {status === "sending" ? "Sending..." : "Send inquiry"}
+        <SendIcon />
+        {status === "sending" ? text.sending : text.send}
       </button>
     </form>
   );

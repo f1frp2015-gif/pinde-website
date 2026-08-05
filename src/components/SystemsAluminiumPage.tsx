@@ -10,22 +10,25 @@ type Props = { locale: PageLocale; content: any };
 const container = "mx-auto max-w-[1200px] px-[55px] max-lg:px-6";
 
 export default function SystemsAluminiumPage({ locale, content }: Props) {
+  const homeLabel = locale === "ru" ? "Главная" : "Home";
+  const systemsLabel = locale === "ru" ? "Системы" : "Systems";
+  const aluminiumLabel = locale === "ru" ? "Алюминий" : "Aluminium";
   const crumbs = breadcrumbJsonLd([
-    { name: "Home", url: `https://pindesys.com/${locale}` },
-    { name: "Systems", url: `https://pindesys.com/${locale}/systems` },
-    { name: "Aluminium", url: `https://pindesys.com/${locale}/systems/aluminium` },
+    { name: homeLabel, url: `https://pindesys.com/${locale}` },
+    { name: systemsLabel, url: `https://pindesys.com/${locale}/systems` },
+    { name: aluminiumLabel, url: `https://pindesys.com/${locale}/systems/aluminium` },
   ]);
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }} />
-      <nav aria-label="Breadcrumb" className="pt-[104px] py-4 bg-obsidian border-b border-line">
+      <nav aria-label={locale === "ru" ? "Хлебные крошки" : "Breadcrumb"} className="pt-[104px] py-4 bg-obsidian border-b border-line">
         <div className={`${container} pt-[13px] flex items-center gap-2 text-[11px] tracking-[2px] uppercase text-muted`}>
-          <Link href={`/${locale}`} className="hover:text-alabaster transition-colors">Home</Link>
+          <Link href={`/${locale}`} className="hover:text-alabaster transition-colors">{homeLabel}</Link>
           <span>/</span>
-          <Link href={`/${locale}/systems`} className="hover:text-alabaster transition-colors">Systems</Link>
+          <Link href={`/${locale}/systems`} className="hover:text-alabaster transition-colors">{systemsLabel}</Link>
           <span>/</span>
-          <span className="text-warm">Aluminium</span>
+          <span className="text-warm">{aluminiumLabel}</span>
         </div>
       </nav>
       <section className="py-[89px] bg-obsidian">

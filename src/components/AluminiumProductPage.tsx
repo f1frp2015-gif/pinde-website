@@ -27,6 +27,7 @@ const labels = {
     related: "Related aluminium systems",
     back: "All aluminium systems",
     details: "Specifications",
+    breadcrumb: "Breadcrumb",
   },
   ru: {
     home: "Главная",
@@ -40,6 +41,7 @@ const labels = {
     related: "Другие алюминиевые системы",
     back: "Все алюминиевые системы",
     details: "Характеристики",
+    breadcrumb: "Хлебные крошки",
   },
 } as const;
 
@@ -55,13 +57,19 @@ export default function AluminiumProductPage({ locale, product }: Props) {
   const related = products
     .filter((candidate) => candidate.category === product.category && candidate.slug !== product.slug)
     .slice(0, 3);
+  const structuredProduct = locale === "ru"
+    ? {
+        ...product,
+        description: `Система PINDÉ ${product.name}: конфигурация, ключевые особенности и справочные технические характеристики для оконного производства.`,
+      }
+    : product;
 
   return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd(product, canonical)) }} />
+    <article lang={locale}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd(structuredProduct, canonical)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }} />
 
-      <nav aria-label="Breadcrumb" className="pt-[104px] py-4 bg-obsidian border-b border-line">
+      <nav aria-label={text.breadcrumb} className="pt-[104px] py-4 bg-obsidian border-b border-line">
         <div className={`${container} pt-[13px] flex flex-wrap items-center gap-2 text-[11px] tracking-[2px] uppercase text-muted`}>
           <Link href={`/${locale}`} className="hover:text-alabaster transition-colors">{text.home}</Link>
           <span>/</span>
@@ -167,6 +175,6 @@ export default function AluminiumProductPage({ locale, product }: Props) {
           </div>
         </div>
       </section>
-    </>
+    </article>
   );
 }

@@ -9,19 +9,20 @@ type Props = { locale: string };
 const container = "mx-auto max-w-[1200px] px-[55px] max-lg:px-6";
 
 export default function CasesPage({ locale }: Props) {
-  const crumbs = breadcrumbJsonLd([
-    { name: "Home", url: `https://pindesys.com/${locale}` },
-    { name: "System Configurations", url: `https://pindesys.com/${locale}/cases` },
-  ]);
-
   const isRu = locale === "ru";
+  const homeLabel = isRu ? "Главная" : "Home";
+  const sectionLabel = isRu ? "Конфигурации систем" : "System Configurations";
+  const crumbs = breadcrumbJsonLd([
+    { name: homeLabel, url: `https://pindesys.com/${locale}` },
+    { name: sectionLabel, url: `https://pindesys.com/${locale}/cases` },
+  ]);
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }} />
-      <nav aria-label="Breadcrumb" className="pt-[104px] py-4 bg-obsidian border-b border-line">
+      <nav aria-label={isRu ? "Хлебные крошки" : "Breadcrumb"} className="pt-[104px] py-4 bg-obsidian border-b border-line">
         <div className={`${container} pt-[13px] flex items-center gap-2 text-[11px] tracking-[2px] uppercase text-muted`}>
-          <Link href={`/${locale}`} className="hover:text-alabaster transition-colors">Home</Link>
+          <Link href={`/${locale}`} className="hover:text-alabaster transition-colors">{homeLabel}</Link>
           <span>/</span>
           <span className="text-warm">{isRu ? "Конфигурации" : "System Configurations"}</span>
         </div>

@@ -14,7 +14,9 @@ export function GET() {
 }
 
 export function HEAD() {
-  return new Response(null, {
+  // Keep a non-empty cached payload. The HTTP server strips it for HEAD, while
+  // Next.js can still size the force-static cache entry correctly.
+  return new Response("This content has been permanently removed.\n", {
     status: 410,
     headers: removalHeaders,
   });
