@@ -63,7 +63,7 @@ export default function Header({ locale }: HeaderProps) {
       <div className="border-b border-white/10">
         <div className="mx-auto flex h-16 max-w-[1280px] items-center justify-between px-5 sm:px-8 lg:h-[72px] lg:px-10">
           <Link href={`/${locale}`} className="shrink-0" aria-label="PINDÉ home">
-            <PindeLogo variant="light" size="sm" hideDescriptorOnMobile />
+            <PindeLogo size="sm" eager />
           </Link>
 
           <nav

@@ -55,7 +55,7 @@ export default function Footer({ locale }: FooterProps) {
           <div className="mx-auto max-w-[1280px] px-5 py-14 sm:px-8 lg:px-10 lg:py-16">
             <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.35fr_0.8fr_0.8fr_1.15fr]">
               <div>
-                <PindeLogo variant="light" size="md" />
+                <PindeLogo size="md" />
                 <p className="mt-5 max-w-[350px] text-[13px] leading-[1.75] text-white/62">{content.footer.description}</p>
                 <div className="mt-6 flex flex-wrap gap-2">
                   {["ALUMINIUM", "FRP", "MACHINING", "CKD"].map((tag) => (
