@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 function MenuIcon({ open }: { open: boolean }) {
   return (
@@ -45,12 +46,28 @@ export default function MobileNav({
   menuLabel,
 }: MobileNavProps) {
   const [open, setOpen] = useState(false);
+  const router = useRouter();
+  const routesAreWarm = useRef(false);
+  const prefetchRoutes = useCallback(() => {
+    if (routesAreWarm.current) return;
+
+    routesAreWarm.current = true;
+    [...links.map((link) => link.href), ctaHref].forEach((href) => {
+      router.prefetch(href);
+    });
+  }, [ctaHref, links, router]);
 
   return (
     <div className="lg:hidden">
       <button
         type="button"
-        onClick={() => setOpen((current) => !current)}
+        onPointerEnter={prefetchRoutes}
+        onFocus={prefetchRoutes}
+        onTouchStart={prefetchRoutes}
+        onClick={() => {
+          prefetchRoutes();
+          setOpen((current) => !current);
+        }}
         className="p-2 text-white"
         aria-label={menuLabel}
         aria-expanded={open}
@@ -69,6 +86,7 @@ export default function MobileNav({
               <Link
                 key={link.href}
                 href={link.href}
+                prefetch
                 onClick={() => setOpen(false)}
                 className="flex items-center justify-between border-b border-white/10 px-1 py-3 text-[13px] font-semibold text-white/78"
               >
@@ -78,6 +96,7 @@ export default function MobileNav({
             ))}
             <Link
               href={ctaHref}
+              prefetch
               onClick={() => setOpen(false)}
               className="mt-4 flex min-h-12 items-center justify-center bg-[#DAAF37] px-5 text-[12px] font-bold text-[#081D2A]"
             >
