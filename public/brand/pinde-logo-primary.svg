@@ -1,17 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 112" role="img" aria-labelledby="title description">
-  <title id="title">PINDÉ Window System</title>
-  <desc id="description">PINDÉ primary logo in navy, gold and red</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 128" role="img" aria-labelledby="title description">
+  <title id="title">PINDÉ Window Systems</title>
+  <desc id="description">PINDÉ open gold frame logo with a red focus point</desc>
   <g fill="none">
-    <path d="M7 8h70M92 25v77H23" stroke="#0D2440" stroke-width="8"/>
-    <path d="M7 23l40 23v38L7 107V23Z" stroke="#C7A154" stroke-width="8"/>
-    <path d="M84 5h16v16H84z" fill="#D71920" stroke="none"/>
+    <rect x="8" y="12" width="88" height="88" stroke="#DAAF37" stroke-width="6"/>
+    <circle cx="96" cy="12" r="13" fill="#FF2D2D"/>
   </g>
-  <g fill="#0D2440">
-    <path fill-rule="evenodd" d="M128 24h32c22 0 35 11 35 29s-13 29-35 29h-14v18h-18V24Zm18 15v28h13c12 0 18-5 18-14s-6-14-18-14h-13Z"/>
-    <path d="M218 24h18v76h-18zM260 24h17l35 47V24h18v76h-17l-35-47v47h-18V24Z"/>
-    <path fill-rule="evenodd" d="M354 24h30c26 0 44 15 44 38s-18 38-44 38h-30V24Zm18 15v46h11c17 0 27-8 27-23s-10-23-27-23h-11Z"/>
-    <path d="M451 24h49v15h-31v15h28v15h-28v16h31v15h-49V24Z"/>
-  </g>
-  <path d="m471 16 15-11h14l-15 11h-14Z" fill="#D71920"/>
-  <text x="129" y="111" textLength="371" lengthAdjust="spacing" fill="#0D2440" font-family="Montserrat,Arial,sans-serif" font-size="10" font-weight="600">WINDOW SYSTEM</text>
+  <text x="130" y="77" fill="#081D2A" font-family="Manrope,Inter,Arial,sans-serif" font-size="68" font-weight="500" letter-spacing="16">PINDÉ</text>
+  <text x="132" y="108" fill="#DAAF37" font-family="Manrope,Inter,Arial,sans-serif" font-size="15" font-weight="600" letter-spacing="8">WINDOW SYSTEMS</text>
 </svg>

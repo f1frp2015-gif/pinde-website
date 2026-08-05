@@ -2,25 +2,27 @@
 
 @theme inline {
   /* PINDÉ VI — primary and secondary palette */
-  --color-navy: #0D2440;
-  --color-gold: #C7A154;
-  --color-gray: #7A828C;
-  --color-light-gray: #E9EDF2;
+  --color-navy: #081D2A;
+  --color-gold: #DAAF37;
+  --color-beige: #F5E8D2;
+  --color-stone: #D9D9D9;
+  --color-gray: #68747B;
+  --color-light-gray: #F2EFE9;
   --color-obsidian: #FFFFFF;
-  --color-surface: #F6F7F8;
-  --color-alabaster: #0D2440;
-  --color-warm: #4F5B69;
-  --color-bronze: #C7A154;
-  --color-red: #D71920;
-  --color-muted: #7A828C;
-  --color-line: #DCE1E6;
+  --color-surface: #FAF7F1;
+  --color-alabaster: #081D2A;
+  --color-warm: #40515B;
+  --color-bronze: #DAAF37;
+  --color-red: #FF2D2D;
+  --color-muted: #68747B;
+  --color-line: #D9D9D9;
 
   /* Legacy aliases retained so every route shares the VI tokens. */
-  --color-primary: #0D2440;
-  --color-primary-light: #31465E;
-  --color-accent: #C7A154;
-  --color-accent-light: #C7A154;
-  --color-dark: #0D2440;
+  --color-primary: #081D2A;
+  --color-primary-light: #263F4B;
+  --color-accent: #DAAF37;
+  --color-accent-light: #DAAF37;
+  --color-dark: #081D2A;
   --color-light: #FFFFFF;
 
   --font-brand: var(--font-pinde-brand);
@@ -38,11 +40,13 @@
 }
 
 :root {
-  --pinde-navy: #0D2440;
-  --pinde-gold: #C7A154;
-  --pinde-red: #D71920;
-  --pinde-gray: #7A828C;
-  --pinde-light-gray: #E9EDF2;
+  --pinde-navy: #081D2A;
+  --pinde-gold: #DAAF37;
+  --pinde-beige: #F5E8D2;
+  --pinde-red: #FF2D2D;
+  --pinde-stone: #D9D9D9;
+  --pinde-gray: #68747B;
+  --pinde-light-gray: #F2EFE9;
 }
 
 html {
@@ -64,7 +68,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-pinde-brand), Montserrat, Arial, sans-serif;
+  font-family: var(--font-pinde-brand), Manrope, Arial, sans-serif;
   text-wrap: balance;
 }
 
@@ -92,7 +96,7 @@ textarea {
 
 ::selection {
   color: var(--pinde-navy);
-  background: rgba(199, 161, 84, 0.28);
+  background: rgba(218, 175, 55, 0.28);
 }
 
 .landing-technical-grid {
@@ -110,21 +114,47 @@ textarea {
 .market-shell h1,
 .market-shell h2,
 .market-shell h3 {
-  font-family: var(--font-pinde-brand), Montserrat, Arial, sans-serif;
+  font-family: var(--font-pinde-brand), Manrope, Arial, sans-serif;
+}
+
+.brand-geometry {
+  position: relative;
+  isolation: isolate;
+}
+
+.brand-geometry::after {
+  position: absolute;
+  z-index: 3;
+  top: 8%;
+  right: -12%;
+  width: min(58vw, 720px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(218, 175, 55, 0.42);
+  border-radius: 50%;
+  background:
+    linear-gradient(90deg, transparent 61.8%, rgba(218, 175, 55, 0.24) 61.8%, rgba(218, 175, 55, 0.24) calc(61.8% + 1px), transparent calc(61.8% + 1px)),
+    linear-gradient(transparent 61.8%, rgba(218, 175, 55, 0.24) 61.8%, rgba(218, 175, 55, 0.24) calc(61.8% + 1px), transparent calc(61.8% + 1px));
+  content: "";
+  pointer-events: none;
+}
+
+.brand-geometry > * {
+  position: relative;
+  z-index: 2;
 }
 
 .landing-blueprint-grid {
   background-image:
-    linear-gradient(rgba(199, 161, 84, 0.085) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(199, 161, 84, 0.085) 1px, transparent 1px);
+    linear-gradient(rgba(218, 175, 55, 0.085) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(218, 175, 55, 0.085) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
 .pinde-pattern {
-  background-color: #F6F7F8;
+  background-color: #FAF7F1;
   background-image:
-    linear-gradient(45deg, transparent 45%, rgba(13, 36, 64, 0.035) 45%, rgba(13, 36, 64, 0.035) 55%, transparent 55%),
-    linear-gradient(-45deg, transparent 45%, rgba(199, 161, 84, 0.055) 45%, rgba(199, 161, 84, 0.055) 55%, transparent 55%);
+    linear-gradient(45deg, transparent 45%, rgba(8, 29, 42, 0.035) 45%, rgba(8, 29, 42, 0.035) 55%, transparent 55%),
+    linear-gradient(-45deg, transparent 45%, rgba(218, 175, 55, 0.055) 45%, rgba(218, 175, 55, 0.055) 55%, transparent 55%);
   background-size: 34px 34px;
 }
 

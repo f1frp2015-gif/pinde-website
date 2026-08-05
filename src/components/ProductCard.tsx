@@ -27,7 +27,7 @@ export default function ProductCard({ product, href }: Props) {
           />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center">
-            <PindeMark size={34} frame="#DCE1E6" />
+            <PindeMark size={34} frame="#D9D9D9" />
           </div>
         )}
       </div>

@@ -32,7 +32,7 @@ export default function SystemsFrpPage({ locale, content }: Props) {
       </nav>
       <section className="py-[89px] bg-obsidian">
         <div className={container}>
-          <span className="inline-block bg-[#D71920] px-3 py-2 text-[10px] font-bold uppercase tracking-[0.08em] text-white mb-[21px]">{content.supplyStatus}</span>
+          <span className="inline-block bg-[#FF2D2D] px-3 py-2 text-[10px] font-bold uppercase tracking-[0.08em] text-white mb-[21px]">{content.supplyStatus}</span>
           <h1 className="font-[family-name:var(--font-serif)] font-semibold text-[clamp(40px,6vw,64px)] leading-[0.95] text-alabaster mb-[21px]">
             {content.title.replace(/[.!?]+$/, "")}<span className="text-red">.</span>
           </h1>
@@ -69,7 +69,7 @@ export default function SystemsFrpPage({ locale, content }: Props) {
             />
           </div>
           <div>
-            <p className="mb-[13px] text-[10px] font-bold uppercase tracking-[0.16em] text-[#C7A154]">{xd75.eyebrow}</p>
+            <p className="mb-[13px] text-[10px] font-bold uppercase tracking-[0.16em] text-[#DAAF37]">{xd75.eyebrow}</p>
             <h2 className="font-[family-name:var(--font-serif)] text-[36px] font-semibold leading-[1.05] text-alabaster">
               {xd75.title}<span className="text-red">.</span>
             </h2>
@@ -92,7 +92,7 @@ export default function SystemsFrpPage({ locale, content }: Props) {
       {content.note && (
         <section className="py-[55px] bg-surface border-t border-line">
           <div className={`${container} max-w-[860px] flex items-start gap-4`}>
-            <AlertTriangle size={20} className="mt-0.5 shrink-0 text-[#C7A154]" />
+            <AlertTriangle size={20} className="mt-0.5 shrink-0 text-[#DAAF37]" />
             <p className="text-[12px] leading-[1.7] text-muted">{content.note}</p>
           </div>
         </section>

@@ -51,7 +51,7 @@ export default function CertificationPage({ locale, content }: Props) {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-[13px]">
             {content.certifications.map((c: { name: string; description: string }) => (
               <div key={c.name} className="border border-line bg-surface p-5 text-center">
-                <ShieldCheck size={24} className="mx-auto text-[#C7A154] mb-3" />
+                <ShieldCheck size={24} className="mx-auto text-[#DAAF37] mb-3" />
                 <span className="block text-[16px] font-extrabold text-alabaster">{c.name}</span>
                 <span className="mt-2 block text-[10px] text-muted leading-[1.5]">{c.description}</span>
               </div>

@@ -41,7 +41,7 @@ export default function EngineeringPage({ locale, content }: Props) {
               const Icon = icons[i];
               return (
                 <article key={d.title} className="bg-obsidian border border-line rounded-[2px] p-6 sm:p-8">
-                  <span className="flex h-12 w-12 items-center justify-center bg-[#C7A154]/20 text-[#C7A154] mb-[21px]">
+                  <span className="flex h-12 w-12 items-center justify-center bg-[#DAAF37]/20 text-[#DAAF37] mb-[21px]">
                     <Icon size={22} />
                   </span>
                   <h2 className="text-[20px] font-extrabold text-alabaster mb-[13px]">{d.title}</h2>

@@ -1,19 +1,12 @@
-/**
- * PINDÉ window mark.
- *
- * The open navy frame, gold sash and red corner accent follow the primary
- * construction shown in the PINDÉ brand identity manual.
- */
+/** PINDÉ open-frame mark from the current visual identity. */
 export default function PindeMark({
   size = 40,
-  frame = "#0D2440",
-  sash = "#C7A154",
-  accent = "#D71920",
+  frame = "#DAAF37",
+  accent = "#FF2D2D",
   decorative = false,
 }: {
   size?: number;
   frame?: string;
-  sash?: string;
   accent?: string;
   decorative?: boolean;
 }) {
@@ -28,20 +21,8 @@ export default function PindeMark({
       aria-hidden={decorative ? true : undefined}
       focusable="false"
     >
-      <path
-        d="M8 8H48M56 17V56H18"
-        stroke={frame}
-        strokeWidth="5"
-        strokeLinecap="square"
-        strokeLinejoin="miter"
-      />
-      <path
-        d="M8 16L31 29V48L8 58V16Z"
-        stroke={sash}
-        strokeWidth="5"
-        strokeLinejoin="miter"
-      />
-      <rect x="52" y="6" width="9" height="9" fill={accent} />
+      <rect x="9" y="9" width="44" height="44" stroke={frame} strokeWidth="3" />
+      <circle cx="53" cy="9" r="7" fill={accent} />
     </svg>
   );
 }

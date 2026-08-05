@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Montserrat } from "next/font/google";
+import { Inter, Manrope } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { organizationJsonLd, localBusinessJsonLd } from "@/lib/jsonld";
 
-const montserrat = Montserrat({
+const manrope = Manrope({
   subsets: ["latin", "cyrillic"],
   display: "swap",
   variable: "--font-pinde-brand",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
       "Aluminium and FRP profile systems, machined components and glass-free CKD kits for local window fabrication.",
     images: [
       {
-        url: "/og-ru-market.webp",
+        url: "/og-about-pinde.webp",
         width: 1200,
         height: 630,
         alt: "PINDÉ — Window System Materials from Chongqing",
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     title: "PINDÉ | Window System Materials from Chongqing",
     description:
       "Aluminium and FRP profile systems, machined components and glass-free CKD kits for local window fabrication.",
-    images: ["/og-ru-market.webp"],
+    images: ["/og-about-pinde.webp"],
   },
 };
 
@@ -93,7 +93,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${montserrat.variable} ${inter.variable} h-full`}
+      className={`${manrope.variable} ${inter.variable} h-full`}
     >
       <body className="min-h-full flex flex-col antialiased bg-obsidian text-alabaster font-[family-name:var(--font-sans)] selection:bg-red/15">
         <script

@@ -10,18 +10,18 @@ type Props = {
 
 const sizes = {
   sm: {
-    mark: 46,
-    gap: "gap-[15px]",
-    word: "text-[23px]",
-    descriptor: "text-[8px]",
-    descriptorOffset: "mt-[7px]",
+    mark: 42,
+    gap: "gap-[13px]",
+    word: "text-[22px]",
+    descriptor: "text-[7px]",
+    descriptorOffset: "mt-[6px]",
   },
   md: {
     mark: 54,
-    gap: "gap-[18px]",
-    word: "text-[28px]",
+    gap: "gap-[16px]",
+    word: "text-[29px]",
     descriptor: "text-[9px]",
-    descriptorOffset: "mt-[8px]",
+    descriptorOffset: "mt-[7px]",
   },
   lg: {
     mark: 70,
@@ -35,35 +35,35 @@ const sizes = {
 export default function PindeLogo({
   variant = "dark",
   size = "md",
-  descriptor = "WINDOW SYSTEM",
+  descriptor = "WINDOW SYSTEMS",
   hideDescriptorOnMobile = false,
   className = "",
 }: Props) {
   const palette =
     variant === "light"
-      ? { frame: "#FFFFFF", word: "text-white", descriptor: "text-white/68" }
-      : { frame: "#0D2440", word: "text-[#0D2440]", descriptor: "text-[#7A828C]" };
+      ? { frame: "#DAAF37", word: "text-[#DAAF37]", descriptor: "text-[#DAAF37]" }
+      : { frame: "#DAAF37", word: "text-[#081D2A]", descriptor: "text-[#DAAF37]" };
   const scale = sizes[size];
 
   return (
     <span
       className={`inline-flex items-center ${scale.gap} ${className}`}
       role="img"
-      aria-label="PINDÉ Window System"
+      aria-label="PINDÉ Window Systems"
     >
       <PindeMark size={scale.mark} frame={palette.frame} decorative />
       <span className="block leading-none" aria-hidden="true">
         <span
-          className={`block font-[family-name:var(--font-brand)] font-bold tracking-[0.36em] ${scale.word} ${palette.word}`}
+          className={`block font-[family-name:var(--font-brand)] font-medium tracking-[0.28em] ${scale.word} ${palette.word}`}
         >
           PIND
           <span className="relative inline-block tracking-normal">
             E
-            <span className="absolute -top-[0.32em] left-[0.28em] h-[0.17em] w-[0.5em] -rotate-[32deg] bg-[#D71920] [clip-path:polygon(18%_0,100%_0,82%_100%,0_100%)]" />
+            <span className="absolute -top-[0.32em] left-[0.28em] h-[0.17em] w-[0.5em] -rotate-[32deg] bg-[#DAAF37] [clip-path:polygon(18%_0,100%_0,82%_100%,0_100%)]" />
           </span>
         </span>
         <span
-          className={`block font-[family-name:var(--font-brand)] font-semibold tracking-[0.38em] ${scale.descriptorOffset} ${scale.descriptor} ${palette.descriptor} ${hideDescriptorOnMobile ? "max-sm:hidden" : ""}`}
+          className={`block font-[family-name:var(--font-brand)] font-medium tracking-[0.32em] ${scale.descriptorOffset} ${scale.descriptor} ${palette.descriptor} ${hideDescriptorOnMobile ? "max-sm:hidden" : ""}`}
         >
           {descriptor}
         </span>

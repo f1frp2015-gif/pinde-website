@@ -99,10 +99,10 @@ function SectionHeading({
   return (
     <div className="max-w-[860px]">
       <div className="mb-4 flex items-center gap-3">
-        <span className="h-5 w-1 bg-[#D71920]" />
+        <span className="h-5 w-1 bg-[#FF2D2D]" />
         <span
           className={`text-[11px] font-bold uppercase tracking-[0.08em] ${
-            inverted ? "text-white/65" : "text-[#7A828C]"
+            inverted ? "text-white/65" : "text-[#68747B]"
           }`}
         >
           {eyebrow}
@@ -110,7 +110,7 @@ function SectionHeading({
       </div>
       <h2
         className={`max-w-[820px] text-[clamp(32px,4.2vw,54px)] font-extrabold leading-[1.06] tracking-[-0.035em] ${
-          inverted ? "text-white" : "text-[#0D2440]"
+          inverted ? "text-white" : "text-[#081D2A]"
         }`}
       >
         {title}
@@ -118,7 +118,7 @@ function SectionHeading({
       {intro && (
         <p
           className={`mt-5 max-w-[760px] text-[15px] leading-[1.75] ${
-            inverted ? "text-white/68" : "text-[#4F5B69]"
+            inverted ? "text-white/68" : "text-[#40515B]"
           }`}
         >
           {intro}
@@ -180,7 +180,7 @@ export default function MarketLandingPage({ locale, content }: Props) {
   };
 
   return (
-    <article lang={content.lang} className="market-shell overflow-hidden bg-white text-[#0D2440]">
+    <article lang={content.lang} className="market-shell overflow-hidden bg-white text-[#081D2A]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
@@ -190,51 +190,51 @@ export default function MarketLandingPage({ locale, content }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      <section className="border-b border-[#DCE1E6] bg-white pt-[96px] lg:pt-[104px]">
+      <section className="border-b border-[#D9D9D9] bg-white pt-[96px] lg:pt-[104px]">
         <div className={`${container} grid lg:grid-cols-[1.06fr_0.94fr]`}>
           <div className="flex flex-col justify-center py-14 pr-0 lg:min-h-[680px] lg:py-20 lg:pr-16">
-            <div className="mb-5 flex flex-wrap items-center gap-3 text-[11px] font-bold uppercase tracking-[0.08em] text-[#4F5B69]">
-              <span className="bg-[#E9EDF2] px-3 py-2 text-[#C7A154]">B2B</span>
+            <div className="mb-5 flex flex-wrap items-center gap-3 text-[11px] font-bold uppercase tracking-[0.08em] text-[#40515B]">
+              <span className="bg-[#F2EFE9] px-3 py-2 text-[#DAAF37]">B2B</span>
               <span>{ui.buyerLabel}</span>
             </div>
 
-            <p className="mb-5 flex items-center gap-2 text-[12px] font-semibold text-[#7A828C]">
-              <CircleDot size={14} className="text-[#D71920]" />
+            <p className="mb-5 flex items-center gap-2 text-[12px] font-semibold text-[#68747B]">
+              <CircleDot size={14} className="text-[#FF2D2D]" />
               {content.hero.eyebrow}
             </p>
 
-            <h1 className="max-w-[760px] text-[clamp(42px,5.5vw,70px)] font-extrabold leading-[1.01] tracking-[-0.045em] text-[#0D2440]">
+            <h1 className="max-w-[760px] text-[clamp(42px,5.5vw,70px)] font-extrabold leading-[1.01] tracking-[-0.045em] text-[#081D2A]">
               {content.hero.title}
             </h1>
 
-            <p className="mt-6 max-w-[700px] text-[16px] leading-[1.75] text-[#4F5B69]">
+            <p className="mt-6 max-w-[700px] text-[16px] leading-[1.75] text-[#40515B]">
               {content.hero.description}
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
                 href={`/${locale}/rfq`}
-                className="inline-flex min-h-12 items-center justify-center gap-3 bg-[#C7A154] px-6 py-3 text-[12px] font-bold text-[#0D2440] transition-[filter] hover:brightness-105"
+                className="inline-flex min-h-12 items-center justify-center gap-3 bg-[#DAAF37] px-6 py-3 text-[12px] font-bold text-[#081D2A] transition-[filter] hover:brightness-105"
               >
                 {content.hero.primaryCta}
                 <ArrowRight size={16} />
               </Link>
               <Link
                 href={`/${locale}/supply`}
-                className="inline-flex min-h-12 items-center justify-center gap-3 border border-[#0D2440] px-6 py-3 text-[12px] font-bold text-[#0D2440] transition-colors hover:bg-[#E9EDF2]"
+                className="inline-flex min-h-12 items-center justify-center gap-3 border border-[#081D2A] px-6 py-3 text-[12px] font-bold text-[#081D2A] transition-colors hover:bg-[#F2EFE9]"
               >
                 {content.hero.secondaryCta}
                 <ChevronRight size={16} />
               </Link>
             </div>
 
-            <p className="mt-6 flex max-w-[650px] items-start gap-3 border-l-4 border-[#C7A154] bg-[#F8F4E9] px-4 py-3 text-[12px] leading-[1.65] text-[#4F5B69]">
-              <ShieldCheck size={17} className="mt-0.5 shrink-0 text-[#C7A154]" />
+            <p className="mt-6 flex max-w-[650px] items-start gap-3 border-l-4 border-[#DAAF37] bg-[#F5E8D2] px-4 py-3 text-[12px] leading-[1.65] text-[#40515B]">
+              <ShieldCheck size={17} className="mt-0.5 shrink-0 text-[#DAAF37]" />
               {content.hero.note}
             </p>
           </div>
 
-          <div className="relative -mx-5 bg-[#0D2440] text-white sm:-mx-8 lg:mx-0 lg:flex lg:min-h-[680px] lg:flex-col">
+          <div className="brand-geometry relative -mx-5 overflow-hidden bg-[#081D2A] text-white sm:-mx-8 lg:mx-0 lg:flex lg:min-h-[680px] lg:flex-col">
             <div className="relative h-[230px] overflow-hidden border-b border-white/15 lg:h-auto lg:aspect-[2000/755] lg:shrink-0">
               <Image
                 src="/images/pinde-factory-aerial-view-chongqing.webp"
@@ -245,7 +245,7 @@ export default function MarketLandingPage({ locale, content }: Props) {
                 sizes="(min-width: 1024px) 47vw, 100vw"
                 className="object-cover object-center"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0D2440]/90 via-[#0D2440]/15 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#081D2A]/90 via-[#081D2A]/15 to-transparent" />
               <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-4 lg:bottom-7 lg:left-7 lg:right-7">
                 <div>
                   <span className="block text-[10px] font-bold uppercase tracking-[0.1em] text-white/65">
@@ -253,7 +253,7 @@ export default function MarketLandingPage({ locale, content }: Props) {
                   </span>
                   <span className="mt-1 block text-[20px] font-extrabold">Chongqing · China</span>
                 </div>
-                <span className="bg-white px-3 py-2 text-[11px] font-extrabold text-[#0D2440]">
+                <span className="bg-white px-3 py-2 text-[11px] font-extrabold text-[#081D2A]">
                   100,000 m²
                 </span>
               </div>
@@ -262,12 +262,12 @@ export default function MarketLandingPage({ locale, content }: Props) {
             <div className="landing-blueprint-grid flex-1 p-5 sm:p-8 lg:p-9">
               <div className="flex items-start justify-between gap-5 border-b border-white/15 pb-5">
                 <div>
-                  <span className="text-[10px] font-bold uppercase tracking-[0.1em] text-[#C7A154]">
+                  <span className="text-[10px] font-bold uppercase tracking-[0.1em] text-[#DAAF37]">
                     {ui.panelEyebrow}
                   </span>
                   <h2 className="mt-2 text-[26px] font-extrabold leading-tight">{ui.panelTitle}</h2>
                 </div>
-                <Boxes size={28} className="shrink-0 text-[#D71920]" />
+                <Boxes size={28} className="shrink-0 text-[#FF2D2D]" />
               </div>
 
               <div className="mt-5 grid gap-3">
@@ -276,7 +276,7 @@ export default function MarketLandingPage({ locale, content }: Props) {
                     key={card.code}
                     className="grid grid-cols-[62px_1fr_auto] items-center gap-4 border border-white/15 bg-white/[0.045] p-4"
                   >
-                    <span className="flex h-12 items-center justify-center border border-[#C7A154] bg-[#0D2440] text-[12px] font-extrabold tracking-[0.04em] text-white">
+                    <span className="flex h-12 items-center justify-center border border-[#DAAF37] bg-[#081D2A] text-[12px] font-extrabold tracking-[0.04em] text-white">
                       {card.code}
                     </span>
                     <div>
@@ -296,28 +296,28 @@ export default function MarketLandingPage({ locale, content }: Props) {
         </div>
       </section>
 
-      <section className="border-b border-[#DCE1E6] bg-[#F6F7F8]">
-        <div className={`${container} grid grid-cols-2 divide-x divide-y divide-[#DCE1E6] border-x border-[#DCE1E6] lg:grid-cols-4 lg:divide-y-0`}>
+      <section className="border-b border-[#D9D9D9] bg-[#FAF7F1]">
+        <div className={`${container} grid grid-cols-2 divide-x divide-y divide-[#D9D9D9] border-x border-[#D9D9D9] lg:grid-cols-4 lg:divide-y-0`}>
           {ui.facts.map(([value, label]) => (
             <div key={label} className="min-h-[112px] px-4 py-5 sm:px-6">
-              <strong className="block text-[22px] font-extrabold tracking-[-0.03em] text-[#0D2440]">
+              <strong className="block text-[22px] font-extrabold tracking-[-0.03em] text-[#081D2A]">
                 {value}
               </strong>
-              <span className="mt-2 block text-[11px] leading-[1.5] text-[#7A828C]">{label}</span>
+              <span className="mt-2 block text-[11px] leading-[1.5] text-[#68747B]">{label}</span>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="border-b border-[#DCE1E6] bg-[#E9EDF2] py-5">
+      <section className="border-b border-[#D9D9D9] bg-[#F2EFE9] py-5">
         <div className={`${container} flex flex-col gap-4 lg:flex-row lg:items-center`}>
-          <span className="shrink-0 bg-[#C7A154] px-3 py-2 text-[10px] font-bold uppercase tracking-[0.08em] text-[#0D2440]">
+          <span className="shrink-0 bg-[#DAAF37] px-3 py-2 text-[10px] font-bold uppercase tracking-[0.08em] text-[#081D2A]">
             {content.audience.label}
           </span>
           <div className="flex flex-wrap gap-x-7 gap-y-3">
             {content.audience.items.map((item) => (
-              <span key={item} className="flex items-center gap-2 text-[12px] font-semibold text-[#31465E]">
-                <Check size={14} className="text-[#D71920]" />
+              <span key={item} className="flex items-center gap-2 text-[12px] font-semibold text-[#263F4B]">
+                <Check size={14} className="text-[#FF2D2D]" />
                 {item}
               </span>
             ))}
@@ -325,7 +325,7 @@ export default function MarketLandingPage({ locale, content }: Props) {
         </div>
       </section>
 
-      <section id="systems" className={`${sectionPadding} scroll-mt-28 bg-[#F6F7F8]`}>
+      <section id="systems" className={`${sectionPadding} scroll-mt-28 bg-[#FAF7F1]`}>
         <div className={container}>
           <SectionHeading
             eyebrow={content.systems.eyebrow}
@@ -335,8 +335,8 @@ export default function MarketLandingPage({ locale, content }: Props) {
 
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
             {content.systems.items.map((system, index) => (
-              <article key={system.number} className="flex h-full flex-col border border-[#DCE1E6] bg-white shadow-[0_10px_30px_rgba(16,47,69,0.06)]">
-                <div className={`flex min-h-[118px] items-start justify-between gap-5 p-6 ${index === 0 ? "bg-[#C7A154] text-[#0D2440]" : "bg-[#0D2440] text-white"}`}>
+              <article key={system.number} className="flex h-full flex-col border border-[#D9D9D9] bg-white shadow-[0_10px_30px_rgba(16,47,69,0.06)]">
+                <div className={`flex min-h-[118px] items-start justify-between gap-5 p-6 ${index === 0 ? "bg-[#DAAF37] text-[#081D2A]" : "bg-[#081D2A] text-white"}`}>
                   <div>
                     <span className="text-[10px] font-bold uppercase tracking-[0.08em] opacity-65">
                       {ui.supplyStatus}
@@ -349,29 +349,29 @@ export default function MarketLandingPage({ locale, content }: Props) {
                 </div>
 
                 <div className="flex flex-1 flex-col p-6 sm:p-8">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.08em] text-[#7A828C]">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.08em] text-[#68747B]">
                     {ui.systemScope}
                   </p>
-                  <h3 className="mt-3 text-[26px] font-extrabold leading-[1.15] tracking-[-0.025em] text-[#0D2440]">
+                  <h3 className="mt-3 text-[26px] font-extrabold leading-[1.15] tracking-[-0.025em] text-[#081D2A]">
                     {system.title}
                   </h3>
-                  <p className="mt-4 text-[14px] leading-[1.75] text-[#7A828C]">{system.description}</p>
+                  <p className="mt-4 text-[14px] leading-[1.75] text-[#68747B]">{system.description}</p>
 
-                  <div className="mt-6 border-t border-[#DCE1E6] pt-5">
-                    <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.08em] text-[#C7A154]">
+                  <div className="mt-6 border-t border-[#D9D9D9] pt-5">
+                    <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.08em] text-[#DAAF37]">
                       {ui.packageLabel}
                     </p>
                     <ul className="grid gap-3">
                       {system.included.map((item) => (
-                        <li key={item} className="flex items-start gap-3 text-[12px] leading-[1.65] text-[#31465E]">
-                          <Check size={15} className="mt-0.5 shrink-0 text-[#D71920]" />
+                        <li key={item} className="flex items-start gap-3 text-[12px] leading-[1.65] text-[#263F4B]">
+                          <Check size={15} className="mt-0.5 shrink-0 text-[#FF2D2D]" />
                           {item}
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <p className="mt-6 border-l-4 border-[#C7A154] bg-[#E9EDF2] px-4 py-3 text-[11px] leading-[1.65] text-[#4F5B69]">
+                  <p className="mt-6 border-l-4 border-[#DAAF37] bg-[#F2EFE9] px-4 py-3 text-[11px] leading-[1.65] text-[#40515B]">
                     {system.keywords}
                   </p>
                 </div>
@@ -379,28 +379,28 @@ export default function MarketLandingPage({ locale, content }: Props) {
             ))}
           </div>
 
-          <div className="mt-6 flex items-start gap-4 border border-[#C7A154] bg-[#F8F4E9] p-5 text-[12px] leading-[1.7] text-[#4F5B69]">
-            <FileCheck2 size={20} className="mt-0.5 shrink-0 text-[#C7A154]" />
+          <div className="mt-6 flex items-start gap-4 border border-[#DAAF37] bg-[#F5E8D2] p-5 text-[12px] leading-[1.7] text-[#40515B]">
+            <FileCheck2 size={20} className="mt-0.5 shrink-0 text-[#DAAF37]" />
             {content.systems.evidence}
           </div>
         </div>
       </section>
 
-      <section id="rail-route" className={`${sectionPadding} border-y border-[#DCE1E6] bg-white`}>
+      <section id="rail-route" className={`${sectionPadding} border-y border-[#D9D9D9] bg-white`}>
         <div className={container}>
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
             <SectionHeading eyebrow={content.logistics.eyebrow} title={content.logistics.title} />
             <div>
-              <p className="max-w-[680px] text-[15px] leading-[1.8] text-[#4F5B69]">
+              <p className="max-w-[680px] text-[15px] leading-[1.8] text-[#40515B]">
                 {content.logistics.intro}
               </p>
-              <dl className="mt-7 grid gap-px border border-[#DCE1E6] bg-[#DCE1E6] sm:grid-cols-3">
+              <dl className="mt-7 grid gap-px border border-[#D9D9D9] bg-[#D9D9D9] sm:grid-cols-3">
                 {content.logistics.facts.map((fact) => (
-                  <div key={fact.label} className="bg-[#F6F7F8] p-5">
-                    <dt className="text-[10px] font-bold uppercase tracking-[0.07em] text-[#7A828C]">
+                  <div key={fact.label} className="bg-[#FAF7F1] p-5">
+                    <dt className="text-[10px] font-bold uppercase tracking-[0.07em] text-[#68747B]">
                       {fact.label}
                     </dt>
-                    <dd className="mt-2 text-[22px] font-extrabold tracking-[-0.025em] text-[#C7A154]">
+                    <dd className="mt-2 text-[22px] font-extrabold tracking-[-0.025em] text-[#DAAF37]">
                       {fact.value}
                     </dd>
                   </div>
@@ -409,7 +409,7 @@ export default function MarketLandingPage({ locale, content }: Props) {
             </div>
           </div>
 
-          <figure className="mt-10 overflow-hidden border border-[#DCE1E6] bg-[#F6F7F8] shadow-[0_18px_50px_rgba(16,47,69,0.08)]">
+          <figure className="mt-10 overflow-hidden border border-[#D9D9D9] bg-[#FAF7F1] shadow-[0_18px_50px_rgba(16,47,69,0.08)]">
             <a
               href="/images/yuxinou-freight-route-map.webp"
               target="_blank"
@@ -427,13 +427,13 @@ export default function MarketLandingPage({ locale, content }: Props) {
                 />
               </div>
             </a>
-            <figcaption className="flex flex-col gap-4 border-t border-[#DCE1E6] px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
-              <span className="text-[11px] font-semibold text-[#7A828C]">{content.logistics.mapCaption}</span>
+            <figcaption className="flex flex-col gap-4 border-t border-[#D9D9D9] px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
+              <span className="text-[11px] font-semibold text-[#68747B]">{content.logistics.mapCaption}</span>
               <a
                 href="/images/yuxinou-freight-route-map.webp"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex shrink-0 items-center gap-2 text-[11px] font-bold text-[#C7A154] hover:text-[#D71920]"
+                className="inline-flex shrink-0 items-center gap-2 text-[11px] font-bold text-[#DAAF37] hover:text-[#FF2D2D]"
               >
                 {content.logistics.openMap}
                 <ArrowRight size={14} />
@@ -441,14 +441,14 @@ export default function MarketLandingPage({ locale, content }: Props) {
             </figcaption>
           </figure>
 
-          <p className="mt-5 flex items-start gap-3 border-l-4 border-[#C7A154] bg-[#F8F4E9] px-5 py-4 text-[11px] leading-[1.7] text-[#4F5B69]">
-            <Route size={18} className="mt-0.5 shrink-0 text-[#C7A154]" />
+          <p className="mt-5 flex items-start gap-3 border-l-4 border-[#DAAF37] bg-[#F5E8D2] px-5 py-4 text-[11px] leading-[1.7] text-[#40515B]">
+            <Route size={18} className="mt-0.5 shrink-0 text-[#DAAF37]" />
             {content.logistics.note}
           </p>
         </div>
       </section>
 
-      <section id="formats" className={`${sectionPadding} scroll-mt-28 border-y border-[#DCE1E6] bg-white`}>
+      <section id="formats" className={`${sectionPadding} scroll-mt-28 border-y border-[#D9D9D9] bg-white`}>
         <div className={container}>
           <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
             <SectionHeading
@@ -456,22 +456,22 @@ export default function MarketLandingPage({ locale, content }: Props) {
               title={content.formats.title}
               intro={content.formats.intro}
             />
-            <span className="shrink-0 border border-[#DCE1E6] bg-[#F6F7F8] px-4 py-3 text-[10px] font-bold uppercase tracking-[0.08em] text-[#7A828C]">
+            <span className="shrink-0 border border-[#D9D9D9] bg-[#FAF7F1] px-4 py-3 text-[10px] font-bold uppercase tracking-[0.08em] text-[#68747B]">
               {ui.formatMatrix}
             </span>
           </div>
 
           <div className="mt-10 grid gap-4 lg:hidden">
             {content.formats.items.map((format) => (
-              <article key={format.level} className="border border-[#DCE1E6] bg-white">
-                <div className="flex items-center justify-between bg-[#0D2440] px-5 py-4 text-white">
+              <article key={format.level} className="border border-[#D9D9D9] bg-white">
+                <div className="flex items-center justify-between bg-[#081D2A] px-5 py-4 text-white">
                   <span className="text-[22px] font-extrabold">{format.level}</span>
                   <span className="border border-white/25 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.06em]">
                     {format.tag}
                   </span>
                 </div>
                 <div className="p-5">
-                  <h3 className="text-[21px] font-extrabold leading-tight text-[#0D2440]">{format.title}</h3>
+                  <h3 className="text-[21px] font-extrabold leading-tight text-[#081D2A]">{format.title}</h3>
                   <dl className="mt-5 grid gap-5">
                     {[
                       [content.formats.labels.chongqing, format.from],
@@ -479,8 +479,8 @@ export default function MarketLandingPage({ locale, content }: Props) {
                       [content.formats.labels.fit, format.fit],
                     ].map(([label, value]) => (
                       <div key={label}>
-                        <dt className="text-[10px] font-bold uppercase tracking-[0.07em] text-[#C7A154]">{label}</dt>
-                        <dd className="mt-2 text-[12px] leading-[1.65] text-[#7A828C]">{value}</dd>
+                        <dt className="text-[10px] font-bold uppercase tracking-[0.07em] text-[#DAAF37]">{label}</dt>
+                        <dd className="mt-2 text-[12px] leading-[1.65] text-[#68747B]">{value}</dd>
                       </div>
                     ))}
                   </dl>
@@ -489,13 +489,13 @@ export default function MarketLandingPage({ locale, content }: Props) {
             ))}
           </div>
 
-          <div className="mt-10 hidden overflow-hidden border border-[#DCE1E6] lg:block">
+          <div className="mt-10 hidden overflow-hidden border border-[#D9D9D9] lg:block">
             <div className="grid grid-cols-[180px_repeat(3,minmax(0,1fr))]">
-              <div className="flex items-end bg-[#E9EDF2] p-5 text-[10px] font-bold uppercase tracking-[0.08em] text-[#7A828C]">
+              <div className="flex items-end bg-[#F2EFE9] p-5 text-[10px] font-bold uppercase tracking-[0.08em] text-[#68747B]">
                 {ui.tableScope}
               </div>
               {content.formats.items.map((format) => (
-                <div key={format.level} className="border-l border-white/15 bg-[#0D2440] p-5 text-white">
+                <div key={format.level} className="border-l border-white/15 bg-[#081D2A] p-5 text-white">
                   <div className="flex items-start justify-between gap-4">
                     <span className="text-[25px] font-extrabold">{format.level}</span>
                     <span className="border border-white/25 px-2 py-1 text-[9px] font-bold uppercase tracking-[0.05em]">
@@ -512,11 +512,11 @@ export default function MarketLandingPage({ locale, content }: Props) {
                 [content.formats.labels.fit, "fit"],
               ].map(([label, key], rowIndex) => (
                 <div key={key} className="contents">
-                  <div className={`border-t border-[#DCE1E6] p-5 text-[11px] font-bold text-[#C7A154] ${rowIndex % 2 ? "bg-white" : "bg-[#F6F7F8]"}`}>
+                  <div className={`border-t border-[#D9D9D9] p-5 text-[11px] font-bold text-[#DAAF37] ${rowIndex % 2 ? "bg-white" : "bg-[#FAF7F1]"}`}>
                     {label}
                   </div>
                   {content.formats.items.map((format) => (
-                    <div key={`${format.level}-${key}`} className={`border-l border-t border-[#DCE1E6] p-5 text-[12px] leading-[1.65] text-[#7A828C] ${rowIndex % 2 ? "bg-white" : "bg-[#F6F7F8]"}`}>
+                    <div key={`${format.level}-${key}`} className={`border-l border-t border-[#D9D9D9] p-5 text-[12px] leading-[1.65] text-[#68747B] ${rowIndex % 2 ? "bg-white" : "bg-[#FAF7F1]"}`}>
                       {format[key as "from" | "local" | "fit"]}
                     </div>
                   ))}
@@ -527,11 +527,11 @@ export default function MarketLandingPage({ locale, content }: Props) {
         </div>
       </section>
 
-      <section id="process" className={`${sectionPadding} scroll-mt-28 bg-[#0D2440]`}>
+      <section id="process" className={`${sectionPadding} scroll-mt-28 bg-[#081D2A]`}>
         <div className={container}>
           <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
             <SectionHeading eyebrow={content.process.eyebrow} title={content.process.title} inverted />
-            <p className="max-w-[360px] text-[11px] font-bold uppercase tracking-[0.08em] text-[#C7A154]">
+            <p className="max-w-[360px] text-[11px] font-bold uppercase tracking-[0.08em] text-[#DAAF37]">
               {ui.processMeta}
             </p>
           </div>
@@ -540,7 +540,7 @@ export default function MarketLandingPage({ locale, content }: Props) {
             <div className="absolute left-[12.5%] right-[12.5%] top-8 hidden h-px bg-white/20 lg:block" />
             {content.process.items.map((step, index) => (
               <article key={step.number} className="relative border border-white/15 bg-white/[0.045] p-6 lg:border-r-0 lg:last:border-r">
-                <span className="relative z-10 flex h-16 w-16 items-center justify-center border-4 border-[#0D2440] bg-[#D71920] text-[14px] font-extrabold text-white">
+                <span className="relative z-10 flex h-16 w-16 items-center justify-center border-4 border-[#081D2A] bg-[#FF2D2D] text-[14px] font-extrabold text-white">
                   {step.number}
                 </span>
                 <span className="absolute right-5 top-5 text-[10px] font-bold text-white/30">0{index + 1}/04</span>
@@ -552,21 +552,21 @@ export default function MarketLandingPage({ locale, content }: Props) {
         </div>
       </section>
 
-      <section className={`${sectionPadding} bg-[#F6F7F8]`}>
+      <section className={`${sectionPadding} bg-[#FAF7F1]`}>
         <div className={container}>
           <SectionHeading eyebrow={ui.responsibility} title={content.split.title} />
 
           <div className="mt-10 grid items-stretch gap-4 lg:grid-cols-[1fr_72px_1fr]">
-            <div className="border border-[#DCE1E6] bg-white">
-              <div className="flex items-center gap-3 border-b border-[#DCE1E6] bg-[#C7A154] p-5 text-[#0D2440]">
+            <div className="border border-[#D9D9D9] bg-white">
+              <div className="flex items-center gap-3 border-b border-[#D9D9D9] bg-[#DAAF37] p-5 text-[#081D2A]">
                 <Factory size={21} />
                 <h3 className="text-[15px] font-extrabold">{content.split.chongqing.title}</h3>
                 <span className="ml-auto text-[9px] font-bold uppercase tracking-[0.06em] opacity-60">{ui.chinaBadge}</span>
               </div>
               <ul className="grid gap-0">
                 {content.split.chongqing.items.map((item) => (
-                  <li key={item} className="flex items-start gap-3 border-b border-[#DCE1E6] px-5 py-4 text-[12px] leading-[1.65] text-[#4F5B69] last:border-b-0">
-                    <Check size={15} className="mt-0.5 shrink-0 text-[#D71920]" />
+                  <li key={item} className="flex items-start gap-3 border-b border-[#D9D9D9] px-5 py-4 text-[12px] leading-[1.65] text-[#40515B] last:border-b-0">
+                    <Check size={15} className="mt-0.5 shrink-0 text-[#FF2D2D]" />
                     {item}
                   </li>
                 ))}
@@ -574,21 +574,21 @@ export default function MarketLandingPage({ locale, content }: Props) {
             </div>
 
             <div className="flex items-center justify-center py-2">
-              <div className="flex h-12 w-12 rotate-90 items-center justify-center bg-[#D71920] text-white lg:rotate-0">
+              <div className="flex h-12 w-12 rotate-90 items-center justify-center bg-[#FF2D2D] text-white lg:rotate-0">
                 <ArrowRight size={20} />
               </div>
             </div>
 
-            <div className="border border-[#DCE1E6] bg-white">
-              <div className="flex items-center gap-3 border-b border-[#DCE1E6] bg-[#0D2440] p-5 text-white">
+            <div className="border border-[#D9D9D9] bg-white">
+              <div className="flex items-center gap-3 border-b border-[#D9D9D9] bg-[#081D2A] p-5 text-white">
                 <Wrench size={21} />
                 <h3 className="text-[15px] font-extrabold">{content.split.destination.title}</h3>
                 <span className="ml-auto text-[9px] font-bold uppercase tracking-[0.06em] text-white/60">{ui.localBadge}</span>
               </div>
               <ul className="grid gap-0">
                 {content.split.destination.items.map((item) => (
-                  <li key={item} className="flex items-start gap-3 border-b border-[#DCE1E6] px-5 py-4 text-[12px] leading-[1.65] text-[#4F5B69] last:border-b-0">
-                    <Check size={15} className="mt-0.5 shrink-0 text-[#D71920]" />
+                  <li key={item} className="flex items-start gap-3 border-b border-[#D9D9D9] px-5 py-4 text-[12px] leading-[1.65] text-[#40515B] last:border-b-0">
+                    <Check size={15} className="mt-0.5 shrink-0 text-[#FF2D2D]" />
                     {item}
                   </li>
                 ))}
@@ -596,63 +596,63 @@ export default function MarketLandingPage({ locale, content }: Props) {
             </div>
           </div>
 
-          <p className="mt-4 flex items-start gap-3 border border-[#DCE1E6] bg-white p-5 text-[12px] leading-[1.7] text-[#7A828C]">
-            <Route size={19} className="mt-0.5 shrink-0 text-[#C7A154]" />
+          <p className="mt-4 flex items-start gap-3 border border-[#D9D9D9] bg-white p-5 text-[12px] leading-[1.7] text-[#68747B]">
+            <Route size={19} className="mt-0.5 shrink-0 text-[#DAAF37]" />
             {content.split.route}
           </p>
         </div>
       </section>
 
-      <section id="engineering" className={`${sectionPadding} scroll-mt-28 border-y border-[#DCE1E6] bg-white`}>
+      <section id="engineering" className={`${sectionPadding} scroll-mt-28 border-y border-[#D9D9D9] bg-white`}>
         <div className={container}>
           <div className="grid gap-10 lg:grid-cols-[0.68fr_1.32fr]">
             <div>
               <SectionHeading eyebrow={content.engineering.eyebrow} title={content.engineering.title} />
-              <div className="mt-7 flex items-center gap-3 border-l-4 border-[#C7A154] bg-[#E9EDF2] px-4 py-4 text-[11px] font-bold uppercase tracking-[0.06em] text-[#C7A154]">
+              <div className="mt-7 flex items-center gap-3 border-l-4 border-[#DAAF37] bg-[#F2EFE9] px-4 py-4 text-[11px] font-bold uppercase tracking-[0.06em] text-[#DAAF37]">
                 <Layers3 size={19} />
                 {ui.documentRegister}
               </div>
             </div>
 
-            <div className="border border-[#DCE1E6]">
+            <div className="border border-[#D9D9D9]">
               {content.engineering.items.map((item, index) => {
                 const icons = [PackageCheck, Wrench, FileCheck2, ShieldCheck];
                 const Icon = icons[index];
                 return (
-                  <article key={item.title} className="grid gap-4 border-b border-[#DCE1E6] p-5 last:border-b-0 sm:grid-cols-[54px_180px_1fr] sm:items-center sm:p-6">
-                    <span className="flex h-12 w-12 items-center justify-center bg-[#E9EDF2] text-[#C7A154]">
+                  <article key={item.title} className="grid gap-4 border-b border-[#D9D9D9] p-5 last:border-b-0 sm:grid-cols-[54px_180px_1fr] sm:items-center sm:p-6">
+                    <span className="flex h-12 w-12 items-center justify-center bg-[#F2EFE9] text-[#DAAF37]">
                       <Icon size={22} />
                     </span>
-                    <h3 className="text-[14px] font-extrabold text-[#0D2440]">{item.title}</h3>
-                    <p className="text-[12px] leading-[1.65] text-[#7A828C]">{item.text}</p>
+                    <h3 className="text-[14px] font-extrabold text-[#081D2A]">{item.title}</h3>
+                    <p className="text-[12px] leading-[1.65] text-[#68747B]">{item.text}</p>
                   </article>
                 );
               })}
             </div>
           </div>
-          <p className="mt-6 border-l-4 border-[#D71920] bg-[#F6F7F8] px-5 py-4 text-[12px] leading-[1.7] text-[#7A828C]">
+          <p className="mt-6 border-l-4 border-[#FF2D2D] bg-[#FAF7F1] px-5 py-4 text-[12px] leading-[1.7] text-[#68747B]">
             {content.engineering.note}
           </p>
         </div>
       </section>
 
-      <section className="border-b border-[#C7A154] bg-[#F8F4E9] py-10">
+      <section className="border-b border-[#DAAF37] bg-[#F5E8D2] py-10">
         <div className={`${container} grid gap-5 lg:grid-cols-[0.4fr_1fr] lg:items-start`}>
           <div>
-            <span className="inline-flex items-center gap-2 bg-[#C7A154] px-3 py-2 text-[10px] font-extrabold uppercase tracking-[0.07em] text-[#0D2440]">
+            <span className="inline-flex items-center gap-2 bg-[#DAAF37] px-3 py-2 text-[10px] font-extrabold uppercase tracking-[0.07em] text-[#081D2A]">
               <ShieldCheck size={15} />
               {ui.complianceTag}
             </span>
-            <p className="mt-4 text-[11px] font-bold uppercase tracking-[0.07em] text-[#7A828C]">
+            <p className="mt-4 text-[11px] font-bold uppercase tracking-[0.07em] text-[#68747B]">
               {content.compliance.label}
             </p>
-            <h2 className="mt-2 text-[26px] font-extrabold leading-[1.15] text-[#0D2440]">{content.compliance.title}</h2>
+            <h2 className="mt-2 text-[26px] font-extrabold leading-[1.15] text-[#081D2A]">{content.compliance.title}</h2>
           </div>
-          <p className="text-[14px] leading-[1.8] text-[#4F5B69]">{content.compliance.text}</p>
+          <p className="text-[14px] leading-[1.8] text-[#40515B]">{content.compliance.text}</p>
         </div>
       </section>
 
-      <section className="relative min-h-[560px] overflow-hidden bg-[#0D2440] text-white">
+      <section className="relative min-h-[560px] overflow-hidden bg-[#081D2A] text-white">
         <Image
           src="/images/factory-aerial.webp"
           alt={content.factory.imageAlt}
@@ -660,10 +660,10 @@ export default function MarketLandingPage({ locale, content }: Props) {
           sizes="100vw"
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0D2440] via-[#0D2440]/90 to-[#0D2440]/35" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#081D2A] via-[#081D2A]/90 to-[#081D2A]/35" />
         <div className={`${container} relative z-10 grid min-h-[560px] items-center gap-10 py-16 lg:grid-cols-[0.72fr_1.28fr]`}>
-          <div className="max-w-[570px] border border-white/20 bg-[#0D2440]/90 p-6 backdrop-blur-sm sm:p-9">
-            <span className="text-[10px] font-bold uppercase tracking-[0.08em] text-[#C7A154]">
+          <div className="max-w-[570px] border border-white/20 bg-[#081D2A]/90 p-6 backdrop-blur-sm sm:p-9">
+            <span className="text-[10px] font-bold uppercase tracking-[0.08em] text-[#DAAF37]">
               {content.factory.eyebrow}
             </span>
             <h2 className="mt-4 text-[clamp(32px,4vw,50px)] font-extrabold leading-[1.06] tracking-[-0.035em]">
@@ -672,7 +672,7 @@ export default function MarketLandingPage({ locale, content }: Props) {
             <p className="mt-5 text-[13px] leading-[1.75] text-white/68">{content.factory.text}</p>
           </div>
 
-          <div className="grid self-end border border-white/20 bg-[#0D2440]/90 sm:grid-cols-3 lg:self-center">
+          <div className="grid self-end border border-white/20 bg-[#081D2A]/90 sm:grid-cols-3 lg:self-center">
             {ui.factoryFacts.map(([value, label]) => (
               <div key={label} className="border-b border-white/15 p-5 last:border-b-0 sm:border-b-0 sm:border-r sm:last:border-r-0">
                 <strong className="block text-[24px] font-extrabold">{value}</strong>
@@ -688,17 +688,17 @@ export default function MarketLandingPage({ locale, content }: Props) {
           <SectionHeading eyebrow={content.faq.eyebrow} title={content.faq.title} />
           <div className="mt-10 grid gap-x-10 lg:grid-cols-2">
             {content.faq.items.map((item, index) => (
-              <details key={item.q} className="group border-t border-[#DCE1E6] py-5 last:border-b">
-                <summary className="flex cursor-pointer list-none items-start justify-between gap-5 text-[14px] font-extrabold leading-[1.5] text-[#0D2440] marker:hidden">
+              <details key={item.q} className="group border-t border-[#D9D9D9] py-5 last:border-b">
+                <summary className="flex cursor-pointer list-none items-start justify-between gap-5 text-[14px] font-extrabold leading-[1.5] text-[#081D2A] marker:hidden">
                   <span className="flex gap-3">
-                    <span className="text-[10px] font-bold text-[#C7A154]">0{index + 1}</span>
+                    <span className="text-[10px] font-bold text-[#DAAF37]">0{index + 1}</span>
                     {item.q}
                   </span>
-                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center bg-[#E9EDF2] text-[18px] font-normal text-[#D71920] transition-transform group-open:rotate-45">
+                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center bg-[#F2EFE9] text-[18px] font-normal text-[#FF2D2D] transition-transform group-open:rotate-45">
                     +
                   </span>
                 </summary>
-                <p className="mt-4 pl-7 text-[12px] leading-[1.75] text-[#7A828C]">{item.a}</p>
+                <p className="mt-4 pl-7 text-[12px] leading-[1.75] text-[#68747B]">{item.a}</p>
               </details>
             ))}
           </div>

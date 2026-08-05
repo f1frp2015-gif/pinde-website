@@ -52,8 +52,8 @@ export default function CasesPage({ locale }: Props) {
           ))}
         </div>
         <div className={`${container} mt-6`}>
-          <div className="flex items-start gap-4 border border-[#C7A154] bg-[#F8F4E9] p-5 text-[12px] leading-[1.7] text-muted">
-            <ShieldCheck size={20} className="mt-0.5 shrink-0 text-[#C7A154]" />
+          <div className="flex items-start gap-4 border border-[#DAAF37] bg-[#F5E8D2] p-5 text-[12px] leading-[1.7] text-muted">
+            <ShieldCheck size={20} className="mt-0.5 shrink-0 text-[#DAAF37]" />
             {isRu
               ? "Эти конфигурации отражают то, что PINDÉ может поставить. Они не являются заявленными завершёнными проектами. Реальные спецификации проектов согласовываются в процессе квалификации и фиксации эталонной конструкции."
               : "These configurations represent what PINDÉ can supply. They are not claimed completed projects. Actual project specifications are agreed during the qualification and reference-build stages."}

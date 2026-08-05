@@ -35,7 +35,7 @@ export default function MobileNav({
       {open ? (
         <div
           id="mobile-navigation"
-          className="absolute inset-x-0 top-full border-b border-[#C7A154]/35 bg-[#0D2440] shadow-[0_18px_40px_rgba(13,36,64,0.22)]"
+          className="absolute inset-x-0 top-full border-b border-[#DAAF37]/35 bg-[#081D2A] shadow-[0_18px_40px_rgba(8,29,42,0.22)]"
         >
           <nav className="mx-auto max-w-[1280px] px-5 py-4 sm:px-8">
             {links.map((link) => (
@@ -46,13 +46,13 @@ export default function MobileNav({
                 className="flex items-center justify-between border-b border-white/10 px-1 py-3 text-[13px] font-semibold text-white/78"
               >
                 {link.label}
-                <span className="text-[#C7A154]" aria-hidden="true">→</span>
+                <span className="text-[#DAAF37]" aria-hidden="true">→</span>
               </Link>
             ))}
             <Link
               href={ctaHref}
               onClick={() => setOpen(false)}
-              className="mt-4 flex min-h-12 items-center justify-center bg-[#C7A154] px-5 text-[12px] font-bold text-[#0D2440]"
+              className="mt-4 flex min-h-12 items-center justify-center bg-[#DAAF37] px-5 text-[12px] font-bold text-[#081D2A]"
             >
               {ctaLabel}
             </Link>
