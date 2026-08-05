@@ -38,7 +38,7 @@ export default function Header({ locale }: HeaderProps) {
             <div className="flex items-center gap-2 border-l border-white/15 pl-4 font-bold">
               <Link
                 href="/en"
-                prefetch={false}
+                prefetch
                 hrefLang="en"
                 lang="en"
                 className={locale === "en" ? "text-[#DAAF37]" : "text-white/45 hover:text-white"}
@@ -49,7 +49,7 @@ export default function Header({ locale }: HeaderProps) {
               <span className="text-white/20">/</span>
               <Link
                 href="/ru"
-                prefetch={false}
+                prefetch
                 hrefLang="ru"
                 lang="ru"
                 className={locale === "ru" ? "text-[#DAAF37]" : "text-white/45 hover:text-white"}
@@ -66,7 +66,7 @@ export default function Header({ locale }: HeaderProps) {
         <div className="mx-auto flex h-16 max-w-[1280px] items-center justify-between px-5 sm:px-8 lg:h-[72px] lg:px-10">
           <Link
             href={`/${locale}`}
-            prefetch={false}
+            prefetch
             className="shrink-0"
             aria-label="PINDÉ home"
           >
@@ -81,7 +81,7 @@ export default function Header({ locale }: HeaderProps) {
               <Link
                 key={link.href}
                 href={link.href}
-                prefetch={false}
+                prefetch
                 className="border-b-2 border-transparent py-2 text-[11px] font-semibold text-white/66 transition-colors hover:border-[#DAAF37] hover:text-white"
               >
                 {link.label}
@@ -99,6 +99,7 @@ export default function Header({ locale }: HeaderProps) {
             </a>
             <Link
               href={`/${locale}/rfq`}
+              prefetch
               className="hidden min-h-11 items-center bg-[#DAAF37] px-5 text-[11px] font-bold text-[#081D2A] transition-[filter] hover:brightness-105 sm:inline-flex"
             >
               {content.headerCta}
