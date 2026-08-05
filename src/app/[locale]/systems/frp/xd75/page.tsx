@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: content.seo.description,
       images: [
         {
-          url: "/images/systems/xd75-aluminium-grpu-window-system.webp",
+          url: "/images/systems/pinde-xd75-aluminium-grpu-composite-window-system.webp",
           width: 1253,
           height: 1253,
           alt: locale === "ru" ? "Гибридная оконная система XD75" : "XD75 hybrid window system",
@@ -50,7 +50,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title: content.seo.title,
       description: content.seo.description,
-      images: ["/images/systems/xd75-aluminium-grpu-window-system.webp"],
+      images: ["/images/systems/pinde-xd75-aluminium-grpu-composite-window-system.webp"],
     },
   };
 }

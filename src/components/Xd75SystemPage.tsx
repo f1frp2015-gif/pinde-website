@@ -54,7 +54,7 @@ export default function Xd75SystemPage({ locale, content }: Props) {
           </div>
           <div className="relative aspect-square overflow-hidden border border-line bg-white">
             <Image
-              src="/images/systems/xd75-aluminium-grpu-window-system.webp"
+              src="/images/systems/pinde-xd75-aluminium-grpu-composite-window-system.webp"
               alt={locale === "ru" ? "Гибридная оконная система XD75 с термомостом GRPU" : "XD75 hybrid aluminium-GRPU window system"}
               fill
               loading="eager"

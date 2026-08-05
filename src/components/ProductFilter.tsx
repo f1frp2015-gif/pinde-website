@@ -76,6 +76,7 @@ export default function ProductFilter({ products, locale = "en", basePath = "/en
             key={product.slug}
             product={product}
             href={`${basePath}/${product.slug}`}
+            locale={locale}
           />
         ))}
       </div>
