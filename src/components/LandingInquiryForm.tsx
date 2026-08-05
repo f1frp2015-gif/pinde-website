@@ -311,9 +311,13 @@ export default function LandingInquiryForm({ locale, content }: Props) {
       </label>
 
       {status === "error" && (
-        <p className="text-[13px] leading-[1.6] text-red" role="alert">
-          {content.error}
-        </p>
+        <div className="text-[13px] leading-[1.6] text-red" role="alert">
+          <p>{content.error}</p>
+          <p className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
+            <a className="font-bold underline underline-offset-4" href="mailto:inquiry@pindesys.com">inquiry@pindesys.com</a>
+            <a className="font-bold underline underline-offset-4" href="https://wa.me/8613883333993" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          </p>
+        </div>
       )}
 
       <button

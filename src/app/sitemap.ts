@@ -23,7 +23,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const localizedPages: MetadataRoute.Sitemap = localizedRoutes.flatMap((route) =>
     ["en", "ru"].map((locale) => ({
       url: `${baseUrl}/${locale}${route.path}`,
-      lastModified: new Date(),
       changeFrequency: route.frequency,
       priority: route.priority,
       alternates: {
@@ -39,9 +38,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const productPages: MetadataRoute.Sitemap = products.flatMap((product) =>
     ["en", "ru"].map((locale) => ({
       url: `${baseUrl}/${locale}/systems/aluminium/${product.slug}`,
-      lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.7,
+      ...(product.images.length > 0
+        ? { images: product.images.map((image) => `${baseUrl}${image}`) }
+        : {}),
       alternates: {
         languages: {
           en: `${baseUrl}/en/systems/aluminium/${product.slug}`,

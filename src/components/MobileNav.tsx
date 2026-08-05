@@ -2,7 +2,34 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+
+function MenuIcon({ open }: { open: boolean }) {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      width="24"
+      height="24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+    >
+      {open ? (
+        <>
+          <path d="M6 6l12 12" />
+          <path d="M18 6L6 18" />
+        </>
+      ) : (
+        <>
+          <path d="M4 6h16" />
+          <path d="M4 12h16" />
+          <path d="M4 18h16" />
+        </>
+      )}
+    </svg>
+  );
+}
 
 type MobileNavProps = {
   links: readonly { label: string; href: string }[];
@@ -29,7 +56,7 @@ export default function MobileNav({
         aria-expanded={open}
         aria-controls="mobile-navigation"
       >
-        {open ? <X size={24} /> : <Menu size={24} />}
+        <MenuIcon open={open} />
       </button>
 
       {open ? (

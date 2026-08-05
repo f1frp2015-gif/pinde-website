@@ -113,6 +113,19 @@ export async function POST(request: Request) {
       ];
     }
 
+    if (!process.env.RESEND_API_KEY) {
+      return NextResponse.json(
+        {
+          error: "Email delivery is temporarily unavailable",
+          code: "DELIVERY_UNAVAILABLE",
+        },
+        {
+          status: 503,
+          headers: { "Retry-After": "3600" },
+        },
+      );
+    }
+
     const resend = new Resend(process.env.RESEND_API_KEY);
     const { error } = await resend.emails.send({
       from: "PINDÉ Website <noreply@pindesys.com>",

@@ -16,11 +16,11 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        source: "/en",
+        source: "/en/:path*",
         headers: [{ key: "Content-Language", value: "en" }],
       },
       {
-        source: "/ru",
+        source: "/ru/:path*",
         headers: [{ key: "Content-Language", value: "ru" }],
       },
       {
@@ -28,7 +28,24 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
+            value: "public, max-age=86400, stale-while-revalidate=604800",
+          },
+          {
+            key: "Vercel-CDN-Cache-Control",
+            value: "public, max-age=31536000, stale-while-revalidate=604800",
+          },
+        ],
+      },
+      {
+        source: "/brand/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=86400, stale-while-revalidate=604800",
+          },
+          {
+            key: "Vercel-CDN-Cache-Control",
+            value: "public, max-age=31536000, stale-while-revalidate=604800",
           },
         ],
       },

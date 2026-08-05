@@ -3,6 +3,7 @@ const siteUrl = "https://pindesys.com";
 export const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": `${siteUrl}/#organization`,
   name: "PINDÉ",
   legalName: "Pinde Doors and Windows (Chongqing) Co., LTD",
   url: siteUrl,
@@ -46,6 +47,9 @@ export const localBusinessJsonLd = {
   url: siteUrl,
   telephone: "+86-138-8333-3993",
   email: "inquiry@pindesys.com",
+  parentOrganization: {
+    "@id": `${siteUrl}/#organization`,
+  },
   address: {
     "@type": "PostalAddress",
     streetAddress: "No. 68 Chanye Avenue",
@@ -75,6 +79,18 @@ export const localBusinessJsonLd = {
   priceRange: "$$$$",
 };
 
+export const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${siteUrl}/#website`,
+  url: siteUrl,
+  name: "PINDÉ Window Systems",
+  inLanguage: ["en", "ru"],
+  publisher: {
+    "@id": `${siteUrl}/#organization`,
+  },
+};
+
 export function productJsonLd(product: {
   name: string;
   slug: string;
@@ -86,16 +102,17 @@ export function productJsonLd(product: {
   return {
     "@context": "https://schema.org",
     "@type": "Product",
+    "@id": `${productUrl}#product`,
     name: product.name,
+    sku: product.series,
     description: product.description,
+    inLanguage: productUrl.includes("/ru/") ? "ru" : "en",
     brand: {
       "@type": "Brand",
       name: "PINDÉ",
     },
     manufacturer: {
-      "@type": "Organization",
-      name: "PINDÉ",
-      url: siteUrl,
+      "@id": `${siteUrl}/#organization`,
     },
     url: productUrl,
     image: product.images.length > 0

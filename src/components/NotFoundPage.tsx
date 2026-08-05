@@ -1,7 +1,7 @@
 import Link from "next/link";
 import PindeMark from "@/components/PindeMark";
 
-export default function NotFound() {
+export default function NotFoundPage() {
   return (
     <main className="min-h-[80vh] flex items-center justify-center bg-obsidian pt-20">
       <div className="text-center px-6">
@@ -16,7 +16,7 @@ export default function NotFound() {
         </p>
         <div className="flex flex-col sm:flex-row gap-[21px] justify-center">
           <Link
-            href="/"
+            href="/en"
             className="inline-flex items-center gap-[10px] px-[34px] py-4 bg-gold text-navy text-[11px] font-medium tracking-[3px] uppercase rounded-[1px] hover:brightness-90 transition-all"
           >
             <span className="inline-block w-[5px] h-[5px] rounded-full bg-white" />

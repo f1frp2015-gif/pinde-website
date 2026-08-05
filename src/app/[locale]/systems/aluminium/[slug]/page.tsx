@@ -25,7 +25,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     : product.description.slice(0, 160);
 
   return {
-    title: { absolute: `${product.name} — ${product.series} Aluminium System | PINDÉ` },
+    title: {
+      absolute: locale === "ru"
+        ? `${product.name} — алюминиевая система ${product.series} | PINDÉ`
+        : `${product.name} — ${product.series} Aluminium System | PINDÉ`,
+    },
     description: localeDescription,
     alternates: {
       canonical,
