@@ -5,6 +5,7 @@ import type { PageLocale } from "@/content/pages";
 import type { Product } from "@/data/products";
 import { products } from "@/data/products";
 import { breadcrumbJsonLd, productJsonLd } from "@/lib/jsonld";
+import { productImageAlt } from "@/lib/product-image-alt";
 import PindeMark from "@/components/PindeMark";
 
 type Props = {
@@ -87,7 +88,7 @@ export default function AluminiumProductPage({ locale, product }: Props) {
             {product.images.length > 0 ? (
               <Image
                 src={product.images[0]}
-                alt={`${product.name} — ${product.series} aluminium system`}
+                alt={productImageAlt(product, locale)}
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"

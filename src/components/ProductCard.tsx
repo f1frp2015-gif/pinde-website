@@ -2,14 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import type { Product } from "@/data/products";
+import { productImageAlt } from "@/lib/product-image-alt";
 import PindeMark from "./PindeMark";
 
 type Props = {
   product: Product;
   href?: string;
+  locale?: "en" | "ru";
 };
 
-export default function ProductCard({ product, href }: Props) {
+export default function ProductCard({ product, href, locale = "en" }: Props) {
   return (
     <Link
       href={href ?? `/en/systems/aluminium/${product.slug}`}
@@ -20,7 +22,7 @@ export default function ProductCard({ product, href }: Props) {
         {product.images.length > 0 ? (
           <Image
             src={product.images[0]}
-            alt={product.name}
+            alt={productImageAlt(product, locale)}
             fill
             unoptimized
             className="object-cover group-hover:scale-105 transition-transform duration-500"

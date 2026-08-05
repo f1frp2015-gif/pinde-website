@@ -5,6 +5,8 @@ const PUBLIC_DIR = path.resolve("public");
 const IMAGE_EXTENSIONS = new Set([".avif", ".gif", ".jpeg", ".jpg", ".png", ".webp"]);
 const MAX_IMAGE_BYTES = 220_000;
 const MAX_PUBLIC_BYTES = 2_500_000;
+const MAX_SYSTEM_IMAGE_BYTES = 80_000;
+const SEO_IMAGE_NAME = /^pinde-[a-z0-9]+(?:-[a-z0-9]+)*\.webp$/;
 
 async function listFiles(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
@@ -26,10 +28,24 @@ const publicBytes = fileSizes.reduce((total, file) => total + file.size, 0);
 const oversizedImages = fileSizes.filter(
   ({ file, size }) => IMAGE_EXTENSIONS.has(path.extname(file).toLowerCase()) && size > MAX_IMAGE_BYTES,
 );
+const systemImages = fileSizes.filter(({ file }) =>
+  path.extname(file).toLowerCase() === ".webp"
+  && (
+    file.startsWith(path.join(PUBLIC_DIR, "images", "products"))
+    || file.startsWith(path.join(PUBLIC_DIR, "images", "systems"))
+  ),
+);
+const invalidSystemImages = systemImages.filter(({ file, size }) =>
+  !SEO_IMAGE_NAME.test(path.basename(file)) || size > MAX_SYSTEM_IMAGE_BYTES,
+);
 
-if (oversizedImages.length > 0 || publicBytes > MAX_PUBLIC_BYTES) {
+if (oversizedImages.length > 0 || invalidSystemImages.length > 0 || publicBytes > MAX_PUBLIC_BYTES) {
   for (const { file, size } of oversizedImages) {
     console.error(`Image exceeds 220 KB: ${path.relative(process.cwd(), file)} (${size} bytes)`);
+  }
+
+  for (const { file, size } of invalidSystemImages) {
+    console.error(`System image must use a pinde-* SEO WebP name and stay below 80 KB: ${path.relative(process.cwd(), file)} (${size} bytes)`);
   }
 
   if (publicBytes > MAX_PUBLIC_BYTES) {
