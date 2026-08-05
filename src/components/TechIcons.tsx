@@ -2,7 +2,7 @@
  * PINDÉ Technology Icons
  * Built to VI manual spec: 24x24 grid, line-based, 1.5px stroke (scales to ~2px visual),
  * rounded caps/joins, window-frame motif as foundational vocabulary,
- * signature red dot (#D71920) as interactive/brand accent.
+ * signature red dot (#FF2D2D) as interactive/brand accent.
  */
 
 type IconProps = { size?: number; className?: string };
@@ -15,7 +15,7 @@ const base = {
   strokeLinejoin: "round" as const,
 };
 
-const RED = "#D71920";
+const RED = "#FF2D2D";
 
 function Frame({ size = 24, className, children }: IconProps & { children: React.ReactNode }) {
   return (

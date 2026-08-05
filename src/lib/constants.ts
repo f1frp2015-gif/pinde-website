@@ -28,13 +28,13 @@ export const NAV_LINKS = [
 /* PINDÉ VI palette. Legacy L/COLORS names remain for data consumers. */
 export const L = {
   0: "#FFFFFF",
-  1: "#F6F7F8",
-  2: "#0D2440",
-  3: "#4F5B69",
-  4: "#C7A154",
-  5: "#D71920",
-  6: "#7A828C",
-  7: "#DCE1E6",
+  1: "#FAF7F1",
+  2: "#081D2A",
+  3: "#40515B",
+  4: "#DAAF37",
+  5: "#FF2D2D",
+  6: "#68747B",
+  7: "#D9D9D9",
 } as const;
 
 export const COLORS = {

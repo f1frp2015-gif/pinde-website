@@ -100,7 +100,7 @@ export function productJsonLd(product: {
     url: productUrl,
     image: product.images.length > 0
       ? `${siteUrl}${product.images[0]}`
-      : `${siteUrl}/og-ru-market.webp`,
+      : `${siteUrl}/og-about-pinde.webp`,
     category: "Architectural Aluminium Systems",
     additionalProperty: product.specs.map((s) => ({
       "@type": "PropertyValue",

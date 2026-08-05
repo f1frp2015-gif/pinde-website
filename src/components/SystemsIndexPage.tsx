@@ -36,7 +36,7 @@ export default function SystemsIndexPage({ locale, content }: Props) {
         <div className={`${container} grid gap-[13px] lg:grid-cols-2`}>
           {content.platforms.map((platform: { code: string; label: string; title: string; description: string; features: string[]; href: string; cta: string }) => (
             <article key={platform.code} className="bg-obsidian border border-line rounded-[2px] overflow-hidden flex flex-col">
-              <div className="bg-[#C7A154] p-6 flex items-center justify-between text-[#0D2440]">
+              <div className="bg-[#DAAF37] p-6 flex items-center justify-between text-[#081D2A]">
                 <span className="text-[22px] font-extrabold">{platform.code}</span>
                 <span className="text-[10px] font-bold uppercase tracking-[0.08em] opacity-60">{platform.label}</span>
               </div>
@@ -63,7 +63,7 @@ export default function SystemsIndexPage({ locale, content }: Props) {
           ))}
         </div>
         <div className={`${container} mt-6`}>
-          <p className="border-l-4 border-[#C7A154] bg-[#F8F4E9] px-5 py-4 text-[12px] leading-[1.7] text-muted">
+          <p className="border-l-4 border-[#DAAF37] bg-[#F5E8D2] px-5 py-4 text-[12px] leading-[1.7] text-muted">
             {content.note}
           </p>
         </div>

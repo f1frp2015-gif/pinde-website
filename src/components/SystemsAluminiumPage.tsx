@@ -30,7 +30,7 @@ export default function SystemsAluminiumPage({ locale, content }: Props) {
       </nav>
       <section className="py-[89px] bg-obsidian">
         <div className={container}>
-          <span className="inline-block bg-[#C7A154] px-3 py-2 text-[10px] font-bold uppercase tracking-[0.08em] text-white mb-[21px]">{content.supplyStatus}</span>
+          <span className="mb-[21px] inline-block bg-[#DAAF37] px-3 py-2 text-[10px] font-bold uppercase tracking-[0.08em] text-[#081D2A]">{content.supplyStatus}</span>
           <h1 className="font-[family-name:var(--font-serif)] font-semibold text-[clamp(40px,6vw,64px)] leading-[0.95] text-alabaster mb-[21px]">
             {content.title.replace(/[.!?]+$/, "")}<span className="text-red">.</span>
           </h1>
@@ -58,7 +58,7 @@ export default function SystemsAluminiumPage({ locale, content }: Props) {
       <section id="aluminium-catalog" className="py-[89px] bg-obsidian scroll-mt-24">
         <div className={container}>
           <div className="mb-[34px] max-w-[760px]">
-            <p className="mb-[13px] text-[10px] font-bold uppercase tracking-[0.16em] text-[#C7A154]">
+            <p className="mb-[13px] text-[10px] font-bold uppercase tracking-[0.16em] text-[#DAAF37]">
               {products.length} {locale === "ru" ? "систем" : "systems"}
             </p>
             <h2 className="font-[family-name:var(--font-serif)] text-[36px] font-semibold text-alabaster mb-[13px]">

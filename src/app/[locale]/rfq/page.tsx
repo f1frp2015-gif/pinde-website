@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       images: [
         {
-          url: "/og-ru-market.webp",
+          url: "/og-about-pinde.webp",
           width: 1200,
           height: 630,
           alt: isRu
@@ -62,7 +62,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title,
       description,
-      images: ["/og-ru-market.webp"],
+      images: ["/og-about-pinde.webp"],
     },
   };
 }

@@ -1,14 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <style>
     .background { fill: #ffffff; }
-    .frame { stroke: #0d2440; }
+    .frame { stroke: #daaf37; }
     @media (prefers-color-scheme: dark) {
-      .background { fill: #0d2440; }
-      .frame { stroke: #ffffff; }
+      .background { fill: #081d2a; }
+      .frame { stroke: #daaf37; }
     }
   </style>
   <rect class="background" width="64" height="64" rx="8"/>
-  <path class="frame" d="M8 8H48M56 17V56H18" fill="none" stroke-width="5"/>
-  <path d="M8 16L31 29V48L8 58V16Z" fill="none" stroke="#C7A154" stroke-width="5"/>
-  <rect x="52" y="6" width="9" height="9" fill="#D71920"/>
+  <rect class="frame" x="9" y="9" width="44" height="44" fill="none" stroke-width="3"/>
+  <circle cx="53" cy="9" r="7" fill="#FF2D2D"/>
 </svg>

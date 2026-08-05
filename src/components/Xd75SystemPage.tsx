@@ -39,10 +39,10 @@ export default function Xd75SystemPage({ locale, content }: Props) {
       <section className="py-[89px] bg-obsidian">
         <div className={`${container} grid items-center gap-[55px] lg:grid-cols-[1.05fr_0.95fr]`}>
           <div>
-            <span className="inline-block bg-[#D71920] px-3 py-2 text-[10px] font-bold uppercase tracking-[0.08em] text-white mb-[21px]">
+            <span className="inline-block bg-[#FF2D2D] px-3 py-2 text-[10px] font-bold uppercase tracking-[0.08em] text-white mb-[21px]">
               {content.supplyStatus}
             </span>
-            <p className="mb-[13px] text-[10px] font-bold uppercase tracking-[0.16em] text-[#C7A154]">
+            <p className="mb-[13px] text-[10px] font-bold uppercase tracking-[0.16em] text-[#DAAF37]">
               {content.eyebrow}
             </p>
             <h1 className="font-[family-name:var(--font-serif)] font-semibold text-[clamp(40px,6vw,64px)] leading-[0.95] text-alabaster mb-[21px]">
@@ -136,7 +136,7 @@ export default function Xd75SystemPage({ locale, content }: Props) {
           <p className="max-w-[860px] text-[13px] leading-[1.8] text-warm">{content.performanceIntro}</p>
           <div className="mt-[34px] overflow-x-auto border border-line">
             <table className="min-w-[850px] w-full bg-surface text-left">
-              <thead className="bg-[#0D2440] text-white">
+              <thead className="bg-[#081D2A] text-white">
                 <tr>
                   {Object.values(content.performanceColumns).map((label) => (
                     <th key={label} className="px-5 py-4 text-[10px] font-bold uppercase tracking-[0.08em]">{label}</th>
@@ -157,8 +157,8 @@ export default function Xd75SystemPage({ locale, content }: Props) {
               </tbody>
             </table>
           </div>
-          <div className="mt-6 flex items-start gap-4 border-l-4 border-[#C7A154] bg-[#F8F4E9] px-5 py-4">
-            <AlertTriangle size={20} className="mt-0.5 shrink-0 text-[#C7A154]" />
+          <div className="mt-6 flex items-start gap-4 border-l-4 border-[#DAAF37] bg-[#F5E8D2] px-5 py-4">
+            <AlertTriangle size={20} className="mt-0.5 shrink-0 text-[#DAAF37]" />
             <p className="text-[12px] leading-[1.7] text-warm">{content.note}</p>
           </div>
         </div>

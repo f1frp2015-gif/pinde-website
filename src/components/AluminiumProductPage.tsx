@@ -89,7 +89,7 @@ export default function AluminiumProductPage({ locale, product }: Props) {
               />
             ) : (
               <div className="absolute inset-0 flex items-center justify-center">
-                <PindeMark size={55} frame="#DCE1E6" />
+                <PindeMark size={55} frame="#D9D9D9" />
               </div>
             )}
           </div>
@@ -150,7 +150,7 @@ export default function AluminiumProductPage({ locale, product }: Props) {
             <h2 className="font-[family-name:var(--font-serif)] font-semibold text-[32px] text-alabaster">
               {text.related}<span className="text-red">.</span>
             </h2>
-            <Link href={`/${locale}/systems/aluminium#aluminium-catalog`} className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.12em] text-[#C7A154] hover:text-red">
+            <Link href={`/${locale}/systems/aluminium#aluminium-catalog`} className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.12em] text-[#DAAF37] hover:text-red">
               <ArrowLeft size={13} /> {text.back}
             </Link>
           </div>

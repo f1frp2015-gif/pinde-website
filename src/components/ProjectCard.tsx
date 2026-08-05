@@ -7,7 +7,7 @@ export default function ProjectCard({ project }: { project: CapabilityCase }) {
     <div className="group bg-surface border border-line rounded-[2px] overflow-hidden transition-all duration-400 hover:border-warm/20 hover:-translate-y-0.5">
       {/* Image Placeholder */}
       <div className="aspect-[16/10] bg-obsidian flex items-center justify-center">
-        <PindeMark size={34} frame="#DCE1E6" />
+        <PindeMark size={34} frame="#D9D9D9" />
       </div>
 
       <div className="p-[34px]">
