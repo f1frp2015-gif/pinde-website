@@ -23,17 +23,20 @@ export default function Footer({ locale }: FooterProps) {
     ];
     const promises = locale === "ru"
       ? [
-          { Icon: ShieldCheck, title: "НАДЁЖНОСТЬ", subtitle: "Контроль качества" },
-          { Icon: Thermometer, title: "ТЕПЛОИЗОЛЯЦИЯ", subtitle: "Инженерные системы" },
-          { Icon: Layers3, title: "СИСТЕМНЫЕ РЕШЕНИЯ", subtitle: "Комплектная поставка" },
-          { Icon: Globe2, title: "ЦЕНТРАЛЬНАЯ АЗИЯ", subtitle: "Региональная логистика" },
+          { Icon: ShieldCheck, title: "ПРОСЛЕЖИВАЕМОСТЬ", subtitle: "Ревизия и номер партии" },
+          { Icon: Thermometer, title: "ТЕПЛОТЕХНИКА", subtitle: "Результат по конструкции" },
+          { Icon: Layers3, title: "КОМПЛЕКТАЦИЯ", subtitle: "P1 · P2 · P3" },
+          { Icon: Globe2, title: "ЕВРАЗИЯ", subtitle: "Железная дорога и автодоставка" },
         ]
       : [
-          { Icon: ShieldCheck, title: "RELIABILITY", subtitle: "Controlled quality" },
-          { Icon: Thermometer, title: "INSULATION", subtitle: "Engineered systems" },
-          { Icon: Layers3, title: "SYSTEM SOLUTIONS", subtitle: "Complete supply" },
-          { Icon: Globe2, title: "CENTRAL ASIA", subtitle: "Regional delivery" },
+          { Icon: ShieldCheck, title: "TRACEABILITY", subtitle: "Revision and batch ID" },
+          { Icon: Thermometer, title: "THERMAL DATA", subtitle: "Result tied to the build" },
+          { Icon: Layers3, title: "SUPPLY FORMAT", subtitle: "P1 · P2 · P3" },
+          { Icon: Globe2, title: "EURASIA", subtitle: "Rail and road delivery" },
         ];
+    const capabilityTags = locale === "ru"
+      ? ["АЛЮМИНИЙ", "FRP", "ОБРАБОТКА", "CKD"]
+      : ["ALUMINIUM", "FRP", "MACHINING", "CKD"];
 
     return (
       <footer>
@@ -58,7 +61,7 @@ export default function Footer({ locale }: FooterProps) {
                 <PindeLogo size="md" />
                 <p className="mt-5 max-w-[350px] text-[13px] leading-[1.75] text-white/62">{content.footer.description}</p>
                 <div className="mt-6 flex flex-wrap gap-2">
-                  {["ALUMINIUM", "FRP", "MACHINING", "CKD"].map((tag) => (
+                  {capabilityTags.map((tag) => (
                     <span key={tag} className="border border-[#DAAF37]/35 px-3 py-2 text-[9px] font-semibold tracking-[0.08em] text-white/60">{tag}</span>
                   ))}
                 </div>
@@ -91,7 +94,7 @@ export default function Footer({ locale }: FooterProps) {
                 <ul className="mt-4 space-y-4 text-[12px] text-white/65">
                   <li className="flex items-start gap-3">
                     <MapPin size={15} className="mt-0.5 shrink-0 text-[#DAAF37]" />
-                    <span className="leading-[1.6]">{BRAND.address}</span>
+                    <span className="leading-[1.6]">{locale === "ru" ? BRAND.addressRu : BRAND.address}</span>
                   </li>
                   <li>
                     <a href={`tel:${BRAND.phone.replace(/\s/g, "")}`} className="flex items-center gap-3 transition-colors hover:text-white">

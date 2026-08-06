@@ -9,75 +9,152 @@ export interface CapabilityCase {
   images: string[];
 }
 
-// Honest capability showcase — system types & performance profiles,
-// NOT claimed as completed projects. Each represents a configuration
-// PINDÉ can supply, tested to the listed standards.
-export const capabilityCases: CapabilityCase[] = [
+type LocalizedCapabilityCase = Omit<CapabilityCase, "title" | "systemType" | "targetMarket" | "description" | "performanceHighlights"> & {
+  copy: Record<"en" | "ru", Pick<CapabilityCase, "title" | "systemType" | "targetMarket" | "description" | "performanceHighlights">>;
+};
+
+// Supply configurations, not completed-project claims. Standards indicate the
+// qualification route; compliance remains configuration- and market-specific.
+const localizedCapabilityCases: LocalizedCapabilityCase[] = [
   {
     slug: "thermally-broken-casement-residential",
-    title: "Thermally Broken Casement — Cold-Climate Residential",
-    systemType: "A120 Casement Window",
-    targetMarket: "Russia, Kazakhstan, Belarus",
-    description:
-      "120.6mm profile depth with 35.3mm PA66GF25 thermal break strip and triple EPDM sealing. Designed for residential window fabricators targeting Uw ≤ 1.0 W/m²K with triple glazing up to 130mm. Compatible with GOST-rated hardware and local EPDM profiles.",
-    performanceHighlights: [
-      "35.3mm PA66GF25 thermal break — 500× lower conductivity than aluminium",
-      "Triple EPDM sealing for air tightness Class 4 (EN 12207)",
-      "Accepts triple glazing up to 130mm for Uw ≤ 1.0 W/m²K",
-      "6063-T5 alloy, 1.4mm minimum wall thickness",
-    ],
-    applicableStandards: ["GOST 23166", "GOST 30673", "EN 14351-1", "NFRC 100"],
+    copy: {
+      en: {
+        title: "A120 Casement Window — Cold-Region Reference Build",
+        systemType: "A120 casement window system",
+        targetMarket: "Central Asia and Russian-speaking markets",
+        description:
+          "A reference construction for inward-opening, outward-opening or fixed window units. The 120.6 mm frame uses a 35.3 mm PA66GF25 thermal barrier, three EPDM sealing levels and project-selected insulating glass. Unit size, opening type, hardware and Uw are fixed during qualification.",
+        performanceHighlights: [
+          "120.6 mm nominal frame construction depth",
+          "35.3 mm PA66GF25 polyamide thermal barrier",
+          "Three EPDM sealing levels and a drained glazing rebate",
+          "6063-T5 aluminium; 1.4 mm reference wall thickness",
+        ],
+      },
+      ru: {
+        title: "Оконный блок A120 — конфигурация для холодных регионов",
+        systemType: "Поворотная оконная система A120",
+        targetMarket: "Центральная Азия и русскоязычные рынки",
+        description:
+          "Справочная конструкция для оконных блоков с открыванием внутрь, наружу или глухим заполнением. Коробка глубиной 120,6 мм оснащена полиамидной термоизоляционной вставкой PA66GF25 шириной 35,3 мм, тремя контурами EPDM-уплотнений и стеклопакетом по проекту. Размер, тип открывания, фурнитуру и Uw фиксируют при квалификации.",
+        performanceHighlights: [
+          "Номинальная монтажная глубина коробки 120,6 мм",
+          "Полиамидная термоизоляционная вставка PA66GF25 35,3 мм",
+          "Три контура EPDM-уплотнений и дренируемый фальц остекления",
+          "Алюминий 6063-T5; справочная толщина стенки 1,4 мм",
+        ],
+      },
+    },
+    applicableStandards: ["ГОСТ 21519-2022", "ГОСТ 23166-2024", "EN 14351-1"],
     images: [],
   },
   {
     slug: "sliding-door-large-opening-eaeu",
-    title: "Large-Opening Sliding — Villa & Hospitality",
-    systemType: "AP187 88 Sliding Door",
-    targetMarket: "Kazakhstan, Uzbekistan, Armenia",
-    description:
-      "196.8mm profile depth sliding door with 88mm sash width for oversized panels. Engineered for large openings in luxury villas and hotel projects. Marble-track option for seamless indoor-outdoor transition. PA66GF25 thermal break with EPDM foam seals.",
-    performanceHighlights: [
-      "196.8mm profile depth for structural stability on large spans",
-      "88mm sash width — reinforced for panels up to 3m height",
-      "Max glazing 191mm — triple-glazed for extreme climates",
-      "Novabes roller system rated for 400kg panel weight",
-    ],
-    applicableStandards: ["GOST 23166", "EN 14351-1", "AS/NZS 4420"],
+    copy: {
+      en: {
+        title: "AP187 88 Sliding Door — Large-Opening Reference Build",
+        systemType: "AP187 88 sliding door system",
+        targetMarket: "Kazakhstan, Uzbekistan and Armenia",
+        description:
+          "A thermally broken sliding door reference with a 196.8 mm frame and an 88 mm visible leaf section. Panel dimensions, glass mass, rollers, deflection limits, track drainage and the optional security lock are coordinated before machining.",
+        performanceHighlights: [
+          "196.8 mm nominal frame construction depth",
+          "88 mm visible leaf section in the reference profile",
+          "High- and low-track arrangements available",
+          "Novabes rollers and Bao Ma lock in the reference hardware set",
+        ],
+      },
+      ru: {
+        title: "Раздвижной дверной блок AP187 88 — крупный проём",
+        systemType: "Раздвижная дверная система AP187 88",
+        targetMarket: "Казахстан, Узбекистан и Армения",
+        description:
+          "Раздвижной дверной блок с термоизоляционными вставками, коробкой глубиной 196,8 мм и видимой частью створки 88 мм. Размеры полотна, массу стеклопакета, ролики, допустимый прогиб, дренаж направляющей и опциональный противовзломный замок согласуют до механической обработки.",
+        performanceHighlights: [
+          "Номинальная монтажная глубина коробки 196,8 мм",
+          "Видимая часть створки 88 мм в справочном профиле",
+          "Высокий и низкий варианты направляющей",
+          "Ролики Novabes и замок Bao Ma в справочной комплектации",
+        ],
+      },
+    },
+    applicableStandards: ["ГОСТ 23747-2015", "ГОСТ 23166-2024", "EN 14351-1"],
     images: [],
   },
   {
     slug: "frp-window-system-pilot",
-    title: "FRP Composite Window — Pilot Programme",
-    systemType: "FRP Pultruded Window System",
-    targetMarket: "Russia (Siberia & Far East), Kazakhstan (north)",
-    description:
-      "Pultruded glass-fibre profile system for fabricators evaluating FRP as a low-conductivity alternative to aluminium in extreme cold. Released against a defined BOM, mechanical joint method, and project-specific test plan. Includes cutting/drilling/bonding parameters and first-article inspection protocol.",
-    performanceHighlights: [
-      "GFRP thermal conductivity ~0.3 W/m·K — no thermal break needed",
-      "Pultruded profiles with ≥60% glass fibre by weight",
-      "Corner joints via mechanical fastening + structural adhesive",
-      "Pilot kits: 3–10 glass-free units for local fabrication testing",
-    ],
+    copy: {
+      en: {
+        title: "FRP Window System — First-Article Qualification",
+        systemType: "Pultruded FRP window system",
+        targetMarket: "Northern Kazakhstan, Siberia and the Russian Far East",
+        description:
+          "A controlled first-article route for fabricators evaluating pultruded glass-fibre composite window profiles. The release set defines the bill of materials (BOM), joint method, machining parameters, glazing and project test plan before repeat supply.",
+        performanceHighlights: [
+          "Pultruded glass-fibre composite frame and sash profiles",
+          "Material grade and glass content fixed by certificate and BOM",
+          "Mechanical and bonded joints qualified on the selected section",
+          "First-article inspection before repeat profile or CKD supply",
+        ],
+      },
+      ru: {
+        title: "Оконная система из FRP — квалификация первого образца",
+        systemType: "Оконная система из пултрузионного стеклокомпозита",
+        targetMarket: "Север Казахстана, Сибирь и Дальний Восток",
+        description:
+          "Порядок квалификации первого образца для производств, оценивающих пултрузионные стеклокомпозитные оконные профили. До серийной поставки в комплекте выпуска фиксируют спецификацию комплектации (BOM), способ соединения, параметры обработки, стеклопакет и план испытаний.",
+        performanceHighlights: [
+          "Пултрузионные стеклокомпозитные профили коробки и створки",
+          "Марка материала и содержание стекловолокна по сертификату и BOM",
+          "Механические и клеевые соединения квалифицируют на выбранном сечении",
+          "Контроль первого образца до повторной поставки профилей или CKD",
+        ],
+      },
+    },
     applicableStandards: ["GOST R 57790", "EN 13706-3", "ASTM E283"],
     images: [],
   },
   {
     slug: "ckd-supply-multi-opening-project",
-    title: "Glass-Free CKD — Multi-Opening Project Supply",
-    systemType: "Mixed AL Systems (P3 CKD)",
-    targetMarket: "Kyrgyzstan, Armenia, Belarus",
-    description:
-      "Glass-free CKD kit supply for a mixed-opening project: casement windows (A65), sliding doors (AP187-50), and swing doors (A65). All profiles cut, drilled, machined, and labelled by opening. Seals, joints, approved hardware, and spares pack included. Dimensions confirmed by local fabricator before production release.",
-    performanceHighlights: [
-      "P3 glass-free CKD: machined profiles packed by opening",
-      "Mixed system types in one shipment with separate BOMs",
-      "Rail-compatible export packing from Chongqing",
-      "2-business-day technical RFQ review before quotation",
-    ],
-    applicableStandards: ["GOST 23166", "Local national conformity per market"],
+    copy: {
+      en: {
+        title: "Glass-Free CKD — Mixed Opening Schedule",
+        systemType: "Mixed aluminium systems · machined CKD",
+        targetMarket: "Kyrgyzstan, Armenia and Belarus",
+        description:
+          "A glass-free CKD supply example combining A65 casement windows, AP187 50 sliding doors and A65 hinged doors. Profiles are cut, drilled, machined and labelled by opening; the local fabricator confirms dimensions and installs the specified glass.",
+        performanceHighlights: [
+          "Machined profiles packed by opening mark",
+          "Separate bill of materials for each system and opening type",
+          "Seals, connectors, approved hardware and spares identified",
+          "Export packing prepared for the agreed rail or road route",
+        ],
+      },
+      ru: {
+        title: "CKD без стеклопакетов — смешанная ведомость проёмов",
+        systemType: "Несколько алюминиевых систем · обработанный CKD",
+        targetMarket: "Кыргызстан, Армения и Беларусь",
+        description:
+          "Пример поставки CKD без стеклопакетов, объединяющей поворотные окна A65, раздвижные двери AP187 50 и распашные двери A65. Профили нарезают, сверлят, обрабатывают и маркируют по проёмам; местное производство подтверждает размеры и устанавливает предусмотренные стеклопакеты.",
+        performanceHighlights: [
+          "Обработанные профили упакованы по марке проёма",
+          "Отдельная спецификация комплектации для каждой системы и типа открывания",
+          "Уплотнения, соединители, согласованная фурнитура и запасные части обозначены",
+          "Экспортная упаковка под согласованный железнодорожный или автомобильный маршрут",
+        ],
+      },
+    },
+    applicableStandards: ["ГОСТ 21519-2022", "ГОСТ 23747-2015", "Требования страны назначения"],
     images: [],
   },
 ];
 
-// Compatibility export — old code importing `projects` still works
+export function getCapabilityCases(locale: string): CapabilityCase[] {
+  const language = locale === "ru" ? "ru" : "en";
+  return localizedCapabilityCases.map(({ copy, ...shared }) => ({ ...shared, ...copy[language] }));
+}
+
+// Compatibility exports for code that expects the English collection.
+export const capabilityCases = getCapabilityCases("en");
 export const projects = capabilityCases;

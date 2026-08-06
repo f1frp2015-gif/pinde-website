@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import AluminiumProductPage from "@/components/AluminiumProductPage";
+import { getLocalizedAluminiumProduct } from "@/content/aluminiumProductCopy";
 import { getAluminiumProductSeo } from "@/content/aluminiumProductSeo";
 import { isPageLocale, pageLocales } from "@/content/pages";
 import { products } from "@/data/products";
@@ -22,6 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const canonical = `https://pindesys.com/${locale}/systems/aluminium/${product.slug}`;
   const seo = getAluminiumProductSeo(product, locale);
+  const localizedProduct = getLocalizedAluminiumProduct(product, locale);
 
   return {
     title: { absolute: seo.title },
@@ -44,7 +46,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: seo.title,
       description: seo.description,
       images: product.images.length > 0
-        ? [{ url: product.images[0], alt: product.name }]
+        ? [{ url: product.images[0], alt: localizedProduct.name }]
         : undefined,
     },
     twitter: {

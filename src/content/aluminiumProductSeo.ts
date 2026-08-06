@@ -1,4 +1,5 @@
 import type { Product } from "@/data/products";
+import { getLocalizedAluminiumProduct } from "@/content/aluminiumProductCopy";
 
 export type ProductPageLocale = "en" | "ru";
 export type ProductFaq = { question: string; answer: string };
@@ -38,28 +39,28 @@ const aluminiumProductSeo: Record<string, LocalizedSeo> = {
     ["алюминиевое окно A110 110 мм", "широкий оконный профиль с терморазрывом", "оконная система A110"],
   ),
   "a120-casement-window": defineSeo(
-    "A120 Passive Aluminium Window System | 120mm Profile | PINDÉ",
-    "A120 120mm passive thermal break aluminium window system",
-    ["120mm aluminium window system", "passive house aluminium window profile", "A120 thermal break window"],
-    "Пассивная алюминиевая система A120 120 мм | PINDÉ",
-    "Алюминиевая оконная система A120 120 мм для пассивных зданий",
-    ["алюминиевая оконная система A120 120 мм", "алюминиевый профиль для пассивного дома", "окно A120 с терморазрывом"],
+    "A120 120mm Aluminium Casement Window System | PINDÉ",
+    "A120 120mm thermally broken aluminium casement window system",
+    ["120mm aluminium casement window", "deep aluminium window frame", "A120 thermal break window"],
+    "Поворотное алюминиевое окно A120 120 мм | PINDÉ",
+    "Алюминиевая поворотная оконная система A120 120 мм",
+    ["алюминиевая оконная система A120 120 мм", "алюминиевый профиль с глубокой коробкой", "окно A120 с термовставкой"],
   ),
   "s175-push-out-window": defineSeo(
-    "S175 Aluminium Push-Out Window | Heavy-Duty System | PINDÉ",
-    "S175 175mm heavy-duty aluminium push-out window system",
-    ["aluminium push out window system", "heavy duty aluminium window profile", "S175 parallel push out window"],
-    "Выдвижное алюминиевое окно S175 175 мм | PINDÉ",
-    "Усиленная алюминиевая система S175 175 мм с параллельным выдвижением",
-    ["алюминиевое окно с параллельным выдвижением", "усиленный оконный профиль S175", "выдвижное окно 175 мм"],
+    "S175 Aluminium Parallel-Projecting Window | PINDÉ",
+    "S175 175mm aluminium parallel-projecting window system",
+    ["parallel projecting aluminium window", "parallel opening window profile", "S175 projecting window"],
+    "Параллельно-выдвижное алюминиевое окно S175 | PINDÉ",
+    "Алюминиевая система S175 175 мм с параллельно-выдвижным открыванием",
+    ["алюминиевое окно с параллельно-выдвижным открыванием", "оконный профиль S175", "выдвижное окно 175 мм"],
   ),
   "s132-side-pressed-window": defineSeo(
-    "S132 Aluminium Side-Pressed Window | 132mm Profile | PINDÉ",
-    "S132 132mm thermally broken aluminium side-pressed window",
-    ["aluminium side pressed window", "132mm aluminium window profile", "S132 thermal break window"],
-    "Прижимное алюминиевое окно S132 132 мм | PINDÉ",
-    "Алюминиевая оконная система S132 132 мм с боковым прижимом",
-    ["алюминиевое окно с боковым прижимом", "оконный профиль S132 132 мм", "прижимная оконная система с терморазрывом"],
+    "S132 Aluminium Compression-Seal Sliding Window | PINDÉ",
+    "S132 132mm thermally broken sliding window with compression sealing",
+    ["compression seal aluminium window", "132mm aluminium sliding window", "S132 sliding window with compression"],
+    "Раздвижное алюминиевое окно S132 с прижимом | PINDÉ",
+    "Алюминиевая раздвижная система S132 132 мм с прижимом створки",
+    ["алюминиевое раздвижное окно с прижимом", "оконный профиль S132 132 мм", "раздвижная система с термовставкой"],
   ),
   "s96n-inward-casement-window": defineSeo(
     "S96N Inward Aluminium Window | Tilt-and-Turn Profile | PINDÉ",
@@ -86,91 +87,91 @@ const aluminiumProductSeo: Record<string, LocalizedSeo> = {
     ["усиленное алюминиевое раздвижное окно", "оконный профиль S126 126 мм", "раздвижная алюминиевая система S126"],
   ),
   "s150-vertical-lifting-window": defineSeo(
-    "S150 Aluminium Vertical Lifting Window System | PINDÉ",
-    "S150 150mm thermal break aluminium vertical lifting window",
-    ["aluminium vertical lifting window", "150mm aluminium window profile", "S150 electric lifting window"],
-    "Вертикально-подъёмное алюминиевое окно S150 | PINDÉ",
-    "Алюминиевая вертикально-подъёмная оконная система S150 150 мм",
-    ["алюминиевое вертикально-подъёмное окно", "оконный профиль S150 150 мм", "электрическое подъёмное окно"],
+    "S150 Aluminium Vertical Sliding Window System | PINDÉ",
+    "S150 150mm aluminium window with a vertical sliding sash",
+    ["aluminium vertical sliding window", "150mm aluminium window profile", "S150 motorised sash window"],
+    "Алюминиевое окно S150 с вертикально-сдвижной створкой | PINDÉ",
+    "Алюминиевая оконная система S150 150 мм с вертикально-сдвижной створкой",
+    ["алюминиевое окно с вертикально-сдвижной створкой", "оконный профиль S150 150 мм", "моторизованное подъёмное окно"],
   ),
   "a65-swing-door": defineSeo(
-    "A65 Aluminium Swing Door System | Thermal Break Profile | PINDÉ",
-    "A65 65mm thermal break aluminium swing door system",
-    ["aluminium swing door system", "thermal break aluminium door profile", "A65 aluminium entrance door"],
-    "Распашная алюминиевая дверь A65 с терморазрывом | PINDÉ",
-    "Алюминиевая распашная дверная система A65 65 мм с терморазрывом",
-    ["алюминиевая распашная дверная система", "дверной профиль A65 с терморазрывом", "алюминиевая входная дверь A65"],
+    "A65 Aluminium Hinged Door System | Thermal Break | PINDÉ",
+    "A65 65mm thermally broken aluminium hinged-door system",
+    ["aluminium hinged door system", "thermally broken aluminium door profile", "A65 aluminium entrance door"],
+    "Распашная алюминиевая дверь A65 с термовставкой | PINDÉ",
+    "Алюминиевый распашной дверной блок A65 глубиной 65 мм",
+    ["алюминиевый распашной дверной блок", "дверной профиль A65 с термовставкой", "алюминиевая входная дверь A65"],
   ),
   "ap187-50-sliding-door": defineSeo(
     "AP187 50 Aluminium Sliding Door | Slim Profile System | PINDÉ",
     "AP187 50 slim-profile aluminium sliding door system",
     ["aluminium sliding door profile system", "slim aluminium door profile", "AP187 50 sliding door"],
-    "Раздвижная алюминиевая дверь AP187 50 | Узкий профиль | PINDÉ",
-    "Алюминиевая раздвижная дверная система AP187 50 с узким профилем",
+    "Раздвижной дверной блок AP187 50 | Узкий профиль | PINDÉ",
+    "Алюминиевый раздвижной дверной блок AP187 50 с узким профилем",
     ["алюминиевая раздвижная дверная система", "узкий алюминиевый дверной профиль", "раздвижная дверь AP187 50"],
   ),
   "ap187-88-sliding-door": defineSeo(
     "AP187 88 Heavy-Duty Aluminium Sliding Door | PINDÉ",
     "AP187 88 heavy-duty aluminium sliding door system",
     ["heavy duty aluminium sliding door", "88mm aluminium door profile", "AP187 88 sliding door"],
-    "Усиленная раздвижная алюминиевая дверь AP187 88 | PINDÉ",
-    "Усиленная алюминиевая раздвижная дверная система AP187 88",
+    "Раздвижной дверной блок AP187 88 | Усиленный профиль | PINDÉ",
+    "Алюминиевый раздвижной дверной блок AP187 88 с усиленным профилем",
     ["усиленная алюминиевая раздвижная дверь", "алюминиевый дверной профиль 88 мм", "раздвижная дверь AP187 88"],
   ),
   "s150-sliding-door": defineSeo(
     "S150 Aluminium Sliding Door | Thermal Break Profile | PINDÉ",
     "S150 150mm thermal break aluminium sliding door system",
     ["150mm aluminium sliding door", "thermal break patio door profile", "S150 aluminium door system"],
-    "Раздвижная алюминиевая дверь S150 с терморазрывом | PINDÉ",
-    "Алюминиевая раздвижная дверная система S150 150 мм с терморазрывом",
+    "Раздвижной дверной блок S150 с термовставками | PINDÉ",
+    "Алюминиевый раздвижной дверной блок S150 с термоизоляционными вставками",
     ["алюминиевая раздвижная дверь 150 мм", "профиль терморазрывной двери для террасы", "дверная система S150"],
   ),
   "s93-heavy-duty-folding-door": defineSeo(
     "S93 Heavy-Duty Aluminium Folding Door System | PINDÉ",
     "S93 93mm heavy-duty thermal break aluminium folding door",
     ["aluminium folding door system", "heavy duty aluminium folding door", "S93 thermal break folding door"],
-    "Усиленная складная алюминиевая дверь S93 | PINDÉ",
-    "Усиленная складная алюминиевая дверная система S93 93 мм",
+    "Складной алюминиевый дверной блок S93 | PINDÉ",
+    "Складной алюминиевый дверной блок S93 93 мм с термоизоляционными вставками",
     ["алюминиевая складная дверная система", "усиленная алюминиевая дверь-гармошка", "складная дверь S93 с терморазрывом"],
   ),
   "perfect-system-non-interlocking-door": defineSeo(
-    "Perfect System Aluminium Interior Sliding Door | PINDÉ",
-    "Perfect System non-interlocking aluminium interior sliding door",
-    ["aluminium interior door system", "non interlocking aluminium door", "Perfect System sliding door"],
-    "Межкомнатная алюминиевая дверь Perfect System | PINDÉ",
-    "Межкомнатная раздвижная алюминиевая дверь Perfect System без сцепления",
-    ["алюминиевая межкомнатная дверная система", "раздвижная дверь без сцепления", "межкомнатная дверь Perfect System"],
+    "Perfect System Independent or Linked-Panel Sliding Door | PINDÉ",
+    "Perfect System interior sliding partition with independent or linked panels",
+    ["aluminium sliding partition", "linked panel sliding door", "Perfect System interior door"],
+    "Раздвижная перегородка Perfect System | PINDÉ",
+    "Раздвижная перегородка Perfect System с независимыми или связанными полотнами",
+    ["алюминиевая раздвижная перегородка", "связанные раздвижные полотна", "межкомнатная система Perfect System"],
   ),
   "perfect-system-phantom-door": defineSeo(
-    "Perfect System Phantom Aluminium Sliding Door | PINDÉ",
-    "Perfect System hidden phantom aluminium sliding door",
-    ["aluminium phantom door", "hidden sliding aluminium door", "Perfect System suspended door"],
-    "Скрытая алюминиевая дверь Phantom Perfect System | PINDÉ",
-    "Скрытая подвесная алюминиевая дверь Phantom Perfect System",
-    ["скрытая алюминиевая раздвижная дверь", "подвесная дверь без нижней направляющей", "дверь Phantom Perfect System"],
+    "Perfect System Top-Hung Concealed-Track Sliding Door | PINDÉ",
+    "Perfect System top-hung interior sliding door with a concealed track",
+    ["top hung aluminium sliding door", "concealed track interior door", "Perfect System suspended door"],
+    "Верхнеподвесной блок Perfect System | PINDÉ",
+    "Верхнеподвесной раздвижной дверной блок Perfect System со скрытой направляющей",
+    ["верхнеподвесная раздвижная дверь", "дверь без сплошной напольной направляющей", "скрытая направляющая Perfect System"],
   ),
   "1645-bathroom-door": defineSeo(
-    "1645 Aluminium Bathroom Door System | Interior Profile | PINDÉ",
-    "1645 aluminium bathroom interior door system",
-    ["aluminium bathroom door system", "interior aluminium door profile", "1645 waterproof bathroom door"],
-    "Алюминиевая дверь для ванной 1645 | Межкомнатная система | PINDÉ",
-    "Алюминиевая дверная система 1645 для ванной комнаты",
-    ["алюминиевая дверь для ванной комнаты", "межкомнатный алюминиевый дверной профиль", "влагостойкая дверь 1645"],
+    "1645 Aluminium Bathroom Door Set | Interior System | PINDÉ",
+    "1645 aluminium door set for bathrooms and interior wet areas",
+    ["aluminium bathroom door system", "interior aluminium door profile", "1645 bathroom door set"],
+    "Алюминиевый дверной блок 1645 для ванной комнаты | PINDÉ",
+    "Алюминиевый дверной блок 1645 для ванной комнаты",
+    ["алюминиевый дверной блок для ванной", "межкомнатный алюминиевый дверной профиль", "дверной блок 1645"],
   ),
   "perfect-system-opposite-direction-linkage": defineSeo(
-    "Perfect System Opposite-Direction Aluminium Linkage Door | PINDÉ",
-    "Perfect System opposite-direction aluminium linkage door",
-    ["aluminium linkage door", "opposite direction aluminium door", "synchronised interior sliding door"],
-    "Синхронная алюминиевая дверь Perfect System | PINDÉ",
-    "Алюминиевая дверь Perfect System с синхронным встречным открыванием",
-    ["алюминиевая синхронная раздвижная дверь", "дверь со встречным открыванием", "система связанных дверей Perfect System"],
+    "Perfect System Synchronised Bi-Parting Sliding Door | PINDÉ",
+    "Perfect System synchronised bi-parting aluminium sliding door",
+    ["synchronised sliding door", "bi parting aluminium door", "linked interior sliding panels"],
+    "Синхронный раздвижной дверной блок Perfect System | PINDÉ",
+    "Алюминиевый дверной блок Perfect System с синхронным двусторонним открыванием",
+    ["синхронная раздвижная дверь", "двустороннее открывание полотен", "связанные полотна Perfect System"],
   ),
   "perfect-system-folding-door": defineSeo(
     "Perfect System Aluminium Interior Folding Door | PINDÉ",
     "Perfect System aluminium interior folding door system",
     ["aluminium interior folding door", "folding aluminium door system", "Perfect System folding door"],
-    "Складная алюминиевая дверь Perfect System | PINDÉ",
-    "Межкомнатная складная алюминиевая дверь Perfect System",
+    "Складной алюминиевый дверной блок Perfect System | PINDÉ",
+    "Межкомнатный складной алюминиевый дверной блок Perfect System",
     ["алюминиевая межкомнатная складная дверь", "складная алюминиевая дверная система", "дверь-гармошка Perfect System"],
   ),
 };
@@ -187,67 +188,63 @@ function specValue(product: Product, label: string) {
 
 function description(product: Product, locale: ProductPageLocale, heading: string) {
   if (locale === "en" && product.slug === "a65-casement-window") {
-    return "65mm thermally broken aluminium casement window with PA66GF25 breaks and triple EPDM seals. System kit or glass-free CKD supply for fabricators.";
+    return "65 mm aluminium casement window with PA66GF25 thermal barriers, three EPDM sealing levels and system-kit or glass-free CKD supply for fabricators.";
   }
   if (locale === "en") {
     const firstSentence = product.description.split(/(?<=\.)\s/)[0];
     return truncateAtWord(`${heading}. ${firstSentence}`);
   }
 
-  const depth = specValue(product, "profile depth");
-  const glazing = specValue(product, "max glass");
-  const facts = [
-    depth ? `глубина профиля ${depth}` : null,
-    glazing ? `стеклопакет до ${glazing.replace("≤ ", "")}` : null,
-  ].filter(Boolean).join(", ");
-  return truncateAtWord(`${heading}${facts ? `: ${facts}` : ""}. Профили, компоненты и CKD-комплекты без стекла для локального производства.`);
+  const depth = specValue(product, "frame depth");
+  const facts = depth ? `, монтажная глубина ${depth}` : "";
+  return truncateAtWord(`${heading}${facts}. Профили с обработкой и CKD-комплекты без стеклопакетов для локального производства.`);
 }
 
 function aluminiumFaqs(product: Product, locale: ProductPageLocale): ProductFaq[] {
-  const depth = specValue(product, "profile depth");
-  const glazing = specValue(product, "max glass");
-  const alloy = specValue(product, "aluminum alloy") ?? "6063-T5";
-  const thermalBreak = specValue(product, "thermal break") ?? (product.category === "interior-doors" ? null : "PA66GF25");
-  const seals = specValue(product, "seals") ?? (product.category === "interior-doors" ? null : "EPDM");
+  const localized = getLocalizedAluminiumProduct(product, locale);
+  const depth = specValue(product, "frame depth") ?? specValue(product, "system depth");
+  const alloy = specValue(product, "aluminium alloy") ?? "6063-T5";
+  const thermalBarrier = specValue(product, "thermal barrier") ?? (product.category === "interior-doors" ? null : "PA66GF25");
+  const gaskets = specValue(product, "gaskets") ?? (product.category === "interior-doors" ? null : "EPDM");
   const firstSentence = product.description.split(/(?<=\.)\s/)[0];
 
   if (locale === "ru") {
     return [
       {
-        question: depth ? `Какова глубина профиля системы ${product.name}?` : `Для каких задач предназначена система ${product.name}?`,
+        question: depth ? `Какова монтажная глубина системы ${localized.name}?` : `Для каких проёмов предназначена система ${localized.name}?`,
         answer: depth
-          ? `Для ${product.name} указана глубина профиля ${depth}${glazing ? ` и толщина заполнения до ${glazing.replace("≤ ", "")}` : ""}. Значения подтверждаются по актуальному техническому листу.`
-          : `${firstSentence} Размеры, схема створок и фурнитура фиксируются в техническом предложении.`,
+          ? `В каталоге для ${localized.name} указана монтажная глубина ${depth}. Заполнение, размеры створок или полотен и фурнитуру проверяют по актуальному техническому листу и оконной ведомости.`
+          : `${localized.description.split(/(?<=\.)\s/)[0]} Размеры, схема открывания и фурнитура фиксируются в техническом предложении.`,
       },
       {
-        question: `Какие материалы применяются в системе ${product.name}?`,
+        question: `Какие материалы входят в базовую комплектацию ${localized.name}?`,
         answer: product.category === "interior-doors"
-          ? `Система использует алюминиевую конструкцию и скрытую или специализированную фурнитуру. Отделку и комплектующие согласовывают перед заказом.`
-          : `В справочной конфигурации указаны алюминий ${alloy}${thermalBreak ? `, терморазрыв ${thermalBreak}` : ""}${seals ? ` и уплотнения ${seals}` : ""}. Итоговая спецификация зависит от проекта.`,
+          ? "В основе системы — алюминиевые профили и фурнитура для выбранной схемы движения полотен. Покрытие, заполнение, крепёж и комплект фурнитуры согласовывают до выпуска заказа."
+          : `Базовая конфигурация включает алюминий ${alloy}${thermalBarrier ? `, термоизоляционные вставки ${thermalBarrier}` : ""}${gaskets ? ` и уплотнители ${gaskets}` : ""}. Рабочей считается только согласованная спецификация комплектации.`,
       },
       {
-        question: `Можно ли заказать ${product.name} как комплект для локального производства?`,
-        answer: "Да. PINDÉ проверяет размеры, схему открывания, стеклопакет, фурнитуру и требования проекта. Форматы поставки включают системные компоненты, обработанные профили и CKD-комплект без стекла.",
+        question: `Можно ли заказать ${localized.name} для сборки на местном производстве?`,
+        answer: "Да. PINDÉ проверяет ведомость проёмов, способ открывания, стеклопакет, фурнитуру и требования страны назначения. Поставка возможна как системный комплект, профили с механической обработкой или CKD-комплект без стеклопакетов.",
       },
     ];
   }
 
   return [
     {
-      question: depth ? `What is the profile depth of the ${product.name}?` : `What is the ${product.name} designed for?`,
+      question: depth ? `What is the frame depth of the ${localized.name}?` : `Which openings is the ${localized.name} intended for?`,
       answer: depth
-        ? `${product.name} is listed with a profile depth of ${depth}${glazing ? ` and glazing capacity up to ${glazing.replace("≤ ", "")}` : ""}. Confirm the selected build against the current technical data sheet.`
+        ? `${localized.name} has a listed frame depth of ${depth}. Confirm the infill, sash or leaf limits and hardware against the current technical data sheet and opening schedule.`
         : `${firstSentence} Final dimensions, panel arrangement and hardware are confirmed in the project-specific technical offer.`,
     },
     {
-      question: `Which materials does the ${product.name} use?`,
+      question: `Which materials are listed for the ${localized.name}?`,
       answer: product.category === "interior-doors"
-        ? "The system uses an aluminium construction with concealed or application-specific hardware. Finish and component schedules are confirmed before release."
-        : `The reference build lists ${alloy} aluminium${thermalBreak ? `, ${thermalBreak} thermal breaks` : ""}${seals ? ` and ${seals} seals` : ""}. The released bill of materials remains project-specific.`,
+        ? "The system uses aluminium profiles with hardware selected for the specified panel movement. Finish, infill, fixings and hardware are confirmed before release."
+        : `The reference build lists ${alloy} aluminium${thermalBarrier ? `, ${thermalBarrier} polyamide thermal barriers` : ""}${gaskets ? ` and ${gaskets} gaskets` : ""}. The released bill of materials remains project-specific.`,
     },
     {
-      question: `Can fabricators order the ${product.name} as a production kit?`,
-      answer: "Yes. PINDÉ checks dimensions, opening layout, glazing, hardware and destination requirements. Supply can include system components, machined profiles or a glass-free CKD kit.",
+      question: `Can a fabricator order the ${localized.name} as a production kit?`,
+      answer: "Yes. PINDÉ checks the opening schedule, opening type, glazing, hardware and destination requirements. Supply can include a system kit, machined profiles or a glass-free CKD kit.",
     },
   ];
 }

@@ -7,7 +7,7 @@ type ContactLocale = "en" | "ru";
 const copy = {
   en: {
     thanks: "Thank you",
-    received: "We've received your inquiry and will get back to you within 24 hours.",
+    received: "We've received your inquiry. Our team will review the project details and reply by email.",
     name: "Full Name",
     namePlaceholder: "Your name",
     email: "Email Address",
@@ -25,7 +25,7 @@ const copy = {
   },
   ru: {
     thanks: "Спасибо",
-    received: "Мы получили ваш запрос и ответим в течение 24 часов.",
+    received: "Мы получили запрос. Команда проверит данные проекта и ответит по электронной почте.",
     name: "Имя и фамилия",
     namePlaceholder: "Как к вам обращаться",
     email: "Электронная почта",

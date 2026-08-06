@@ -11,6 +11,7 @@ export const BRAND = {
   email: "inquiry@pindesys.com",
   whatsapp: "+86 138 8333 3993",
   address: "No. 68 Chanye Avenue, Tongliang District, Chongqing, China",
+  addressRu: "Китай, г. Чунцин, район Тунлян, проспект Чанье, 68",
   website: "https://pindesys.com",
   groupWebsite: "http://www.cq-md.com",
 };

@@ -14,15 +14,15 @@ const categories = [
 const categoryLabels = {
   en: {
     all: "All systems",
-    "exterior-windows": "Exterior windows",
-    "exterior-doors": "Exterior doors",
-    "interior-doors": "Interior doors",
+    "exterior-windows": "Window systems",
+    "exterior-doors": "Exterior door systems",
+    "interior-doors": "Interior doors & partitions",
   },
   ru: {
     all: "Все системы",
-    "exterior-windows": "Наружные окна",
-    "exterior-doors": "Наружные двери",
-    "interior-doors": "Межкомнатные двери",
+    "exterior-windows": "Оконные системы",
+    "exterior-doors": "Наружные дверные блоки",
+    "interior-doors": "Межкомнатные двери и перегородки",
   },
 } as const;
 

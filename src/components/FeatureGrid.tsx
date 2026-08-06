@@ -12,37 +12,37 @@ const features = [
     Icon: ThermalBreakIcon,
     title: "Thermal Performance",
     description:
-      "Advanced thermal break technology delivers superior insulation, reducing energy costs and improving comfort year-round.",
+      "Polyamide thermal barriers reduce direct heat flow through the aluminium frame. Whole-window results still depend on glazing, unit size, fabrication and installation.",
   },
   {
     Icon: SecurityIcon,
-    title: "Security",
+    title: "Hardware schedule",
     description:
-      "Multi-point locking systems and reinforced profiles provide peace of mind with industry-leading security ratings.",
+      "Locking points, hinges, rollers and reinforcement are selected for the opening type and calculated leaf mass. Any resistance class must be supported by the applicable test report.",
   },
   {
     Icon: CertifiedIcon,
-    title: "Certified Quality",
+    title: "Evidence scope",
     description:
-      "Products tested and certified to international standards including AS2047, NFRC, CE, and ISO quality management.",
+      "Product results are tied to the tested size, glazing, hardware and standard. Factory-management certificates are recorded separately from product conformity evidence.",
   },
   {
     Icon: GlobalIcon,
-    title: "Global Reach",
+    title: "Export documentation",
     description:
-      "Serving architects, builders, and homeowners across Australia, New Zealand, North America, Europe, and the Middle East.",
+      "Packing lists, batch references and transport documents are prepared for the agreed rail or road route. Import conformity remains market-specific.",
   },
   {
     Icon: CustomIcon,
-    title: "Custom Solutions",
+    title: "Project configuration",
     description:
-      "Tailored designs to meet specific project requirements, from bespoke colours to non-standard sizes and configurations.",
+      "Colour, dimensions, opening mode, hardware and processing scope are fixed in the released drawings and bill of materials.",
   },
   {
     Icon: SustainabilityIcon,
-    title: "Sustainability",
+    title: "Material records",
     description:
-      "Recyclable aluminium profiles and energy-efficient designs contribute to greener buildings and reduced carbon footprints.",
+      "Alloy or composite grade, finish, gasket material and batch identification remain linked to the production and inspection records.",
   },
 ];
 
@@ -53,12 +53,12 @@ export default function FeatureGrid() {
         <div className="flex items-center gap-[13px] mb-[55px]">
           <span className="w-[21px] h-px bg-muted opacity-40" />
           <span className="text-[10px] tracking-[4px] uppercase text-muted font-medium">
-            Why PINDÉ
+            System controls
           </span>
         </div>
 
         <h2 className="font-[family-name:var(--font-serif)] font-semibold text-[clamp(32px,4vw,44px)] leading-[1.15] text-alabaster mb-[55px]">
-          Precision in every detail<span className="text-red">.</span>
+          What a released system records<span className="text-red">.</span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[13px]">

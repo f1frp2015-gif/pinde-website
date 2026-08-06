@@ -36,27 +36,27 @@ export const landingContent = {
     headerCta: "Send an RFQ",
     hero: {
       eyebrow: "Chongqing · Window system supply · Eurasia",
-      title: "Window system materials built for local fabrication.",
+      title: "Window and door systems prepared for your production line.",
       description:
-        "Aluminium and FRP profile systems, machined components and glass-free CKD kits for window manufacturers, system fabricators and project suppliers across Russian-speaking markets.",
-      primaryCta: "Request the technical pack",
-      secondaryCta: "View supply formats",
-      note: "Not a retail window shop. Glazing, final assembly, testing and installation stay local.",
+        "PINDÉ supplies aluminium and FRP profile systems, machined parts and glass-free CKD kits to fabricators in Russia and Central Asia. The opening schedule and available machinery determine how far the parts are prepared in Chongqing.",
+      primaryCta: "Send an opening schedule",
+      secondaryCta: "Compare supply formats",
+      note: "Business-to-business supply. Insulating glass units, final assembly, destination-market conformity and installation normally remain local.",
       cards: [
         {
           code: "AL",
           name: "Aluminium systems",
-          detail: "Thermally broken profiles · components · BOM",
+          detail: "Thermally broken profiles · components · bill of materials",
         },
         {
           code: "FRP",
           name: "Composite systems",
-          detail: "Pultruded profiles · joints · fabrication package",
+          detail: "Pultruded profiles · qualified joints · fabrication pack",
         },
         {
           code: "CKD",
           name: "Machined kits",
-          detail: "Cut · drilled · labelled · packed by opening",
+          detail: "Cut · machined · labelled · packed by opening",
         },
       ],
     },
@@ -70,35 +70,35 @@ export const landingContent = {
       ],
     },
     systems: {
-      eyebrow: "Two material platforms",
-      title: "Choose the system. Keep production close to the project.",
+      eyebrow: "Two material families",
+      title: "Select the construction before choosing the supply format.",
       intro:
-        "We supply the material, interfaces and production information required to make a repeatable window system—not loose profiles without a manufacturing plan.",
+        "The technical offer identifies the profile set, gaskets, connectors, hardware interfaces and fabrication documents for the selected construction. Local responsibilities are recorded in the same revision.",
       items: [
         {
           number: "01",
-          label: "Commercial mainline",
+          label: "Regular production range",
           title: "Thermally broken aluminium window-and-door systems",
           description:
-            "Surface-finished aluminium profiles supplied as a complete system for local cutting and fabrication, or upgraded to project-specific machined and CKD kits.",
+            "Exterior window and door systems use aluminium profiles with polyamide thermal barriers. Interior sliding and folding systems are listed separately. Supply can stop at finished profile lengths or include project-specific cutting, machining and kit preparation.",
           included: [
-            "Frame, sash, mullion and glazing-bead profiles",
-            "Thermal breaks, EPDM gaskets, cleats and connectors",
-            "Drainage parts, compatible hardware schedule and complete BOM",
-            "Processing drawings, assembly instructions and spare-parts list",
+            "Frame, sash or door-leaf, mullion and glazing-bead profiles",
+            "Polyamide barriers, EPDM gaskets, cleats and connectors",
+            "Drainage parts, hardware schedule and bill of materials",
+            "Machining drawings, assembly instructions and spare-parts list",
           ],
           keywords:
             "For buyers searching aluminium window profiles wholesale, thermally broken window systems or profiles for aluminium window production.",
         },
         {
           number: "02",
-          label: "Engineering programme",
+          label: "Project-qualified range",
           title: "FRP / glass-fibre composite window profile systems",
           description:
-            "Pultruded FRP profile sets for fabricators evaluating a low-conductivity material platform. Each programme is released against a defined BOM, joint method and project test plan.",
+            "Full-FRP and aluminium-composite systems are released from a defined reference build. The joint method, adhesive or fasteners, processing controls and test plan belong to that system and are not transferred from another composite product.",
           included: [
             "Frame, sash, mullion and glazing-bead profile set",
-            "Corner joints, seals and approved fastening interfaces",
+            "Qualified corner joints, gaskets and fastening interfaces",
             "Cutting, drilling, bonding and dust-control parameters",
             "Pilot kits, first-article inspection and fabrication training",
           ],
@@ -107,17 +107,17 @@ export const landingContent = {
         },
       ],
       evidence:
-        "Thermal, structural and weather-performance values are stated only for a verified specimen, glazing build-up and test scope. Unverified values remain project targets—not sales claims.",
+        "A thermal, structural or weather value is quoted with the specimen, insulating-glass make-up and report scope. A different construction keeps the value as a project requirement until it is verified.",
     },
     logistics: {
       eyebrow: "Chongqing rail connection",
-      title: "Fast rail access from Chongqing to Central Asia and Russia.",
+      title: "Rail dispatch from Chongqing to Central Asia and Russia.",
       intro:
-        "The Yuxinou freight railway connects our Chongqing manufacturing base with five Central Asian countries and Russia. Reference rail transit is approximately 7–20 days by destination, supporting responsive replenishment and project scheduling across the region.",
+        "Chongqing's international rail network serves hubs in Kazakhstan and onward routes across Central Asia and Russia. A planning range of roughly 7–20 days may be used for the rail leg in a current quotation, but the booked service, border transfer, customs and last mile determine the actual delivery date.",
       facts: [
         { value: "Chongqing", label: "Origin and production dispatch" },
-        { value: "6 markets", label: "Five Central Asian countries + Russia" },
-        { value: "~7–20 days", label: "Indicative rail transit by destination" },
+        { value: "Central Asia", label: "Rail hubs and onward regional routes" },
+        { value: "~7–20 days", label: "Planning range for the rail leg only" },
       ],
       mapAlt:
         "Yuxinou railway freight route map from Chongqing to Kazakhstan, Uzbekistan, Turkmenistan, Tajikistan, Kyrgyzstan and Russia",
@@ -128,85 +128,85 @@ export const landingContent = {
     },
     formats: {
       eyebrow: "Supply formats",
-      title: "From system materials to assembly-ready semi-finished kits.",
+      title: "Choose how much processing stays in Chongqing.",
       intro:
-        "The right level depends on your equipment, labour, order mix and import economics. Every quote separates profile value, processing, components, packing and freight.",
+        "P1, P2 and P3 distribute cutting, machining and kit preparation between PINDÉ and the local fabricator. Quotations separate profiles, processing, components, packing and freight.",
       items: [
         {
           level: "P1",
-          title: "Complete system kit",
-          tag: "Default",
-          from: "Finished profiles, gaskets, cleats, connectors, drainage parts, BOM and fabrication documents.",
+          title: "System material kit",
+          tag: "Material supply",
+          from: "Finished profiles, gaskets, cleats, connectors, drainage parts, bill of materials and fabrication documents.",
           local: "Cutting, machining, hardware, glazing, assembly, QA and installation.",
-          fit: "Established fabricators with cutting and corner-joining capability.",
+          fit: "A fabricator with cutting, machining and corner-joining equipment.",
         },
         {
           level: "P2",
-          title: "Cut-to-length & machined",
-          tag: "Upgrade",
-          from: "Optimised cutting, drainage and lock machining, CNC work and part identification.",
+          title: "Cut-to-length and machined profiles",
+          tag: "Machined supply",
+          from: "Cutting-list optimisation, drainage and lock machining, CNC work and part identification.",
           local: "Corner joining, hardware, glazing, adjustment, final inspection and installation.",
-          fit: "Factories that need capacity relief or controlled first production.",
+          fit: "A factory introducing a system or moving selected machining work upstream.",
         },
         {
           level: "P3",
           title: "Glass-free CKD kit",
-          tag: "Project",
+          tag: "Opening-by-opening",
           from: "Machined profiles packed by opening with seals, joints, selected hardware and a spares pack.",
-          local: "Final dimensions, assembly, insulating-glass units, commissioning, compliance and site work.",
-          fit: "Paid pilot runs, time-sensitive projects and lower-capability production cells.",
+          local: "Final dimensional check, assembly, insulating glass units, adjustment, conformity work and installation.",
+          fit: "A paid pilot, scheduled project or production cell with limited machining capacity.",
         },
       ],
       labels: {
         chongqing: "From Chongqing",
         local: "Kept local",
-        fit: "Best fit",
+        fit: "Typical buyer",
       },
     },
     process: {
-      eyebrow: "Fabricator enablement",
-      title: "A controlled route from drawing to repeat supply.",
+      eyebrow: "Production launch",
+      title: "Four decisions before repeat supply.",
       items: [
         {
           number: "01",
           title: "Qualify the system",
-          text: "Review your equipment, annual volume, current systems, window schedule, glazing and target-country requirements.",
+          text: "Review the equipment list, expected volume, current systems, opening schedule, glazing and destination requirements.",
         },
         {
           number: "02",
           title: "Freeze the reference build",
-          text: "Agree the system code, representative sizes, BOM, interfaces, performance evidence and responsibility matrix.",
+          text: "Agree the system code, representative sizes, bill of materials, joints, evidence and responsibility split.",
         },
         {
           number: "03",
           title: "Run a paid pilot",
-          text: "Start with section samples and corner joints, then 3–10 glass-free kits for local fabrication and testing.",
+          text: "Inspect profile sections and corner joints, then assemble and test a typical 3–10 glass-free kit pilot.",
         },
         {
           number: "04",
           title: "Scale by evidence",
-          text: "Move through a micro-batch, project batch and repeat programme only after yield, fit, logistics and claims data are accepted.",
+          text: "Review yield, fit, packing, delivery and closed non-conformities before a project batch or repeat order.",
         },
       ],
     },
     split: {
-      eyebrow: "One coordinated supply chain",
-      title: "Chongqing prepares the system. Your market completes the window.",
+      eyebrow: "Responsibility split",
+      title: "Prepared parts from Chongqing, finished units near the project.",
       chongqing: {
         title: "PINDÉ · Chongqing",
         items: [
-          "System engineering and BOM control",
+          "System definition and bill-of-materials control",
           "Profile production, finishing and batch QA",
-          "Optional cutting, CNC and kit identification",
+          "Optional cutting, CNC machining and kit identification",
           "Packing, documentation and replacement parts",
         ],
       },
       destination: {
         title: "Local fabricator · Destination market",
         items: [
-          "Final opening and dimension confirmation",
+          "Final opening and unit-dimension confirmation",
           "Locally sourced glazing and approved hardware",
-          "Assembly, adjustment and finished-window QA",
+          "Assembly, adjustment and finished-unit inspection",
           "National conformity, installation and first-line service",
         ],
       },
@@ -214,12 +214,12 @@ export const landingContent = {
         "Rail-compatible export packing from Chongqing. FCA, CIP and DAP options are quoted per shipment; freight and import charges are never presented as fixed long-term rates.",
     },
     engineering: {
-      eyebrow: "Engineering before volume",
-      title: "Documents a production team can use—not a marketing PDF alone.",
+      eyebrow: "Technical release",
+      title: "Production documents tied to the approved construction.",
       items: [
         {
           title: "System definition",
-          text: "Profile sections, kg/m, bill of materials, colour and batch rules, gasket and connector mapping.",
+          text: "Profile sections, mass per metre, bill of materials, colour and batch rules, plus gasket and connector maps.",
         },
         {
           title: "Fabrication package",
@@ -227,27 +227,27 @@ export const landingContent = {
         },
         {
           title: "Evidence register",
-          text: "Report number, laboratory, specimen size, glazing, hardware, date and the exact scope a result supports.",
+          text: "Report number, laboratory, specimen size, insulating-glass make-up, hardware, date and stated scope.",
         },
         {
           title: "Launch support",
-          text: "Samples, first-article review, remote training, issue traceability, change control and replenishment planning.",
+          text: "Samples, first-article review, remote training, issue log, change control and replacement-part planning.",
         },
       ],
       note:
-        "Cold-climate suitability is confirmed system by system. Frame depth, thermal-break width or material conductivity alone is not used to infer whole-window performance.",
+        "Cold-region performance is checked for the finished construction. Frame depth, thermal-barrier width and material conductivity do not establish whole-window performance on their own.",
     },
     compliance: {
       label: "Country-specific conformity",
-      title: "Customs union is not the same as one window certificate.",
+      title: "Confirm the route for the product and destination.",
       text:
-        "Russia, Kazakhstan and Belarus require separate confirmation of the applicable national route, importer/applicant, sample scope and labelling. We align classification and documentation with the actual supply form before the first shipment; we do not market one generic EAEU certificate as universal approval.",
+        "The importer and a local conformity body determine the applicable standard, applicant, specimen and marking. P1 material kits, P2 machined parts, P3 CKD kits and finished units may not share the same customs or conformity scope.",
     },
     factory: {
       eyebrow: "Manufacturing base · Chongqing, China",
-      title: "A 100,000 m² integrated base supporting profiles, finishing, machining and system assembly.",
+      title: "One 100,000 m² site for profiles, finishing, machining and system assembly.",
       text:
-        "Export programmes are released by system and process capacity—not by a headline factory number. Equipment, inspection points, packing and monthly capacity are confirmed during qualification.",
+        "The factory area describes the manufacturing base, not the capacity reserved for an order. Equipment, inspection points, packing method and available monthly output are confirmed for the selected system during qualification.",
       imageAlt: "PINDÉ integrated manufacturing base in Chongqing, China",
     },
     faq: {
@@ -256,35 +256,35 @@ export const landingContent = {
       items: [
         {
           q: "Do you ship complete glazed windows for retail projects?",
-          a: "Not as the default model. We focus on complete profile-system kits, machined semi-finished parts and glass-free CKD kits. Glazing, final assembly, national testing and installation remain local. A finished sample window can be supplied for certification, training or a qualified high-value project.",
+          a: "Normally no. The regular scope is a system material kit, machined profiles or a glass-free CKD kit. Insulating glass units, final assembly, destination-market assessment and installation remain local. A finished sample may be quoted for testing or training when its size and purpose are agreed.",
         },
         {
           q: "Can aluminium and FRP be included in the same enquiry?",
-          a: "Yes. They are quoted as separate system lines with separate BOMs, processing methods, evidence registers and quality plans. A shared shipment does not merge product identity or performance responsibility.",
+          a: "Yes. They remain separate lines with their own bill of materials, processing method, evidence register and inspection plan. Sharing a container does not make the constructions or their performance evidence interchangeable.",
         },
         {
           q: "What do you need for a technical quotation?",
-          a: "Your company role, destination country and city, current system, annual volume, equipment list, window schedule or drawings, glazing concept, target standard and preferred supply format. Upload a PDF, DWG, DXF, spreadsheet or ZIP with the RFQ.",
+          a: "Send the destination city, company role, expected volume, equipment list, opening schedule or drawings, glazing concept, required finish, target standard and preferred supply format. PDF, DWG, DXF, spreadsheet and ZIP attachments are accepted.",
         },
         {
           q: "How are samples and pilot orders handled?",
-          a: "We begin with profile sections and corner samples, then a paid pilot of 3–10 glass-free kits. Sample and freight costs can be credited against an agreed first purchase threshold.",
+          a: "The normal sequence is profile sections, corner-joint specimens and then a paid pilot of 3–10 glass-free kits. Any credit for sample or freight cost is written into the quotation.",
         },
         {
-          q: "Do you provide one EAC certificate for all EAEU countries?",
-          a: "No. Customs circulation and technical conformity are different matters. The route is checked for the actual product form and first country of sale, with a local applicant and testing scope agreed before shipment.",
+          q: "Can one generic EAC document cover every shipment?",
+          a: "It should not be assumed. The importer and appointed local body check the actual goods, intended use, destination and applicable technical regulation or national standard. The applicant and specimen scope are agreed before shipment.",
         },
         {
           q: "Which commercial terms are available?",
-          a: "Initial quotations can be structured on FCA, CIP or DAP terms, with freight, duty and tax shown separately. New programmes start with prepayment; credit terms are considered only after successful repeat business.",
+          a: "Initial quotations can be structured on FCA, CIP or DAP terms, with freight, duty and tax shown separately. New accounts start with prepayment; credit terms are considered only after successful repeat business.",
         },
       ],
     },
     rfq: {
       eyebrow: "Technical RFQ",
-      title: "Send the window schedule. We will map the supply format.",
+      title: "Send the opening schedule and equipment list.",
       text:
-        "Tell us what your factory can do and what must arrive from Chongqing. We will respond with the information gaps, recommended pilot level and the documents needed for a comparable quote.",
+        "State which operations your factory performs and which parts must arrive ready from Chongqing. The technical reply will list missing data, a proposed pilot format and the documents used for the quotation.",
       response: "Technical review target: within 2 business days",
       email: "inquiry@pindesys.com",
       fields: {
@@ -308,7 +308,7 @@ export const landingContent = {
         message: "Project and fabrication requirements",
         messagePlaceholder:
           "Current system, equipment, window types, glazing, sizes, finish, required delivery city and target date...",
-        file: "Window schedule / BOM / drawings",
+        file: "Opening schedule / BOM / drawings",
         fileHelp: "PDF, DWG, DXF, XLS/XLSX, CSV or ZIP · max 8 MB",
         consent:
           "I agree that PINDÉ may use these details to evaluate and respond to this business enquiry.",
@@ -334,12 +334,12 @@ export const landingContent = {
       systems: [
         "Aluminium profile systems",
         "FRP / glass-fibre composite systems",
-        "Both material platforms",
+        "Both material families",
         "Project-specific / not decided",
       ],
       formats: [
-        "P1 · Complete system kit",
-        "P2 · Cut-to-length & machined",
+        "P1 · System material kit",
+        "P2 · Cut-to-length and machined profiles",
         "P3 · Glass-free CKD kit",
         "Samples / pilot only",
         "Not decided",
@@ -355,7 +355,7 @@ export const landingContent = {
     },
     footer: {
       description:
-        "Aluminium and FRP window-system materials, machined components and glass-free CKD kits from Chongqing for local fabrication.",
+        "Aluminium and FRP profile systems, machined components and glass-free CKD kits from Chongqing for local window and door fabrication.",
       systems: "System supply",
       company: "Working model",
       contact: "Contact",
@@ -393,27 +393,27 @@ export const landingContent = {
     headerCta: "Отправить запрос",
     hero: {
       eyebrow: "Чунцин · Системные поставки · Евразия",
-      title: "Системные материалы для локального производства окон.",
+      title: "Оконные и дверные системы, подготовленные под ваше производство.",
       description:
-        "Алюминиевые и стеклокомпозитные профильные системы, детали с механической обработкой и комплекты CKD без стеклопакетов — для оконных производств, переработчиков профильных систем и проектных поставщиков в русскоязычных странах.",
-      primaryCta: "Получить технический пакет",
-      secondaryCta: "Форматы поставки",
-      note: "Мы не продаём окна в розницу. Остекление, окончательная сборка, испытания и монтаж выполняются на месте.",
+        "PINDÉ поставляет производителям в России и Центральной Азии алюминиевые и стеклокомпозитные профильные системы, обработанные детали и CKD-комплекты без стеклопакетов. Степень подготовки в Чунцине определяется по ведомости проёмов и оборудованию заказчика.",
+      primaryCta: "Отправить ведомость проёмов",
+      secondaryCta: "Сравнить форматы поставки",
+      note: "Поставка для бизнеса. Стеклопакеты, окончательная сборка, местное подтверждение соответствия и монтаж обычно выполняются в стране назначения.",
       cards: [
         {
           code: "AL",
           name: "Алюминиевые системы",
-          detail: "Тёплые профили · комплектующие · BOM",
+          detail: "Профили с термовставкой · комплектующие · спецификация",
         },
         {
           code: "FRP",
           name: "Стеклокомпозитные системы",
-          detail: "Пултрузионные профили · соединения · технология",
+          detail: "Пултрузионные профили · квалифицированные соединения · технология",
         },
         {
           code: "CKD",
           name: "Комплекты с обработкой",
-          detail: "Раскрой · фрезеровка · маркировка · упаковка",
+          detail: "Раскрой · механическая обработка · маркировка · упаковка",
         },
       ],
     },
@@ -427,35 +427,35 @@ export const landingContent = {
       ],
     },
     systems: {
-      eyebrow: "Две материальные платформы",
-      title: "Выберите систему. Оставьте изготовление готового окна ближе к объекту.",
+      eyebrow: "Два семейства материалов",
+      title: "Сначала конструкция, затем формат поставки.",
       intro:
-        "Мы поставляем не набор разрозненных хлыстов, а материалы, сопряжения и производственную документацию, необходимые для стабильного изготовления оконно-дверной системы.",
+        "В техническом предложении перечислены профили, уплотнители, соединители, интерфейсы фурнитуры и производственные документы для выбранной конструкции. Ответственность местного производства фиксируется в той же ревизии.",
       items: [
         {
           number: "01",
-          label: "Основная коммерческая линейка",
-          title: "Тёплые алюминиевые оконно-дверные системы",
+          label: "Серийная производственная линейка",
+          title: "Алюминиевые оконные и дверные системы с термовставкой",
           description:
-            "Окрашенные и анодированные профили поставляются как полный системный комплект для раскроя и обработки на месте либо как детали с обработкой и проектные CKD-комплекты.",
+            "В наружных оконных и дверных блоках применяются алюминиевые профили с полиамидными термоизоляционными вставками. Интерьерные раздвижные и складные системы выделены отдельно. Поставка может ограничиваться готовыми хлыстами или включать проектный раскрой, обработку и комплектацию.",
           included: [
-            "Профили рамы, створки, импоста и штапика",
-            "Термовставки, уплотнители EPDM, угловые и соединительные элементы",
-            "Водоотводные детали, ведомость совместимой фурнитуры и полный BOM",
-            "Чертежи обработки, инструкция по сборке и перечень запасных частей",
+            "Профили коробки, створки или полотна, импоста и штапика",
+            "Полиамидные термовставки, уплотнители EPDM, угловые и соединительные элементы",
+            "Детали водоотвода, спецификация фурнитуры и комплектации",
+            "Чертежи механической обработки, инструкция по сборке и перечень запасных частей",
           ],
           keywords:
             "Для закупок по запросам «алюминиевый оконный профиль оптом», «тёплые алюминиевые системы» и «профиль для производства алюминиевых окон».",
         },
         {
           number: "02",
-          label: "Инженерная программа",
+          label: "Линейка с проектной квалификацией",
           title: "Оконные системы из стеклокомпозита / FRP",
           description:
-            "Комплекты пултрузионных профилей из стеклопластика для производителей, которые внедряют материал с низкой теплопроводностью. Каждая система привязана к конкретному BOM, способу соединения и плану испытаний.",
+            "Полностью стеклокомпозитные и алюминиево-композитные системы выпускаются по определённому установочному образцу. Соединения, клей или крепёж, режимы обработки и план испытаний относятся к этой системе и не переносятся с другого композитного изделия.",
           included: [
             "Профили рамы, створки, импоста и штапика",
-            "Угловые соединения, уплотнения и проверенные узлы крепления",
+            "Квалифицированные угловые соединения, уплотнители и узлы крепления",
             "Режимы резки, сверления, склеивания и удаления пыли",
             "Пробные комплекты, приёмка первого изделия и обучение производству",
           ],
@@ -464,17 +464,17 @@ export const landingContent = {
         },
       ],
       evidence:
-        "Показатели теплотехники, прочности и герметичности указываются только для проверенного образца, стеклопакета и объёма испытаний. Непроверенные значения остаются целями проекта, а не рекламными обещаниями.",
+        "Теплотехническое, прочностное или климатическое значение приводится вместе с образцом, формулой стеклопакета и областью протокола. Для другой конструкции оно остаётся требованием проекта до подтверждения.",
     },
     logistics: {
       eyebrow: "Железнодорожная связь из Чунцина",
-      title: "Быстрый железнодорожный маршрут в Центральную Азию и Россию.",
+      title: "Железнодорожная отправка из Чунцина в Центральную Азию и Россию.",
       intro:
-        "Грузовая железная дорога Юйсиньоу связывает нашу производственную базу в Чунцине с пятью странами Центральной Азии и Россией. Ориентировочное время перевозки составляет 7–20 дней в зависимости от направления, что упрощает пополнение запасов и планирование проектов в регионе.",
+        "Международная железнодорожная сеть Чунцина работает через узлы Казахстана и дальнейшие маршруты по Центральной Азии и России. В актуальном расчёте для железнодорожного плеча может использоваться ориентир около 7–20 дней, но фактическую дату определяют забронированный сервис, перегрузка на границе, таможенное оформление и последняя миля.",
       facts: [
         { value: "Чунцин", label: "Производство и отправление" },
-        { value: "6 рынков", label: "Пять стран Центральной Азии + Россия" },
-        { value: "~7–20 дней", label: "Ориентировочный срок по железной дороге" },
+        { value: "Центральная Азия", label: "Железнодорожные узлы и региональные маршруты" },
+        { value: "~7–20 дней", label: "Плановый диапазон только для железнодорожного плеча" },
       ],
       mapAlt:
         "Схема железнодорожного грузового маршрута Юйсиньоу из Чунцина в Казахстан, Узбекистан, Туркменистан, Таджикистан, Кыргызстан и Россию",
@@ -485,33 +485,33 @@ export const landingContent = {
     },
     formats: {
       eyebrow: "Форматы поставки",
-      title: "От системных материалов до полуфабрикатов, готовых к сборке.",
+      title: "Определите, какая обработка выполняется в Чунцине.",
       intro:
-        "Уровень подготовки зависит от оборудования, загрузки, номенклатуры заказов и экономики импорта. В предложении отдельно указываются профиль, обработка, комплектующие, упаковка и перевозка.",
+        "P1, P2 и P3 распределяют раскрой, обработку и комплектацию между PINDÉ и местным производством. В предложении отдельно указываются профили, обработка, комплектующие, упаковка и перевозка.",
       items: [
         {
           level: "P1",
-          title: "Полный системный комплект",
-          tag: "Основной",
-          from: "Готовые профили, уплотнители, угловые и соединительные элементы, водоотвод, BOM и технологические документы.",
+          title: "Системный комплект материалов",
+          tag: "Поставка материалов",
+          from: "Готовые профили, уплотнители, угловые и соединительные элементы, детали водоотвода, спецификация комплектации и технологические документы.",
           local: "Раскрой, обработка, фурнитура, стеклопакеты, сборка, контроль качества и монтаж.",
-          fit: "Действующие оконные производства с пилами и оборудованием для сборки углов.",
+          fit: "Производство с оборудованием для раскроя, обработки и сборки углов.",
         },
         {
           level: "P2",
-          title: "Размерный раскрой и обработка",
-          tag: "Расширенный",
-          from: "Оптимизация раскроя, фрезеровка водоотводов и отверстий под замок, CNC-обработка и маркировка деталей.",
+          title: "Профили в размер с механической обработкой",
+          tag: "Поставка с обработкой",
+          from: "Оптимизация карты раскроя, фрезерование водоотводов и вырезов под замок, обработка на ЧПУ и маркировка деталей.",
           local: "Сборка углов, установка фурнитуры и стеклопакетов, регулировка, приёмка и монтаж.",
-          fit: "Предприятиям, которым нужна дополнительная мощность или контролируемый запуск новой системы.",
+          fit: "Производство, запускающее систему или передающее часть обработки поставщику.",
         },
         {
           level: "P3",
           title: "CKD-комплект без стеклопакетов",
-          tag: "Проектный",
+          tag: "По каждому проёму",
           from: "Обработанные детали по каждому проёму, уплотнения, соединители, согласованная фурнитура и комплект запасных частей.",
-          local: "Подтверждение размеров, окончательная сборка, стеклопакеты, наладка, соответствие требованиям страны и монтаж.",
-          fit: "Платная опытная партия, срочный проект или производственный участок с ограниченной обработкой.",
+          local: "Контроль размеров, окончательная сборка, стеклопакеты, регулировка, подтверждение соответствия и монтаж.",
+          fit: "Платная опытная партия, проектная поставка или участок с ограниченными возможностями обработки.",
         },
       ],
       labels: {
@@ -521,40 +521,40 @@ export const landingContent = {
       },
     },
     process: {
-      eyebrow: "Внедрение у переработчика",
-      title: "Контролируемый путь от чертежа до регулярных поставок.",
+      eyebrow: "Запуск производства",
+      title: "Четыре решения до регулярных поставок.",
       items: [
         {
           number: "01",
           title: "Квалификация системы",
-          text: "Проверяем оборудование, годовой объём, текущие системы, оконную ведомость, стеклопакеты и требования страны назначения.",
+          text: "Проверяем оборудование, ожидаемый объём, текущие системы, ведомость проёмов, стеклопакеты и требования страны назначения.",
         },
         {
           number: "02",
           title: "Фиксация эталонной конструкции",
-          text: "Согласуем код системы, типоразмеры, BOM, сопряжения, доказательную базу и матрицу ответственности.",
+          text: "Согласуем код системы, типоразмеры, спецификацию комплектации, соединения, протоколы и распределение ответственности.",
         },
         {
           number: "03",
           title: "Платная опытная партия",
-          text: "Начинаем с образцов сечений и углов, затем поставляем 3–10 комплектов без стеклопакетов для местной сборки и испытаний.",
+          text: "Проверяем образцы профилей и углов, затем собираем и испытываем типовую партию из 3–10 комплектов без стеклопакетов.",
         },
         {
           number: "04",
           title: "Масштабирование по результатам",
-          text: "Переходим к микропартии, проектной поставке и регулярной программе после подтверждения выхода годных, стыковки, логистики и показателей.",
+          text: "До проектной партии проверяем выход годных, точность сопряжений, упаковку, доставку и закрытие несоответствий.",
         },
       ],
     },
     split: {
-      eyebrow: "Одна согласованная цепочка",
-      title: "Чунцин подготавливает систему. Ваш рынок завершает изготовление окна.",
+      eyebrow: "Распределение ответственности",
+      title: "Подготовленные детали из Чунцина, готовое изделие рядом с объектом.",
       chongqing: {
         title: "PINDÉ · Чунцин",
         items: [
-          "Проектирование системы и управление BOM",
+          "Описание системы и управление спецификацией комплектации",
           "Изготовление профилей, отделка и контроль партии",
-          "Опционально — раскрой, CNC и маркировка комплектов",
+          "Опционально — раскрой, обработка на ЧПУ и маркировка комплектов",
           "Экспортная упаковка, документы и запасные части",
         ],
       },
@@ -563,7 +563,7 @@ export const landingContent = {
         items: [
           "Подтверждение проёмов и окончательных размеров",
           "Местные стеклопакеты и согласованная фурнитура",
-          "Сборка, регулировка и контроль готового окна",
+          "Сборка, регулировка и контроль готового оконного или дверного блока",
           "Национальное соответствие, монтаж и первичный сервис",
         ],
       },
@@ -571,12 +571,12 @@ export const landingContent = {
         "Экспортная упаковка из Чунцина рассчитана в том числе на железнодорожную перевозку. FCA, CIP и DAP рассчитываются для каждой партии; фрахт и импортные платежи не фиксируются как постоянная ставка.",
     },
     engineering: {
-      eyebrow: "Сначала инженерия, затем объём",
-      title: "Документы для производства, а не только рекламный каталог.",
+      eyebrow: "Технический выпуск",
+      title: "Производственные документы для утверждённой конструкции.",
       items: [
         {
           title: "Состав системы",
-          text: "Сечения, масса кг/м, спецификация, правила цвета и партий, карта уплотнений и соединительных элементов.",
+          text: "Сечения, масса профилей на метр, спецификация комплектации, правила по цвету и партиям, карты уплотнителей и соединителей.",
         },
         {
           title: "Технологический пакет",
@@ -584,27 +584,27 @@ export const landingContent = {
         },
         {
           title: "Реестр доказательств",
-          text: "Номер отчёта, лаборатория, размер образца, стеклопакет, фурнитура, дата и точная область применимости результата.",
+          text: "Номер протокола, лаборатория, размер образца, формула стеклопакета, фурнитура, дата и заявленная область применения.",
         },
         {
           title: "Поддержка запуска",
-          text: "Образцы, приёмка первого изделия, дистанционное обучение, прослеживаемость проблем, управление изменениями и пополнение.",
+          text: "Образцы, проверка первого изделия, дистанционное обучение, журнал замечаний, управление изменениями и планирование запасных деталей.",
         },
       ],
       note:
-        "Пригодность для холодного климата подтверждается по каждой системе. Монтажная глубина, ширина терморазрыва или теплопроводность материала сами по себе не заменяют показатель готового окна.",
+        "Показатели для холодного региона проверяются на готовой конструкции. Монтажная глубина, ширина термовставки и теплопроводность материала сами по себе не определяют характеристики оконного блока.",
     },
     compliance: {
       label: "Соответствие по каждой стране",
-      title: "Таможенный союз не означает единый сертификат на окна.",
+      title: "Процедуру определяют для товара и страны назначения.",
       text:
-        "Для России, Казахстана и Беларуси отдельно уточняются национальная процедура, заявитель/импортёр, объём образцов и маркировка. До первой отправки код товара и комплект документов привязываются к фактическому формату поставки. Мы не выдаём общий документ ЕАЭС за универсальное разрешение для всех стран.",
+        "Импортёр и местный орган по оценке соответствия определяют применимый стандарт, заявителя, образец и маркировку. Системные материалы P1, обработанные детали P2, CKD-комплекты P3 и готовые изделия могут иметь разную таможенную классификацию и область оценки.",
     },
     factory: {
       eyebrow: "Производственная база · Чунцин, Китай",
-      title: "Интегрированная база площадью 100 000 м² для профилей, отделки, обработки и сборки систем.",
+      title: "На одной площадке 100 000 м² выполняются профили, отделка, обработка и сборка систем.",
       text:
-        "Экспортная программа подтверждается по конкретной системе и процессу, а не общей цифрой завода. Оборудование, точки контроля, упаковка и месячная мощность уточняются при квалификации.",
+        "Площадь описывает производственную базу, но не зарезервированную мощность заказа. Оборудование, контрольные операции, упаковка и доступный месячный выпуск подтверждаются для выбранной системы при квалификации.",
       imageAlt: "Интегрированная производственная база PINDÉ в Чунцине, Китай",
     },
     faq: {
@@ -613,23 +613,23 @@ export const landingContent = {
       items: [
         {
           q: "Вы поставляете готовые окна со стеклопакетами для розницы?",
-          a: "Не в качестве основной модели. Мы поставляем полные комплекты профильной системы, полуфабрикаты с обработкой и CKD-комплекты без стеклопакетов. Остекление, окончательная сборка, национальные испытания и монтаж остаются на месте. Готовый образец возможен для сертификации, обучения или согласованного высокобюджетного проекта.",
+          a: "Обычно нет. Основной формат — системный комплект материалов, обработанные профили или CKD-комплект без стеклопакетов. Стеклопакеты, окончательная сборка, местная оценка соответствия и монтаж остаются в стране назначения. Готовый образец можно рассчитать для испытаний или обучения после согласования размера и назначения.",
         },
         {
           q: "Можно запросить алюминий и FRP в одной заявке?",
-          a: "Да. Это две отдельные системные позиции с собственными BOM, технологией, реестром доказательств и планом качества. Совместная перевозка не объединяет идентичность продукции и ответственность за показатели.",
+          a: "Да. Это остаются две отдельные позиции со своими спецификациями комплектации, технологиями, реестрами протоколов и планами контроля. Перевозка в одном контейнере не делает конструкции и их доказательную базу взаимозаменяемыми.",
         },
         {
           q: "Что требуется для технического предложения?",
-          a: "Роль компании, страна и город назначения, текущая система, годовой объём, список оборудования, оконная ведомость или чертежи, стеклопакет, целевой стандарт и предпочтительный формат поставки. К запросу можно приложить PDF, DWG, DXF, таблицу или ZIP.",
+          a: "Укажите город назначения, роль компании, ожидаемый объём, перечень оборудования, ведомость проёмов или чертежи, формулу стеклопакета, покрытие, целевой стандарт и формат поставки. Можно приложить PDF, DWG, DXF, таблицу или ZIP.",
         },
         {
           q: "Как заказываются образцы и опытная партия?",
-          a: "Сначала поставляются образцы сечений и угловых соединений, затем платная партия из 3–10 комплектов без стеклопакетов. Стоимость образцов и перевозки может быть зачтена при достижении согласованного объёма первой закупки.",
+          a: "Обычная последовательность: образцы профилей, образцы угловых соединений и затем платная партия из 3–10 комплектов без стеклопакетов. Зачёт стоимости образцов или перевозки действует только тогда, когда он указан в предложении.",
         },
         {
-          q: "Есть ли единый сертификат EAC для всех стран ЕАЭС?",
-          a: "Нет. Таможенное обращение и техническое соответствие — разные вопросы. Процедура определяется для фактического вида товара и первой страны продажи; местный заявитель и объём испытаний согласуются до отправки.",
+          q: "Можно ли использовать один общий документ EAC для любой поставки?",
+          a: "Это нельзя принимать по умолчанию. Импортёр и назначенный местный орган проверяют фактический товар, назначение, страну обращения и применимый техрегламент либо национальный стандарт. Заявитель и образец согласуются до отправки.",
         },
         {
           q: "На каких условиях возможна поставка?",
@@ -639,9 +639,9 @@ export const landingContent = {
     },
     rfq: {
       eyebrow: "Технический запрос",
-      title: "Пришлите оконную ведомость — мы предложим формат поставки.",
+      title: "Пришлите ведомость проёмов и перечень оборудования.",
       text:
-        "Укажите, какие операции выполняет ваше производство и что должно прибыть из Чунцина. В ответ мы обозначим недостающие данные, рекомендуемый уровень опытной партии и документы для сопоставимого предложения.",
+        "Укажите, какие операции выполняются на вашем производстве и какие детали должны прибыть из Чунцина готовыми. В техническом ответе будут перечислены недостающие данные, предлагаемый формат пилота и документы, положенные в основу расчёта.",
       response: "Целевой срок технического разбора — 2 рабочих дня",
       email: "inquiry@pindesys.com",
       fields: {
@@ -665,7 +665,7 @@ export const landingContent = {
         message: "Проект и возможности производства",
         messagePlaceholder:
           "Текущая система, оборудование, типы окон, стеклопакеты, размеры, отделка, город поставки и требуемый срок...",
-        file: "Оконная ведомость / BOM / чертежи",
+        file: "Ведомость проёмов / спецификация / чертежи",
         fileHelp: "PDF, DWG, DXF, XLS/XLSX, CSV или ZIP · до 8 МБ",
         consent:
           "Я согласен на использование этих данных компанией PINDÉ для оценки и ответа на деловой запрос.",
@@ -691,12 +691,12 @@ export const landingContent = {
       systems: [
         "Алюминиевые профильные системы",
         "Системы из стеклокомпозита / FRP",
-        "Обе материальные платформы",
+        "Обе группы материалов",
         "Проектная система / пока не определено",
       ],
       formats: [
-        "P1 · Полный системный комплект",
-        "P2 · Размерный раскрой и обработка",
+        "P1 · Системный комплект материалов",
+        "P2 · Профили в размер с обработкой",
         "P3 · CKD-комплект без стеклопакетов",
         "Только образцы / опытная партия",
         "Пока не определено",
@@ -712,7 +712,7 @@ export const landingContent = {
     },
     footer: {
       description:
-        "Алюминиевые и стеклокомпозитные системные материалы, детали с обработкой и CKD-комплекты без стеклопакетов из Чунцина для локального производства.",
+        "Алюминиевые и стеклокомпозитные профильные системы, обработанные детали и CKD-комплекты без стеклопакетов из Чунцина для локального производства окон и дверей.",
       systems: "Системные поставки",
       company: "Модель работы",
       contact: "Контакты",

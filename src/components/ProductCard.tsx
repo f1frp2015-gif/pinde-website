@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import type { Product } from "@/data/products";
+import { getLocalizedAluminiumProduct } from "@/content/aluminiumProductCopy";
 import { productImageAlt } from "@/lib/product-image-alt";
 import PindeMark from "./PindeMark";
 
@@ -12,6 +13,8 @@ type Props = {
 };
 
 export default function ProductCard({ product, href, locale = "en" }: Props) {
+  const localizedProduct = getLocalizedAluminiumProduct(product, locale);
+
   return (
     <Link
       href={href ?? `/en/systems/aluminium/${product.slug}`}
@@ -22,7 +25,7 @@ export default function ProductCard({ product, href, locale = "en" }: Props) {
         {product.images.length > 0 ? (
           <Image
             src={product.images[0]}
-            alt={productImageAlt(product, locale)}
+            alt={productImageAlt(localizedProduct, locale)}
             fill
             unoptimized
             className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -37,16 +40,16 @@ export default function ProductCard({ product, href, locale = "en" }: Props) {
 
       <div className="p-[34px]">
         <p className="text-[9px] font-medium tracking-[2px] uppercase text-bronze mb-[8px]">
-          {product.series} Series
+          {product.series} {locale === "ru" ? "серия" : "series"}
         </p>
         <h3 className="font-[family-name:var(--font-serif)] text-[22px] font-normal text-alabaster mb-[8px] tracking-[0.01em] group-hover:text-bronze transition-colors">
-          {product.name}
+          {localizedProduct.name}
         </h3>
         <p className="text-[13px] text-warm line-clamp-2 mb-[21px]">
-          {product.description}
+          {localizedProduct.description}
         </p>
         <span className="inline-flex items-center gap-2 text-[11px] tracking-[2px] uppercase text-bronze">
-          Specifications{" "}
+          {locale === "ru" ? "Технические данные" : "Technical data"}{" "}
           <ArrowRight
             size={12}
             className="group-hover:translate-x-1 transition-transform"

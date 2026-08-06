@@ -43,7 +43,7 @@ export default function ContactPage({ locale }: Props) {
                 <span className="block text-[10px] font-bold uppercase tracking-[0.08em] text-muted mb-1">
                   {isRu ? "Головной офис и завод" : "Head Office & Factory"}
                 </span>
-                <span>{BRAND.address}</span>
+                <span>{isRu ? BRAND.addressRu : BRAND.address}</span>
               </div>
               <div>
                 <span className="block text-[10px] font-bold uppercase tracking-[0.08em] text-muted mb-1">

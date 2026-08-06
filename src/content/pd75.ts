@@ -58,7 +58,7 @@ export const pd75Content: Record<PageLocale, Pd75Content> = {
     seo: {
       title: "PD75 Aluminium-Composite Window | 45mm Ultra FRP Core | PINDÉ",
       description:
-        "PD75 75mm aluminium-composite window system with a 45mm Ultra FRP Core engineered to support strength, energy-efficient insulation and acoustic separation.",
+        "PD75 is a 75 mm aluminium-composite window system. A 45 mm pultruded GRPU core connects the aluminium shells and forms the insulated structural zone.",
       keywords: [
         "PD75 window system",
         "Ultra FRP Core window",
@@ -71,17 +71,17 @@ export const pd75Content: Record<PageLocale, Pd75Content> = {
     title: "PD75 aluminium-composite window with 45mm Ultra FRP Core",
     eyebrow: "FRP family · PD75 series",
     intro:
-      "A 75mm aluminium-composite platform built around a 45mm Ultra FRP Core: a pultruded glass-fibre reinforced polyurethane (GRPU) element that structurally connects the inner and outer aluminium shells. The wide, low-conductivity core supports connection strength, energy-efficient insulation and acoustic separation in one system.",
-    supplyStatus: "Engineering programme — project qualification required",
+      "PD75 is a 75 mm aluminium-composite window system. Its 45 mm Ultra FRP Core is a pultruded glass-fibre reinforced polyurethane (GRPU) element that connects the interior and exterior aluminium shells. The released window build must define the core material, corner connection, glazing, seals and hardware.",
+    supplyStatus: "Project-qualified supply · system evidence required",
     heroCards: [
-      { label: "Platform depth", value: "75 mm" },
+      { label: "Frame construction depth", value: "75 mm" },
       { label: "Ultra FRP Core", value: "45 mm" },
-      { label: "Strength · thermal · acoustic", value: "3-in-1" },
+      { label: "Profile construction", value: "Aluminium + GRPU" },
       { label: "Opening modes", value: "2 variants" },
     ],
     identityTitle: "The structural heart of PD75",
     identity:
-      "PD75 is an aluminium-composite system, not a full-FRP frame. Its Ultra FRP Core replaces a conventional narrow polyamide bridge and forms the structural connection between the inner and outer aluminium shells. Continuous glass-fibre reinforcement and a polyurethane matrix combine rigidity and dimensional stability with low thermal conductivity. PINDÉ therefore manages PD75 under the FRP engineering programme, with composite-material traceability, connection testing and project-specific whole-window verification.",
+      "PD75 is an aluminium-composite system, not a full-FRP frame. Its Ultra FRP Core replaces a conventional narrow polyamide thermal barrier and connects the two aluminium shells. Continuous glass fibres provide reinforcement; the polyurethane matrix forms the low-conductivity core. Release for supply requires material traceability, connection test evidence and whole-window verification for the ordered construction.",
     benefitsTitle: "One core, three contributions",
     benefits: [
       {
@@ -122,7 +122,7 @@ export const pd75Content: Record<PageLocale, Pd75Content> = {
           "The inward-opening sash supports both full opening and tilt ventilation. In tilt mode, ventilation remains available while helping limit direct rain entry.",
         features: [
           "Inward turn and tilt ventilation",
-          "Shared 45mm Ultra FRP Core platform",
+          "Shared 45 mm Ultra FRP Core profile family",
           "European C-groove hardware interface",
           "Straight frame-and-sash interior geometry",
         ],
@@ -133,16 +133,16 @@ export const pd75Content: Record<PageLocale, Pd75Content> = {
       { label: "System family", value: "PD75" },
       { label: "Core identity", value: "Ultra FRP Core" },
       { label: "Construction", value: "Aluminium shells + pultruded GRPU structural core" },
-      { label: "Nominal platform depth", value: "75 mm" },
+      { label: "Nominal frame construction depth", value: "75 mm" },
       { label: "Thermal-core width", value: "45 mm" },
       { label: "Aluminium profile wall", value: "1.8 mm" },
       { label: "Hardware interface", value: "European C-groove; project schedule required" },
-      { label: "Glazing", value: "Double or triple insulating glass; project-specific build-up" },
+      { label: "Glazing", value: "Double- or triple-glazed insulating glass unit; project-specific build-up" },
       { label: "Supply route", value: "Qualified system profiles or glass-free CKD package" },
     ],
     drawingsTitle: "PD75 system architecture",
     drawingsIntro:
-      "The section drawings show the 75mm platform, 45mm core and principal frame, sash and mullion references. XDCX codes are retained as component identifiers; PD75 is the updated system-series name.",
+      "The section drawings show the 75 mm frame construction, 45 mm core and the principal frame, sash and mullion profiles. XDCX codes remain as component identifiers; PD75 is the public series name.",
     performanceTitle: "Source-catalogue performance references",
     performanceIntro:
       "The source system catalogue reports the following values for the listed glazing build-ups. They are reference results for the catalogue specimen, not automatic ratings for another size, glazing package, fabrication route or national standard.",
@@ -196,17 +196,17 @@ export const pd75Content: Record<PageLocale, Pd75Content> = {
     title: "Алюминиево-композитное окно PD75 с Ultra FRP Core 45 мм",
     eyebrow: "Семейство FRP · серия PD75",
     intro:
-      "Алюминиево-композитная платформа глубиной 75 мм построена вокруг Ultra FRP Core шириной 45 мм — пултрузионного стеклокомпозитного элемента GRPU, который конструктивно соединяет внутреннюю и наружную алюминиевые оболочки. Широкий низкотеплопроводный сердечник одновременно поддерживает прочность, энергоэффективную теплоизоляцию и акустическое разделение.",
-    supplyStatus: "Инженерная программа — требуется квалификация проекта",
+      "PD75 — алюминиево-композитная оконная система с монтажной глубиной 75 мм. Ultra FRP Core шириной 45 мм представляет собой пултрузионный стеклокомпозитный элемент GRPU, соединяющий внутреннюю и наружную алюминиевые оболочки. В рабочей комплектации фиксируют материал сердечника, угловое соединение, стеклопакет, уплотнения и фурнитуру.",
+    supplyStatus: "Поставка после квалификации проекта · требуется доказательная база системы",
     heroCards: [
-      { label: "Глубина платформы", value: "75 мм" },
+      { label: "Монтажная глубина", value: "75 мм" },
       { label: "Ultra FRP Core", value: "45 мм" },
-      { label: "Прочность · тепло · звук", value: "3 в 1" },
+      { label: "Конструкция профиля", value: "Алюминий + GRPU" },
       { label: "Схемы открывания", value: "2 варианта" },
     ],
     identityTitle: "Несущая основа PD75",
     identity:
-      "PD75 — алюминиево-композитная система, а не полностью стеклокомпозитная рама. Ultra FRP Core заменяет обычную узкую полиамидную вставку и формирует конструктивную связь внутренней и наружной алюминиевых оболочек. Непрерывное стекловолокно и полиуретановая матрица объединяют жёсткость и стабильность геометрии с низкой теплопроводностью. Поэтому PINDÉ ведёт PD75 в инженерной программе FRP: с прослеживаемостью композита, испытаниями соединений и проектной проверкой готового окна.",
+      "PD75 — алюминиево-композитная система, а не полностью стеклокомпозитный оконный блок. Ultra FRP Core заменяет обычную узкую полиамидную термоизоляционную вставку и соединяет две алюминиевые оболочки. Непрерывное стекловолокно армирует сердечник, а полиуретановая матрица образует низкотеплопроводную зону. Для поставки требуются прослеживаемость материала, протоколы соединений и проверка оконного блока в заказанной комплектации.",
     benefitsTitle: "Один сердечник — три функции",
     benefits: [
       {
@@ -247,7 +247,7 @@ export const pd75Content: Record<PageLocale, Pd75Content> = {
           "Створка открывается внутрь и поддерживает поворотный и откидной режимы. Откидное положение даёт проветривание и помогает ограничить прямое попадание дождя.",
         features: [
           "Поворотное и откидное открывание внутрь",
-          "Единая платформа с Ultra FRP Core 45 мм",
+          "Единое семейство профилей с Ultra FRP Core 45 мм",
           "Европаз C для фурнитуры",
           "Прямая внутренняя геометрия рамы и створки",
         ],
@@ -259,15 +259,15 @@ export const pd75Content: Record<PageLocale, Pd75Content> = {
       { label: "Наименование сердечника", value: "Ultra FRP Core" },
       { label: "Конструкция", value: "Алюминиевые оболочки + несущий пултрузионный сердечник GRPU" },
       { label: "Номинальная глубина", value: "75 мм" },
-      { label: "Ширина термомоста", value: "45 мм" },
+      { label: "Ширина теплоизоляционного сердечника", value: "45 мм" },
       { label: "Стенка алюминиевого профиля", value: "1,8 мм" },
       { label: "Интерфейс фурнитуры", value: "Европаз C; спецификация согласуется по проекту" },
-      { label: "Остекление", value: "Двойное или тройное остекление по расчёту проекта" },
+      { label: "Остекление", value: "Однокамерный или двухкамерный стеклопакет по расчёту проекта" },
       { label: "Форма поставки", value: "Квалифицированная система профилей или CKD без стеклопакета" },
     ],
     drawingsTitle: "Архитектура системы PD75",
     drawingsIntro:
-      "На чертежах показаны платформа глубиной 75 мм, сердечник шириной 45 мм и основные сечения рамы, створки и импоста. Коды XDCX сохранены как обозначения компонентов; PD75 — обновлённое название серии.",
+      "На чертежах показаны монтажная глубина 75 мм, сердечник шириной 45 мм и основные сечения коробки, створки и импоста. Коды XDCX сохранены как обозначения компонентов; PD75 — публичное название серии.",
     performanceTitle: "Справочные показатели исходного каталога",
     performanceIntro:
       "В исходном каталоге системы приведены следующие значения для указанных стеклопакетов. Это результаты каталожного образца, а не автоматический рейтинг для другого размера, стеклопакета, технологии сборки или национального стандарта.",

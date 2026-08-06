@@ -319,7 +319,7 @@ export default function AboutPindePage({ locale, content }: Props) {
           <div className="border-t-4 border-[#DAAF37] bg-white p-6 lg:p-8">
             <div className="flex items-center gap-3 text-[#DAAF37]">
               <Factory size={21} />
-              <span className="text-[11px] font-bold uppercase tracking-[0.08em]">PINDÉ / QA REGISTER</span>
+              <span className="text-[11px] font-bold uppercase tracking-[0.08em]">{locale === "ru" ? "PINDÉ / РЕЕСТР ОТК" : "PINDÉ / QA REGISTER"}</span>
             </div>
             <div className="mt-6 grid sm:grid-cols-2">
               {content.quality.tags.map((tag, index) => (

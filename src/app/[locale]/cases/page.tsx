@@ -13,11 +13,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   if (!isPageLocale(locale)) notFound();
   const title = locale === "ru"
-    ? "Конфигурации систем — Решения для холодного климата и ЕАЭС | PINDÉ"
-    : "System Configurations — Cold-Climate & EAEU Window Solutions | PINDÉ";
+    ? "Конфигурации оконных систем для холодных регионов | PINDÉ"
+    : "Window System Configurations for Cold Regions | PINDÉ";
   const description = locale === "ru"
-    ? "Проверенные конфигурации систем для оконных производств в России, Казахстане, Беларуси и СНГ. Тёплый алюминий, стеклокомпозит FRP, CKD-поставки с применимыми стандартами ГОСТ, EN, NFRC."
-    : "Verified system configurations for window fabricators in Russia, Kazakhstan, Belarus, and CIS. Thermally broken aluminium, FRP composite, and CKD supply examples with applicable GOST, EN, and NFRC standards.";
+    ? "Справочные алюминиевые, FRP и CKD-конфигурации для производств России и Центральной Азии. Стандарты и протоколы уточняются по проекту."
+    : "Reference aluminium, FRP and glass-free CKD configurations for fabricators in Russia and Central Asia, with project-specific standards and evidence.";
   const canonical = `https://pindesys.com/${locale}/cases`;
   return {
     title: { absolute: title },

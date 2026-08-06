@@ -40,7 +40,7 @@ export const coldClimateFrpCategoryContent: Record<PageLocale, ColdClimateFrpCat
     seo: {
       title: "Cold-Climate FRP Window & Door Systems | PINDÉ",
       description:
-        "Cold-climate full-FRP category with PHI-certified FD90 phB passive window system and FDTL140 side-press sliding doors for qualified winter projects.",
+        "Full-FRP systems for cold-region projects: the FD90 PHI component window and the FDTL140 compression-seal sliding door set, both subject to configuration review.",
       keywords: [
         "cold climate FRP systems",
         "fiberglass windows for extreme cold",
@@ -51,30 +51,30 @@ export const coldClimateFrpCategoryContent: Record<PageLocale, ColdClimateFrpCat
         "Grade 10 thermal window system",
       ],
     },
-    title: "Cold-climate flagship systems",
-    eyebrow: "Dedicated FRP category · FD90 + FDTL140",
+    title: "Full-FRP systems for cold-region projects",
+    eyebrow: "FD90 window · FDTL140 sliding door set",
     intro:
-      "A focused category for the two full-FRP systems engineered around demanding winter envelopes. FD90 covers high-insulation casement and tilt-turn openings; FDTL140 extends cold-climate performance to large side-press sliding doors. No other PINDÉ systems are grouped in this category.",
-    supplyStatus: "Dedicated cold-climate category — project qualification required",
+      "This category contains two full-FRP systems. FD90 covers casement and tilt-and-turn window units; FDTL140 covers large sliding door sets with leaf compression at closing. Each project is checked against the cited certificate or catalogue configuration.",
+    supplyStatus: "Catalogue and certificate data available · project qualification required",
     heroCards: [
       { label: "Systems in category", value: "2" },
-      { label: "Frame depths", value: "90 + 140 mm" },
+      { label: "Construction depths", value: "90 + 140 mm" },
       { label: "Catalogue thermal grade", value: "Grade 10" },
-      { label: "Product route", value: "Full-FRP" },
+      { label: "Profile construction", value: "Full-FRP" },
     ],
     scopeTitle: "A category with a clear boundary",
     scopeIntro:
-      "This category is defined by material route, winter-performance positioning and verified product scope. PD75 and PD95 remain together in the separate aluminium-composite category within the broader FRP family.",
+      "The grouping is based on profile construction and documented cold-region data. PD75 and PD95 use aluminium-composite sections and therefore remain in a separate category.",
     scopeItems: [
       {
         title: "Only two named systems",
         description:
-          "The category contains FD90 and FDTL140 only, giving buyers a direct path to the two winter-focused full-FRP platforms.",
+          "The category contains FD90 and FDTL140 only: one window system and one compression-seal sliding door system.",
       },
       {
         title: "Full-FRP construction",
         description:
-          "Both systems use pultruded glass-fibre composite profiles throughout the frame rather than an aluminium shell with a composite thermal core.",
+          "Both systems use pultruded glass-fibre composite profiles for the frame construction rather than aluminium shells connected by a composite insulating core.",
       },
       {
         title: "Cold-climate qualification",
@@ -84,7 +84,7 @@ export const coldClimateFrpCategoryContent: Record<PageLocale, ColdClimateFrpCat
     ],
     productsTitle: "Two systems in the category",
     productsIntro:
-      "Choose by opening type and scale: FD90 for casement and tilt-turn windows, or FDTL140 for heavy side-press sliding doors.",
+      "Choose by opening type and leaf size: FD90 for casement and tilt-and-turn windows, or FDTL140 for compression-seal sliding doors.",
     categoryLabel: "Cold-climate category",
     comparisonTitle: "Category comparison",
     comparisonIntro:
@@ -95,12 +95,12 @@ export const coldClimateFrpCategoryContent: Record<PageLocale, ColdClimateFrpCat
       fdtl140: "FDTL140",
     },
     comparisonRows: [
-      { criterion: "Product type", fd90: "Casement / tilt-turn window", fdtl140: "Side-press sliding door" },
+      { criterion: "Product type", fd90: "Casement / tilt-and-turn window", fdtl140: "Compression-seal sliding door set" },
       { criterion: "Construction", fd90: "Full-FRP", fdtl140: "Full-FRP" },
-      { criterion: "Nominal frame depth", fd90: "90 mm", fdtl140: "140 mm" },
+      { criterion: "Nominal construction depth", fd90: "90 mm", fdtl140: "140 mm" },
       { criterion: "Maximum sash / leaf load", fd90: "130 kg", fdtl140: "200 kg" },
       { criterion: "Catalogue frame Uf", fd90: "0.85 W/(m²·K)", fdtl140: "0.90 W/(m²·K)" },
-      { criterion: "Best listed whole-unit Uw", fd90: "0.85 W/(m²·K)", fdtl140: "1.02 W/(m²·K)" },
+      { criterion: "Listed whole-unit Uw", fd90: "0.85 W/(m²·K)", fdtl140: "1.02 W/(m²·K)" },
       { criterion: "Catalogue thermal grade", fd90: "Grade 10", fdtl140: "Grade 10" },
       { criterion: "PHI component certificate", fd90: "2491wi03 · phB · valid through 2026", fdtl140: "Not stated" },
     ],
@@ -116,7 +116,7 @@ export const coldClimateFrpCategoryContent: Record<PageLocale, ColdClimateFrpCat
     seo: {
       title: "Системы FRP для холодного климата | PINDÉ",
       description:
-        "Категория полностью FRP для холодного климата: сертифицированные PHI окна FD90 класса phB и раздвижные двери FDTL140 для квалифицированных зимних проектов.",
+        "Системы из FRP для холодных регионов: оконный блок FD90 с сертификатом компонента PHI и раздвижной дверной блок FDTL140 с прижимом створки.",
       keywords: [
         "системы FRP для холодного климата",
         "стеклокомпозитные окна для сильного мороза",
@@ -127,30 +127,30 @@ export const coldClimateFrpCategoryContent: Record<PageLocale, ColdClimateFrpCat
         "оконная система класс теплоизоляции 10",
       ],
     },
-    title: "Флагманские системы для холодного климата",
-    eyebrow: "Отдельная категория FRP · FD90 + FDTL140",
+    title: "Системы из FRP для холодных регионов",
+    eyebrow: "Оконный блок FD90 · раздвижной дверной блок FDTL140",
     intro:
-      "Специализированная категория из двух полностью FRP систем для суровых зимних ограждающих конструкций. FD90 закрывает поворотные и поворотно-откидные проёмы, а FDTL140 переносит зимнюю энергоэффективность на крупные раздвижные двери с боковым прижимом. Другие системы PINDÉ в эту категорию не входят.",
-    supplyStatus: "Отдельная категория для холодного климата — требуется квалификация проекта",
+      "В категорию входят две системы из FRP. FD90 предназначена для поворотных и поворотно-откидных оконных блоков; FDTL140 — для крупных раздвижных дверных блоков с прижимом створки при закрывании. Каждый проект проверяется по конфигурации, указанной в сертификате или каталоге.",
+    supplyStatus: "Доступны данные каталога и сертификата · требуется квалификация проекта",
     heroCards: [
       { label: "Систем в категории", value: "2" },
-      { label: "Глубина рам", value: "90 + 140 мм" },
+      { label: "Монтажная глубина", value: "90 + 140 мм" },
       { label: "Каталожный класс теплоизоляции", value: "Класс 10" },
-      { label: "Материальный маршрут", value: "Полностью FRP" },
+      { label: "Конструкция профилей", value: "Полностью FRP" },
     ],
     scopeTitle: "Категория с чёткими границами",
     scopeIntro:
-      "Категория определяется материалом, зимним позиционированием и подтверждённым продуктовым составом. PD75 и PD95 остаются вместе в отдельной алюминиево-композитной категории внутри более широкого семейства FRP.",
+      "Группировка основана на конструкции профилей и документированных данных для холодного климата. PD75 и PD95 имеют алюминиево-композитные сечения и поэтому остаются в отдельной категории.",
     scopeItems: [
       {
         title: "Только две системы",
         description:
-          "В категорию входят исключительно FD90 и FDTL140 — прямой выбор между двумя зимними платформами полностью FRP.",
+          "В категорию входят только FD90 и FDTL140: одна оконная и одна раздвижная дверная система.",
       },
       {
         title: "Конструкция полностью FRP",
         description:
-          "Обе системы используют пултрузионные стеклокомпозитные профили по всему сечению рамы, а не алюминиевые оболочки с композитным сердечником.",
+          "Обе системы используют пултрузионные стеклокомпозитные профили в конструкции коробки и створки, без алюминиевых оболочек, соединённых композитным теплоизоляционным сердечником.",
       },
       {
         title: "Квалификация для холода",
@@ -160,7 +160,7 @@ export const coldClimateFrpCategoryContent: Record<PageLocale, ColdClimateFrpCat
     ],
     productsTitle: "Две системы в категории",
     productsIntro:
-      "Выбор определяется типом и масштабом проёма: FD90 для поворотных и поворотно-откидных окон, FDTL140 для тяжёлых раздвижных дверей с боковым прижимом.",
+      "Выбор определяется типом открывания и размером створки: FD90 для поворотных и поворотно-откидных окон, FDTL140 для раздвижных дверных блоков с прижимом створки.",
     categoryLabel: "Категория для холодного климата",
     comparisonTitle: "Сравнение систем категории",
     comparisonIntro:
@@ -171,12 +171,12 @@ export const coldClimateFrpCategoryContent: Record<PageLocale, ColdClimateFrpCat
       fdtl140: "FDTL140",
     },
     comparisonRows: [
-      { criterion: "Тип продукта", fd90: "Поворотное / поворотно-откидное окно", fdtl140: "Раздвижная дверь с боковым прижимом" },
+      { criterion: "Тип изделия", fd90: "Поворотный / поворотно-откидной оконный блок", fdtl140: "Раздвижной дверной блок с прижимом створки" },
       { criterion: "Конструкция", fd90: "Полностью FRP", fdtl140: "Полностью FRP" },
-      { criterion: "Номинальная глубина рамы", fd90: "90 мм", fdtl140: "140 мм" },
+      { criterion: "Номинальная монтажная глубина", fd90: "90 мм", fdtl140: "140 мм" },
       { criterion: "Максимальная масса створки", fd90: "130 кг", fdtl140: "200 кг" },
-      { criterion: "Каталожный Uf рамы", fd90: "0,85 Вт/(м²·K)", fdtl140: "0,90 Вт/(м²·K)" },
-      { criterion: "Лучший каталожный Uw изделия", fd90: "0,85 Вт/(м²·K)", fdtl140: "1,02 Вт/(м²·K)" },
+      { criterion: "Каталожный Uf коробки", fd90: "0,85 Вт/(м²·K)", fdtl140: "0,90 Вт/(м²·K)" },
+      { criterion: "Каталожный Uw изделия", fd90: "0,85 Вт/(м²·K)", fdtl140: "1,02 Вт/(м²·K)" },
       { criterion: "Каталожный класс теплоизоляции", fd90: "Класс 10", fdtl140: "Класс 10" },
       { criterion: "Сертификат компонента PHI", fd90: "2491wi03 · phB · действует до конца 2026 года", fdtl140: "Не указан" },
     ],
