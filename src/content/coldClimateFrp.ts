@@ -197,7 +197,7 @@ export const coldClimateFrpSystems: Record<
         "Qualification gate: catalogue thermal and performance values apply only to the identified configuration. Final claims must be confirmed for the ordered dimensions, glazing, spacer, hardware, seals, corner joints, installation node and destination-market test method.",
       ctaTitle: "Qualify FD90 for your cold-climate project",
       cta: "Request the FD90 technical pack",
-      backLabel: "Back to FRP systems",
+      backLabel: "Back to cold-climate category",
     },
     ru: {
       slug: "fd90",
@@ -319,7 +319,7 @@ export const coldClimateFrpSystems: Record<
         "Квалификационный барьер: каталожные теплотехнические и эксплуатационные значения относятся только к указанной конфигурации. Итоговые показатели подтверждаются для заказанных размеров, стеклопакета, дистанционной рамки, фурнитуры, уплотнений, угловых соединений, монтажного узла и метода испытаний целевого рынка.",
       ctaTitle: "Квалифицировать FD90 для холодного климата",
       cta: "Запросить технический пакет FD90",
-      backLabel: "Назад к системам FRP",
+      backLabel: "Назад в категорию холодного климата",
     },
   },
   fdtl140: {
@@ -443,7 +443,7 @@ export const coldClimateFrpSystems: Record<
         "Qualification gate: catalogue thermal and performance values apply only to the identified configuration. Final claims must be confirmed for the ordered dimensions, glass weight, spacer, hardware, seals, drainage, corner joints, installation node and destination-market test method.",
       ctaTitle: "Qualify FDTL140 for your cold-climate project",
       cta: "Request the FDTL140 technical pack",
-      backLabel: "Back to FRP systems",
+      backLabel: "Back to cold-climate category",
     },
     ru: {
       slug: "fdtl140",
@@ -565,7 +565,7 @@ export const coldClimateFrpSystems: Record<
         "Квалификационный барьер: каталожные теплотехнические и эксплуатационные значения относятся только к указанной конфигурации. Итоговые показатели подтверждаются для заказанных размеров, массы стекла, дистанционной рамки, фурнитуры, уплотнений, дренажа, угловых соединений, монтажного узла и метода испытаний целевого рынка.",
       ctaTitle: "Квалифицировать FDTL140 для холодного климата",
       cta: "Запросить технический пакет FDTL140",
-      backLabel: "Назад к системам FRP",
+      backLabel: "Назад в категорию холодного климата",
     },
   },
 };

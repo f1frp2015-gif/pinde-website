@@ -63,12 +63,20 @@ export default function SystemsFrpPage({ locale, content }: Props) {
       </section>
       <section className="overflow-hidden bg-[#0D2440] py-[89px] text-white">
         <div className={container}>
-          <div className="mb-[34px] max-w-[860px]">
-            <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.16em] text-[#E5C47F]">Full-FRP · Grade 10 thermal systems</p>
-            <h2 className="mb-[13px] font-[family-name:var(--font-serif)] text-[36px] font-semibold leading-[1.05] text-white">
-              {content.coldClimateTitle}<span className="text-red">.</span>
-            </h2>
-            <p className="text-[14px] leading-[1.85] text-white/70">{content.coldClimateIntro}</p>
+          <div className="mb-[34px] flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <div className="max-w-[860px]">
+              <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.16em] text-[#E5C47F]">
+                {locale === "ru" ? "Отдельная категория · полностью FRP · класс 10" : "Dedicated category · full-FRP · Grade 10"}
+              </p>
+              <h2 className="mb-[13px] font-[family-name:var(--font-serif)] text-[36px] font-semibold leading-[1.05] text-white">
+                {content.coldClimateTitle}<span className="text-red">.</span>
+              </h2>
+              <p className="text-[14px] leading-[1.85] text-white/70">{content.coldClimateIntro}</p>
+            </div>
+            <Link href={`/${locale}/systems/frp/cold-climate`} className="inline-flex shrink-0 items-center gap-2 self-start border border-[#E5C47F] px-[26px] py-3 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#E5C47F] transition-colors hover:bg-[#E5C47F] hover:text-navy lg:self-auto">
+              {content.coldClimateCategoryCta}
+              <ArrowRight size={13} />
+            </Link>
           </div>
           <div className="grid gap-[13px] lg:grid-cols-2">
             {coldClimateSystems.map((system) => (

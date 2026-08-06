@@ -27,7 +27,7 @@ Key specifications:
 - Extrusion: 3,600-ton press, automated cutting at ±0.5mm tolerance
 
 ### FRP & Aluminium-GRPU Composite Systems (Engineering Programme)
-Two composite routes are managed in this family. The full-FRP route includes two cold-climate flagships: FD90, a 90mm casement and tilt-turn window platform with Grade 10 catalogue thermal insulation and listed whole-window Uw values down to 0.85 W/(m²·K); and FDTL140, a 140mm side-press sliding door with a 200kg leaf capacity, Grade 10 catalogue thermal insulation and a listed Uw of 1.02 W/(m²·K). PD75 is a 75mm aluminium-composite window platform with inner and outer aluminium shells structurally joined by a 45mm Ultra FRP Core made from pultruded glass-fibre reinforced polyurethane (GRPU). Each programme is released against its own defined BOM, connection method, and project test plan.
+Two composite routes are managed in this family. The dedicated Cold-Climate FRP Systems category contains exactly two full-FRP flagships: FD90, a 90mm casement and tilt-turn window platform with Grade 10 catalogue thermal insulation and listed whole-window Uw values down to 0.85 W/(m²·K); and FDTL140, a 140mm side-press sliding door with a 200kg leaf capacity, Grade 10 catalogue thermal insulation and a listed Uw of 1.02 W/(m²·K). PD75 is a separate 75mm aluminium-composite window platform with inner and outer aluminium shells structurally joined by a 45mm Ultra FRP Core made from pultruded glass-fibre reinforced polyurethane (GRPU). Each programme is released against its own defined BOM, connection method, and project test plan.
 
 Package includes:
 - Frame, sash, mullion, and glazing-bead profile set

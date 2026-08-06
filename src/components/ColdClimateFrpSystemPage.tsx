@@ -3,6 +3,7 @@ import Link from "next/link";
 import { AlertTriangle, ArrowLeft, Check, ShieldCheck, Snowflake, ThermometerSnowflake } from "lucide-react";
 import type { PageLocale } from "@/content/pages";
 import type { ColdClimateFrpSystemContent } from "@/content/coldClimateFrp";
+import { coldClimateFrpCategoryContent } from "@/content/coldClimateFrpCategory";
 import { breadcrumbJsonLd } from "@/lib/jsonld";
 
 type Props = {
@@ -15,10 +16,15 @@ const climateIcons = [ThermometerSnowflake, Snowflake, ShieldCheck];
 
 export default function ColdClimateFrpSystemPage({ locale, content }: Props) {
   const canonical = `https://pindesys.com/${locale}/systems/frp/${content.slug}`;
+  const category = coldClimateFrpCategoryContent[locale];
+  const categoryUrl = `https://pindesys.com/${locale}/systems/frp/cold-climate`;
+  const homeLabel = locale === "ru" ? "Главная" : "Home";
+  const systemsLabel = locale === "ru" ? "Системы" : "Systems";
   const crumbs = breadcrumbJsonLd([
-    { name: "Home", url: `https://pindesys.com/${locale}` },
-    { name: "Systems", url: `https://pindesys.com/${locale}/systems` },
+    { name: homeLabel, url: `https://pindesys.com/${locale}` },
+    { name: systemsLabel, url: `https://pindesys.com/${locale}/systems` },
     { name: "FRP", url: `https://pindesys.com/${locale}/systems/frp` },
+    { name: category.breadcrumbLabel, url: categoryUrl },
     { name: content.designation, url: canonical },
   ]);
   const productJsonLd = {
@@ -28,8 +34,9 @@ export default function ColdClimateFrpSystemPage({ locale, content }: Props) {
     description: content.seo.description,
     image: `https://pindesys.com${content.image.src}`,
     url: canonical,
-    category: content.productType,
+    category: category.title,
     brand: { "@type": "Brand", name: "PINDÉ" },
+    isPartOf: { "@type": "CollectionPage", name: category.title, url: categoryUrl },
     additionalProperty: content.specs.map((spec) => ({
       "@type": "PropertyValue",
       name: spec.label,
@@ -42,13 +49,15 @@ export default function ColdClimateFrpSystemPage({ locale, content }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }} />
 
-      <nav aria-label="Breadcrumb" className="border-b border-line bg-obsidian pt-[104px] py-4">
+      <nav aria-label={locale === "ru" ? "Хлебные крошки" : "Breadcrumb"} className="border-b border-line bg-obsidian pt-[104px] py-4">
         <div className={`${container} flex flex-wrap items-center gap-2 pt-[13px] text-[11px] uppercase tracking-[2px] text-muted`}>
-          <Link href={`/${locale}`} className="transition-colors hover:text-alabaster">Home</Link>
+          <Link href={`/${locale}`} className="transition-colors hover:text-alabaster">{homeLabel}</Link>
           <span>/</span>
-          <Link href={`/${locale}/systems`} className="transition-colors hover:text-alabaster">Systems</Link>
+          <Link href={`/${locale}/systems`} className="transition-colors hover:text-alabaster">{systemsLabel}</Link>
           <span>/</span>
           <Link href={`/${locale}/systems/frp`} className="transition-colors hover:text-alabaster">FRP</Link>
+          <span>/</span>
+          <Link href={`/${locale}/systems/frp/cold-climate`} className="transition-colors hover:text-alabaster">{category.breadcrumbLabel}</Link>
           <span>/</span>
           <span className="text-warm">{content.designation}</span>
         </div>
@@ -232,7 +241,7 @@ export default function ColdClimateFrpSystemPage({ locale, content }: Props) {
               <span className="inline-block h-[5px] w-[5px] bg-red" />
               {content.cta}
             </Link>
-            <Link href={`/${locale}/systems/frp`} className="inline-flex items-center justify-center gap-2 border border-line px-[34px] py-4 text-[11px] font-medium uppercase tracking-[3px] text-alabaster transition-colors hover:border-warm">
+            <Link href={`/${locale}/systems/frp/cold-climate`} className="inline-flex items-center justify-center gap-2 border border-line px-[34px] py-4 text-[11px] font-medium uppercase tracking-[3px] text-alabaster transition-colors hover:border-warm">
               <ArrowLeft size={13} />
               {content.backLabel}
             </Link>

@@ -299,6 +299,7 @@ export const systemsFrpContent = {
     coldClimateIntro:
       "FD90 targets high-insulation casement and tilt-turn openings; FDTL140 brings side-press sealing and a 200kg leaf capacity to large sliding doors. Both are catalogue Grade 10 thermal systems and remain subject to project-specific whole-window or whole-door verification.",
     coldClimateLabel: "Cold-climate flagship",
+    coldClimateCategoryCta: "Explore the cold-climate category",
     sections: [
       {
         title: "PD75 Ultra FRP Core platform",
@@ -369,6 +370,7 @@ export const systemsFrpContent = {
     coldClimateIntro:
       "FD90 рассчитана на высокотеплоизоляционные поворотные и поворотно-откидные проёмы; FDTL140 переносит боковой прижим и створку до 200 кг на крупные раздвижные двери. Обе системы имеют каталожный класс теплоизоляции 10 и требуют проектного подтверждения готового окна или двери.",
     coldClimateLabel: "Флагман для холодного климата",
+    coldClimateCategoryCta: "Открыть категорию для холодного климата",
     sections: [
       {
         title: "Платформа PD75 с Ultra FRP Core",
