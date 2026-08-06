@@ -1,12 +1,18 @@
-import { readFileSync } from "node:fs";
-import { execFileSync } from "node:child_process";
+import { readdirSync, readFileSync } from "node:fs";
+import path from "node:path";
 
-const files = execFileSync("rg", ["--files", "src/content", "src/data", "src/components"], {
-  encoding: "utf8",
-})
-  .trim()
-  .split("\n")
-  .filter((file) => /\.(?:ts|tsx)$/.test(file));
+function collectSourceFiles(directory) {
+  return readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
+    const filePath = path.join(directory, entry.name);
+
+    if (entry.isDirectory()) return collectSourceFiles(filePath);
+    return entry.isFile() && /\.(?:ts|tsx)$/.test(entry.name) ? [filePath] : [];
+  });
+}
+
+const files = ["src/content", "src/data", "src/components"]
+  .flatMap(collectSourceFiles)
+  .sort();
 
 const rules = [
   ["generic superlative", /\b(?:superior|outstanding|premium|innovative)\b/giu],
