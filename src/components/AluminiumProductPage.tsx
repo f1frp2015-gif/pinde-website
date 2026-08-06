@@ -1,10 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import ProductFaqSection from "@/components/ProductFaqSection";
+import { getAluminiumProductSeo } from "@/content/aluminiumProductSeo";
 import type { PageLocale } from "@/content/pages";
 import type { Product } from "@/data/products";
 import { products } from "@/data/products";
-import { breadcrumbJsonLd, productJsonLd } from "@/lib/jsonld";
+import { breadcrumbJsonLd, faqPageJsonLd, productJsonLd, serializeJsonLd } from "@/lib/jsonld";
 import { productImageAlt } from "@/lib/product-image-alt";
 import PindeMark from "@/components/PindeMark";
 
@@ -48,6 +50,7 @@ const labels = {
 
 export default function AluminiumProductPage({ locale, product }: Props) {
   const text = labels[locale];
+  const seo = getAluminiumProductSeo(product, locale);
   const canonical = `https://pindesys.com/${locale}/systems/aluminium/${product.slug}`;
   const crumbs = breadcrumbJsonLd([
     { name: text.home, url: `https://pindesys.com/${locale}` },
@@ -67,8 +70,9 @@ export default function AluminiumProductPage({ locale, product }: Props) {
 
   return (
     <article lang={locale}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd(structuredProduct, canonical)) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(productJsonLd(structuredProduct, canonical)) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(crumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(faqPageJsonLd(seo.faqs)) }} />
 
       <nav aria-label={text.breadcrumb} className="pt-[104px] py-4 bg-obsidian border-b border-line">
         <div className={`${container} pt-[13px] flex flex-wrap items-center gap-2 text-[11px] tracking-[2px] uppercase text-muted`}>
@@ -108,7 +112,7 @@ export default function AluminiumProductPage({ locale, product }: Props) {
               {text.family} · {product.series}
             </p>
             <h1 className="font-[family-name:var(--font-serif)] font-semibold text-[clamp(32px,4vw,48px)] leading-[1.1] text-alabaster mb-[21px]">
-              {product.name}<span className="text-red">.</span>
+              {seo.heading}<span className="text-red">.</span>
             </h1>
             <p className="text-warm text-[15px] leading-[1.9] mb-[34px]">{product.description}</p>
 
@@ -152,6 +156,8 @@ export default function AluminiumProductPage({ locale, product }: Props) {
           <p className="mt-[13px] text-[11px] leading-[1.6] text-muted">{text.specNote}</p>
         </div>
       </section>
+
+      <ProductFaqSection locale={locale} faqs={seo.faqs} />
 
       <section className="py-[89px] bg-obsidian">
         <div className={container}>

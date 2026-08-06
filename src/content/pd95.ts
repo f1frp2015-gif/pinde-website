@@ -54,7 +54,7 @@ export const pd95Content: Record<PageLocale, Pd95Content> = {
   en: {
     locale: "en_US",
     seo: {
-      title: "PD95 Passive-Performance Window System | PINDÉ",
+      title: "PD95 Aluminium-Composite Passive Window | 95mm Profile | PINDÉ",
       description:
         "PD95 nominal 95mm aluminium-composite window platform with an 80mm thermal-break zone, triple-glazing reference and documented thermal, weather and acoustic data.",
       keywords: [
@@ -66,7 +66,7 @@ export const pd95Content: Record<PageLocale, Pd95Content> = {
         "high insulation window profile",
       ],
     },
-    title: "PD95 passive-performance window system",
+    title: "PD95 95mm aluminium-composite passive window system",
     eyebrow: "FRP family · aluminium-composite · PD95 series",
     intro:
       "A nominal 95mm aluminium-composite window platform with an 80mm insulated profile zone and a source-catalogue triple-glazing configuration. PD95 sits beside PD75 in PINDÉ's aluminium-composite category, adding a deeper, passive-performance-oriented option for projects that require a longer thermal path and documented whole-window references.",
@@ -162,7 +162,7 @@ export const pd95Content: Record<PageLocale, Pd95Content> = {
   ru: {
     locale: "ru_RU",
     seo: {
-      title: "Оконная система PD95 для пассивных зданий | PINDÉ",
+      title: "Алюминиево-композитное окно PD95 95 мм для пассивных зданий | PINDÉ",
       description:
         "Алюминиево-композитная оконная платформа PD95 глубиной около 95 мм с терморазрывом 80 мм, тройным остеклением и справочными теплотехническими, погодными и акустическими показателями.",
       keywords: [
@@ -174,7 +174,7 @@ export const pd95Content: Record<PageLocale, Pd95Content> = {
         "энергоэффективный оконный профиль",
       ],
     },
-    title: "Оконная система PD95 для пассивных зданий",
+    title: "Алюминиево-композитная оконная система PD95 95 мм для пассивных зданий",
     eyebrow: "Семейство FRP · алюминиево-композитная система · PD95",
     intro:
       "Алюминиево-композитная оконная платформа номинальной глубиной 95 мм с теплоизоляционной зоной шириной 80 мм и каталожной конфигурацией тройного остекления. PD95 размещена рядом с PD75 в категории алюминиево-композитных систем PINDÉ и предлагает более глубокое решение для проектов, где важны длинный путь теплового потока и документированные показатели готового окна.",

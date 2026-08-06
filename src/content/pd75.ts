@@ -56,7 +56,7 @@ export const pd75Content: Record<PageLocale, Pd75Content> = {
   en: {
     locale: "en_US",
     seo: {
-      title: "PD75 Ultra FRP Core Window System | PINDÉ",
+      title: "PD75 Aluminium-Composite Window | 45mm Ultra FRP Core | PINDÉ",
       description:
         "PD75 75mm aluminium-composite window system with a 45mm Ultra FRP Core engineered to support strength, energy-efficient insulation and acoustic separation.",
       keywords: [
@@ -68,7 +68,7 @@ export const pd75Content: Record<PageLocale, Pd75Content> = {
         "energy efficient acoustic window",
       ],
     },
-    title: "PD75 Ultra FRP Core window system",
+    title: "PD75 aluminium-composite window with 45mm Ultra FRP Core",
     eyebrow: "FRP family · PD75 series",
     intro:
       "A 75mm aluminium-composite platform built around a 45mm Ultra FRP Core: a pultruded glass-fibre reinforced polyurethane (GRPU) element that structurally connects the inner and outer aluminium shells. The wide, low-conductivity core supports connection strength, energy-efficient insulation and acoustic separation in one system.",
@@ -181,7 +181,7 @@ export const pd75Content: Record<PageLocale, Pd75Content> = {
   ru: {
     locale: "ru_RU",
     seo: {
-      title: "Оконная система PD75 с Ultra FRP Core | PINDÉ",
+      title: "Алюминиево-композитное окно PD75 | Ultra FRP Core 45 мм | PINDÉ",
       description:
         "Оконная система PD75 глубиной 75 мм с Ultra FRP Core шириной 45 мм для прочности соединения, энергоэффективной теплоизоляции и акустического разделения.",
       keywords: [
@@ -193,7 +193,7 @@ export const pd75Content: Record<PageLocale, Pd75Content> = {
         "энергоэффективное звукоизоляционное окно",
       ],
     },
-    title: "Оконная система PD75 с Ultra FRP Core",
+    title: "Алюминиево-композитное окно PD75 с Ultra FRP Core 45 мм",
     eyebrow: "Семейство FRP · серия PD75",
     intro:
       "Алюминиево-композитная платформа глубиной 75 мм построена вокруг Ultra FRP Core шириной 45 мм — пултрузионного стеклокомпозитного элемента GRPU, который конструктивно соединяет внутреннюю и наружную алюминиевые оболочки. Широкий низкотеплопроводный сердечник одновременно поддерживает прочность, энергоэффективную теплоизоляцию и акустическое разделение.",

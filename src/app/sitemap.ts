@@ -6,6 +6,7 @@ const localizedRoutes = [
   { path: "/about", frequency: "monthly" as const, priority: 0.8 },
   { path: "/systems", frequency: "weekly" as const, priority: 0.85 },
   { path: "/systems/aluminium", frequency: "weekly" as const, priority: 0.85 },
+  { path: "/systems/aluminium/comparison", frequency: "monthly" as const, priority: 0.8 },
   { path: "/systems/frp", frequency: "weekly" as const, priority: 0.8 },
   { path: "/systems/frp/cold-climate", frequency: "weekly" as const, priority: 0.85 },
   { path: "/systems/frp/fd90", frequency: "weekly" as const, priority: 0.85 },
