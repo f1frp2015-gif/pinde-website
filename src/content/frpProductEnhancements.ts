@@ -22,7 +22,7 @@ export const frpProductFaqs: Record<FrpProductSlug, Record<ProductPageLocale, Pr
       },
       {
         question: "What are the key PD75 profile dimensions?",
-        answer: "PD75 has a nominal 75mm platform depth and a 45mm Ultra FRP Core. Final sash, glazing, hardware and connection details are fixed for the ordered configuration.",
+        answer: "PD75 has a nominal frame construction depth of 75 mm and a 45 mm Ultra FRP Core. Final sash, glazing, hardware and connection details are fixed for the ordered configuration.",
       },
       {
         question: "How can a fabricator qualify the PD75 system?",
@@ -36,7 +36,7 @@ export const frpProductFaqs: Record<FrpProductSlug, Record<ProductPageLocale, Pr
       },
       {
         question: "Каковы основные размеры профиля PD75?",
-        answer: "Номинальная глубина платформы составляет 75 мм, ширина Ultra FRP Core — 45 мм. Створка, стеклопакет, фурнитура и соединения фиксируются для выбранной комплектации.",
+        answer: "Номинальная монтажная глубина составляет 75 мм, ширина Ultra FRP Core — 45 мм. Створка, стеклопакет, фурнитура и соединения фиксируются для выбранной комплектации.",
       },
       {
         question: "Как производителю квалифицировать систему PD75?",
@@ -48,7 +48,7 @@ export const frpProductFaqs: Record<FrpProductSlug, Record<ProductPageLocale, Pr
     en: [
       {
         question: "What type of window system is PD95?",
-        answer: "PD95 is a nominal 95mm aluminium-composite window platform with an 80mm insulated profile zone. It is not presented as a full-FRP frame.",
+        answer: "PD95 is an aluminium-composite window system with a nominal 95 mm frame construction depth and an 80 mm insulated profile zone. It is not presented as a full-FRP frame.",
       },
       {
         question: "Which PD95 performance references are documented?",
@@ -62,11 +62,11 @@ export const frpProductFaqs: Record<FrpProductSlug, Record<ProductPageLocale, Pr
     ru: [
       {
         question: "К какому типу оконных систем относится PD95?",
-        answer: "PD95 — алюминиево-композитная оконная платформа номинальной глубиной 95 мм с теплоизоляционной зоной 80 мм. Она не заявляется как полностью FRP-рама.",
+        answer: "PD95 — алюминиево-композитная оконная система с номинальной монтажной глубиной 95 мм и теплоизоляционной зоной 80 мм. Она не заявляется как полностью стеклокомпозитный оконный блок.",
       },
       {
         question: "Какие показатели PD95 документированы?",
-        answer: "В исходном каталоге для указанного образца приведены тройной стеклопакет, Uw 0,98 Вт/(м²·K), класс ветровой стойкости 9 и звукоизоляция 39 дБ. Эти значения не являются гарантией для любой комплектации.",
+        answer: "В исходном каталоге для указанного образца приведены двухкамерный стеклопакет, Uw 0,98 Вт/(м²·K), класс ветровой стойкости 9 и звукоизоляция 39 дБ. Эти значения не являются гарантией для любой комплектации.",
       },
       {
         question: "Что нужно проверить перед заказом PD95?",
@@ -107,12 +107,12 @@ export const frpProductFaqs: Record<FrpProductSlug, Record<ProductPageLocale, Pr
   fdtl140: {
     en: [
       {
-        question: "What is an FDTL140 side-press sliding door?",
-        answer: "FDTL140 combines sliding travel with a side-pressure closing action that compresses the seals at closure. The hardware and sealing schedule must be qualified for the ordered opening.",
+        question: "How does the FDTL140 compression-seal door close?",
+        answer: "The FDTL140 leaf slides horizontally and is pressed against the seals at the end of the closing cycle. The hardware and sealing schedule must be qualified for the ordered opening.",
       },
       {
         question: "What are the key FDTL140 capacity references?",
-        answer: "The catalogue lists a 140mm full-FRP frame, up to 200kg leaf capacity and a best listed whole-door Uw of 1.02 W/(m²·K), subject to the identified glazing and configuration.",
+        answer: "The catalogue lists a 140 mm full-FRP frame, a maximum leaf mass of 200 kg and Uw 1.02 W/(m²·K) for the identified glazing and configuration.",
       },
       {
         question: "What must be checked before ordering FDTL140?",
@@ -121,12 +121,12 @@ export const frpProductFaqs: Record<FrpProductSlug, Record<ProductPageLocale, Pr
     ],
     ru: [
       {
-        question: "Что означает боковой прижим в двери FDTL140?",
-        answer: "FDTL140 сочетает раздвижное движение с боковым прижимом створки, который сжимает уплотнения при закрывании. Фурнитура и схема уплотнений квалифицируются для конкретного проёма.",
+        question: "Как закрывается раздвижной дверной блок FDTL140?",
+        answer: "Створка FDTL140 перемещается горизонтально и в конце цикла закрывания прижимается к контуру уплотнений. Фурнитура и схема уплотнений квалифицируются для конкретного проёма.",
       },
       {
         question: "Каковы основные справочные показатели FDTL140?",
-        answer: "В каталоге указаны рама полностью FRP глубиной 140 мм, створка до 200 кг и лучший Uw готовой двери 1,02 Вт/(м²·K) для идентифицированной комплектации и стеклопакета.",
+        answer: "В каталоге указаны коробка из FRP с монтажной глубиной 140 мм, максимальная масса створки 200 кг и Uw 1,02 Вт/(м²·K) для идентифицированной комплектации и стеклопакета.",
       },
       {
         question: "Что проверяется перед заказом FDTL140?",

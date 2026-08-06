@@ -17,8 +17,8 @@ export default function Header({ locale }: HeaderProps) {
   }));
   const utilityText =
     locale === "ru"
-      ? "Алюминиевые и FRP оконные системы"
-      : "Aluminium & FRP window systems";
+      ? "Алюминиевые и стеклокомпозитные системы для окон и дверей"
+      : "Aluminium and FRP systems for window and door fabrication";
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-[#081D2A] text-white shadow-[0_12px_32px_rgba(8,29,42,0.18)]">

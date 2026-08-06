@@ -54,9 +54,9 @@ export const pd95Content: Record<PageLocale, Pd95Content> = {
   en: {
     locale: "en_US",
     seo: {
-      title: "PD95 Aluminium-Composite Passive Window | 95mm Profile | PINDÉ",
+      title: "PD95 Aluminium-Composite Window | 95mm System | PINDÉ",
       description:
-        "PD95 nominal 95mm aluminium-composite window platform with an 80mm thermal-break zone, triple-glazing reference and documented thermal, weather and acoustic data.",
+        "PD95 is a 95 mm aluminium-composite window system with an 80 mm insulated profile zone and catalogue data for one triple-glazed window build.",
       keywords: [
         "PD95 window system",
         "95mm passive window profile",
@@ -66,21 +66,21 @@ export const pd95Content: Record<PageLocale, Pd95Content> = {
         "high insulation window profile",
       ],
     },
-    title: "PD95 95mm aluminium-composite passive window system",
+    title: "PD95 95 mm aluminium-composite window system",
     eyebrow: "FRP family · aluminium-composite · PD95 series",
     intro:
-      "A nominal 95mm aluminium-composite window platform with an 80mm insulated profile zone and a source-catalogue triple-glazing configuration. PD95 sits beside PD75 in PINDÉ's aluminium-composite category, adding a deeper, passive-performance-oriented option for projects that require a longer thermal path and documented whole-window references.",
-    supplyStatus: "Engineering programme — evidence refresh required",
+      "PD95 is an aluminium-composite window system with a nominal construction depth of 95 mm and an 80 mm insulated profile zone. The source catalogue includes one triple-glazed reference build. The historical Passive House document shown below expired in 2024 and cannot be used as a current PD95 certificate.",
+    supplyStatus: "Historical certificate only · current evidence required",
     heroCards: [
       { label: "Nominal system depth", value: "95 mm" },
-      { label: "Thermal-break width", value: "80 mm" },
+      { label: "Insulated profile width", value: "80 mm" },
       { label: "Catalogue thermal value", value: "0.98 W/(m²·K)" },
       { label: "Catalogue acoustic value", value: "39 dB" },
     ],
     identityTitle: "The deeper aluminium-composite option",
     identity:
       "PD95 is grouped with PD75 because both use an aluminium-composite thermal-break architecture rather than a full-FRP frame. The supplied drawings identify an 80mm insulated profile zone and retain XMG95ES component codes for source traceability. The exact polymer or FRP formulation is not stated in the supplied sheets, so Ultra FRP Core material claims remain subject to BOM and material-certificate confirmation before release.",
-    benefitsTitle: "What the 95mm platform contributes",
+    benefitsTitle: "Construction and source data",
     benefits: [
       {
         kicker: "Thermal path",
@@ -90,7 +90,7 @@ export const pd95Content: Record<PageLocale, Pd95Content> = {
       },
       {
         kicker: "Glazing",
-        title: "Triple-glazing reference",
+        title: "Triple-glazed IGU reference",
         description:
           "The source catalogue pairs the system with 6Low-E + 16Ar + 6 + 16Ar + 6 glazing. Glass make-up, coatings, gas fill, edge system and panel dimensions must be respecified for each destination project.",
       },
@@ -105,13 +105,13 @@ export const pd95Content: Record<PageLocale, Pd95Content> = {
     specs: [
       { label: "Public series name", value: "PD95" },
       { label: "Source identifiers", value: "ES95 / XMG95ES component family" },
-      { label: "Construction", value: "Thermally broken aluminium-composite frame" },
-      { label: "Nominal system depth", value: "95 mm; source frame sections list 95.5–95.8 mm" },
-      { label: "Thermal-break profile width", value: "80 mm" },
+      { label: "Construction", value: "Aluminium-composite frame with an insulated structural zone" },
+      { label: "Nominal frame construction depth", value: "95 mm; source frame sections list 95.5–95.8 mm" },
+      { label: "Insulated profile width", value: "80 mm" },
       { label: "Aluminium profile wall", value: "1.8 mm" },
       { label: "Catalogue frame Uf reference", value: "Minimum 0.73 W/(m²·K), as stated in the source sheet" },
       { label: "Catalogue glazing range", value: "Ug 0.8–1.1 W/(m²·K), depending on configuration" },
-      { label: "Joinery statement", value: "Seamless welded appearance stated by source; process qualification required" },
+      { label: "Joint appearance", value: "Source sheet describes a visually continuous welded joint; process qualification required" },
       { label: "Supply route", value: "Qualified system profiles or glass-free CKD package" },
     ],
     drawingsTitle: "PD95 system architecture",
@@ -164,41 +164,41 @@ export const pd95Content: Record<PageLocale, Pd95Content> = {
     seo: {
       title: "Алюминиево-композитное окно PD95 95 мм для пассивных зданий | PINDÉ",
       description:
-        "Алюминиево-композитная оконная платформа PD95 глубиной около 95 мм с терморазрывом 80 мм, тройным остеклением и справочными теплотехническими, погодными и акустическими показателями.",
+        "Оконная система PD95 с монтажной глубиной 95 мм, теплоизоляционной зоной 80 мм и каталожными данными для одного оконного блока с двухкамерным стеклопакетом.",
       keywords: [
         "оконная система PD95",
         "пассивное окно 95 мм",
-        "окно с терморазрывом 80 мм",
+        "окно с теплоизоляционной вставкой 80 мм",
         "алюминиево-композитное окно",
-        "окно с тройным остеклением",
+        "окно с двухкамерным стеклопакетом",
         "энергоэффективный оконный профиль",
       ],
     },
-    title: "Алюминиево-композитная оконная система PD95 95 мм для пассивных зданий",
+    title: "Алюминиево-композитная оконная система PD95 95 мм",
     eyebrow: "Семейство FRP · алюминиево-композитная система · PD95",
     intro:
-      "Алюминиево-композитная оконная платформа номинальной глубиной 95 мм с теплоизоляционной зоной шириной 80 мм и каталожной конфигурацией тройного остекления. PD95 размещена рядом с PD75 в категории алюминиево-композитных систем PINDÉ и предлагает более глубокое решение для проектов, где важны длинный путь теплового потока и документированные показатели готового окна.",
-    supplyStatus: "Инженерная программа — требуется обновление доказательной базы",
+      "PD95 — алюминиево-композитная оконная система с номинальной монтажной глубиной 95 мм и теплоизоляционной зоной шириной 80 мм. В исходном каталоге приведена одна конструкция с двухкамерным стеклопакетом. Показанный ниже исторический документ Passive House истёк в 2024 году и не является действующим сертификатом PD95.",
+    supplyStatus: "Только исторический сертификат · требуются актуальные документы",
     heroCards: [
       { label: "Номинальная глубина", value: "95 мм" },
-      { label: "Ширина терморазрыва", value: "80 мм" },
+      { label: "Ширина теплоизоляционной зоны", value: "80 мм" },
       { label: "Каталожная теплотехника", value: "0,98 Вт/(м²·K)" },
       { label: "Каталожная звукоизоляция", value: "39 дБ" },
     ],
-    identityTitle: "Более глубокая алюминиево-композитная платформа",
+    identityTitle: "Алюминиево-композитная конструкция PD95",
     identity:
-      "PD95 объединена с PD75, поскольку обе системы используют алюминиево-композитную архитектуру с терморазрывом, а не полностью FRP-раму. На предоставленных чертежах указана теплоизоляционная зона шириной 80 мм; коды компонентов XMG95ES сохранены для прослеживаемости источника. Точный состав полимера или FRP в материалах не указан, поэтому заявления об Ultra FRP Core допускаются только после подтверждения BOM и сертификатов материала.",
-    benefitsTitle: "Что даёт платформа глубиной 95 мм",
+      "PD95 объединена с PD75, поскольку обе системы используют алюминиево-композитные профили, а не полностью стеклокомпозитные коробку и створку. На предоставленных чертежах указана теплоизоляционная зона шириной 80 мм; коды XMG95ES сохранены для прослеживаемости источника. Точный состав полимера или FRP в материалах не указан, поэтому состав сердечника можно заявлять только после проверки спецификации комплектации (BOM) и сертификатов материала.",
+    benefitsTitle: "Конструкция и исходные данные",
     benefits: [
       {
         kicker: "Тепловой путь",
         title: "Теплоизоляционная зона 80 мм",
         description:
-          "Широкий терморазрыв разделяет внутреннюю и наружную алюминиевые части и удлиняет путь теплопередачи. Итоговый показатель готового окна зависит от подтверждённой рамы, дистанционной рамки, стеклопакета, уплотнений и монтажного узла.",
+          "Широкая теплоизоляционная зона разделяет внутреннюю и наружную алюминиевые части и удлиняет путь теплопередачи. Итоговый показатель оконного блока зависит от подтверждённой конструкции коробки и створки, дистанционной рамки, стеклопакета, уплотнений и монтажного узла.",
       },
       {
         kicker: "Остекление",
-        title: "Справочная тройная конфигурация",
+        title: "Справочный двухкамерный стеклопакет",
         description:
           "В исходном каталоге система показана со стеклопакетом 6Low-E + 16Ar + 6 + 16Ar + 6. Стекло, покрытия, заполнение газом, кромочная система и размеры пересогласуются для каждого проекта.",
       },
@@ -213,18 +213,18 @@ export const pd95Content: Record<PageLocale, Pd95Content> = {
     specs: [
       { label: "Публичное название", value: "PD95" },
       { label: "Исходные обозначения", value: "ES95 / семейство компонентов XMG95ES" },
-      { label: "Конструкция", value: "Алюминиево-композитная рама с терморазрывом" },
-      { label: "Номинальная глубина", value: "95 мм; на чертежах рамы указано 95,5–95,8 мм" },
+      { label: "Конструкция", value: "Алюминиево-композитные профили с теплоизоляционной зоной" },
+      { label: "Номинальная монтажная глубина", value: "95 мм; на чертежах коробки указано 95,5–95,8 мм" },
       { label: "Ширина теплоизоляционного профиля", value: "80 мм" },
       { label: "Стенка алюминиевого профиля", value: "1,8 мм" },
-      { label: "Справочный Uf рамы", value: "Минимум 0,73 Вт/(м²·K) по исходному листу" },
+      { label: "Справочный Uf коробки", value: "Минимум 0,73 Вт/(м²·K) по исходному листу" },
       { label: "Диапазон Ug стеклопакета", value: "0,8–1,1 Вт/(м²·K) в зависимости от конфигурации" },
-      { label: "Соединение", value: "Источник заявляет бесшовную сварку; требуется квалификация процесса" },
+      { label: "Внешний вид соединения", value: "Исходный лист описывает визуально непрерывный сварной стык; требуется квалификация процесса" },
       { label: "Форма поставки", value: "Квалифицированная система профилей или CKD без стеклопакета" },
     ],
     drawingsTitle: "Архитектура системы PD95",
     drawingsIntro:
-      "На предоставленных сечениях показаны рама, импост и створка вровень, теплоизоляционный профиль шириной 80 мм и основные коды XMG95ES. Исходные обозначения остаются видимыми для технической прослеживаемости; PD95 — публичное название серии PINDÉ.",
+      "На предоставленных сечениях показаны коробка, импост, створка вровень, теплоизоляционный профиль шириной 80 мм и основные коды XMG95ES. Исходные обозначения сохранены для технической прослеживаемости; PD95 — публичное название серии PINDÉ.",
     performanceTitle: "Справочные показатели исходного каталога",
     performanceIntro:
       "В предоставленном каталоге приведены следующие значения для образца со стеклопакетом 6Low-E + 16Ar + 6 + 16Ar + 6. До предложения они должны быть связаны с оригинальными протоколами и не переносятся на другой размер, стеклопакет, фурнитуру, технологию сборки или стандарт испытаний.",
@@ -259,7 +259,7 @@ export const pd95Content: Record<PageLocale, Pd95Content> = {
       { label: "Гигиенический критерий", value: "fRsi=0,25 ≥ 0,70" },
     ],
     certificateNote:
-      "До включения утверждений Passive House в предложение необходимо проверить продлённый сертификат, актуальную запись в базе, испытанный BOM и соответствие PD95 исходной системе XMG ES95.",
+      "До включения утверждений Passive House в предложение необходимо проверить продлённый сертификат, актуальную запись в базе, испытанную спецификацию комплектации (BOM) и соответствие PD95 исходной системе XMG ES95.",
     certificateDownload: "Скачать сертификат PHI в PDF",
     note:
       "Квалификационный барьер: каталожные показатели и исторический сертификат относятся только к идентифицированным образцам и объёму доказательств. Итоговые показатели теплотехники, воздуха, воды, ветра, звука, долговечности и сертификации требуют актуальных документов для заказанного окна PD95 и метода целевого рынка.",

@@ -16,8 +16,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ? "Контакты — Запрос цен на алюминиевые окна и двери | PINDÉ"
     : "Contact — Request a Quote for Window Systems | PINDÉ";
   const description = locale === "ru"
-    ? "Свяжитесь с PINDÉ для запроса цен, технических спецификаций и поддержки. Офис и завод в Чунцине. Email, WhatsApp, телефон. Ответ в течение 2 рабочих дней."
-    : "Contact PINDÉ for window system quotations, technical specifications, and support. Chongqing office and factory. Email, WhatsApp, phone. Response within 2 business days.";
+    ? "Контакты PINDÉ в Чунцине: предложения по алюминиевым и FRP-системам, технические данные и CKD-комплекты без стеклопакетов."
+    : "Contact PINDÉ in Chongqing for aluminium or FRP window-system quotations, technical data and glass-free CKD supply.";
   const canonical = `https://pindesys.com/${locale}/contact`;
   return {
     title: { absolute: title },

@@ -110,9 +110,9 @@ export const coldClimateFrpSystems: Record<
         alt: "FD90 full-FRP 90 Series cold-climate casement window section",
       },
       seo: {
-        title: "FD90 FRP Cold-Climate Window | PHI-Certified Profile | PINDÉ",
+        title: "FD90 FRP Window for Cold Regions | PHI Component | PINDÉ",
         description:
-          "PHI-certified FD90 full-FRP 90mm window system for passive buildings in cool, temperate climates: phB, certified Uw 0.78 W/(m²·K), valid through 2026.",
+          "FD90 is a 90 mm full-FRP casement and tilt-and-turn window system. PHI certificate 2491wi03 lists class phB and Uw 0.78 W/(m²·K) for its certified build.",
         keywords: [
           "FD90 FRP window",
           "90mm fiberglass window system",
@@ -124,21 +124,21 @@ export const coldClimateFrpSystems: Record<
           "pultruded composite window frame",
         ],
       },
-      title: "FD90 PHI-certified FRP cold-climate window system",
-      eyebrow: "Extreme-cold flagship · full-FRP",
+      title: "FD90 full-FRP window system for cold regions",
+      eyebrow: "90 mm full-FRP window · PHI component",
       intro:
-        "A 90mm full-FRP casement platform for demanding winter envelopes. Passive House Institute certificate 2491wi03 covers the Fengdu Passive GFRP 90 Series for the cool, temperate climate zone at efficiency class phB, with a certified whole-window Uw of 0.78 W/(m²·K). Its pultruded full-FRP route is positioned for a strong performance-to-cost ratio in qualified passive-building programmes.",
-      supplyStatus: "PHI-certified cold-climate flagship — configuration control required",
+        "FD90 is a 90 mm full-FRP casement and tilt-and-turn window system. Passive House Institute certificate 2491wi03 covers the Fengdu Passive GFRP 90 Series in the cool, temperate climate zone at class phB. The certificate records Uw 0.78 W/(m²·K) for the stated window build; that value does not transfer automatically to other sizes, glass or installation details.",
+      supplyStatus: "PHI certificate 2491wi03 · configuration control required",
       heroCards: [
-        { label: "Frame depth", value: "90 mm" },
+        { label: "Frame construction depth", value: "90 mm" },
         { label: "PHI efficiency class", value: "phB" },
         { label: "Certified whole-window Uw", value: "0.78" },
         { label: "Certificate valid through", value: "2026" },
       ],
       cardDescription:
-        "PHI-certified 90mm casement and tilt-turn platform: phB for the cool, temperate climate zone, certified Uw 0.78 W/(m²·K), and a value-focused full-FRP supply route.",
+        "A 90 mm full-FRP casement and tilt-and-turn system. PHI certificate 2491wi03 records class phB and Uw 0.78 W/(m²·K) for the certified configuration.",
       cardCta: "Explore FD90",
-      climateTitle: "Built for demanding winter envelopes",
+      climateTitle: "Configuration control for cold-region envelopes",
       climateIntro:
         "PHI certification provides an independent component reference for passive-building use in the cool, temperate climate zone. FD90 is also positioned for cold-region, ultra-low-energy and nearly-zero-energy projects, subject to matching the certified build and verifying project size, glazing, edge spacer, hardware, joints and installation.",
       climateFeatures: [
@@ -148,9 +148,9 @@ export const coldClimateFrpSystems: Record<
             "Component 2491wi03 is certified at phB for the cool, temperate climate zone, with Uw 0.78 W/(m²·K) and installed Uw values meeting the certificate criterion of 0.85 W/(m²·K) or better.",
         },
         {
-          title: "High performance-to-cost route",
+          title: "Profiles or glass-free CKD supply",
           description:
-            "Pultruded full-FRP profiles, a 90mm platform and flexible profile or glass-free CKD supply combine certified thermal capability with a value-engineered route for qualified production programmes.",
+            "The system can be quoted as qualified profiles or as a glass-free CKD package. Final glazing and assembly may remain local, subject to fabrication controls and the project specification.",
         },
         {
           title: "Weather and acoustic control",
@@ -170,19 +170,19 @@ export const coldClimateFrpSystems: Record<
       ],
       openingsTitle: "Opening configurations",
       openingsIntro:
-        "One 90mm platform supports familiar cold-climate opening formats while retaining the same full-FRP frame family.",
+        "The 90 mm profile family supports the opening types listed below. Sizes, hardware and reinforcement requirements are checked for each schedule.",
       openingModes: ["Inward casement", "Inward tilt-turn", "Double casement", "Inward or outward door configuration"],
       specsTitle: "System reference specifications",
       specs: [
         { label: "System designation", value: "FD90 / 90 Series" },
         { label: "Construction", value: "Pultruded glass-fibre reinforced composite (full-FRP) profiles" },
-        { label: "Nominal frame depth", value: "90 mm" },
+        { label: "Nominal frame construction depth", value: "90 mm" },
         { label: "Load-bearing profile wall", value: "3.0 mm" },
         { label: "Maximum sash load", value: "130 kg" },
         { label: "Catalogue frame Uf", value: "0.85 W/(m²·K)" },
         { label: "PHI component certificate", value: "2491wi03 · phB · valid through 31 December 2026" },
         { label: "PHI certified whole-window Uw", value: "0.78 W/(m²·K), with Ug 0.70 W/(m²·K)" },
-        { label: "Glazing route", value: "Project-selected double or triple insulating glazing" },
+        { label: "Glazing", value: "Project-selected double- or triple-glazed insulating glass unit" },
         { label: "Supply route", value: "Qualified system profiles or glass-free CKD package" },
       ],
       phiCertificate: {
@@ -198,9 +198,9 @@ export const coldClimateFrpSystems: Record<
           { label: "Installed Uw criterion", value: "≤ 0.85 W/(m²·K)" },
           { label: "Hygiene criterion", value: "fRsi=0.25 ≥ 0.70" },
         ],
-        valueTitle: "Certified performance with a value-engineered route",
+        valueTitle: "What the certificate covers",
         valueIntro:
-          "FD90 combines an independently certified thermal reference with a pultruded full-FRP platform and flexible local-fabrication supply. This supports a strong performance-to-cost proposition for passive and cold-region building programmes; the actual commercial advantage is confirmed project by project against glazing, hardware, fabrication and logistics.",
+          "Certificate 2491wi03 provides an independent thermal reference for the stated frame, glazing, warm-edge spacer, seals and installation conditions. Profile or glass-free CKD supply can keep glazing and assembly local, but the fabricator must preserve the qualified construction.",
         valuePoints: [
           "Certified whole-window Uw 0.78 W/(m²·K) for the identified PHI configuration",
           "Pultruded full-FRP profiles avoid a continuous metal thermal path",
@@ -273,31 +273,31 @@ export const coldClimateFrpSystems: Record<
         description:
           "Сертифицированная PHI система FD90 из FRP глубиной 90 мм для пассивных зданий: класс phB, Uw 0,78 Вт/(м²·K), сертификат действует до конца 2026 года.",
         keywords: [
-          "стеклокомпозитное окно FD90",
+          "оконный блок FD90 из стеклокомпозита",
           "оконная система FRP 90 мм",
           "окно для холодного климата",
           "стеклопластиковое окно пассивный дом",
           "сертифицированное окно Passive House Institute",
           "оконный компонент PHI phB",
-          "окно FRP с тройным стеклопакетом",
-          "пултрузионная композитная оконная рама",
+          "окно FRP с двухкамерным стеклопакетом",
+          "пултрузионная композитная оконная коробка",
         ],
       },
-      title: "Сертифицированная PHI оконная система FRP FD90 для холодного климата",
-      eyebrow: "Флагман для экстремального холода · полностью FRP",
+      title: "Оконная система FD90 из FRP для холодных регионов",
+      eyebrow: "Оконный блок 90 мм из FRP · компонент PHI",
       intro:
-        "Полностью стеклокомпозитная поворотная платформа глубиной 90 мм для суровых зимних ограждающих конструкций. Сертификат Passive House Institute 2491wi03 распространяется на Fengdu Passive GFRP 90 Series для прохладной умеренной климатической зоны: класс эффективности phB и Uw готового окна 0,78 Вт/(м²·K). Пултрузионная система FRP обеспечивает сильное соотношение характеристик и стоимости для квалифицированных проектов пассивных зданий.",
-      supplyStatus: "Сертифицированный PHI зимний флагман — требуется контроль конфигурации",
+        "FD90 — поворотная и поворотно-откидная оконная система из FRP с монтажной глубиной 90 мм. Сертификат Passive House Institute 2491wi03 распространяется на Fengdu Passive GFRP 90 Series для прохладной умеренной климатической зоны и указывает класс phB. Значение Uw 0,78 Вт/(м²·K) относится к описанной в сертификате конструкции и не переносится автоматически на другие размеры, стеклопакеты или монтажные узлы.",
+      supplyStatus: "Сертификат PHI 2491wi03 · требуется контроль конфигурации",
       heroCards: [
-        { label: "Глубина рамы", value: "90 мм" },
+        { label: "Монтажная глубина", value: "90 мм" },
         { label: "Класс эффективности PHI", value: "phB" },
         { label: "Сертифицированный Uw окна", value: "0,78" },
         { label: "Сертификат действует до", value: "2026" },
       ],
       cardDescription:
-        "Сертифицированная PHI 90-мм поворотная и поворотно-откидная платформа: phB для прохладной умеренной зоны, Uw 0,78 Вт/(м²·K) и выгодный маршрут поставки полностью FRP.",
+        "Поворотная и поворотно-откидная система из FRP с монтажной глубиной 90 мм. Сертификат PHI 2491wi03 указывает класс phB и Uw 0,78 Вт/(м²·K) для сертифицированной конфигурации.",
       cardCta: "Открыть FD90",
-      climateTitle: "Для самых требовательных зимних оболочек",
+      climateTitle: "Контроль конфигурации для холодных регионов",
       climateIntro:
         "Сертификация PHI даёт независимую основу для применения компонента в пассивных зданиях прохладной умеренной климатической зоны. FD90 также предназначена для холодных регионов, сверхнизкоэнергетических и почти нулевых зданий при совпадении сертифицированной конструкции и проверке размеров, стеклопакета, дистанционной рамки, фурнитуры, стыков и монтажа.",
       climateFeatures: [
@@ -307,9 +307,9 @@ export const coldClimateFrpSystems: Record<
             "Компонент 2491wi03 сертифицирован по классу phB для прохладной умеренной зоны: Uw 0,78 Вт/(м²·K), а установленные окна выполняют критерий сертификата Uw не выше 0,85 Вт/(м²·K).",
         },
         {
-          title: "Высокое отношение характеристик к стоимости",
+          title: "Профили или CKD без стеклопакета",
           description:
-            "Пултрузионные профили полностью FRP, глубина 90 мм и поставка профилей либо CKD без стеклопакета объединяют сертифицированную теплотехнику с экономичным производственным маршрутом.",
+            "Систему можно поставить как комплект квалифицированных профилей или CKD без стеклопакета. Остекление и сборка могут выполняться на месте при соблюдении требований к изготовлению и проектной спецификации.",
         },
         {
           title: "Погода и акустика",
@@ -329,19 +329,19 @@ export const coldClimateFrpSystems: Record<
       ],
       openingsTitle: "Варианты открывания",
       openingsIntro:
-        "Единая 90-мм платформа поддерживает привычные для холодного климата варианты открывания в одном семействе рам FRP.",
-      openingModes: ["Поворотное внутрь", "Поворотно-откидное внутрь", "Двустворчатое", "Дверная конфигурация внутрь или наружу"],
+        "Семейство профилей с монтажной глубиной 90 мм поддерживает указанные ниже типы открывания. Размеры, фурнитуру и необходимость усиления проверяют по ведомости заполнения проёмов.",
+      openingModes: ["Поворотное внутрь", "Поворотно-откидное внутрь", "Двустворчатое", "Дверное полотно с открыванием внутрь или наружу"],
       specsTitle: "Справочные характеристики системы",
       specs: [
         { label: "Обозначение системы", value: "FD90 / серия 90" },
         { label: "Конструкция", value: "Пултрузионные стеклокомпозитные профили (полностью FRP)" },
-        { label: "Номинальная глубина рамы", value: "90 мм" },
+        { label: "Номинальная монтажная глубина", value: "90 мм" },
         { label: "Стенка несущего профиля", value: "3,0 мм" },
         { label: "Максимальная масса створки", value: "130 кг" },
-        { label: "Каталожный Uf рамы", value: "0,85 Вт/(м²·K)" },
+        { label: "Каталожный Uf коробки", value: "0,85 Вт/(м²·K)" },
         { label: "Сертификат компонента PHI", value: "2491wi03 · phB · действует до 31 декабря 2026 года" },
         { label: "Сертифицированный Uw окна PHI", value: "0,78 Вт/(м²·K) при Ug 0,70 Вт/(м²·K)" },
-        { label: "Остекление", value: "Двойной или тройной стеклопакет по проекту" },
+        { label: "Остекление", value: "Однокамерный или двухкамерный стеклопакет по проекту" },
         { label: "Форма поставки", value: "Квалифицированная система профилей или CKD без стеклопакета" },
       ],
       phiCertificate: {
@@ -357,9 +357,9 @@ export const coldClimateFrpSystems: Record<
           { label: "Критерий установленного Uw", value: "≤ 0,85 Вт/(м²·K)" },
           { label: "Гигиенический критерий", value: "fRsi=0.25 ≥ 0,70" },
         ],
-        valueTitle: "Сертифицированные характеристики и экономичный маршрут",
+        valueTitle: "Область сертификата",
         valueIntro:
-          "FD90 сочетает независимое подтверждение теплотехники с пултрузионной платформой полностью FRP и гибкой локальной сборкой. Это формирует высокое отношение характеристик к стоимости для пассивных зданий и проектов в холодных регионах; фактическое коммерческое преимущество подтверждается по проекту с учётом стекла, фурнитуры, производства и логистики.",
+          "Сертификат 2491wi03 независимо подтверждает теплотехнические показатели указанной конструкции коробки, стеклопакета, тёплой дистанционной рамки, уплотнений и монтажа. Поставка профилей или CKD без стеклопакета позволяет оставить остекление и сборку на местном производстве, если изготовитель сохраняет квалифицированную конструкцию.",
         valuePoints: [
           "Uw готового окна 0,78 Вт/(м²·K) для сертифицированной конфигурации PHI",
           "Профили полностью FRP не создают непрерывного металлического пути теплопередачи",
@@ -383,7 +383,7 @@ export const coldClimateFrpSystems: Record<
       glazingColumns: {
         glazing: "Стеклопакет каталога",
         ug: "Ug стекла",
-        uf: "Uf рамы",
+        uf: "Uf коробки",
         uw: "Uw окна",
         hardware: "Фурнитура",
       },
@@ -422,17 +422,17 @@ export const coldClimateFrpSystems: Record<
       slug: "fdtl140",
       locale: "en_US",
       designation: "FDTL140",
-      productType: "Full-FRP side-press sliding door system",
+      productType: "Full-FRP compression-seal sliding door set",
       image: {
         src: "/images/systems/pinde-fdtl140-cold-climate-frp-sliding-door.webp",
         width: 423,
         height: 423,
-        alt: "FDTL140 full-FRP 140 Series cold-climate side-press sliding door section",
+        alt: "FDTL140 full-FRP 140 Series compression-seal sliding door section",
       },
       seo: {
         title: "FDTL140 FRP Sliding Door | 140mm Cold-Climate Profile | PINDÉ",
         description:
-          "FDTL140 full-FRP 140mm side-press sliding door for extreme cold climates, with a 200kg leaf capacity and listed whole-door Uw of 1.02 W/(m²·K).",
+          "FDTL140 is a 140 mm full-FRP compression-seal sliding door set. The catalogue lists a 200 kg leaf limit and Uw 1.02 W/(m²·K) for one stated build.",
         keywords: [
           "FDTL140 FRP sliding door",
           "140mm fiberglass sliding door",
@@ -443,14 +443,14 @@ export const coldClimateFrpSystems: Record<
         ],
       },
       title: "FDTL140 140mm cold-climate FRP sliding door system",
-      eyebrow: "Extreme-cold flagship · full-FRP",
+      eyebrow: "140 mm full-FRP sliding door set",
       intro:
-        "A 140mm full-FRP sliding-door platform that combines side-press closing, triple-glazing configurations and a 200kg leaf capacity. The listed build-ups reach whole-door Uw values of 1.02 W/(m²·K), bringing cold-climate envelope performance to large sliding openings.",
-      supplyStatus: "Cold-climate flagship — project qualification required",
+        "FDTL140 is a 140 mm full-FRP sliding door set with a closing sequence that compresses the leaf against the seals. The catalogue lists a maximum leaf mass of 200 kg and Uw 1.02 W/(m²·K) for one two-cavity insulating glass build. Ordered dimensions, glass mass, hardware and installation details require project review.",
+      supplyStatus: "Catalogue data available · project qualification required",
       heroCards: [
-        { label: "Frame depth", value: "140 mm" },
+        { label: "Frame construction depth", value: "140 mm" },
         { label: "Catalogue frame Uf", value: "0.90" },
-        { label: "Best listed Uw", value: "1.02" },
+        { label: "Uw of listed build", value: "1.02" },
         { label: "Maximum leaf load", value: "200 kg" },
       ],
       cardDescription:
@@ -461,12 +461,12 @@ export const coldClimateFrpSystems: Record<
         "The source catalogue positions FDTL140 across high-performance building selections through passive or nearly-zero-energy and zero-energy applications. Project qualification is required for the ordered opening size, glass weight, hardware, drainage, seals and installation node.",
       climateFeatures: [
         {
-          title: "140mm insulated platform",
+          title: "140 mm full-FRP frame",
           description:
-            "The deep full-FRP frame supports triple-glazing build-ups while maintaining a catalogue frame Uf of 0.90 W/(m²·K).",
+            "The catalogue pairs the 140 mm frame with triple-glazed insulating glass units and lists frame Uf 0.90 W/(m²·K).",
         },
         {
-          title: "Side-press closing action",
+          title: "Compression-seal closing action",
           description:
             "Sliding travel is paired with side-pressure closing to support compression at the seals, subject to the qualified hardware schedule.",
         },
@@ -489,16 +489,16 @@ export const coldClimateFrpSystems: Record<
       openingsTitle: "Operating configuration",
       openingsIntro:
         "FDTL140 combines space-efficient horizontal movement with a closing sequence that presses the leaf toward the seals.",
-      openingModes: ["Horizontal sliding", "Side-press closing", "Triple insulating glazing", "Universal hardware interface in the source catalogue"],
+      openingModes: ["Horizontal sliding", "Leaf compression at closing", "Triple-glazed insulating glass unit", "Hardware interface listed in the source catalogue"],
       specsTitle: "System reference specifications",
       specs: [
         { label: "System designation", value: "FDTL140 / 140 Series" },
         { label: "Construction", value: "Pultruded glass-fibre reinforced composite (full-FRP) profiles" },
-        { label: "Nominal frame depth", value: "140 mm" },
+        { label: "Nominal frame construction depth", value: "140 mm" },
         { label: "Load-bearing profile wall", value: "3.0 mm" },
         { label: "Maximum leaf load", value: "200 kg" },
         { label: "Catalogue frame Uf", value: "0.90 W/(m²·K)" },
-        { label: "Operating type", value: "Sliding with side-press closing" },
+        { label: "Operating type", value: "Sliding with leaf compression at closing" },
         { label: "Supply route", value: "Qualified system profiles or glass-free CKD package" },
       ],
       glazingTitle: "Recommended cold-climate configurations",
@@ -544,51 +544,51 @@ export const coldClimateFrpSystems: Record<
       slug: "fdtl140",
       locale: "ru_RU",
       designation: "FDTL140",
-      productType: "Полностью FRP раздвижная дверь с боковым прижимом",
+      productType: "Раздвижной дверной блок из FRP с прижимом створки",
       image: {
         src: "/images/systems/pinde-fdtl140-cold-climate-frp-sliding-door.webp",
         width: 423,
         height: 423,
-        alt: "Сечение стеклокомпозитной двери FDTL140 серии 140 с боковым прижимом",
+        alt: "Сечение раздвижного дверного блока FDTL140 серии 140 из FRP с прижимом створки",
       },
       seo: {
         title: "Раздвижная дверь FRP FDTL140 140 мм для холодного климата | PINDÉ",
         description:
-          "Полностью стеклокомпозитная дверь FDTL140 глубиной 140 мм с боковым прижимом: створка до 200 кг и каталожный Uw до 1,02 Вт/(м²·K).",
+          "Раздвижной дверной блок FDTL140 из FRP с монтажной глубиной 140 мм: створка до 200 кг и Uw 1,02 Вт/(м²·K) для указанной каталожной конструкции.",
         keywords: [
           "стеклокомпозитная раздвижная дверь FDTL140",
           "дверная система FRP 140 мм",
-          "дверь с боковым прижимом для холодного климата",
+          "дверь с прижимом створки для холодного климата",
           "теплая стеклопластиковая портальная дверь",
-          "композитная дверь с тройным стеклопакетом",
+          "композитная дверь с двухкамерным стеклопакетом",
           "пултрузионная дверная система FRP",
         ],
       },
-      title: "Раздвижная дверная система FRP FDTL140 140 мм для холодного климата",
-      eyebrow: "Флагман для экстремального холода · полностью FRP",
+      title: "Раздвижной дверной блок FDTL140 из FRP для холодного климата",
+      eyebrow: "Раздвижной дверной блок 140 мм из FRP",
       intro:
-        "Полностью стеклокомпозитная раздвижная платформа глубиной 140 мм с боковым прижимом, тройными стеклопакетами и створкой до 200 кг. В указанных конфигурациях Uw готовой двери достигает 1,02 Вт/(м²·K), перенося зимнюю энергоэффективность на крупноформатные раздвижные проёмы.",
-      supplyStatus: "Флагман для холодного климата — требуется квалификация проекта",
+        "FDTL140 — раздвижной дверной блок из FRP с монтажной глубиной 140 мм. При закрывании створка прижимается к уплотнениям. Каталог указывает предельную массу створки 200 кг и Uw 1,02 Вт/(м²·K) для одной конструкции с двухкамерным стеклопакетом. Размеры, масса заполнения, фурнитура и монтажный узел проверяются по проекту.",
+      supplyStatus: "Каталожные данные доступны · требуется квалификация проекта",
       heroCards: [
-        { label: "Глубина рамы", value: "140 мм" },
-        { label: "Каталожный Uf рамы", value: "0,90" },
-        { label: "Лучший Uw в каталоге", value: "1,02" },
+        { label: "Монтажная глубина", value: "140 мм" },
+        { label: "Каталожный Uf коробки", value: "0,90" },
+        { label: "Uw указанной конструкции", value: "1,02" },
         { label: "Максимальная масса створки", value: "200 кг" },
       ],
       cardDescription:
-        "140-мм дверь с боковым прижимом для больших зимних проёмов: класс теплоизоляции 10, створка до 200 кг и Uw 1,02 Вт/(м²·K).",
+        "Раздвижной дверной блок с монтажной глубиной 140 мм и прижимом створки: масса створки до 200 кг, Uw 1,02 Вт/(м²·K) для указанной каталожной конструкции.",
       cardCta: "Открыть FDTL140",
       climateTitle: "Большие проёмы с зимней энергоэффективностью",
       climateIntro:
         "Исходный каталог относит FDTL140 к высокоэффективным зданиям вплоть до пассивных или почти нулевых и нулевых по энергопотреблению. Для размера проёма, массы стекла, фурнитуры, дренажа, уплотнений и монтажного узла требуется проектная квалификация.",
       climateFeatures: [
         {
-          title: "Теплоизолированная платформа 140 мм",
+          title: "Коробка из FRP глубиной 140 мм",
           description:
-            "Глубокая рама полностью FRP поддерживает тройное остекление при каталожном Uf рамы 0,90 Вт/(м²·K).",
+            "Каталог сочетает коробку глубиной 140 мм с двухкамерными стеклопакетами и указывает Uf коробки 0,90 Вт/(м²·K).",
         },
         {
-          title: "Закрывание с боковым прижимом",
+          title: "Закрывание с прижимом створки",
           description:
             "Горизонтальное перемещение сочетается с прижимом створки к уплотнениям при закрывании; применяется квалифицированная спецификация фурнитуры.",
         },
@@ -610,17 +610,17 @@ export const coldClimateFrpSystems: Record<
       ],
       openingsTitle: "Схема работы",
       openingsIntro:
-        "FDTL140 сочетает компактное горизонтальное перемещение со схемой закрывания, прижимающей створку к уплотнениям.",
-      openingModes: ["Горизонтальное раздвижное открывание", "Закрывание с боковым прижимом", "Тройной стеклопакет", "Универсальный интерфейс фурнитуры по исходному каталогу"],
+        "Створка FDTL140 перемещается горизонтально, а в конце цикла закрывания прижимается к контуру уплотнений.",
+      openingModes: ["Горизонтальное раздвижное открывание", "Закрывание с прижимом створки", "Двухкамерный стеклопакет", "Интерфейс фурнитуры по исходному каталогу"],
       specsTitle: "Справочные характеристики системы",
       specs: [
         { label: "Обозначение системы", value: "FDTL140 / серия 140" },
         { label: "Конструкция", value: "Пултрузионные стеклокомпозитные профили (полностью FRP)" },
-        { label: "Номинальная глубина рамы", value: "140 мм" },
+        { label: "Номинальная монтажная глубина", value: "140 мм" },
         { label: "Стенка несущего профиля", value: "3,0 мм" },
         { label: "Максимальная масса створки", value: "200 кг" },
-        { label: "Каталожный Uf рамы", value: "0,90 Вт/(м²·K)" },
-        { label: "Тип открывания", value: "Раздвижное с боковым прижимом" },
+        { label: "Каталожный Uf коробки", value: "0,90 Вт/(м²·K)" },
+        { label: "Тип открывания", value: "Раздвижное с прижимом створки при закрывании" },
         { label: "Форма поставки", value: "Квалифицированная система профилей или CKD без стеклопакета" },
       ],
       glazingTitle: "Рекомендуемые конфигурации для холодного климата",
@@ -629,7 +629,7 @@ export const coldClimateFrpSystems: Record<
       glazingColumns: {
         glazing: "Стеклопакет каталога",
         ug: "Ug стекла",
-        uf: "Uf рамы",
+        uf: "Uf коробки",
         uw: "Uw двери",
         hardware: "Фурнитура",
       },

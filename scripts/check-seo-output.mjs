@@ -32,6 +32,11 @@ function validatePage(file, html, locale) {
   if (countMatches(html, /<link rel="canonical"/g) !== 1) failures.push("must contain exactly one canonical link");
   if (countMatches(html, /<h1(?:\s|>)/g) !== 1) failures.push("must contain exactly one h1");
 
+  const title = html.match(/<title>(.*?)<\/title>/)?.[1] ?? "";
+  const description = html.match(/<meta name="description" content="(.*?)"\/>/)?.[1] ?? "";
+  if (title.length > 68) failures.push(`title exceeds 68 characters (${title.length})`);
+  if (description.length > 165) failures.push(`meta description exceeds 165 characters (${description.length})`);
+
   const canonical = html.match(/<link rel="canonical" href="([^"]+)"\/>/)?.[1];
   if (!canonical?.startsWith(`${CANONICAL_ORIGIN}/${locale}`)) {
     failures.push("canonical must use the matching localized pindesys.com URL");

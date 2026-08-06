@@ -39,7 +39,7 @@ export default function SupplyPage({ locale, content }: Props) {
             <span className="border border-line bg-obsidian px-4 py-3 text-[10px] font-bold uppercase tracking-[0.08em] text-muted">{content.labels.matrix}</span>
           </div>
           <div className="hidden lg:grid grid-cols-[160px_repeat(3,minmax(0,1fr))] border border-line">
-            <div className="flex items-end bg-obsidian p-5 text-[10px] font-bold uppercase tracking-[0.08em] text-muted">Scope</div>
+            <div className="flex items-end bg-obsidian p-5 text-[10px] font-bold uppercase tracking-[0.08em] text-muted">{locale === "ru" ? "Объём" : "Scope"}</div>
             {content.formats.map((f: { level: string; tag: string; title: string; from: string; local: string; fit: string }) => (
               <div key={f.level} className="border-l border-line bg-[#081D2A] p-5 text-white">
                 <div className="flex items-start justify-between gap-4">

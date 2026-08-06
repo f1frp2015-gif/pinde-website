@@ -4,14 +4,14 @@ type Locale = "en" | "ru";
 
 const categoryAlt = {
   en: {
-    "exterior-windows": "thermally broken aluminium window system",
-    "exterior-doors": "aluminium exterior door system",
-    "interior-doors": "aluminium interior door system",
+    "exterior-windows": "thermally broken aluminium window unit",
+    "exterior-doors": "aluminium exterior door set",
+    "interior-doors": "aluminium interior door or partition",
   },
   ru: {
-    "exterior-windows": "алюминиевая оконная система с терморазрывом",
-    "exterior-doors": "алюминиевая наружная дверная система",
-    "interior-doors": "алюминиевая межкомнатная дверная система",
+    "exterior-windows": "алюминиевый оконный блок с термовставкой",
+    "exterior-doors": "наружный алюминиевый дверной блок",
+    "interior-doors": "алюминиевый межкомнатный дверной блок или перегородка",
   },
 } as const;
 

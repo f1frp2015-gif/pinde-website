@@ -251,7 +251,7 @@ export default function MarketLandingPage({ locale, content }: Props) {
                   <span className="block text-[10px] font-bold uppercase tracking-[0.1em] text-white/65">
                     {ui.sourceLabel}
                   </span>
-                  <span className="mt-1 block text-[20px] font-extrabold">Chongqing · China</span>
+                  <span className="mt-1 block text-[20px] font-extrabold">{locale === "ru" ? "Чунцин · Китай" : "Chongqing · China"}</span>
                 </div>
                 <span className="bg-white px-3 py-2 text-[11px] font-extrabold text-[#081D2A]">
                   100,000 m²

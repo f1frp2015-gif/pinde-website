@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ShieldCheck } from "lucide-react";
-import { capabilityCases } from "@/data/projects";
+import { getCapabilityCases } from "@/data/projects";
 import ProjectCard from "@/components/ProjectCard";
 import { breadcrumbJsonLd } from "@/lib/jsonld";
 
@@ -12,6 +12,7 @@ export default function CasesPage({ locale }: Props) {
   const isRu = locale === "ru";
   const homeLabel = isRu ? "Главная" : "Home";
   const sectionLabel = isRu ? "Конфигурации систем" : "System Configurations";
+  const capabilityCases = getCapabilityCases(locale);
   const crumbs = breadcrumbJsonLd([
     { name: homeLabel, url: `https://pindesys.com/${locale}` },
     { name: sectionLabel, url: `https://pindesys.com/${locale}/cases` },
@@ -41,8 +42,8 @@ export default function CasesPage({ locale }: Props) {
           </h1>
           <p className="text-warm text-[15px] leading-[1.9] max-w-[620px]">
             {isRu
-              ? "Проверенные конфигурации систем, которые PINDÉ может поставить оконным производствам. Это конфигурации, готовые к поставке — не заявленные выполненные проекты. Каждая конфигурация подкреплена применимыми стандартами и доказательной базой испытаний."
-              : "Verified system configurations that PINDÉ can supply to window fabricators. These represent supply-ready specifications — not claimed completed projects. Each configuration is backed by applicable standards and test evidence."}
+              ? "Примеры конструкций, которые PINDÉ может квалифицировать и поставить оконным производствам. Это не перечень завершённых объектов. Для каждого заказа отдельно фиксируют состав изделия, метод испытаний и требования страны назначения."
+              : "Examples of constructions that PINDÉ can qualify and supply to window fabricators. These are not completed-project claims. Each order fixes the product build, test method and destination-market requirements."}
           </p>
         </div>
       </section>
@@ -56,8 +57,8 @@ export default function CasesPage({ locale }: Props) {
           <div className="flex items-start gap-4 border border-[#DAAF37] bg-[#F5E8D2] p-5 text-[12px] leading-[1.7] text-muted">
             <ShieldCheck size={20} className="mt-0.5 shrink-0 text-[#DAAF37]" />
             {isRu
-              ? "Эти конфигурации отражают то, что PINDÉ может поставить. Они не являются заявленными завершёнными проектами. Реальные спецификации проектов согласовываются в процессе квалификации и фиксации эталонной конструкции."
-              : "These configurations represent what PINDÉ can supply. They are not claimed completed projects. Actual project specifications are agreed during the qualification and reference-build stages."}
+              ? "Показанные данные описывают возможную форму поставки, а не выполненные объекты. Рабочую спецификацию утверждают после проверки ведомости проёмов, эталонного образца и применимых норм."
+              : "The data shown describes possible supply configurations, not completed buildings. The working specification is approved after review of the opening schedule, reference unit and applicable standards."}
           </div>
         </div>
       </section>
