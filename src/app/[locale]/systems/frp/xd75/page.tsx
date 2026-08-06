@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Xd75SystemPage from "@/components/Xd75SystemPage";
+import Pd75SystemPage from "@/components/Pd75SystemPage";
 import { isPageLocale, pageLocales } from "@/content/pages";
-import { xd75Content } from "@/content/xd75";
+import { pd75Content } from "@/content/pd75";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   if (!isPageLocale(locale)) notFound();
 
-  const content = xd75Content[locale];
+  const content = pd75Content[locale];
   const canonical = `https://pindesys.com/${locale}/systems/frp/xd75`;
 
   return {
@@ -39,10 +39,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: content.seo.description,
       images: [
         {
-          url: "/images/systems/pinde-xd75-aluminium-grpu-composite-window-system.webp",
-          width: 1253,
-          height: 1253,
-          alt: locale === "ru" ? "Гибридная оконная система XD75" : "XD75 hybrid window system",
+          url: "/images/systems/pinde-pd75-ultra-frp-core-thermal-performance.webp",
+          width: 1178,
+          height: 756,
+          alt: locale === "ru" ? "Оконная система PD75 с Ultra FRP Core" : "PD75 window system with Ultra FRP Core",
         },
       ],
     },
@@ -50,14 +50,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title: content.seo.title,
       description: content.seo.description,
-      images: ["/images/systems/pinde-xd75-aluminium-grpu-composite-window-system.webp"],
+      images: ["/images/systems/pinde-pd75-ultra-frp-core-thermal-performance.webp"],
     },
   };
 }
 
-export default async function Xd75Route({ params }: Props) {
+export default async function Pd75Route({ params }: Props) {
   const { locale } = await params;
   if (!isPageLocale(locale)) notFound();
 
-  return <Xd75SystemPage locale={locale} content={xd75Content[locale]} />;
+  return <Pd75SystemPage locale={locale} content={pd75Content[locale]} />;
 }

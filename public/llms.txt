@@ -4,8 +4,8 @@
 ## Systems
 - /en/systems: Aluminium & FRP window profile systems — overview and comparison
 - /en/systems/aluminium: Thermally broken aluminium window-and-door systems — profiles, components, BOM, launch package. For buyers searching "aluminium window profile systems China", "thermally broken aluminium profiles"
-- /en/systems/frp: XD75 aluminium-GRPU hybrid and full-FRP window systems — composite traceability, defined BOM, connection methods and project test plans
-- /en/systems/frp/xd75: XD75 75mm hybrid system — aluminium shells, 45mm pultruded GRPU thermal core, outward-opening and inward tilt-turn configurations
+- /en/systems/frp: PD75 Ultra FRP Core and full-FRP window systems — strength, insulation and acoustic engineering with composite traceability and project test plans
+- /en/systems/frp/xd75: PD75 75mm aluminium-composite system — aluminium shells, 45mm Ultra FRP Core, outward-opening and inward tilt-turn configurations (the established URL retains the xd75 slug)
 
 ## Product Catalog
 - /en/systems/aluminium: 19 aluminium window & door products — casement, sliding, folding, push-out, swing doors, interior systems

@@ -87,7 +87,7 @@ src/
 │   └── projects.ts       # 6 global project cases
 ├── content/
 │   ├── pages.ts          # EN/RU systems and company content
-│   └── xd75.ts           # EN/RU XD75 source-catalogue content
+│   └── pd75.ts           # EN/RU PD75 Ultra FRP Core content
 └── lib/
     └── constants.ts      # Brand info, L color system, nav links
 ```
@@ -95,7 +95,7 @@ src/
 ## Canonical URL Invariants
 - Canonical domain: `https://pindesys.com`
 - Aluminium: `/{locale}/systems/aluminium/{slug}`
-- FRP/XD75: `/{locale}/systems/frp/xd75`
+- FRP/PD75: `/{locale}/systems/frp/xd75` (established route slug retained)
 - `pinde-alu.com` is retired; `pindesye.com` is invalid.
 - Legacy non-localized pages are redirect-only. The blog and its article content are permanently removed and must not be restored.
 

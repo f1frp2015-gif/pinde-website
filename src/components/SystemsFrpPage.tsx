@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { AlertTriangle, ArrowRight, Check } from "lucide-react";
 import type { PageLocale } from "@/content/pages";
-import { xd75Content } from "@/content/xd75";
+import { pd75Content } from "@/content/pd75";
 import { breadcrumbJsonLd } from "@/lib/jsonld";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -11,7 +11,7 @@ type Props = { locale: PageLocale; content: any };
 const container = "mx-auto max-w-[1200px] px-[55px] max-lg:px-6";
 
 export default function SystemsFrpPage({ locale, content }: Props) {
-  const xd75 = xd75Content[locale];
+  const pd75 = pd75Content[locale];
   const homeLabel = locale === "ru" ? "Главная" : "Home";
   const systemsLabel = locale === "ru" ? "Системы" : "Systems";
   const crumbs = breadcrumbJsonLd([
@@ -61,23 +61,23 @@ export default function SystemsFrpPage({ locale, content }: Props) {
       </section>
       <section className="py-[89px] bg-obsidian">
         <div className={`${container} grid items-center gap-[55px] lg:grid-cols-2`}>
-          <div className="relative aspect-square overflow-hidden border border-line bg-white">
+          <div className="relative aspect-[1178/756] overflow-hidden border border-line bg-white">
             <Image
-              src="/images/systems/pinde-xd75-aluminium-grpu-composite-window-system.webp"
-              alt={locale === "ru" ? "Гибридная оконная система XD75 с термомостом GRPU" : "XD75 hybrid aluminium-GRPU window system"}
+              src="/images/systems/pinde-pd75-ultra-frp-core-thermal-performance.webp"
+              alt={locale === "ru" ? "PD75 с Ultra FRP Core и визуализацией теплового потока" : "PD75 window with Ultra FRP Core and thermal-flow visualisation"}
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-contain p-5"
+              className="object-contain"
             />
           </div>
           <div>
-            <p className="mb-[13px] text-[10px] font-bold uppercase tracking-[0.16em] text-[#DAAF37]">{xd75.eyebrow}</p>
+            <p className="mb-[13px] text-[10px] font-bold uppercase tracking-[0.16em] text-[#DAAF37]">{pd75.eyebrow}</p>
             <h2 className="font-[family-name:var(--font-serif)] text-[36px] font-semibold leading-[1.05] text-alabaster">
-              {xd75.title}<span className="text-red">.</span>
+              {pd75.title}<span className="text-red">.</span>
             </h2>
-            <p className="mt-5 text-[14px] leading-[1.85] text-warm">{xd75.intro}</p>
+            <p className="mt-5 text-[14px] leading-[1.85] text-warm">{pd75.intro}</p>
             <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-              {xd75.heroCards.map((card) => (
+              {pd75.heroCards.map((card) => (
                 <li key={card.label} className="flex items-start gap-3 text-[12px] leading-[1.6] text-warm">
                   <Check size={15} className="mt-0.5 shrink-0 text-red" />
                   <span><strong className="block text-alabaster">{card.value}</strong>{card.label}</span>
@@ -85,7 +85,7 @@ export default function SystemsFrpPage({ locale, content }: Props) {
               ))}
             </ul>
             <Link href={`/${locale}/systems/frp/xd75`} className="mt-8 inline-flex items-center gap-2 bg-gold px-[34px] py-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-navy hover:brightness-105">
-              {locale === "ru" ? "Открыть серию XD75" : "Explore the XD75 series"}
+              {locale === "ru" ? "Открыть серию PD75" : "Explore the PD75 series"}
               <ArrowRight size={14} />
             </Link>
           </div>

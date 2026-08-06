@@ -1,25 +1,26 @@
 import Image from "next/image";
 import Link from "next/link";
-import { AlertTriangle, ArrowLeft, Check } from "lucide-react";
+import { AlertTriangle, ArrowLeft, Check, ShieldCheck, ThermometerSnowflake, Volume2 } from "lucide-react";
 import type { PageLocale } from "@/content/pages";
-import { xd75Content } from "@/content/xd75";
+import { pd75Content } from "@/content/pd75";
 import { breadcrumbJsonLd } from "@/lib/jsonld";
 
 type Props = {
   locale: PageLocale;
-  content: (typeof xd75Content)["en"];
+  content: (typeof pd75Content)["en"];
 };
 
 const container = "mx-auto max-w-[1200px] px-[55px] max-lg:px-6";
+const benefitIcons = [ShieldCheck, ThermometerSnowflake, Volume2];
 
-export default function Xd75SystemPage({ locale, content }: Props) {
+export default function Pd75SystemPage({ locale, content }: Props) {
   const homeLabel = locale === "ru" ? "Главная" : "Home";
   const systemsLabel = locale === "ru" ? "Системы" : "Systems";
   const crumbs = breadcrumbJsonLd([
     { name: homeLabel, url: `https://pindesys.com/${locale}` },
     { name: systemsLabel, url: `https://pindesys.com/${locale}/systems` },
     { name: "FRP", url: `https://pindesys.com/${locale}/systems/frp` },
-    { name: "XD75", url: `https://pindesys.com/${locale}/systems/frp/xd75` },
+    { name: "PD75", url: `https://pindesys.com/${locale}/systems/frp/xd75` },
   ]);
 
   return (
@@ -34,7 +35,7 @@ export default function Xd75SystemPage({ locale, content }: Props) {
           <span>/</span>
           <Link href={`/${locale}/systems/frp`} className="hover:text-alabaster transition-colors">FRP</Link>
           <span>/</span>
-          <span className="text-warm">XD75</span>
+          <span className="text-warm">PD75</span>
         </div>
       </nav>
 
@@ -52,16 +53,15 @@ export default function Xd75SystemPage({ locale, content }: Props) {
             </h1>
             <p className="text-warm text-[15px] leading-[1.9] max-w-[680px]">{content.intro}</p>
           </div>
-          <div className="relative aspect-square overflow-hidden border border-line bg-white">
+          <div className="relative aspect-[1178/756] overflow-hidden border border-line bg-white">
             <Image
-              src="/images/systems/pinde-xd75-aluminium-grpu-composite-window-system.webp"
-              alt={locale === "ru" ? "Гибридная оконная система XD75 с термомостом GRPU" : "XD75 hybrid aluminium-GRPU window system"}
+              src="/images/systems/pinde-pd75-ultra-frp-core-thermal-performance.webp"
+              alt={locale === "ru" ? "PD75 с Ultra FRP Core и визуализацией теплового потока" : "PD75 window with Ultra FRP Core and thermal-flow visualisation"}
               fill
               loading="eager"
               fetchPriority="high"
-              unoptimized
               sizes="(max-width: 1024px) 100vw, 45vw"
-              className="object-contain p-5"
+              className="object-contain"
             />
           </div>
         </div>
@@ -76,6 +76,27 @@ export default function Xd75SystemPage({ locale, content }: Props) {
       </section>
 
       <section className="py-[89px] bg-surface">
+        <div className={container}>
+          <h2 className="font-[family-name:var(--font-serif)] text-[32px] font-semibold text-alabaster mb-[34px]">
+            {content.benefitsTitle}<span className="text-red">.</span>
+          </h2>
+          <div className="grid gap-[13px] lg:grid-cols-3">
+            {content.benefits.map((benefit, index) => {
+              const Icon = benefitIcons[index];
+              return (
+                <article key={benefit.title} className="border border-line bg-obsidian p-6 sm:p-8">
+                  <Icon size={24} strokeWidth={1.5} className="text-[#DAAF37]" />
+                  <p className="mt-6 text-[10px] font-bold uppercase tracking-[0.16em] text-red">{benefit.kicker}</p>
+                  <h3 className="mt-2 text-[22px] font-extrabold text-alabaster">{benefit.title}</h3>
+                  <p className="mt-4 text-[13px] leading-[1.8] text-warm">{benefit.description}</p>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-[89px] bg-obsidian">
         <div className={`${container} max-w-[900px]`}>
           <h2 className="font-[family-name:var(--font-serif)] text-[32px] font-semibold text-alabaster mb-[13px]">
             {content.identityTitle}<span className="text-red">.</span>
@@ -84,14 +105,14 @@ export default function Xd75SystemPage({ locale, content }: Props) {
         </div>
       </section>
 
-      <section className="py-[89px] bg-obsidian">
+      <section className="py-[89px] bg-surface">
         <div className={container}>
           <h2 className="font-[family-name:var(--font-serif)] text-[32px] font-semibold text-alabaster mb-[34px]">
             {content.variantsTitle}<span className="text-red">.</span>
           </h2>
           <div className="grid gap-[13px] lg:grid-cols-2">
             {content.variants.map((variant) => (
-              <article key={variant.name} className="border border-line bg-surface p-6 sm:p-8">
+              <article key={variant.name} className="border border-line bg-obsidian p-6 sm:p-8">
                 <h3 className="text-[24px] font-extrabold text-alabaster">{variant.name}</h3>
                 <p className="mt-4 text-[14px] leading-[1.8] text-warm">{variant.description}</p>
                 <ul className="mt-6 grid gap-3">
@@ -108,16 +129,16 @@ export default function Xd75SystemPage({ locale, content }: Props) {
         </div>
       </section>
 
-      <section className="py-[89px] bg-surface">
+      <section className="py-[89px] bg-obsidian">
         <div className={container}>
           <h2 className="font-[family-name:var(--font-serif)] text-[32px] font-semibold text-alabaster mb-[34px]">
             {content.specsTitle}<span className="text-red">.</span>
           </h2>
-          <div className="overflow-hidden border border-line bg-obsidian">
+          <div className="overflow-hidden border border-line bg-surface">
             <table className="w-full">
               <tbody>
                 {content.specs.map((spec, index) => (
-                  <tr key={spec.label} className={index % 2 === 0 ? "bg-obsidian" : "bg-surface/50"}>
+                  <tr key={spec.label} className={index % 2 === 0 ? "bg-surface" : "bg-obsidian/40"}>
                     <th scope="row" className="w-[38%] px-5 py-4 text-left text-[12px] font-bold text-muted sm:px-8">
                       {spec.label}
                     </th>
@@ -126,6 +147,31 @@ export default function Xd75SystemPage({ locale, content }: Props) {
                 ))}
               </tbody>
             </table>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-[89px] bg-surface">
+        <div className={container}>
+          <div className="mb-[34px] max-w-[860px]">
+            <h2 className="font-[family-name:var(--font-serif)] text-[32px] font-semibold text-alabaster mb-[13px]">
+              {content.drawingsTitle}<span className="text-red">.</span>
+            </h2>
+            <p className="text-[13px] leading-[1.8] text-warm">{content.drawingsIntro}</p>
+          </div>
+          <div className="relative overflow-hidden border border-line bg-white">
+            <Image
+              src="/images/systems/pinde-pd75-profile-parameters.webp"
+              alt={locale === "ru" ? "Сечения и параметры профилей системы PD75" : "PD75 system profile sections and parameters"}
+              width={1322}
+              height={1270}
+              unoptimized
+              sizes="(max-width: 1200px) 100vw, 1200px"
+              className="h-auto w-full"
+            />
+            <div className="absolute right-[4.8%] top-[2.7%] flex h-[7.4%] w-[18.5%] items-center justify-center bg-white" aria-hidden="true">
+              <span className="font-sans text-[clamp(18px,4.6vw,64px)] font-bold leading-none tracking-[0.02em] text-[#4F4F4F]">PD75</span>
+            </div>
           </div>
         </div>
       </section>

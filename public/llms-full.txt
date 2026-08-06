@@ -27,7 +27,7 @@ Key specifications:
 - Extrusion: 3,600-ton press, automated cutting at ±0.5mm tolerance
 
 ### FRP & Aluminium-GRPU Composite Systems (Engineering Programme)
-Two composite routes are managed in this family. XD75 is a hybrid 75mm window platform with aluminium inner/outer shells structurally joined by a 45mm pultruded glass-fibre reinforced polyurethane (GRPU) thermal core. It is available in outward-opening and inward tilt-turn configurations. The full-FRP route uses pultruded glass-fibre profiles throughout. Each programme is released against its own defined BOM, connection method, and project test plan.
+Two composite routes are managed in this family. PD75 is a 75mm aluminium-composite window platform with inner and outer aluminium shells structurally joined by a 45mm Ultra FRP Core made from pultruded glass-fibre reinforced polyurethane (GRPU). Continuous reinforcement supports load transfer, low conductivity interrupts the metal heat path, and material damping helps reduce vibration transfer. It is available in outward-opening and inward tilt-turn configurations. The full-FRP route uses pultruded glass-fibre profiles throughout. Each programme is released against its own defined BOM, connection method, and project test plan.
 
 Package includes:
 - Frame, sash, mullion, and glazing-bead profile set
@@ -35,9 +35,9 @@ Package includes:
 - Cutting, drilling, bonding, and dust-control parameters
 - Pilot kits, first-article inspection, and fabrication training
 
-XD75 reference specifications:
+PD75 reference specifications:
 - 75mm nominal platform depth
-- 45mm pultruded GRPU structural thermal core
+- 45mm Ultra FRP Core: pultruded GRPU structural and thermal element
 - 1.8mm aluminium profile wall in the source system catalogue
 - Outward-opening and inward tilt-turn configurations
 - Source-catalogue performance values apply only to the identified specimen and glazing build-up; destination-market claims require project-specific whole-window verification

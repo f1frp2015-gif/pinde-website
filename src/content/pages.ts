@@ -52,11 +52,11 @@ export const systemsIndexContent = {
         label: "Engineering programme",
         title: "FRP & aluminium-GRPU composite",
         description:
-          "The XD75 hybrid platform combines aluminium shells with a 45mm pultruded GRPU structural thermal core, while the full-FRP route uses pultruded glass-fibre profiles throughout. Both are released against a defined BOM, connection method and project test plan.",
+          "The PD75 platform combines aluminium shells with a 45mm Ultra FRP Core for structural continuity, energy-efficient insulation and acoustic separation, while the full-FRP route uses pultruded glass-fibre profiles throughout. Both are released against a defined BOM, connection method and project test plan.",
         features: [
-          "XD75: 75mm aluminium-GRPU hybrid window platform",
-          "45mm pultruded glass-fibre reinforced polyurethane thermal core",
-          "Outward-opening and inward tilt-turn XD75 configurations",
+          "PD75: 75mm aluminium-composite window platform",
+          "45mm Ultra FRP Core for strength, insulation and acoustic separation",
+          "Outward-opening and inward tilt-turn PD75 configurations",
           "Full-FRP profile route remains available by engineering qualification",
           "Pilot programme: 3–10 glass-free units for local testing",
           "Composite traceability, connection testing and first-article inspection",
@@ -109,11 +109,11 @@ export const systemsIndexContent = {
         label: "Инженерная программа",
         title: "FRP и гибридный алюминий-GRPU",
         description:
-          "Гибридная платформа XD75 сочетает алюминиевые оболочки с несущим пултрузионным термомостом GRPU шириной 45 мм, а полностью FRP-маршрут использует стеклокомпозитные профили по всему сечению. Обе системы выпускаются с определённым BOM, технологией соединений и планом испытаний.",
+          "Платформа PD75 сочетает алюминиевые оболочки с Ultra FRP Core шириной 45 мм для конструктивной прочности, энергоэффективной теплоизоляции и акустического разделения, а полностью FRP-маршрут использует стеклокомпозитные профили по всему сечению. Обе системы выпускаются с определённым BOM, технологией соединений и планом испытаний.",
         features: [
-          "XD75: гибридная оконная платформа алюминий-GRPU глубиной 75 мм",
-          "Пултрузионный стеклокомпозитный термомост GRPU шириной 45 мм",
-          "XD75 с наружным открыванием и поворотно-откидной конфигурацией",
+          "PD75: алюминиево-композитная оконная платформа глубиной 75 мм",
+          "Ultra FRP Core 45 мм для прочности, теплоизоляции и акустической развязки",
+          "PD75 с наружным открыванием и поворотно-откидной конфигурацией",
           "Полностью FRP-профили доступны по инженерной квалификации",
           "Пробная программа: 3–10 комплектов без стеклопакетов для локальных испытаний",
           "Прослеживаемость композита, испытания соединений и приёмка первого изделия",
@@ -268,9 +268,9 @@ export const systemsFrpContent = {
     lang: "en",
     locale: "en_US",
     seo: {
-      title: "XD75 & FRP Composite Window Systems | PINDÉ",
+      title: "PD75 Ultra FRP Core & FRP Window Systems | PINDÉ",
       description:
-        "XD75 aluminium-GRPU hybrid window system and full pultruded FRP profile programmes for qualified fabricators. Composite traceability, connection testing, pilot kits and project-specific verification from Chongqing.",
+        "PD75 aluminium-composite window system with Ultra FRP Core and full pultruded FRP profile programmes for qualified fabricators. Strength, insulation and acoustic engineering from Chongqing.",
       keywords: [
         "FRP window profiles",
         "pultruded window profiles",
@@ -278,35 +278,36 @@ export const systemsFrpContent = {
         "glass-fibre composite window systems",
         "pultruded profiles for window fabrication",
         "FRP window system supplier",
-        "XD75 window system",
+        "PD75 window system",
+        "Ultra FRP Core",
         "aluminium GRPU window profile",
       ],
     },
     title: "FRP and aluminium-GRPU composite window systems.",
     intro:
-      "Two composite routes sit in this family. XD75 is a hybrid 75mm system with aluminium shells joined by a 45mm pultruded GRPU structural thermal core. The full-FRP route uses pultruded glass-fibre profiles throughout. Each programme is released against a defined BOM, connection method and project test plan.",
+      "Two composite routes sit in this family. PD75 is a 75mm aluminium-composite system whose shells are joined by a 45mm Ultra FRP Core. The core supports structural continuity, interrupts heat flow and helps separate vibration paths. The full-FRP route uses pultruded glass-fibre profiles throughout. Each programme is released against a defined BOM, connection method and project test plan.",
     supplyStatus: "Engineering programme — released by project qualification",
     heroCards: [
-      { label: "Featured system", value: "XD75" },
-      { label: "XD75 composite core", value: "45 mm GRPU" },
-      { label: "XD75 opening modes", value: "Outward + tilt-turn" },
+      { label: "Featured system", value: "PD75" },
+      { label: "Ultra FRP Core", value: "45 mm" },
+      { label: "PD75 opening modes", value: "Outward + tilt-turn" },
       { label: "Supply", value: "Qualification → pilot → project" },
     ],
     sections: [
       {
-        title: "XD75 hybrid composite platform",
+        title: "PD75 Ultra FRP Core platform",
         content:
-          "XD75 retains aluminium inner and outer shells for familiar finishing, hardware interfaces and fabrication logic, but structurally joins them with a 45mm pultruded glass-fibre reinforced polyurethane core. It is not a full-FRP frame. The system belongs in the FRP engineering family because composite material traceability, connection strength, thermal cycling and whole-window verification govern its release.",
+          "PD75 retains aluminium inner and outer shells for familiar finishing, hardware interfaces and fabrication logic, but structurally joins them with a 45mm pultruded glass-fibre reinforced polyurethane Ultra FRP Core. Continuous reinforcement supports load transfer, low conductivity limits the metal-to-metal heat path, and material damping helps reduce vibration transfer. It is not a full-FRP frame; whole-window strength, thermal and acoustic results remain project-qualified.",
       },
       {
         title: "Full-FRP route",
         content:
-          "For projects that require composite profiles throughout the frame, PINDÉ also supports a full pultruded FRP route. Continuous glass-fibre rovings and mats are pulled through a resin system and heated die, producing low-conductivity profiles without a separate metal thermal bridge. Full-FRP systems use their own BOM, corner-joint method, tooling parameters and validation plan and are not represented by XD75 catalogue values.",
+          "For projects that require composite profiles throughout the frame, PINDÉ also supports a full pultruded FRP route. Continuous glass-fibre rovings and mats are pulled through a resin system and heated die, producing low-conductivity profiles without a separate metal thermal bridge. Full-FRP systems use their own BOM, corner-joint method, tooling parameters and validation plan and are not represented by PD75 catalogue values.",
       },
       {
         title: "Composite manufacturing & connection control",
         content:
-          "XD75 requires controlled aluminium-to-GRPU composite assembly, batch traceability and connection testing before profiles reach a fabricator. The full-FRP route uses mechanical fastening plus structural adhesive at corner joints and adds composite-specific cutting, drilling, bonding and HEPA dust-control parameters. The fabrication package identifies which process applies to each system rather than treating all composite windows alike.",
+          "PD75 requires controlled aluminium-to-Ultra-FRP-Core assembly, batch traceability and connection testing before profiles reach a fabricator. The full-FRP route uses mechanical fastening plus structural adhesive at corner joints and adds composite-specific cutting, drilling, bonding and HEPA dust-control parameters. The fabrication package identifies which process applies to each system rather than treating all composite windows alike.",
       },
       {
         title: "Pilot programme",
@@ -321,19 +322,19 @@ export const systemsFrpContent = {
       {
         title: "Standards & compliance",
         content:
-          "Full-FRP profiles are qualified against the agreed composite-profile and whole-window standards for the destination market. XD75, as an aluminium-composite window system, requires a separate material and product route plus whole-window testing for its ordered size, glazing, hardware and installation node. EAEU conformity is confirmed separately for Russia, Kazakhstan and Belarus with a local applicant and an agreed sample scope.",
+          "Full-FRP profiles are qualified against the agreed composite-profile and whole-window standards for the destination market. PD75, as an aluminium-composite window system, requires a separate material and product route plus whole-window testing for its ordered size, glazing, hardware and installation node. EAEU conformity is confirmed separately for Russia, Kazakhstan and Belarus with a local applicant and an agreed sample scope.",
       },
     ],
     cta: "Enquire about FRP pilot programme",
-    note: "XD75 and full-FRP systems are supplied through an engineering programme, not as interchangeable off-the-shelf profiles. Catalogue and test values apply only to the identified specimen, glazing and scope. Destination-market claims require project-specific verification.",
+    note: "PD75 and full-FRP systems are supplied through an engineering programme, not as interchangeable off-the-shelf profiles. Catalogue and test values apply only to the identified specimen, glazing and scope. Destination-market claims require project-specific verification.",
   },
   ru: {
     lang: "ru",
     locale: "ru_RU",
     seo: {
-      title: "XD75 и стеклокомпозитные оконные системы FRP | PINDÉ",
+      title: "PD75 с Ultra FRP Core и оконные системы FRP | PINDÉ",
       description:
-        "Гибридная оконная система XD75 алюминий-GRPU и программы полностью пултрузионных профилей FRP для квалифицированных производств. Прослеживаемость композита, испытания соединений и проектная проверка из Чунцина.",
+        "Алюминиево-композитная система PD75 с Ultra FRP Core и программы полностью пултрузионных профилей FRP. Прочность, теплоизоляция и акустическая инженерия из Чунцина.",
       keywords: [
         "стеклокомпозитный оконный профиль",
         "стеклопластиковый профиль для окон",
@@ -341,35 +342,36 @@ export const systemsFrpContent = {
         "FRP оконные системы",
         "композитные оконные профили из Китая",
         "стеклокомпозитные оконные системы поставщик",
-        "оконная система XD75",
+        "оконная система PD75",
+        "Ultra FRP Core",
         "оконный профиль алюминий GRPU",
       ],
     },
     title: "Оконные системы FRP и гибридный алюминий-GRPU.",
     intro:
-      "В этом семействе два композитных маршрута. XD75 — гибридная система глубиной 75 мм: алюминиевые оболочки соединены несущим пултрузионным термомостом GRPU шириной 45 мм. Полностью FRP-маршрут использует стеклокомпозитные профили по всему сечению. Каждая программа имеет свой BOM, технологию соединений и план испытаний.",
+      "В этом семействе два композитных маршрута. PD75 — алюминиево-композитная система глубиной 75 мм с Ultra FRP Core шириной 45 мм. Сердечник поддерживает совместную работу оболочек, прерывает тепловой поток и помогает развязать пути передачи вибраций. Полностью FRP-маршрут использует стеклокомпозитные профили по всему сечению. Каждая программа имеет свой BOM, технологию соединений и план испытаний.",
     supplyStatus: "Инженерная программа — поставка по проектной квалификации",
     heroCards: [
-      { label: "Основная система", value: "XD75" },
-      { label: "Композитный термомост XD75", value: "GRPU 45 мм" },
-      { label: "Открывание XD75", value: "Наружное + поворотно-откидное" },
+      { label: "Основная система", value: "PD75" },
+      { label: "Ultra FRP Core", value: "45 мм" },
+      { label: "Открывание PD75", value: "Наружное + поворотно-откидное" },
       { label: "Поставка", value: "Квалификация → пилот → проект" },
     ],
     sections: [
       {
-        title: "Гибридная композитная платформа XD75",
+        title: "Платформа PD75 с Ultra FRP Core",
         content:
-          "XD75 сохраняет внутреннюю и наружную алюминиевые оболочки, привычную отделку и интерфейсы фурнитуры, но конструктивно соединяет их пултрузионным стеклокомпозитным элементом GRPU шириной 45 мм. Это не полностью FRP-рама. Система относится к инженерному семейству FRP, поскольку её выпуск определяется прослеживаемостью композита, прочностью соединений, термоциклированием и испытаниями готового окна.",
+          "PD75 сохраняет внутреннюю и наружную алюминиевые оболочки, привычную отделку и интерфейсы фурнитуры, но конструктивно соединяет их Ultra FRP Core шириной 45 мм из пултрузионного стеклокомпозита GRPU. Непрерывное армирование поддерживает передачу нагрузок, низкая теплопроводность ограничивает мостик холода, а демпфирование материала помогает снизить передачу вибраций. Это не полностью FRP-рама; прочность, теплотехника и акустика готового окна подтверждаются по проекту.",
       },
       {
         title: "Полностью FRP-маршрут",
         content:
-          "Для проектов, которым нужны композитные профили по всему сечению рамы, PINDÉ также поддерживает полностью пултрузионный маршрут FRP. Непрерывные стеклянные ровинги и маты протягиваются через связующее и нагретую фильеру, формируя низкотеплопроводные профили без металлического термомоста. Такие системы имеют собственные BOM, угловые соединения, режимы обработки и план испытаний; значения каталога XD75 на них не распространяются.",
+          "Для проектов, которым нужны композитные профили по всему сечению рамы, PINDÉ также поддерживает полностью пултрузионный маршрут FRP. Непрерывные стеклянные ровинги и маты протягиваются через связующее и нагретую фильеру, формируя низкотеплопроводные профили без металлического термомоста. Такие системы имеют собственные BOM, угловые соединения, режимы обработки и план испытаний; значения каталога PD75 на них не распространяются.",
       },
       {
         title: "Контроль композита и соединений",
         content:
-          "XD75 требует контролируемой сборки алюминия с GRPU, прослеживаемости партий и испытаний соединений до передачи профиля изготовителю окон. Полностью FRP-маршрут использует механический крепёж с конструкционным клеем и добавляет специальные режимы резки, сверления, склеивания и HEPA-удаления стеклянной пыли. Технологический пакет явно разделяет процессы двух систем.",
+          "PD75 требует контролируемой сборки алюминия с Ultra FRP Core, прослеживаемости партий и испытаний соединений до передачи профиля изготовителю окон. Полностью FRP-маршрут использует механический крепёж с конструкционным клеем и добавляет специальные режимы резки, сверления, склеивания и HEPA-удаления стеклянной пыли. Технологический пакет явно разделяет процессы двух систем.",
       },
       {
         title: "Программа опытной партии",
@@ -384,11 +386,11 @@ export const systemsFrpContent = {
       {
         title: "Стандарты и соответствие",
         content:
-          "Полностью FRP-профили квалифицируются по согласованным для целевого рынка стандартам на композитные профили и готовые окна. Для XD75 как алюминиево-композитной оконной системы требуется отдельный путь по материалам и продукции, а также испытания готового окна для заказанного размера, стеклопакета, фурнитуры и монтажного узла. Соответствие ЕАЭС подтверждается отдельно для России, Казахстана и Беларуси с локальным заявителем и согласованным объёмом образцов.",
+          "Полностью FRP-профили квалифицируются по согласованным для целевого рынка стандартам на композитные профили и готовые окна. Для PD75 как алюминиево-композитной оконной системы требуется отдельный путь по материалам и продукции, а также испытания готового окна для заказанного размера, стеклопакета, фурнитуры и монтажного узла. Соответствие ЕАЭС подтверждается отдельно для России, Казахстана и Беларуси с локальным заявителем и согласованным объёмом образцов.",
       },
     ],
     cta: "Запросить программу опытной партии FRP",
-    note: "XD75 и полностью FRP-системы поставляются в рамках инженерной программы и не являются взаимозаменяемыми складскими профилями. Каталожные и испытательные значения относятся только к указанному образцу, стеклопакету и объёму проверки. Заявления для целевого рынка требуют проектного подтверждения.",
+    note: "PD75 и полностью FRP-системы поставляются в рамках инженерной программы и не являются взаимозаменяемыми складскими профилями. Каталожные и испытательные значения относятся только к указанному образцу, стеклопакету и объёму проверки. Заявления для целевого рынка требуют проектного подтверждения.",
   },
 } as const;
 

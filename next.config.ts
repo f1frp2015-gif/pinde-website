@@ -92,6 +92,12 @@ const nextConfig: NextConfig = {
         destination: "/en",
         permanent: true,
       },
+      // PD75 is the public series name; retain the established xd75 slug as canonical.
+      {
+        source: "/:locale(en|ru)/systems/frp/pd75",
+        destination: "/:locale/systems/frp/xd75",
+        permanent: true,
+      },
       // Old projects page → cases
       {
         source: "/projects",
