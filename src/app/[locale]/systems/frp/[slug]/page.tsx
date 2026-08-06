@@ -16,6 +16,8 @@ export function generateStaticParams() {
   );
 }
 
+export const dynamicParams = false;
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
   if (!isPageLocale(locale) || !isColdClimateFrpSystemSlug(slug)) notFound();

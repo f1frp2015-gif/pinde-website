@@ -31,7 +31,7 @@ export default function SystemMegaMenu({ menu }: SystemMegaMenuProps) {
             </p>
             <Link
               href={menu.href}
-              prefetch
+              prefetch={false}
               className="text-[10px] font-bold uppercase tracking-[0.12em] text-[#DAAF37] transition-colors hover:text-white"
             >
               {menu.allLabel} →
@@ -47,7 +47,7 @@ export default function SystemMegaMenu({ menu }: SystemMegaMenuProps) {
               >
                 <Link
                   href={category.overviewHref}
-                  prefetch
+                  prefetch={false}
                   className="group/category inline-flex items-center gap-2"
                 >
                   <span

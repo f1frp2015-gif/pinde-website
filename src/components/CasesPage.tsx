@@ -23,7 +23,7 @@ export default function CasesPage({ locale }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }} />
       <nav aria-label={isRu ? "Хлебные крошки" : "Breadcrumb"} className="pt-[104px] py-4 bg-obsidian border-b border-line">
         <div className={`${container} pt-[13px] flex items-center gap-2 text-[11px] tracking-[2px] uppercase text-muted`}>
-          <Link href={`/${locale}`} className="hover:text-alabaster transition-colors">{homeLabel}</Link>
+          <Link href={`/${locale}`} prefetch={false} className="hover:text-alabaster transition-colors">{homeLabel}</Link>
           <span>/</span>
           <span className="text-warm">{isRu ? "Конфигурации" : "System Configurations"}</span>
         </div>

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowUpRight, Globe2, Layers3, Mail, MapPin, Phone, ShieldCheck, Thermometer } from "lucide-react";
 import { BRAND } from "@/lib/constants";
 import { marketChrome, type MarketLocale } from "@/content/marketChrome";
+import LocaleSwitcher from "./LocaleSwitcher";
 import PindeLogo from "./PindeLogo";
 
 type FooterProps = {
@@ -19,6 +20,8 @@ export default function Footer({ locale }: FooterProps) {
       { label: content.nav[5].label, href: `/${locale}/about` },
       { label: content.nav[2].label, href: `/${locale}/process` },
       { label: content.nav[4].label, href: `/${locale}/certification` },
+      { label: locale === "ru" ? "Проекты и конфигурации" : "Cases & configurations", href: `/${locale}/cases` },
+      { label: locale === "ru" ? "Контакты" : "Contact", href: `/${locale}/contact` },
       { label: content.rfqEyebrow, href: `/${locale}/rfq` },
     ];
     const promises = locale === "ru"
@@ -72,7 +75,7 @@ export default function Footer({ locale }: FooterProps) {
                 <ul className="mt-4 space-y-3">
                   {systemsLinks.map((item) => (
                     <li key={item.label}>
-                      <Link href={item.href} className="text-[12px] font-medium text-white/65 transition-colors hover:text-white">{item.label}</Link>
+                      <Link href={item.href} prefetch={false} className="text-[12px] font-medium text-white/65 transition-colors hover:text-white">{item.label}</Link>
                     </li>
                   ))}
                 </ul>
@@ -83,7 +86,7 @@ export default function Footer({ locale }: FooterProps) {
                 <ul className="mt-4 space-y-3">
                   {workingLinks.map((item) => (
                     <li key={item.label}>
-                      <Link href={item.href} className="text-[12px] font-medium text-white/65 transition-colors hover:text-white">{item.label}</Link>
+                      <Link href={item.href} prefetch={false} className="text-[12px] font-medium text-white/65 transition-colors hover:text-white">{item.label}</Link>
                     </li>
                   ))}
                 </ul>
@@ -109,7 +112,7 @@ export default function Footer({ locale }: FooterProps) {
                     </a>
                   </li>
                 </ul>
-                <Link href={`/${locale}/rfq`} className="mt-6 inline-flex items-center gap-2 bg-[#DAAF37] px-4 py-3 text-[11px] font-bold text-[#081D2A] transition-[filter] hover:brightness-105">
+                <Link href={`/${locale}/rfq`} prefetch className="mt-6 inline-flex items-center gap-2 bg-[#DAAF37] px-4 py-3 text-[11px] font-bold text-[#081D2A] transition-[filter] hover:brightness-105">
                   {content.headerCta}
                   <ArrowUpRight size={14} />
                 </Link>
@@ -119,9 +122,13 @@ export default function Footer({ locale }: FooterProps) {
             <div className="mt-12 flex flex-col gap-4 border-t border-white/15 pt-5 text-[10px] text-white/42 sm:flex-row sm:items-center sm:justify-between">
               <span>&copy; {new Date().getFullYear()} {content.footer.copyright}</span>
               <div className="flex items-center gap-3">
-                <Link href="/en" hrefLang="en" lang="en" className={locale === "en" ? "font-bold text-[#DAAF37]" : "hover:text-white"}>English</Link>
-                <span>/</span>
-                <Link href="/ru" hrefLang="ru" lang="ru" className={locale === "ru" ? "font-bold text-[#DAAF37]" : "hover:text-white"}>Русский</Link>
+                <LocaleSwitcher
+                  locale={locale}
+                  englishLabel="English"
+                  russianLabel="Русский"
+                  activeClassName="font-bold text-[#DAAF37]"
+                  inactiveClassName="hover:text-white"
+                />
                 <span className="ml-2 hidden sm:inline">{content.footer.tagline}</span>
               </div>
             </div>

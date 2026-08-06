@@ -55,11 +55,11 @@ export default function Pd95SystemPage({ locale, content }: Props) {
 
       <nav aria-label={locale === "ru" ? "Хлебные крошки" : "Breadcrumb"} className="border-b border-line bg-obsidian pt-[104px] py-4">
         <div className={`${container} flex flex-wrap items-center gap-2 pt-[13px] text-[11px] uppercase tracking-[2px] text-muted`}>
-          <Link href={`/${locale}`} className="transition-colors hover:text-alabaster">{homeLabel}</Link>
+          <Link href={`/${locale}`} prefetch={false} className="transition-colors hover:text-alabaster">{homeLabel}</Link>
           <span>/</span>
-          <Link href={`/${locale}/systems`} className="transition-colors hover:text-alabaster">{systemsLabel}</Link>
+          <Link href={`/${locale}/systems`} prefetch={false} className="transition-colors hover:text-alabaster">{systemsLabel}</Link>
           <span>/</span>
-          <Link href={`/${locale}/systems/frp`} className="transition-colors hover:text-alabaster">FRP</Link>
+          <Link href={`/${locale}/systems/frp`} prefetch={false} className="transition-colors hover:text-alabaster">FRP</Link>
           <span>/</span>
           <span className="text-warm">PD95</span>
         </div>

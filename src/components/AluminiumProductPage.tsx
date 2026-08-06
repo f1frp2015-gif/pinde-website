@@ -30,6 +30,7 @@ const labels = {
     specNote: "Catalogue dimensions describe the reference configuration. Confirm the infill, hardware, opening limits and released bill of materials before ordering.",
     related: "Related aluminium systems",
     back: "All aluminium systems",
+    compare: "Compare aluminium window systems",
     details: "Specifications",
     breadcrumb: "Breadcrumb",
   },
@@ -44,6 +45,7 @@ const labels = {
     specNote: "Размеры относятся к каталожной конфигурации. До заказа согласуйте заполнение, фурнитуру, ограничения открывания и рабочую спецификацию комплектации.",
     related: "Другие алюминиевые системы",
     back: "Все алюминиевые системы",
+    compare: "Сравнить алюминиевые оконные системы",
     details: "Характеристики",
     breadcrumb: "Хлебные крошки",
   },
@@ -72,11 +74,11 @@ export default function AluminiumProductPage({ locale, product }: Props) {
 
       <nav aria-label={text.breadcrumb} className="pt-[104px] py-4 bg-obsidian border-b border-line">
         <div className={`${container} pt-[13px] flex flex-wrap items-center gap-2 text-[11px] tracking-[2px] uppercase text-muted`}>
-          <Link href={`/${locale}`} className="hover:text-alabaster transition-colors">{text.home}</Link>
+          <Link href={`/${locale}`} prefetch={false} className="hover:text-alabaster transition-colors">{text.home}</Link>
           <span>/</span>
-          <Link href={`/${locale}/systems`} className="hover:text-alabaster transition-colors">{text.systems}</Link>
+          <Link href={`/${locale}/systems`} prefetch={false} className="hover:text-alabaster transition-colors">{text.systems}</Link>
           <span>/</span>
-          <Link href={`/${locale}/systems/aluminium`} className="hover:text-alabaster transition-colors">{text.aluminium}</Link>
+          <Link href={`/${locale}/systems/aluminium`} prefetch={false} className="hover:text-alabaster transition-colors">{text.aluminium}</Link>
           <span>/</span>
           <span className="text-warm">{product.series}</span>
         </div>
@@ -161,15 +163,20 @@ export default function AluminiumProductPage({ locale, product }: Props) {
             <h2 className="font-[family-name:var(--font-serif)] font-semibold text-[32px] text-alabaster">
               {text.related}<span className="text-red">.</span>
             </h2>
-            <Link href={`/${locale}/systems/aluminium#aluminium-catalog`} className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.12em] text-[#DAAF37] hover:text-red">
-              <ArrowLeft size={13} /> {text.back}
-            </Link>
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
+              <Link href={`/${locale}/systems/aluminium/comparison`} prefetch={false} className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.12em] text-[#DAAF37] hover:text-red">
+                {text.compare} <ArrowRight size={13} />
+              </Link>
+              <Link href={`/${locale}/systems/aluminium#aluminium-catalog`} prefetch={false} className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.12em] text-[#DAAF37] hover:text-red">
+                <ArrowLeft size={13} /> {text.back}
+              </Link>
+            </div>
           </div>
           <div className="grid grid-cols-1 gap-[13px] sm:grid-cols-3">
             {related.map((candidate) => {
               const localizedCandidate = getLocalizedAluminiumProduct(candidate, locale);
               return (
-                <Link key={candidate.slug} href={`/${locale}/systems/aluminium/${candidate.slug}`} className="group block border border-line bg-surface p-[34px] transition-colors hover:border-warm/40">
+                <Link key={candidate.slug} href={`/${locale}/systems/aluminium/${candidate.slug}`} prefetch={false} className="group block border border-line bg-surface p-[34px] transition-colors hover:border-warm/40">
                   <p className="mb-[8px] text-[9px] uppercase tracking-[2px] text-bronze">{candidate.series} {locale === "ru" ? "серия" : "series"}</p>
                   <h3 className="font-[family-name:var(--font-serif)] text-[20px] font-normal text-alabaster transition-colors group-hover:text-bronze">{localizedCandidate.name}</h3>
                   <span className="mt-5 inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.12em] text-muted">

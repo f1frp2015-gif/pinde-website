@@ -47,9 +47,9 @@ export default function SystemsFrpPage({ locale, content }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }} />
       <nav aria-label={locale === "ru" ? "Хлебные крошки" : "Breadcrumb"} className="pt-[104px] py-4 bg-obsidian border-b border-line">
         <div className={`${container} pt-[13px] flex items-center gap-2 text-[11px] tracking-[2px] uppercase text-muted`}>
-          <Link href={`/${locale}`} className="hover:text-alabaster transition-colors">{homeLabel}</Link>
+          <Link href={`/${locale}`} prefetch={false} className="hover:text-alabaster transition-colors">{homeLabel}</Link>
           <span>/</span>
-          <Link href={`/${locale}/systems`} className="hover:text-alabaster transition-colors">{systemsLabel}</Link>
+          <Link href={`/${locale}/systems`} prefetch={false} className="hover:text-alabaster transition-colors">{systemsLabel}</Link>
           <span>/</span>
           <span className="text-warm">FRP</span>
         </div>

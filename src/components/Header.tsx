@@ -3,6 +3,7 @@ import { Mail, Phone } from "lucide-react";
 import { BRAND } from "@/lib/constants";
 import { marketChrome, type MarketLocale } from "@/content/marketChrome";
 import { getSystemMenu } from "@/content/systemNavigation";
+import LocaleSwitcher from "./LocaleSwitcher";
 import MobileNav from "./MobileNav";
 import PindeLogo from "./PindeLogo";
 import SystemMegaMenu from "./SystemMegaMenu";
@@ -39,27 +40,14 @@ export default function Header({ locale }: HeaderProps) {
               {BRAND.email}
             </a>
             <div className="flex items-center gap-2 border-l border-white/15 pl-4 font-bold">
-              <Link
-                href="/en"
-                prefetch
-                hrefLang="en"
-                lang="en"
-                className={locale === "en" ? "text-[#DAAF37]" : "text-white/45 hover:text-white"}
-                aria-current={locale === "en" ? "page" : undefined}
-              >
-                EN
-              </Link>
-              <span className="text-white/20">/</span>
-              <Link
-                href="/ru"
-                prefetch
-                hrefLang="ru"
-                lang="ru"
-                className={locale === "ru" ? "text-[#DAAF37]" : "text-white/45 hover:text-white"}
-                aria-current={locale === "ru" ? "page" : undefined}
-              >
-                RU
-              </Link>
+              <LocaleSwitcher
+                locale={locale}
+                englishLabel="EN"
+                russianLabel="RU"
+                activeClassName="text-[#DAAF37]"
+                inactiveClassName="text-white/45 hover:text-white"
+                separatorClassName="text-white/20"
+              />
             </div>
           </div>
         </div>
@@ -69,7 +57,7 @@ export default function Header({ locale }: HeaderProps) {
         <div className="mx-auto flex h-16 max-w-[1280px] items-center justify-between px-5 sm:px-8 lg:h-[72px] lg:px-10">
           <Link
             href={`/${locale}`}
-            prefetch
+            prefetch={false}
             className="shrink-0"
             aria-label="PINDÉ home"
           >
@@ -85,7 +73,7 @@ export default function Header({ locale }: HeaderProps) {
               <Link
                 key={link.href}
                 href={link.href}
-                prefetch
+                prefetch={false}
                 className="border-b-2 border-transparent py-2 text-[11px] font-semibold text-white/66 transition-colors hover:border-[#DAAF37] hover:text-white"
               >
                 {link.label}
