@@ -104,7 +104,7 @@ export const coldClimateFrpSystems: Record<
       designation: "FD90",
       productType: "Full-FRP casement window system",
       image: {
-        src: "/images/systems/fd90-cold-climate-frp-window.webp",
+        src: "/images/systems/pinde-fd90-cold-climate-frp-window.webp",
         width: 430,
         height: 430,
         alt: "FD90 full-FRP 90 Series cold-climate casement window section",
@@ -212,9 +212,9 @@ export const coldClimateFrpSystems: Record<
         openLabel: "Open certificate",
         filePath: "/certificates/fd90-passive-house-institute-certificate-2491wi03.pdf",
         preview: {
-          src: "/images/systems/fd90-passive-house-institute-certificate-2491wi03.webp",
-          width: 1158,
-          height: 1638,
+          src: "/images/systems/pinde-fd90-passive-house-institute-certificate-2491wi03.webp",
+          width: 900,
+          height: 1273,
           alt: "Passive House Institute certificate 2491wi03 for Fengdu Passive GFRP 90 Series",
         },
       },
@@ -263,7 +263,7 @@ export const coldClimateFrpSystems: Record<
       designation: "FD90",
       productType: "Полностью FRP поворотная оконная система",
       image: {
-        src: "/images/systems/fd90-cold-climate-frp-window.webp",
+        src: "/images/systems/pinde-fd90-cold-climate-frp-window.webp",
         width: 430,
         height: 430,
         alt: "Сечение стеклокомпозитного окна FD90 серии 90 для холодного климата",
@@ -371,9 +371,9 @@ export const coldClimateFrpSystems: Record<
         openLabel: "Открыть сертификат",
         filePath: "/certificates/fd90-passive-house-institute-certificate-2491wi03.pdf",
         preview: {
-          src: "/images/systems/fd90-passive-house-institute-certificate-2491wi03.webp",
-          width: 1158,
-          height: 1638,
+          src: "/images/systems/pinde-fd90-passive-house-institute-certificate-2491wi03.webp",
+          width: 900,
+          height: 1273,
           alt: "Сертификат Passive House Institute 2491wi03 для Fengdu Passive GFRP 90 Series",
         },
       },
@@ -424,7 +424,7 @@ export const coldClimateFrpSystems: Record<
       designation: "FDTL140",
       productType: "Full-FRP side-press sliding door system",
       image: {
-        src: "/images/systems/fdtl140-cold-climate-frp-sliding-door.webp",
+        src: "/images/systems/pinde-fdtl140-cold-climate-frp-sliding-door.webp",
         width: 423,
         height: 423,
         alt: "FDTL140 full-FRP 140 Series cold-climate side-press sliding door section",
@@ -546,7 +546,7 @@ export const coldClimateFrpSystems: Record<
       designation: "FDTL140",
       productType: "Полностью FRP раздвижная дверь с боковым прижимом",
       image: {
-        src: "/images/systems/fdtl140-cold-climate-frp-sliding-door.webp",
+        src: "/images/systems/pinde-fdtl140-cold-climate-frp-sliding-door.webp",
         width: 423,
         height: 423,
         alt: "Сечение стеклокомпозитной двери FDTL140 серии 140 с боковым прижимом",

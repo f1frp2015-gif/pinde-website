@@ -14,6 +14,9 @@ const legacySystemImageRedirects = [
   ["/images/products/perfect-system-phantom-door.webp", "/images/products/pinde-perfect-system-phantom-interior-door.webp"],
   ["/images/products/1645-bathroom-door.webp", "/images/products/pinde-1645-aluminium-bathroom-door.webp"],
   ["/images/systems/xd75-aluminium-grpu-window-system.webp", "/images/systems/pinde-xd75-aluminium-grpu-composite-window-system.webp"],
+  ["/images/systems/fd90-cold-climate-frp-window.webp", "/images/systems/pinde-fd90-cold-climate-frp-window.webp"],
+  ["/images/systems/fd90-passive-house-institute-certificate-2491wi03.webp", "/images/systems/pinde-fd90-passive-house-institute-certificate-2491wi03.webp"],
+  ["/images/systems/fdtl140-cold-climate-frp-sliding-door.webp", "/images/systems/pinde-fdtl140-cold-climate-frp-sliding-door.webp"],
 ] as const;
 
 const nextConfig: NextConfig = {
