@@ -52,14 +52,14 @@ export const systemsIndexContent = {
         label: "Engineering programme",
         title: "FRP & aluminium-GRPU composite",
         description:
-          "The PD75 platform combines aluminium shells with a 45mm Ultra FRP Core for structural continuity, energy-efficient insulation and acoustic separation, while the full-FRP route uses pultruded glass-fibre profiles throughout. Both are released against a defined BOM, connection method and project test plan.",
+          "FD90 and FDTL140 are full-FRP cold-climate flagships, while PD75 combines aluminium shells with a 45mm Ultra FRP Core. Each system is released against a defined BOM, connection method and project test plan.",
         features: [
+          "FD90: 90mm full-FRP cold-climate casement and tilt-turn window",
+          "FDTL140: 140mm full-FRP side-press sliding door",
           "PD75: 75mm aluminium-composite window platform",
           "45mm Ultra FRP Core for strength, insulation and acoustic separation",
-          "Outward-opening and inward tilt-turn PD75 configurations",
-          "Full-FRP profile route remains available by engineering qualification",
-          "Pilot programme: 3–10 glass-free units for local testing",
-          "Composite traceability, connection testing and first-article inspection",
+          "Grade 10 catalogue thermal systems for demanding cold regions",
+          "Qualification, pilot kits and project-specific whole-unit verification",
         ],
         href: "/systems/frp",
         cta: "Explore FRP systems",
@@ -109,14 +109,14 @@ export const systemsIndexContent = {
         label: "Инженерная программа",
         title: "FRP и гибридный алюминий-GRPU",
         description:
-          "Платформа PD75 сочетает алюминиевые оболочки с Ultra FRP Core шириной 45 мм для конструктивной прочности, энергоэффективной теплоизоляции и акустического разделения, а полностью FRP-маршрут использует стеклокомпозитные профили по всему сечению. Обе системы выпускаются с определённым BOM, технологией соединений и планом испытаний.",
+          "FD90 и FDTL140 — флагманские полностью FRP системы для холодного климата, а PD75 сочетает алюминиевые оболочки с Ultra FRP Core шириной 45 мм. Каждая система имеет свой BOM, технологию соединений и план испытаний.",
         features: [
+          "FD90: 90-мм полностью FRP поворотное и поворотно-откидное окно",
+          "FDTL140: 140-мм полностью FRP раздвижная дверь с боковым прижимом",
           "PD75: алюминиево-композитная оконная платформа глубиной 75 мм",
           "Ultra FRP Core 45 мм для прочности, теплоизоляции и акустической развязки",
-          "PD75 с наружным открыванием и поворотно-откидной конфигурацией",
-          "Полностью FRP-профили доступны по инженерной квалификации",
-          "Пробная программа: 3–10 комплектов без стеклопакетов для локальных испытаний",
-          "Прослеживаемость композита, испытания соединений и приёмка первого изделия",
+          "Каталожный класс теплоизоляции 10 для суровых холодных регионов",
+          "Квалификация, опытные комплекты и проектная проверка готового изделия",
         ],
         href: "/systems/frp",
         cta: "Стеклокомпозитные системы",
@@ -268,9 +268,9 @@ export const systemsFrpContent = {
     lang: "en",
     locale: "en_US",
     seo: {
-      title: "PD75 Ultra FRP Core & FRP Window Systems | PINDÉ",
+      title: "FD90, FDTL140 & PD75 FRP Systems | PINDÉ",
       description:
-        "PD75 aluminium-composite window system with Ultra FRP Core and full pultruded FRP profile programmes for qualified fabricators. Strength, insulation and acoustic engineering from Chongqing.",
+        "FD90 and FDTL140 full-FRP cold-climate systems plus the PD75 aluminium-composite window platform. Qualified profile and CKD programmes from Chongqing.",
       keywords: [
         "FRP window profiles",
         "pultruded window profiles",
@@ -281,18 +281,24 @@ export const systemsFrpContent = {
         "PD75 window system",
         "Ultra FRP Core",
         "aluminium GRPU window profile",
+        "FD90 cold climate FRP window",
+        "FDTL140 FRP sliding door",
       ],
     },
-    title: "FRP and aluminium-GRPU composite window systems.",
+    title: "FRP window and door systems for engineered climates.",
     intro:
-      "Two composite routes sit in this family. PD75 is a 75mm aluminium-composite system whose shells are joined by a 45mm Ultra FRP Core. The core supports structural continuity, interrupts heat flow and helps separate vibration paths. The full-FRP route uses pultruded glass-fibre profiles throughout. Each programme is released against a defined BOM, connection method and project test plan.",
+      "Two composite routes sit in this family. FD90 and FDTL140 are full-FRP flagships for demanding cold regions, pairing low-conductivity pultruded frames with winter-focused glazing configurations. PD75 is a 75mm aluminium-composite system whose shells are joined by a 45mm Ultra FRP Core. Each programme is released against a defined BOM, connection method and project test plan.",
     supplyStatus: "Engineering programme — released by project qualification",
     heroCards: [
-      { label: "Featured system", value: "PD75" },
-      { label: "Ultra FRP Core", value: "45 mm" },
-      { label: "PD75 opening modes", value: "Outward + tilt-turn" },
+      { label: "Cold-climate flagships", value: "FD90 + FDTL140" },
+      { label: "Catalogue thermal grade", value: "Grade 10" },
+      { label: "PD75 Ultra FRP Core", value: "45 mm" },
       { label: "Supply", value: "Qualification → pilot → project" },
     ],
+    coldClimateTitle: "Extreme-cold full-FRP flagships",
+    coldClimateIntro:
+      "FD90 targets high-insulation casement and tilt-turn openings; FDTL140 brings side-press sealing and a 200kg leaf capacity to large sliding doors. Both are catalogue Grade 10 thermal systems and remain subject to project-specific whole-window or whole-door verification.",
+    coldClimateLabel: "Cold-climate flagship",
     sections: [
       {
         title: "PD75 Ultra FRP Core platform",
@@ -332,9 +338,9 @@ export const systemsFrpContent = {
     lang: "ru",
     locale: "ru_RU",
     seo: {
-      title: "PD75 с Ultra FRP Core и оконные системы FRP | PINDÉ",
+      title: "Системы FRP FD90, FDTL140 и PD75 | PINDÉ",
       description:
-        "Алюминиево-композитная система PD75 с Ultra FRP Core и программы полностью пултрузионных профилей FRP. Прочность, теплоизоляция и акустическая инженерия из Чунцина.",
+        "Полностью FRP системы FD90 и FDTL140 для холодного климата плюс алюминиево-композитная платформа PD75. Квалифицированные профили и CKD из Чунцина.",
       keywords: [
         "стеклокомпозитный оконный профиль",
         "стеклопластиковый профиль для окон",
@@ -345,18 +351,24 @@ export const systemsFrpContent = {
         "оконная система PD75",
         "Ultra FRP Core",
         "оконный профиль алюминий GRPU",
+        "окно FRP FD90 для холодного климата",
+        "раздвижная дверь FRP FDTL140",
       ],
     },
-    title: "Оконные системы FRP и гибридный алюминий-GRPU.",
+    title: "Оконные и дверные системы FRP для расчётного климата.",
     intro:
-      "В этом семействе два композитных маршрута. PD75 — алюминиево-композитная система глубиной 75 мм с Ultra FRP Core шириной 45 мм. Сердечник поддерживает совместную работу оболочек, прерывает тепловой поток и помогает развязать пути передачи вибраций. Полностью FRP-маршрут использует стеклокомпозитные профили по всему сечению. Каждая программа имеет свой BOM, технологию соединений и план испытаний.",
+      "В этом семействе два композитных маршрута. FD90 и FDTL140 — флагманские полностью FRP системы для суровых холодных регионов: низкотеплопроводные пултрузионные рамы сочетаются с зимними стеклопакетами. PD75 — алюминиево-композитная система глубиной 75 мм с Ultra FRP Core шириной 45 мм. Каждая программа имеет свой BOM, технологию соединений и план испытаний.",
     supplyStatus: "Инженерная программа — поставка по проектной квалификации",
     heroCards: [
-      { label: "Основная система", value: "PD75" },
-      { label: "Ultra FRP Core", value: "45 мм" },
-      { label: "Открывание PD75", value: "Наружное + поворотно-откидное" },
+      { label: "Флагманы для холодного климата", value: "FD90 + FDTL140" },
+      { label: "Каталожный класс теплоизоляции", value: "Класс 10" },
+      { label: "Ultra FRP Core PD75", value: "45 мм" },
       { label: "Поставка", value: "Квалификация → пилот → проект" },
     ],
+    coldClimateTitle: "Флагманы полностью FRP для экстремального холода",
+    coldClimateIntro:
+      "FD90 рассчитана на высокотеплоизоляционные поворотные и поворотно-откидные проёмы; FDTL140 переносит боковой прижим и створку до 200 кг на крупные раздвижные двери. Обе системы имеют каталожный класс теплоизоляции 10 и требуют проектного подтверждения готового окна или двери.",
+    coldClimateLabel: "Флагман для холодного климата",
     sections: [
       {
         title: "Платформа PD75 с Ultra FRP Core",

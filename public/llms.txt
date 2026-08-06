@@ -4,7 +4,9 @@
 ## Systems
 - /en/systems: Aluminium & FRP window profile systems — overview and comparison
 - /en/systems/aluminium: Thermally broken aluminium window-and-door systems — profiles, components, BOM, launch package. For buyers searching "aluminium window profile systems China", "thermally broken aluminium profiles"
-- /en/systems/frp: PD75 Ultra FRP Core and full-FRP window systems — strength, insulation and acoustic engineering with composite traceability and project test plans
+- /en/systems/frp: FD90 and FDTL140 cold-climate full-FRP systems plus PD75 Ultra FRP Core — qualified strength, thermal and weather-performance programmes
+- /en/systems/frp/fd90: FD90 90mm full-FRP cold-climate casement and tilt-turn window — Grade 10 catalogue thermal insulation, Uw references down to 0.85 W/(m²·K)
+- /en/systems/frp/fdtl140: FDTL140 140mm full-FRP side-press sliding door — 200kg leaf capacity, Grade 10 catalogue thermal insulation, Uw reference 1.02 W/(m²·K)
 - /en/systems/frp/xd75: PD75 75mm aluminium-composite system — aluminium shells, 45mm Ultra FRP Core, outward-opening and inward tilt-turn configurations (the established URL retains the xd75 slug)
 
 ## Product Catalog

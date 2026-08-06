@@ -27,13 +27,25 @@ Key specifications:
 - Extrusion: 3,600-ton press, automated cutting at ±0.5mm tolerance
 
 ### FRP & Aluminium-GRPU Composite Systems (Engineering Programme)
-Two composite routes are managed in this family. PD75 is a 75mm aluminium-composite window platform with inner and outer aluminium shells structurally joined by a 45mm Ultra FRP Core made from pultruded glass-fibre reinforced polyurethane (GRPU). Continuous reinforcement supports load transfer, low conductivity interrupts the metal heat path, and material damping helps reduce vibration transfer. It is available in outward-opening and inward tilt-turn configurations. The full-FRP route uses pultruded glass-fibre profiles throughout. Each programme is released against its own defined BOM, connection method, and project test plan.
+Two composite routes are managed in this family. The full-FRP route includes two cold-climate flagships: FD90, a 90mm casement and tilt-turn window platform with Grade 10 catalogue thermal insulation and listed whole-window Uw values down to 0.85 W/(m²·K); and FDTL140, a 140mm side-press sliding door with a 200kg leaf capacity, Grade 10 catalogue thermal insulation and a listed Uw of 1.02 W/(m²·K). PD75 is a 75mm aluminium-composite window platform with inner and outer aluminium shells structurally joined by a 45mm Ultra FRP Core made from pultruded glass-fibre reinforced polyurethane (GRPU). Each programme is released against its own defined BOM, connection method, and project test plan.
 
 Package includes:
 - Frame, sash, mullion, and glazing-bead profile set
 - Corner joints, seals, and approved fastening interfaces
 - Cutting, drilling, bonding, and dust-control parameters
 - Pilot kits, first-article inspection, and fabrication training
+
+FD90 cold-climate reference specifications:
+- 90mm nominal full-FRP frame depth
+- 3.0mm load-bearing profile wall and 130kg maximum sash load
+- Catalogue performance grades: thermal 10, acoustic 5, water 6, air 8, wind 9
+- Catalogue frame Uf 0.85 W/(m²·K); listed whole-window Uw values from 1.35 to 0.85 W/(m²·K), depending on glazing build-up
+
+FDTL140 cold-climate reference specifications:
+- 140mm nominal full-FRP frame depth with side-press sliding operation
+- 3.0mm load-bearing profile wall and 200kg maximum leaf load
+- Catalogue performance grades: thermal 10, acoustic 4, water 6, air 8, wind 9
+- Catalogue frame Uf 0.90 W/(m²·K); listed whole-door Uw values from 1.25 to 1.02 W/(m²·K), depending on glazing build-up
 
 PD75 reference specifications:
 - 75mm nominal platform depth

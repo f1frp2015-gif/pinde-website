@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { AlertTriangle, ArrowRight, Check } from "lucide-react";
 import type { PageLocale } from "@/content/pages";
+import { coldClimateFrpSystems, coldClimateFrpSystemSlugs } from "@/content/coldClimateFrp";
 import { pd75Content } from "@/content/pd75";
 import { breadcrumbJsonLd } from "@/lib/jsonld";
 
@@ -12,6 +13,7 @@ const container = "mx-auto max-w-[1200px] px-[55px] max-lg:px-6";
 
 export default function SystemsFrpPage({ locale, content }: Props) {
   const pd75 = pd75Content[locale];
+  const coldClimateSystems = coldClimateFrpSystemSlugs.map((slug) => coldClimateFrpSystems[slug][locale]);
   const homeLabel = locale === "ru" ? "Главная" : "Home";
   const systemsLabel = locale === "ru" ? "Системы" : "Systems";
   const crumbs = breadcrumbJsonLd([
@@ -59,6 +61,50 @@ export default function SystemsFrpPage({ locale, content }: Props) {
           ))}
         </div>
       </section>
+      <section className="overflow-hidden bg-[#0D2440] py-[89px] text-white">
+        <div className={container}>
+          <div className="mb-[34px] max-w-[860px]">
+            <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.16em] text-[#E5C47F]">Full-FRP · Grade 10 thermal systems</p>
+            <h2 className="mb-[13px] font-[family-name:var(--font-serif)] text-[36px] font-semibold leading-[1.05] text-white">
+              {content.coldClimateTitle}<span className="text-red">.</span>
+            </h2>
+            <p className="text-[14px] leading-[1.85] text-white/70">{content.coldClimateIntro}</p>
+          </div>
+          <div className="grid gap-[13px] lg:grid-cols-2">
+            {coldClimateSystems.map((system) => (
+              <article key={system.slug} className="grid overflow-hidden border border-white/15 bg-white/[0.05] sm:grid-cols-[42%_58%]">
+                <div className="relative aspect-square min-w-0 bg-[radial-gradient(circle_at_50%_42%,#ffffff_0%,#f5f7f9_70%,#e9edf2_100%)] sm:aspect-auto sm:min-h-full">
+                  <Image
+                    src={system.image.src}
+                    alt={system.image.alt}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 42vw, 24vw"
+                    className="object-contain p-[9%]"
+                  />
+                </div>
+                <div className="flex min-w-0 flex-col p-6 sm:p-8">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#E5C47F]">{content.coldClimateLabel}</p>
+                  <h3 className="mt-3 text-[28px] font-extrabold leading-tight text-white">{system.designation}</h3>
+                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.06em] text-white/50">{system.productType}</p>
+                  <p className="mt-5 text-[13px] leading-[1.75] text-white/70">{system.cardDescription}</p>
+                  <div className="mt-5 grid grid-cols-2 gap-2 text-[10px] text-white/65">
+                    {system.heroCards.slice(0, 4).map((card) => (
+                      <div key={card.label} className="border border-white/10 px-3 py-2">
+                        <strong className="block text-[14px] text-white">{card.value}</strong>
+                        <span>{card.label}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <Link href={`/${locale}/systems/frp/${system.slug}`} className="mt-6 inline-flex items-center gap-2 self-start bg-gold px-[26px] py-3 text-[10px] font-semibold uppercase tracking-[0.12em] text-navy hover:brightness-105">
+                    {system.cardCta}
+                    <ArrowRight size={13} />
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
       <section className="py-[89px] bg-obsidian">
         <div className={`${container} grid items-center gap-[55px] lg:grid-cols-2`}>
           <div className="relative aspect-[1178/756] overflow-hidden border border-line bg-white">
@@ -102,7 +148,7 @@ export default function SystemsFrpPage({ locale, content }: Props) {
       <section className="py-[89px] bg-obsidian">
         <div className={`${container} text-center`}>
           <h2 className="font-[family-name:var(--font-serif)] font-semibold text-[28px] text-alabaster mb-[21px]">
-            Interested in the FRP programme<span className="text-red">?</span>
+            {locale === "ru" ? "Интересует программа FRP" : "Interested in the FRP programme"}<span className="text-red">?</span>
           </h2>
           <Link href={`/${locale}/rfq`} className="inline-flex items-center gap-[10px] px-[34px] py-4 bg-gold text-navy text-[11px] font-medium tracking-[3px] uppercase rounded-[1px] hover:brightness-90">
             <span className="inline-block w-[5px] h-[5px] rounded-full bg-white" />
