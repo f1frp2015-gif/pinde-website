@@ -1,6 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
-import { AlertTriangle, ArrowLeft, Check, ShieldCheck, Snowflake, ThermometerSnowflake } from "lucide-react";
+import {
+  AlertTriangle,
+  ArrowLeft,
+  BadgeCheck,
+  Check,
+  Download,
+  ExternalLink,
+  ShieldCheck,
+  Snowflake,
+  ThermometerSnowflake,
+} from "lucide-react";
 import type { PageLocale } from "@/content/pages";
 import type { ColdClimateFrpSystemContent } from "@/content/coldClimateFrp";
 import { coldClimateFrpCategoryContent } from "@/content/coldClimateFrpCategory";
@@ -42,6 +52,17 @@ export default function ColdClimateFrpSystemPage({ locale, content }: Props) {
       name: spec.label,
       value: spec.value,
     })),
+    ...(content.phiCertificate
+      ? {
+          subjectOf: {
+            "@type": "DigitalDocument",
+            name: content.phiCertificate.title,
+            identifier: "2491wi03",
+            encodingFormat: "application/pdf",
+            url: `https://pindesys.com${content.phiCertificate.filePath}`,
+          },
+        }
+      : {}),
   };
 
   return (
@@ -132,6 +153,85 @@ export default function ColdClimateFrpSystemPage({ locale, content }: Props) {
           </div>
         </div>
       </section>
+
+      {content.phiCertificate ? (
+        <section className="bg-obsidian py-[89px]">
+          <div className={`${container} grid items-start gap-[55px] lg:grid-cols-[0.76fr_1.24fr]`}>
+            <a
+              href={content.phiCertificate.filePath}
+              target="_blank"
+              rel="noreferrer"
+              className="group block overflow-hidden border border-line bg-white"
+              aria-label={content.phiCertificate.openLabel}
+            >
+              <Image
+                src={content.phiCertificate.preview.src}
+                alt={content.phiCertificate.preview.alt}
+                width={content.phiCertificate.preview.width}
+                height={content.phiCertificate.preview.height}
+                sizes="(max-width: 1024px) 100vw, 38vw"
+                className="h-auto w-full transition-transform duration-300 group-hover:scale-[1.01]"
+              />
+            </a>
+            <div>
+              <div className="mb-5 flex items-center gap-3 text-[#C7A154]">
+                <BadgeCheck size={25} />
+                <span className="text-[11px] font-bold uppercase tracking-[0.12em]">{content.phiCertificate.status}</span>
+              </div>
+              <h2 className="font-[family-name:var(--font-serif)] text-[32px] font-semibold text-alabaster">
+                {content.phiCertificate.title}<span className="text-red">.</span>
+              </h2>
+              <p className="mt-5 text-[14px] leading-[1.9] text-warm">{content.phiCertificate.intro}</p>
+              <dl className="mt-8 grid gap-[13px] sm:grid-cols-2">
+                {content.phiCertificate.facts.map((fact) => (
+                  <div key={fact.label} className="border border-line bg-surface p-5">
+                    <dt className="text-[10px] font-bold uppercase tracking-[0.08em] text-muted">{fact.label}</dt>
+                    <dd className="mt-2 text-[13px] font-semibold leading-[1.6] text-alabaster">{fact.value}</dd>
+                  </div>
+                ))}
+              </dl>
+
+              <div className="mt-8 border border-[#C7A154]/45 bg-[#0D2440] p-6 sm:p-8">
+                <h3 className="text-[22px] font-extrabold text-white">{content.phiCertificate.valueTitle}</h3>
+                <p className="mt-4 text-[13px] leading-[1.8] text-white/70">{content.phiCertificate.valueIntro}</p>
+                <ul className="mt-5 grid gap-3">
+                  {content.phiCertificate.valuePoints.map((point) => (
+                    <li key={point} className="flex items-start gap-3 text-[12px] leading-[1.7] text-white/80">
+                      <Check size={15} className="mt-1 shrink-0 text-[#E5C47F]" />
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="mt-6 flex flex-col gap-[13px] sm:flex-row">
+                <a
+                  href={content.phiCertificate.filePath}
+                  download="fd90-passive-house-institute-certificate-2491wi03.pdf"
+                  className="inline-flex items-center justify-center gap-2 bg-gold px-[26px] py-4 text-[10px] font-semibold uppercase tracking-[0.12em] text-navy hover:brightness-105"
+                >
+                  <Download size={15} />
+                  {content.phiCertificate.downloadLabel}
+                </a>
+                <a
+                  href={content.phiCertificate.filePath}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center justify-center gap-2 border border-line px-[26px] py-4 text-[10px] font-semibold uppercase tracking-[0.12em] text-alabaster transition-colors hover:border-warm"
+                >
+                  <ExternalLink size={14} />
+                  {content.phiCertificate.openLabel}
+                </a>
+              </div>
+
+              <div className="mt-6 flex items-start gap-4 border-l-4 border-[#C7A154] bg-surface px-5 py-4">
+                <AlertTriangle size={20} className="mt-0.5 shrink-0 text-[#C7A154]" />
+                <p className="text-[12px] leading-[1.7] text-warm">{content.phiCertificate.note}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       <section className="bg-obsidian py-[89px]">
         <div className={container}>

@@ -27,7 +27,7 @@ Key specifications:
 - Extrusion: 3,600-ton press, automated cutting at ±0.5mm tolerance
 
 ### FRP & Aluminium-GRPU Composite Systems (Engineering Programme)
-Two composite routes are managed in this family. The dedicated Cold-Climate FRP Systems category contains exactly two full-FRP flagships: FD90, a 90mm casement and tilt-turn window platform with Grade 10 catalogue thermal insulation and listed whole-window Uw values down to 0.85 W/(m²·K); and FDTL140, a 140mm side-press sliding door with a 200kg leaf capacity, Grade 10 catalogue thermal insulation and a listed Uw of 1.02 W/(m²·K). PD75 is a separate 75mm aluminium-composite window platform with inner and outer aluminium shells structurally joined by a 45mm Ultra FRP Core made from pultruded glass-fibre reinforced polyurethane (GRPU). Each programme is released against its own defined BOM, connection method, and project test plan.
+Two composite routes are managed in this family. The dedicated Cold-Climate FRP Systems category contains exactly two full-FRP flagships: FD90, a 90mm casement and tilt-turn window platform with Grade 10 catalogue thermal insulation plus current Passive House Institute component certification; and FDTL140, a 140mm side-press sliding door with a 200kg leaf capacity, Grade 10 catalogue thermal insulation and a listed Uw of 1.02 W/(m²·K). PD75 is a separate 75mm aluminium-composite window platform with inner and outer aluminium shells structurally joined by a 45mm Ultra FRP Core made from pultruded glass-fibre reinforced polyurethane (GRPU). Each programme is released against its own defined BOM, connection method, and project test plan.
 
 Package includes:
 - Frame, sash, mullion, and glazing-bead profile set
@@ -40,6 +40,9 @@ FD90 cold-climate reference specifications:
 - 3.0mm load-bearing profile wall and 130kg maximum sash load
 - Catalogue performance grades: thermal 10, acoustic 5, water 6, air 8, wind 9
 - Catalogue frame Uf 0.85 W/(m²·K); listed whole-window Uw values from 1.35 to 0.85 W/(m²·K), depending on glazing build-up
+- Passive House Institute certificate 2491wi03 identifies the certified product as Fengdu Passive GFRP 90 Series by Chongqing Xianju New Material Co., Ltd.; phB for the cool, temperate climate zone; certified whole-window Uw 0.78 W/(m²·K) with Ug 0.70 W/(m²·K); valid through 31 December 2026
+- The certificate is configuration-specific. Any PHI claim must match the certified frame, glazing, spacer, seals, and installation conditions. FD90 is positioned as a high performance-to-cost full-FRP route, while actual commercial advantage remains quotation-specific
+- Official certificate PDF: https://pindesys.com/certificates/fd90-passive-house-institute-certificate-2491wi03.pdf
 
 FDTL140 cold-climate reference specifications:
 - 140mm nominal full-FRP frame depth with side-press sliding operation

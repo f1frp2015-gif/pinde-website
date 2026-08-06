@@ -16,6 +16,26 @@ type GlazingRow = {
   hardware: string;
 };
 
+type PhiCertificateContent = {
+  title: string;
+  intro: string;
+  status: string;
+  facts: { label: string; value: string }[];
+  valueTitle: string;
+  valueIntro: string;
+  valuePoints: string[];
+  note: string;
+  downloadLabel: string;
+  openLabel: string;
+  filePath: string;
+  preview: {
+    src: string;
+    width: number;
+    height: number;
+    alt: string;
+  };
+};
+
 export type ColdClimateFrpSystemContent = {
   slug: ColdClimateFrpSystemSlug;
   locale: string;
@@ -50,6 +70,7 @@ export type ColdClimateFrpSystemContent = {
   openingModes: string[];
   specsTitle: string;
   specs: { label: string; value: string }[];
+  phiCertificate?: PhiCertificateContent;
   glazingTitle: string;
   glazingIntro: string;
   glazingColumns: {
@@ -91,12 +112,14 @@ export const coldClimateFrpSystems: Record<
       seo: {
         title: "FD90 Cold-Climate FRP Window System | PINDÉ",
         description:
-          "FD90 full-FRP 90mm casement and tilt-turn window system for extreme cold climates, with catalogue whole-window U-values down to 0.85 W/(m²·K).",
+          "PHI-certified FD90 full-FRP 90mm window system for passive buildings in cool, temperate climates: phB, certified Uw 0.78 W/(m²·K), valid through 2026.",
         keywords: [
           "FD90 FRP window",
           "90mm fiberglass window system",
           "cold climate FRP window",
           "passive house fiberglass window",
+          "Passive House Institute certified window",
+          "PHI phB window component",
           "triple glazed FRP window",
           "pultruded composite window frame",
         ],
@@ -104,30 +127,30 @@ export const coldClimateFrpSystems: Record<
       title: "FD90 90 Series cold-climate window",
       eyebrow: "Extreme-cold flagship · full-FRP",
       intro:
-        "A 90mm full-FRP casement platform developed for demanding winter envelopes. The catalogue combines a low-conductivity frame, triple-glazing packages and high weather-performance grades, with whole-window thermal references reaching 0.85 W/(m²·K) in the listed warm-edge configuration.",
-      supplyStatus: "Cold-climate flagship — project qualification required",
+        "A 90mm full-FRP casement platform for demanding winter envelopes. Passive House Institute certificate 2491wi03 covers the Fengdu Passive GFRP 90 Series for the cool, temperate climate zone at efficiency class phB, with a certified whole-window Uw of 0.78 W/(m²·K). Its pultruded full-FRP route is positioned for a strong performance-to-cost ratio in qualified passive-building programmes.",
+      supplyStatus: "PHI-certified cold-climate flagship — configuration control required",
       heroCards: [
         { label: "Frame depth", value: "90 mm" },
-        { label: "Catalogue frame Uf", value: "0.85" },
-        { label: "Best listed Uw", value: "0.85" },
-        { label: "Maximum sash load", value: "130 kg" },
+        { label: "PHI efficiency class", value: "phB" },
+        { label: "Certified whole-window Uw", value: "0.78" },
+        { label: "Certificate valid through", value: "2026" },
       ],
       cardDescription:
-        "The high-insulation 90mm casement and tilt-turn platform: Grade 10 thermal insulation and listed whole-window Uw values down to 0.85 W/(m²·K).",
+        "PHI-certified 90mm casement and tilt-turn platform: phB for the cool, temperate climate zone, certified Uw 0.78 W/(m²·K), and a value-focused full-FRP supply route.",
       cardCta: "Explore FD90",
       climateTitle: "Built for demanding winter envelopes",
       climateIntro:
-        "The source catalogue positions FD90 for ultra-low-energy, passive or nearly-zero-energy, and zero-energy building selections. Final suitability still depends on project size, glazing, edge spacer, hardware, joints, installation and the destination-market test method.",
+        "PHI certification provides an independent component reference for passive-building use in the cool, temperate climate zone. FD90 is also positioned for cold-region, ultra-low-energy and nearly-zero-energy projects, subject to matching the certified build and verifying project size, glazing, edge spacer, hardware, joints and installation.",
       climateFeatures: [
         {
-          title: "Low-conductivity full-FRP frame",
+          title: "PHI-certified passive component",
           description:
-            "Pultruded glass-fibre composite profiles avoid a continuous metal heat path and support a catalogue frame Uf of 0.85 W/(m²·K).",
+            "Component 2491wi03 is certified at phB for the cool, temperate climate zone, with Uw 0.78 W/(m²·K) and installed Uw values meeting the certificate criterion of 0.85 W/(m²·K) or better.",
         },
         {
-          title: "Triple-glazing-ready depth",
+          title: "High performance-to-cost route",
           description:
-            "The 90mm platform is listed with multi-layer Low-E, argon and warm-edge glazing packages for winter-focused envelope design.",
+            "Pultruded full-FRP profiles, a 90mm platform and flexible profile or glass-free CKD supply combine certified thermal capability with a value-engineered route for qualified production programmes.",
         },
         {
           title: "Weather and acoustic control",
@@ -157,9 +180,44 @@ export const coldClimateFrpSystems: Record<
         { label: "Load-bearing profile wall", value: "3.0 mm" },
         { label: "Maximum sash load", value: "130 kg" },
         { label: "Catalogue frame Uf", value: "0.85 W/(m²·K)" },
+        { label: "PHI component certificate", value: "2491wi03 · phB · valid through 31 December 2026" },
+        { label: "PHI certified whole-window Uw", value: "0.78 W/(m²·K), with Ug 0.70 W/(m²·K)" },
         { label: "Glazing route", value: "Project-selected double or triple insulating glazing" },
         { label: "Supply route", value: "Qualified system profiles or glass-free CKD package" },
       ],
+      phiCertificate: {
+        title: "PHI-certified for passive buildings",
+        intro:
+          "The official Passive House Institute certificate identifies the certified window-frame component as Fengdu Passive GFRP 90 Series by Chongqing Xianju New Material Co., Ltd. It satisfies the component criteria stated in the certificate for the cool, temperate climate zone.",
+        status: "Current PHI certificate · valid through 31 December 2026",
+        facts: [
+          { label: "Component ID", value: "2491wi03" },
+          { label: "Certified product", value: "Fengdu Passive GFRP 90 Series" },
+          { label: "Climate / class", value: "Cool, temperate · phB" },
+          { label: "Certified Uw", value: "0.78 W/(m²·K), with Ug 0.70 W/(m²·K)" },
+          { label: "Installed Uw criterion", value: "≤ 0.85 W/(m²·K)" },
+          { label: "Hygiene criterion", value: "fRsi=0.25 ≥ 0.70" },
+        ],
+        valueTitle: "Certified performance with a value-engineered route",
+        valueIntro:
+          "FD90 combines an independently certified thermal reference with a pultruded full-FRP platform and flexible local-fabrication supply. This supports a strong performance-to-cost proposition for passive and cold-region building programmes; the actual commercial advantage is confirmed project by project against glazing, hardware, fabrication and logistics.",
+        valuePoints: [
+          "Certified whole-window Uw 0.78 W/(m²·K) for the identified PHI configuration",
+          "Pultruded full-FRP profiles avoid a continuous metal thermal path",
+          "System-profile or glass-free CKD supply keeps final glazing and assembly local",
+        ],
+        note:
+          "Certificate scope is configuration-specific. Any quotation or project that cites PHI certification must match the certified frame build, glazing, warm-edge spacer, seals and installation conditions identified in certificate 2491wi03; destination-market approval remains separate.",
+        downloadLabel: "Download official PHI certificate (PDF)",
+        openLabel: "Open certificate",
+        filePath: "/certificates/fd90-passive-house-institute-certificate-2491wi03.pdf",
+        preview: {
+          src: "/images/systems/fd90-passive-house-institute-certificate-2491wi03.webp",
+          width: 1158,
+          height: 1638,
+          alt: "Passive House Institute certificate 2491wi03 for Fengdu Passive GFRP 90 Series",
+        },
+      },
       glazingTitle: "Recommended cold-climate configurations",
       glazingIntro:
         "Thermal values are reproduced from the supplied 2026 catalogue for the listed glass build-ups. Slash-separated values reflect the catalogue alternatives; units are W/(m²·K).",
@@ -213,12 +271,14 @@ export const coldClimateFrpSystems: Record<
       seo: {
         title: "Оконная система FRP FD90 для холодного климата | PINDÉ",
         description:
-          "Полностью стеклокомпозитная система FD90 глубиной 90 мм для экстремально холодного климата: каталожный Uw готового окна до 0,85 Вт/(м²·K).",
+          "Сертифицированная PHI система FD90 из FRP глубиной 90 мм для пассивных зданий: класс phB, Uw 0,78 Вт/(м²·K), сертификат действует до конца 2026 года.",
         keywords: [
           "стеклокомпозитное окно FD90",
           "оконная система FRP 90 мм",
           "окно для холодного климата",
           "стеклопластиковое окно пассивный дом",
+          "сертифицированное окно Passive House Institute",
+          "оконный компонент PHI phB",
           "окно FRP с тройным стеклопакетом",
           "пултрузионная композитная оконная рама",
         ],
@@ -226,30 +286,30 @@ export const coldClimateFrpSystems: Record<
       title: "FD90: окно серии 90 для холодного климата",
       eyebrow: "Флагман для экстремального холода · полностью FRP",
       intro:
-        "Полностью стеклокомпозитная поворотная платформа глубиной 90 мм для суровых зимних ограждающих конструкций. Каталог объединяет низкотеплопроводную раму, тройные стеклопакеты и высокие классы герметичности; в указанной конфигурации с тёплой дистанционной рамкой Uw готового окна достигает 0,85 Вт/(м²·K).",
-      supplyStatus: "Флагман для холодного климата — требуется квалификация проекта",
+        "Полностью стеклокомпозитная поворотная платформа глубиной 90 мм для суровых зимних ограждающих конструкций. Сертификат Passive House Institute 2491wi03 распространяется на Fengdu Passive GFRP 90 Series для прохладной умеренной климатической зоны: класс эффективности phB и Uw готового окна 0,78 Вт/(м²·K). Пултрузионная система FRP обеспечивает сильное соотношение характеристик и стоимости для квалифицированных проектов пассивных зданий.",
+      supplyStatus: "Сертифицированный PHI зимний флагман — требуется контроль конфигурации",
       heroCards: [
         { label: "Глубина рамы", value: "90 мм" },
-        { label: "Каталожный Uf рамы", value: "0,85" },
-        { label: "Лучший Uw в каталоге", value: "0,85" },
-        { label: "Максимальная масса створки", value: "130 кг" },
+        { label: "Класс эффективности PHI", value: "phB" },
+        { label: "Сертифицированный Uw окна", value: "0,78" },
+        { label: "Сертификат действует до", value: "2026" },
       ],
       cardDescription:
-        "Высокотеплоизоляционная 90-мм платформа с поворотным и поворотно-откидным открыванием: класс теплоизоляции 10 и Uw до 0,85 Вт/(м²·K).",
+        "Сертифицированная PHI 90-мм поворотная и поворотно-откидная платформа: phB для прохладной умеренной зоны, Uw 0,78 Вт/(м²·K) и выгодный маршрут поставки полностью FRP.",
       cardCta: "Открыть FD90",
       climateTitle: "Для самых требовательных зимних оболочек",
       climateIntro:
-        "Матрица выбора исходного каталога относит FD90 к сверхнизкоэнергетическим, пассивным или почти нулевым и нулевым по энергопотреблению зданиям. Итоговая пригодность зависит от размера, стеклопакета, дистанционной рамки, фурнитуры, стыков, монтажа и метода испытаний целевого рынка.",
+        "Сертификация PHI даёт независимую основу для применения компонента в пассивных зданиях прохладной умеренной климатической зоны. FD90 также предназначена для холодных регионов, сверхнизкоэнергетических и почти нулевых зданий при совпадении сертифицированной конструкции и проверке размеров, стеклопакета, дистанционной рамки, фурнитуры, стыков и монтажа.",
       climateFeatures: [
         {
-          title: "Низкотеплопроводная рама полностью FRP",
+          title: "Сертифицированный компонент PHI",
           description:
-            "Пултрузионные стеклокомпозитные профили не создают непрерывного металлического пути теплопередачи; каталожный Uf рамы — 0,85 Вт/(м²·K).",
+            "Компонент 2491wi03 сертифицирован по классу phB для прохладной умеренной зоны: Uw 0,78 Вт/(м²·K), а установленные окна выполняют критерий сертификата Uw не выше 0,85 Вт/(м²·K).",
         },
         {
-          title: "Глубина под тройной стеклопакет",
+          title: "Высокое отношение характеристик к стоимости",
           description:
-            "90-мм платформа указана с многослойными Low-E, аргоновыми и тёплыми дистанционными конфигурациями для зимней оболочки.",
+            "Пултрузионные профили полностью FRP, глубина 90 мм и поставка профилей либо CKD без стеклопакета объединяют сертифицированную теплотехнику с экономичным производственным маршрутом.",
         },
         {
           title: "Погода и акустика",
@@ -279,9 +339,44 @@ export const coldClimateFrpSystems: Record<
         { label: "Стенка несущего профиля", value: "3,0 мм" },
         { label: "Максимальная масса створки", value: "130 кг" },
         { label: "Каталожный Uf рамы", value: "0,85 Вт/(м²·K)" },
+        { label: "Сертификат компонента PHI", value: "2491wi03 · phB · действует до 31 декабря 2026 года" },
+        { label: "Сертифицированный Uw окна PHI", value: "0,78 Вт/(м²·K) при Ug 0,70 Вт/(м²·K)" },
         { label: "Остекление", value: "Двойной или тройной стеклопакет по проекту" },
         { label: "Форма поставки", value: "Квалифицированная система профилей или CKD без стеклопакета" },
       ],
+      phiCertificate: {
+        title: "Сертифицировано PHI для пассивных зданий",
+        intro:
+          "Официальный сертификат Passive House Institute называет сертифицированный оконный компонент Fengdu Passive GFRP 90 Series производства Chongqing Xianju New Material Co., Ltd. Компонент соответствует указанным в документе критериям для прохладной умеренной климатической зоны.",
+        status: "Действующий сертификат PHI · до 31 декабря 2026 года",
+        facts: [
+          { label: "ID компонента", value: "2491wi03" },
+          { label: "Сертифицированный продукт", value: "Fengdu Passive GFRP 90 Series" },
+          { label: "Климат / класс", value: "Прохладный умеренный · phB" },
+          { label: "Сертифицированный Uw", value: "0,78 Вт/(м²·K) при Ug 0,70 Вт/(м²·K)" },
+          { label: "Критерий установленного Uw", value: "≤ 0,85 Вт/(м²·K)" },
+          { label: "Гигиенический критерий", value: "fRsi=0.25 ≥ 0,70" },
+        ],
+        valueTitle: "Сертифицированные характеристики и экономичный маршрут",
+        valueIntro:
+          "FD90 сочетает независимое подтверждение теплотехники с пултрузионной платформой полностью FRP и гибкой локальной сборкой. Это формирует высокое отношение характеристик к стоимости для пассивных зданий и проектов в холодных регионах; фактическое коммерческое преимущество подтверждается по проекту с учётом стекла, фурнитуры, производства и логистики.",
+        valuePoints: [
+          "Uw готового окна 0,78 Вт/(м²·K) для сертифицированной конфигурации PHI",
+          "Профили полностью FRP не создают непрерывного металлического пути теплопередачи",
+          "Поставка профилей или CKD без стеклопакета сохраняет локальное остекление и сборку",
+        ],
+        note:
+          "Область сертификата ограничена конкретной конфигурацией. При ссылке на PHI в предложении или проекте конструкция рамы, стеклопакет, тёплая дистанционная рамка, уплотнения и монтаж должны соответствовать сертификату 2491wi03; разрешение для целевого рынка оформляется отдельно.",
+        downloadLabel: "Скачать официальный сертификат PHI (PDF)",
+        openLabel: "Открыть сертификат",
+        filePath: "/certificates/fd90-passive-house-institute-certificate-2491wi03.pdf",
+        preview: {
+          src: "/images/systems/fd90-passive-house-institute-certificate-2491wi03.webp",
+          width: 1158,
+          height: 1638,
+          alt: "Сертификат Passive House Institute 2491wi03 для Fengdu Passive GFRP 90 Series",
+        },
+      },
       glazingTitle: "Рекомендуемые конфигурации для холодного климата",
       glazingIntro:
         "Теплотехнические значения перенесены из предоставленного каталога 2026 года для указанных стеклопакетов. Значения через косую черту отражают варианты каталога; единицы — Вт/(м²·K).",
