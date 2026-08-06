@@ -2,8 +2,10 @@ import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
 import { BRAND } from "@/lib/constants";
 import { marketChrome, type MarketLocale } from "@/content/marketChrome";
+import { getSystemMenu } from "@/content/systemNavigation";
 import MobileNav from "./MobileNav";
 import PindeLogo from "./PindeLogo";
+import SystemMegaMenu from "./SystemMegaMenu";
 
 type HeaderProps = {
   locale: MarketLocale;
@@ -15,6 +17,7 @@ export default function Header({ locale }: HeaderProps) {
     ...link,
     href: `/${locale}${link.href}`,
   }));
+  const systemMenu = getSystemMenu(locale);
   const utilityText =
     locale === "ru"
       ? "Алюминиевые и стеклокомпозитные системы для окон и дверей"
@@ -77,7 +80,8 @@ export default function Header({ locale }: HeaderProps) {
             className="hidden items-center gap-6 lg:flex"
             aria-label={locale === "ru" ? "Основная навигация" : "Main navigation"}
           >
-            {navLinks.map((link) => (
+            <SystemMegaMenu menu={systemMenu} />
+            {navLinks.slice(1).map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -109,6 +113,7 @@ export default function Header({ locale }: HeaderProps) {
               ctaHref={`/${locale}/rfq`}
               ctaLabel={content.headerCta}
               menuLabel={locale === "ru" ? "Открыть меню" : "Toggle menu"}
+              systemMenu={systemMenu}
             />
           </div>
         </div>
