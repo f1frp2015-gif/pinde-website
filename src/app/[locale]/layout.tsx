@@ -86,6 +86,8 @@ export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "ru" }];
 }
 
+export const dynamicParams = false;
+
 export default async function MarketLayout({
   children,
   params,

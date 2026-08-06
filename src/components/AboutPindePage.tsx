@@ -86,7 +86,7 @@ export default function AboutPindePage({ locale, content }: Props) {
         <div className={`${container} grid lg:grid-cols-[1.02fr_0.98fr]`}>
           <div className="flex flex-col justify-center py-14 lg:min-h-[650px] lg:py-20 lg:pr-16">
             <nav aria-label={locale === "ru" ? "Хлебные крошки" : "Breadcrumb"} className="mb-8 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.08em] text-[#68747B]">
-              <Link href={`/${locale}`} className="transition-colors hover:text-[#DAAF37]">PINDÉ</Link>
+              <Link href={`/${locale}`} prefetch={false} className="transition-colors hover:text-[#DAAF37]">PINDÉ</Link>
               <span className="text-[#D9D9D9]">/</span>
               <span aria-current="page">{content.breadcrumb}</span>
             </nav>

@@ -47,7 +47,8 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: "Cache-Control",
-            value: "public, max-age=86400, stale-while-revalidate=604800",
+            // Public image names are versioned by rename when their content changes.
+            value: "public, max-age=31536000, immutable",
           },
           {
             key: "Vercel-CDN-Cache-Control",
@@ -60,7 +61,8 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: "Cache-Control",
-            value: "public, max-age=86400, stale-while-revalidate=604800",
+            // Brand asset updates must use a new filename before deployment.
+            value: "public, max-age=31536000, immutable",
           },
           {
             key: "Vercel-CDN-Cache-Control",

@@ -183,9 +183,9 @@ export default async function AluminiumComparisonPage({ params }: Props) {
 
       <nav aria-label={locale === "ru" ? "Хлебные крошки" : "Breadcrumb"} className="border-b border-line bg-obsidian pt-[104px] py-4">
         <div className="mx-auto flex max-w-[1200px] flex-wrap items-center gap-2 px-[55px] pt-[13px] text-[11px] uppercase tracking-[2px] text-muted max-lg:px-6">
-          <Link href={`/${locale}`}>{content.home}</Link><span>/</span>
-          <Link href={`/${locale}/systems`}>{content.systems}</Link><span>/</span>
-          <Link href={`/${locale}/systems/aluminium`}>{content.aluminium}</Link><span>/</span>
+          <Link href={`/${locale}`} prefetch={false}>{content.home}</Link><span>/</span>
+          <Link href={`/${locale}/systems`} prefetch={false}>{content.systems}</Link><span>/</span>
+          <Link href={`/${locale}/systems/aluminium`} prefetch={false}>{content.aluminium}</Link><span>/</span>
           <span className="text-warm">{content.breadcrumb}</span>
         </div>
       </nav>
@@ -213,7 +213,7 @@ export default async function AluminiumComparisonPage({ params }: Props) {
                   const localizedProduct = getLocalizedAluminiumProduct(product, locale);
                   return (
                   <tr key={product.slug} className="border-t border-line align-top">
-                    <td className="px-5 py-5"><Link href={`/${locale}/systems/aluminium/${product.slug}`} className="font-bold text-[#DAAF37] hover:text-red">{product.series}</Link><span className="mt-1 block text-[11px] text-muted">{localizedProduct.name}</span></td>
+                    <td className="px-5 py-5"><Link href={`/${locale}/systems/aluminium/${product.slug}`} prefetch={false} className="font-bold text-[#DAAF37] hover:text-red">{product.series}</Link><span className="mt-1 block text-[11px] text-muted">{localizedProduct.name}</span></td>
                     <td className="px-5 py-5 text-[12px] leading-[1.6] text-warm">{content.openings[product.slug as keyof typeof content.openings]}</td>
                     <td className="px-5 py-5 text-[12px] font-semibold text-alabaster">{spec(product, "frame depth")}</td>
                     <td className="px-5 py-5 text-[12px] text-warm">{catalogueReference(product, locale)}</td>

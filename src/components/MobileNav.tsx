@@ -1,8 +1,7 @@
 "use client";
 
-import { useCallback, useRef, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import type { SystemMenuData } from "@/content/systemNavigation";
 
 function MenuIcon({ open }: { open: boolean }) {
@@ -49,28 +48,12 @@ export default function MobileNav({
   systemMenu,
 }: MobileNavProps) {
   const [open, setOpen] = useState(false);
-  const router = useRouter();
-  const routesAreWarm = useRef(false);
-  const prefetchRoutes = useCallback(() => {
-    if (routesAreWarm.current) return;
-
-    routesAreWarm.current = true;
-    [...links.map((link) => link.href), ctaHref].forEach((href) => {
-      router.prefetch(href);
-    });
-  }, [ctaHref, links, router]);
 
   return (
     <div className="lg:hidden">
       <button
         type="button"
-        onPointerEnter={prefetchRoutes}
-        onFocus={prefetchRoutes}
-        onTouchStart={prefetchRoutes}
-        onClick={() => {
-          prefetchRoutes();
-          setOpen((current) => !current);
-        }}
+        onClick={() => setOpen((current) => !current)}
         className="p-2 text-white"
         aria-label={menuLabel}
         aria-expanded={open}
@@ -127,7 +110,7 @@ export default function MobileNav({
                     <div className="pb-3 pl-3">
                       <Link
                         href={category.overviewHref}
-                        prefetch
+                        prefetch={false}
                         onClick={() => setOpen(false)}
                         className="mb-1 flex items-center justify-between py-2 text-[10px] font-bold uppercase tracking-[0.08em] text-[#DAAF37]"
                       >
@@ -166,7 +149,7 @@ export default function MobileNav({
               <Link
                 key={link.href}
                 href={link.href}
-                prefetch
+                prefetch={false}
                 onClick={() => setOpen(false)}
                 className="flex items-center justify-between border-b border-white/10 px-1 py-3 text-[13px] font-semibold text-white/78"
               >
