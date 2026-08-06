@@ -1,9 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { AlertTriangle, ArrowLeft, Check, ShieldCheck, ThermometerSnowflake, Volume2 } from "lucide-react";
+import FrpRelatedProducts from "@/components/FrpRelatedProducts";
+import ProductFaqSection from "@/components/ProductFaqSection";
+import { frpProductFaqs } from "@/content/frpProductEnhancements";
 import type { PageLocale } from "@/content/pages";
 import { pd75Content } from "@/content/pd75";
-import { breadcrumbJsonLd } from "@/lib/jsonld";
+import { breadcrumbJsonLd, faqPageJsonLd, productJsonLd, serializeJsonLd } from "@/lib/jsonld";
 
 type Props = {
   locale: PageLocale;
@@ -14,18 +17,33 @@ const container = "mx-auto max-w-[1200px] px-[55px] max-lg:px-6";
 const benefitIcons = [ShieldCheck, ThermometerSnowflake, Volume2];
 
 export default function Pd75SystemPage({ locale, content }: Props) {
+  const canonical = `https://pindesys.com/${locale}/systems/frp/xd75`;
+  const faqs = frpProductFaqs.xd75[locale];
   const homeLabel = locale === "ru" ? "Главная" : "Home";
   const systemsLabel = locale === "ru" ? "Системы" : "Systems";
   const crumbs = breadcrumbJsonLd([
     { name: homeLabel, url: `https://pindesys.com/${locale}` },
     { name: systemsLabel, url: `https://pindesys.com/${locale}/systems` },
     { name: "FRP", url: `https://pindesys.com/${locale}/systems/frp` },
-    { name: "PD75", url: `https://pindesys.com/${locale}/systems/frp/xd75` },
+    { name: "PD75", url: canonical },
   ]);
+  const productSchema = productJsonLd({
+    name: content.title,
+    slug: "xd75",
+    series: "PD75",
+    description: content.seo.description,
+    images: ["/images/systems/pinde-pd75-ultra-frp-core-thermal-performance.webp"],
+    specs: content.specs,
+  }, canonical, {
+    category: "Aluminium-Composite Window Systems",
+    material: "Aluminium and pultruded glass-fibre-reinforced polyurethane (GRPU)",
+  });
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(crumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(productSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(faqPageJsonLd(faqs)) }} />
 
       <nav aria-label={locale === "ru" ? "Хлебные крошки" : "Breadcrumb"} className="pt-[104px] py-4 bg-obsidian border-b border-line">
         <div className={`${container} pt-[13px] flex flex-wrap items-center gap-2 text-[11px] tracking-[2px] uppercase text-muted`}>
@@ -211,6 +229,9 @@ export default function Pd75SystemPage({ locale, content }: Props) {
           </div>
         </div>
       </section>
+
+      <ProductFaqSection locale={locale} faqs={faqs} />
+      <FrpRelatedProducts locale={locale} current="xd75" />
 
       <section className="py-[89px] bg-surface">
         <div className={`${container} text-center`}>

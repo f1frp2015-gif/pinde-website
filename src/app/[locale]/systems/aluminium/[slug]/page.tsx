@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import AluminiumProductPage from "@/components/AluminiumProductPage";
+import { getAluminiumProductSeo } from "@/content/aluminiumProductSeo";
 import { isPageLocale, pageLocales } from "@/content/pages";
 import { products } from "@/data/products";
 
@@ -20,17 +21,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!product) notFound();
 
   const canonical = `https://pindesys.com/${locale}/systems/aluminium/${product.slug}`;
-  const localeDescription = locale === "ru"
-    ? `Алюминиевая система PINDÉ ${product.name}: конфигурация, особенности и справочные технические характеристики для оконного производства.`
-    : product.description.slice(0, 160);
+  const seo = getAluminiumProductSeo(product, locale);
 
   return {
-    title: {
-      absolute: locale === "ru"
-        ? `${product.name} — алюминиевая система ${product.series} | PINDÉ`
-        : `${product.name} — ${product.series} Aluminium System | PINDÉ`,
-    },
-    description: localeDescription,
+    title: { absolute: seo.title },
+    description: seo.description,
+    keywords: seo.keywords,
     alternates: {
       canonical,
       languages: {
@@ -45,16 +41,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: "PINDÉ",
       locale: locale === "ru" ? "ru_RU" : "en_US",
       alternateLocale: locale === "en" ? ["ru_RU"] : ["en_US"],
-      title: `${product.name} | PINDÉ`,
-      description: localeDescription,
+      title: seo.title,
+      description: seo.description,
       images: product.images.length > 0
         ? [{ url: product.images[0], alt: product.name }]
         : undefined,
     },
     twitter: {
       card: "summary_large_image",
-      title: `${product.name} | PINDÉ`,
-      description: localeDescription,
+      title: seo.title,
+      description: seo.description,
       images: product.images.length > 0 ? [product.images[0]] : undefined,
     },
   };

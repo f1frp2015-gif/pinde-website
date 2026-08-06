@@ -12,9 +12,12 @@ import {
   ThermometerSnowflake,
 } from "lucide-react";
 import type { PageLocale } from "@/content/pages";
+import FrpRelatedProducts from "@/components/FrpRelatedProducts";
+import ProductFaqSection from "@/components/ProductFaqSection";
 import type { ColdClimateFrpSystemContent } from "@/content/coldClimateFrp";
 import { coldClimateFrpCategoryContent } from "@/content/coldClimateFrpCategory";
-import { breadcrumbJsonLd } from "@/lib/jsonld";
+import { frpProductFaqs } from "@/content/frpProductEnhancements";
+import { breadcrumbJsonLd, faqPageJsonLd, serializeJsonLd } from "@/lib/jsonld";
 
 type Props = {
   locale: PageLocale;
@@ -25,6 +28,7 @@ const container = "mx-auto max-w-[1200px] px-[55px] max-lg:px-6";
 const climateIcons = [ThermometerSnowflake, Snowflake, ShieldCheck];
 
 export default function ColdClimateFrpSystemPage({ locale, content }: Props) {
+  const faqs = frpProductFaqs[content.slug][locale];
   const canonical = `https://pindesys.com/${locale}/systems/frp/${content.slug}`;
   const category = coldClimateFrpCategoryContent[locale];
   const categoryUrl = `https://pindesys.com/${locale}/systems/frp/cold-climate`;
@@ -67,8 +71,9 @@ export default function ColdClimateFrpSystemPage({ locale, content }: Props) {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(crumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(productJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(faqPageJsonLd(faqs)) }} />
 
       <nav aria-label={locale === "ru" ? "Хлебные крошки" : "Breadcrumb"} className="border-b border-line bg-obsidian pt-[104px] py-4">
         <div className={`${container} flex flex-wrap items-center gap-2 pt-[13px] text-[11px] uppercase tracking-[2px] text-muted`}>
@@ -330,6 +335,9 @@ export default function ColdClimateFrpSystemPage({ locale, content }: Props) {
           </div>
         </div>
       </section>
+
+      <ProductFaqSection locale={locale} faqs={faqs} />
+      <FrpRelatedProducts locale={locale} current={content.slug} />
 
       <section className="bg-surface py-[89px]">
         <div className={`${container} text-center`}>

@@ -270,7 +270,7 @@ export const systemsFrpContent = {
     lang: "en",
     locale: "en_US",
     seo: {
-      title: "FD90, FDTL140, PD75 & PD95 FRP Systems | PINDÉ",
+      title: "FRP Composite Window Systems | Full-FRP & Aluminium-Composite | PINDÉ",
       description:
         "FD90 and FDTL140 full-FRP cold-climate systems plus PD75 and PD95 aluminium-composite window platforms. Qualified profile and CKD programmes from Chongqing.",
       keywords: [
@@ -346,7 +346,7 @@ export const systemsFrpContent = {
     lang: "ru",
     locale: "ru_RU",
     seo: {
-      title: "Системы FRP FD90, FDTL140, PD75 и PD95 | PINDÉ",
+      title: "Композитные оконные системы FRP | Полностью FRP и алюминий-композит | PINDÉ",
       description:
         "Полностью FRP системы FD90 и FDTL140 для холодного климата плюс алюминиево-композитные оконные платформы PD75 и PD95. Квалифицированные профили и CKD из Чунцина.",
       keywords: [

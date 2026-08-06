@@ -68,6 +68,9 @@ export default function SystemsAluminiumPage({ locale, content }: Props) {
               {content.catalogTitle}<span className="text-red">.</span>
             </h2>
             <p className="text-[14px] leading-[1.9] text-warm">{content.catalogIntro}</p>
+            <Link href={`/${locale}/systems/aluminium/comparison`} className="mt-6 inline-flex items-center border border-[#DAAF37]/55 px-5 py-3 text-[10px] font-bold uppercase tracking-[0.12em] text-[#DAAF37] transition-colors hover:border-red hover:text-red">
+              {locale === "ru" ? "Сравнить 9 наружных оконных систем" : "Compare 9 exterior window systems"}
+            </Link>
           </div>
           <ProductFilter
             products={products}

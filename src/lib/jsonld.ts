@@ -98,7 +98,10 @@ export function productJsonLd(product: {
   description: string;
   images: string[];
   specs: { label: string; value: string }[];
-}, productUrl = `${siteUrl}/en/systems/aluminium/${product.slug}`) {
+}, productUrl = `${siteUrl}/en/systems/aluminium/${product.slug}`, options?: {
+  category?: string;
+  material?: string;
+}) {
   return {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -118,13 +121,33 @@ export function productJsonLd(product: {
     image: product.images.length > 0
       ? `${siteUrl}${product.images[0]}`
       : `${siteUrl}/og-about-pinde.webp`,
-    category: "Architectural Aluminium Systems",
+    category: options?.category ?? "Architectural Aluminium Systems",
+    ...(options?.material ? { material: options.material } : {}),
     additionalProperty: product.specs.map((s) => ({
       "@type": "PropertyValue",
       name: s.label,
       value: s.value,
     })),
   };
+}
+
+export function faqPageJsonLd(items: { question: string; answer: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+}
+
+export function serializeJsonLd(value: unknown) {
+  return JSON.stringify(value).replace(/</g, "\\u003c");
 }
 
 export const faqJsonLd = {

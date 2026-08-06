@@ -36,6 +36,9 @@ function validatePage(file, html, locale) {
   if (!canonical?.startsWith(`${CANONICAL_ORIGIN}/${locale}`)) {
     failures.push("canonical must use the matching localized pindesys.com URL");
   }
+  if (canonical?.includes("?") || canonical?.includes("#") || canonical?.includes("dpl=")) {
+    failures.push("canonical must not contain query parameters or fragments");
+  }
 
   for (const alternate of ["en", "ru", "x-default"]) {
     if (!html.includes(`<link rel="alternate" hrefLang="${alternate}"`)) {
@@ -48,14 +51,24 @@ function validatePage(file, html, locale) {
   }
 
   const jsonLdBlocks = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
+  const jsonLdTypes = [];
   if (jsonLdBlocks.length === 0) failures.push("missing JSON-LD");
   for (const [, json] of jsonLdBlocks) {
     try {
-      JSON.parse(json);
+      const parsed = JSON.parse(json);
+      if (typeof parsed?.["@type"] === "string") jsonLdTypes.push(parsed["@type"]);
     } catch {
       failures.push("contains invalid JSON-LD");
       break;
     }
+  }
+
+  const isProductPage = (relative.includes("/systems/aluminium/") && !relative.endsWith("/systems/aluminium/comparison.html"))
+    || /\/systems\/frp\/(xd75|pd95|fd90|fdtl140)\.html$/.test(relative);
+  if (isProductPage) {
+    if (!html.includes('<meta name="keywords"')) failures.push("product page is missing differentiated keyword metadata");
+    if (!jsonLdTypes.includes("Product")) failures.push("product page is missing Product JSON-LD");
+    if (!jsonLdTypes.includes("FAQPage")) failures.push("product page is missing FAQPage JSON-LD");
   }
 
   return failures.map((failure) => `${relative}: ${failure}`);
