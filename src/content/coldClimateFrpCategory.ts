@@ -64,7 +64,7 @@ export const coldClimateFrpCategoryContent: Record<PageLocale, ColdClimateFrpCat
     ],
     scopeTitle: "A category with a clear boundary",
     scopeIntro:
-      "This category is defined by material route, winter-performance positioning and verified product scope. PD75 remains a separate aluminium-composite engineering platform within the broader FRP family.",
+      "This category is defined by material route, winter-performance positioning and verified product scope. PD75 and PD95 remain together in the separate aluminium-composite category within the broader FRP family.",
     scopeItems: [
       {
         title: "Only two named systems",
@@ -140,7 +140,7 @@ export const coldClimateFrpCategoryContent: Record<PageLocale, ColdClimateFrpCat
     ],
     scopeTitle: "Категория с чёткими границами",
     scopeIntro:
-      "Категория определяется материалом, зимним позиционированием и подтверждённым продуктовым составом. PD75 остаётся отдельной алюминиево-композитной инженерной платформой внутри более широкого семейства FRP.",
+      "Категория определяется материалом, зимним позиционированием и подтверждённым продуктовым составом. PD75 и PD95 остаются вместе в отдельной алюминиево-композитной категории внутри более широкого семейства FRP.",
     scopeItems: [
       {
         title: "Только две системы",

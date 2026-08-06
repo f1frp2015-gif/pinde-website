@@ -4,6 +4,7 @@ import { AlertTriangle, ArrowRight, Check } from "lucide-react";
 import type { PageLocale } from "@/content/pages";
 import { coldClimateFrpSystems, coldClimateFrpSystemSlugs } from "@/content/coldClimateFrp";
 import { pd75Content } from "@/content/pd75";
+import { pd95Content } from "@/content/pd95";
 import { breadcrumbJsonLd } from "@/lib/jsonld";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -13,7 +14,26 @@ const container = "mx-auto max-w-[1200px] px-[55px] max-lg:px-6";
 
 export default function SystemsFrpPage({ locale, content }: Props) {
   const pd75 = pd75Content[locale];
+  const pd95 = pd95Content[locale];
   const coldClimateSystems = coldClimateFrpSystemSlugs.map((slug) => coldClimateFrpSystems[slug][locale]);
+  const aluminiumCompositeSystems = [
+    {
+      designation: "PD75",
+      href: "xd75",
+      image: "/images/systems/pinde-pd75-ultra-frp-core-thermal-performance.webp",
+      imageAlt: locale === "ru" ? "PD75 с Ultra FRP Core и визуализацией теплового потока" : "PD75 window with Ultra FRP Core and thermal-flow visualisation",
+      imageClassName: "object-contain",
+      content: pd75,
+    },
+    {
+      designation: "PD95",
+      href: "pd95",
+      image: "/images/systems/pinde-pd95-passive-window-thermal-performance.webp",
+      imageAlt: locale === "ru" ? "PD95 с теплоизоляционной зоной 80 мм и тепловой визуализацией" : "PD95 with an 80mm insulated zone and thermal visualisation",
+      imageClassName: "object-cover object-[center_47%]",
+      content: pd95,
+    },
+  ];
   const homeLabel = locale === "ru" ? "Главная" : "Home";
   const systemsLabel = locale === "ru" ? "Системы" : "Systems";
   const crumbs = breadcrumbJsonLd([
@@ -113,35 +133,47 @@ export default function SystemsFrpPage({ locale, content }: Props) {
           </div>
         </div>
       </section>
-      <section className="py-[89px] bg-obsidian">
-        <div className={`${container} grid items-center gap-[55px] lg:grid-cols-2`}>
-          <div className="relative aspect-[1178/756] overflow-hidden border border-line bg-white">
-            <Image
-              src="/images/systems/pinde-pd75-ultra-frp-core-thermal-performance.webp"
-              alt={locale === "ru" ? "PD75 с Ultra FRP Core и визуализацией теплового потока" : "PD75 window with Ultra FRP Core and thermal-flow visualisation"}
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-contain"
-            />
-          </div>
-          <div>
-            <p className="mb-[13px] text-[10px] font-bold uppercase tracking-[0.16em] text-[#DAAF37]">{pd75.eyebrow}</p>
-            <h2 className="font-[family-name:var(--font-serif)] text-[36px] font-semibold leading-[1.05] text-alabaster">
-              {pd75.title}<span className="text-red">.</span>
+      <section className="bg-obsidian py-[89px]">
+        <div className={container}>
+          <div className="mb-[34px] max-w-[860px]">
+            <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.16em] text-[#DAAF37]">{content.aluminiumCompositeLabel}</p>
+            <h2 className="mb-[13px] font-[family-name:var(--font-serif)] text-[36px] font-semibold leading-[1.05] text-alabaster">
+              {content.aluminiumCompositeTitle}<span className="text-red">.</span>
             </h2>
-            <p className="mt-5 text-[14px] leading-[1.85] text-warm">{pd75.intro}</p>
-            <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-              {pd75.heroCards.map((card) => (
-                <li key={card.label} className="flex items-start gap-3 text-[12px] leading-[1.6] text-warm">
-                  <Check size={15} className="mt-0.5 shrink-0 text-red" />
-                  <span><strong className="block text-alabaster">{card.value}</strong>{card.label}</span>
-                </li>
-              ))}
-            </ul>
-            <Link href={`/${locale}/systems/frp/xd75`} className="mt-8 inline-flex items-center gap-2 bg-gold px-[34px] py-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-navy hover:brightness-105">
-              {locale === "ru" ? "Открыть серию PD75" : "Explore the PD75 series"}
-              <ArrowRight size={14} />
-            </Link>
+            <p className="text-[14px] leading-[1.85] text-warm">{content.aluminiumCompositeIntro}</p>
+          </div>
+          <div className="grid gap-[13px] lg:grid-cols-2">
+            {aluminiumCompositeSystems.map((system) => (
+              <article key={system.designation} className="overflow-hidden border border-line bg-surface">
+                <div className="relative aspect-[16/10] overflow-hidden bg-white">
+                  <Image
+                    src={system.image}
+                    alt={system.imageAlt}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className={system.imageClassName}
+                  />
+                </div>
+                <div className="p-6 sm:p-8">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#DAAF37]">{system.content.eyebrow}</p>
+                  <h3 className="mt-3 text-[30px] font-extrabold leading-tight text-alabaster">{system.designation}</h3>
+                  <p className="mt-2 text-[13px] font-semibold text-warm">{system.content.title}</p>
+                  <p className="mt-5 text-[13px] leading-[1.75] text-muted">{system.content.intro}</p>
+                  <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+                    {system.content.heroCards.map((card) => (
+                      <li key={card.label} className="flex items-start gap-3 text-[11px] leading-[1.6] text-warm">
+                        <Check size={15} className="mt-0.5 shrink-0 text-red" />
+                        <span><strong className="block text-alabaster">{card.value}</strong>{card.label}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link href={`/${locale}/systems/frp/${system.href}`} className="mt-8 inline-flex items-center gap-2 bg-gold px-[30px] py-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-navy hover:brightness-105">
+                    {locale === "ru" ? `Открыть серию ${system.designation}` : `Explore the ${system.designation} series`}
+                    <ArrowRight size={14} />
+                  </Link>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>

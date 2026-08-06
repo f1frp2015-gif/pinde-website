@@ -27,7 +27,7 @@ Key specifications:
 - Extrusion: 3,600-ton press, automated cutting at ±0.5mm tolerance
 
 ### FRP & Aluminium-GRPU Composite Systems (Engineering Programme)
-Two composite routes are managed in this family. The dedicated Cold-Climate FRP Systems category contains exactly two full-FRP flagships: FD90, a 90mm casement and tilt-turn window platform with Grade 10 catalogue thermal insulation plus current Passive House Institute component certification; and FDTL140, a 140mm side-press sliding door with a 200kg leaf capacity, Grade 10 catalogue thermal insulation and a listed Uw of 1.02 W/(m²·K). PD75 is a separate 75mm aluminium-composite window platform with inner and outer aluminium shells structurally joined by a 45mm Ultra FRP Core made from pultruded glass-fibre reinforced polyurethane (GRPU). Each programme is released against its own defined BOM, connection method, and project test plan.
+Two composite routes are managed in this family. The dedicated Cold-Climate FRP Systems category contains exactly two full-FRP flagships: FD90, a 90mm casement and tilt-turn window platform with Grade 10 catalogue thermal insulation plus current Passive House Institute component certification; and FDTL140, a 140mm side-press sliding door with a 200kg leaf capacity, Grade 10 catalogue thermal insulation and a listed Uw of 1.02 W/(m²·K). The aluminium-composite category contains PD75 and PD95. PD75 is a 75mm platform with inner and outer aluminium shells structurally joined by a documented 45mm Ultra FRP Core made from pultruded glass-fibre reinforced polyurethane (GRPU). PD95 is a nominal 95mm passive-performance platform with an 80mm insulated profile zone; its exact core formulation remains subject to BOM confirmation. Each programme is released against its own defined BOM, connection method, and project test plan.
 
 Package includes:
 - Frame, sash, mullion, and glazing-bead profile set
@@ -56,6 +56,14 @@ PD75 reference specifications:
 - 1.8mm aluminium profile wall in the source system catalogue
 - Outward-opening and inward tilt-turn configurations
 - Source-catalogue performance values apply only to the identified specimen and glazing build-up; destination-market claims require project-specific whole-window verification
+
+PD95 reference specifications:
+- Nominal 95mm aluminium-composite system depth; source frame sections list 95.5–95.8mm
+- 80mm thermal-break profile width and 1.8mm aluminium profile wall in the supplied source sheet
+- Catalogue glazing: 6Low-E + 16Ar + 6 + 16Ar + 6
+- Catalogue specimen references: 0.98 W/(m²·K) Grade 10 thermal, Grade 9 wind, Grade 8 air, Grade 5 water, and 39dB Grade 4 acoustic performance
+- The supplied Passive House Institute certificate names the source product XMG ES95, certificate 2063wi03, and expired on 31 December 2024; renewal, current database status, tested BOM, and identity mapping to PD95 must be verified before any certification claim
+- Historical PHI certificate PDF: https://pindesys.com/certificates/pinde-pd95-phi-passive-house-certificate-2063wi03.pdf
 
 IMPORTANT: Thermal, structural, and weather-performance values are stated only for a verified specimen, glazing build-up, and test scope. Unverified values remain project targets — not sales claims.
 

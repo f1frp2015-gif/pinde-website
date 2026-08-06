@@ -11,6 +11,7 @@ const localizedRoutes = [
   { path: "/systems/frp/fd90", frequency: "weekly" as const, priority: 0.85 },
   { path: "/systems/frp/fdtl140", frequency: "weekly" as const, priority: 0.85 },
   { path: "/systems/frp/xd75", frequency: "weekly" as const, priority: 0.8 },
+  { path: "/systems/frp/pd95", frequency: "weekly" as const, priority: 0.8 },
   { path: "/supply", frequency: "weekly" as const, priority: 0.85 },
   { path: "/engineering", frequency: "monthly" as const, priority: 0.8 },
   { path: "/process", frequency: "monthly" as const, priority: 0.75 },
