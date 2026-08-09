@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -122,6 +123,12 @@ export default async function MarketLayout({
         <WhatsAppButton locale={locale} />
         {process.env.VERCEL ? <SpeedInsights /> : null}
       </body>
+      <Script
+        src="https://analytics.ahrefs.com/analytics.js"
+        data-key="ynadWtd3LlR4xNBUqJFOjg"
+        strategy="beforeInteractive"
+        async
+      />
     </html>
   );
 }
