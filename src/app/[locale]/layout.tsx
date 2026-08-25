@@ -9,6 +9,7 @@ import { isMarketLocale } from "@/content/marketChrome";
 import {
   localBusinessJsonLd,
   organizationJsonLd,
+  serializeJsonLd,
   websiteJsonLd,
 } from "@/lib/jsonld";
 import { manrope } from "../fonts";
@@ -26,6 +27,10 @@ export const metadata: Metadata = {
     "Aluminium and FRP window-system materials, machined components and glass-free CKD kits from Chongqing for local fabrication in Eurasian markets.",
   verification: {
     google: "XOeoFqJn0Z7WWbsfvnhyFJWGeVMhdQ4k07BdWZajNtM",
+  },
+  icons: {
+    icon: [{ url: "/icon.svg", type: "image/svg+xml", sizes: "any" }],
+    shortcut: "/icon.svg",
   },
   keywords: [
     "aluminium window profile systems",
@@ -107,15 +112,15 @@ export default async function MarketLayout({
       <body className="min-h-full flex flex-col antialiased bg-obsidian text-alabaster selection:bg-red/15">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(organizationJsonLd) }}
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(localBusinessJsonLd) }}
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(websiteJsonLd) }}
         />
         <Header locale={locale} />
         <main className="flex-1">{children}</main>
@@ -126,7 +131,7 @@ export default async function MarketLayout({
       <Script
         src="https://analytics.ahrefs.com/analytics.js"
         data-key="ynadWtd3LlR4xNBUqJFOjg"
-        strategy="beforeInteractive"
+        strategy="afterInteractive"
         async
       />
     </html>

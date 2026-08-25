@@ -27,7 +27,6 @@ export const organizationJsonLd = {
       availableLanguage: ["English", "Russian", "Chinese"],
     },
   ],
-  sameAs: [],
   areaServed: [
     "Russia",
     "Kazakhstan",

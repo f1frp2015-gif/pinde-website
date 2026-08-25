@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { PageLocale } from "@/content/pages";
-import { breadcrumbJsonLd } from "@/lib/jsonld";
+import { breadcrumbJsonLd, serializeJsonLd } from "@/lib/jsonld";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type Props = { locale: PageLocale; content: any };
@@ -17,7 +17,7 @@ export default function SupplyPage({ locale, content }: Props) {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(crumbs) }} />
       <nav aria-label={locale === "ru" ? "Хлебные крошки" : "Breadcrumb"} className="pt-[104px] py-4 bg-obsidian border-b border-line">
         <div className={`${container} pt-[13px] flex items-center gap-2 text-[11px] tracking-[2px] uppercase text-muted`}>
           <Link href={`/${locale}`} prefetch={false} className="hover:text-alabaster transition-colors">{homeLabel}</Link>
@@ -84,10 +84,27 @@ export default function SupplyPage({ locale, content }: Props) {
           <p className="mt-6 border-l-4 border-[#DAAF37] bg-obsidian px-5 py-4 text-[12px] leading-[1.7] text-muted">{content.note}</p>
         </div>
       </section>
+      <section className="border-y border-line bg-[#0D2440] py-[55px] text-white">
+        <div className={`${container} grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center`}>
+          <div>
+            <h2 className="text-[25px] font-extrabold">
+              {locale === "ru" ? "Отдельный маршрут для оконных профилей FRP" : "A dedicated route for FRP window profiles"}
+            </h2>
+            <p className="mt-3 max-w-[760px] text-[13px] leading-[1.75] text-white/70">
+              {locale === "ru"
+                ? "Сравните длинномерные профили, обработанные детали и CKD без стеклопакетов, а также данные для опытной партии."
+                : "Compare long profiles, machined parts and glass-free CKD kits, including the inputs required for a pilot batch."}
+            </p>
+          </div>
+          <Link href={`/${locale}/supply/frp-window-profiles`} className="inline-flex items-center self-start bg-gold px-[28px] py-4 text-[10px] font-semibold uppercase tracking-[0.12em] text-navy hover:brightness-105 lg:self-auto">
+            {locale === "ru" ? "Профили FRP и CKD" : "FRP profiles and CKD"}
+          </Link>
+        </div>
+      </section>
       <section className="py-[89px] bg-obsidian">
         <div className={`${container} text-center`}>
           <h2 className="font-[family-name:var(--font-serif)] font-semibold text-[28px] text-alabaster mb-[21px]">
-            Not sure which format fits<span className="text-red">?</span>
+            {locale === "ru" ? "Не уверены, какой формат подходит" : "Not sure which format fits"}<span className="text-red">?</span>
           </h2>
           <Link href={`/${locale}/rfq`} className="inline-flex items-center gap-[10px] px-[34px] py-4 bg-gold text-navy text-[11px] font-medium tracking-[3px] uppercase rounded-[1px] hover:brightness-90">
             <span className="inline-block w-[5px] h-[5px] rounded-full bg-white" />
