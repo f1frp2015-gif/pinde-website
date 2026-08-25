@@ -29,6 +29,8 @@ Key specifications:
 ### FRP & Aluminium-GRPU Composite Systems (Engineering Programme)
 Two composite routes are managed in this family. The dedicated Cold-Climate FRP Systems category contains exactly two full-FRP flagships: FD90, a 90mm casement and tilt-turn window platform with Grade 10 catalogue thermal insulation plus current Passive House Institute component certification; and FDTL140, a 140mm side-press sliding door with a 200kg leaf capacity, Grade 10 catalogue thermal insulation and a listed Uw of 1.02 W/(m²·K). The aluminium-composite category contains PD75 and PD95. PD75 is a 75mm platform with inner and outer aluminium shells structurally joined by a documented 45mm Ultra FRP Core made from pultruded glass-fibre reinforced polyurethane (GRPU). PD95 is a nominal 95mm passive-performance platform with an 80mm insulated profile zone; its exact core formulation remains subject to BOM confirmation. Each programme is released against its own defined BOM, connection method, and project test plan.
 
+Terminology: fiberglass/GFRP/FRP and Russian «стеклопластик/стеклокомпозит» can name the same material family; the released BOM and tested build control.
+
 Package includes:
 - Frame, sash, mullion, and glazing-bead profile set
 - Corner joints, seals, and approved fastening interfaces
@@ -84,6 +86,8 @@ From Chongqing: Machined profiles packed by opening with seals, joints, selected
 Kept local: Final dimensions, assembly, insulating-glass units, commissioning, compliance, and site work.
 Best fit: Paid pilot runs, time-sensitive projects, and lower-capability production cells.
 
+FRP fabricator route: https://pindesys.com/en/supply/frp-window-profiles and /ru/supply/frp-window-profiles. B2B profiles/CKD only; quote from the opening schedule, performance target, factory capability and destination.
+
 ## Fabricator Enablement Process
 1. Qualify the system — Review equipment, annual volume, current systems, window schedule, glazing, target-country requirements
 2. Freeze the reference build — Agree system code, representative sizes, BOM, interfaces, performance evidence, responsibility matrix
@@ -103,6 +107,12 @@ Shipping: The Yuxinou freight railway connects Chongqing with Kazakhstan, Uzbeki
 - Launch support: Samples, first-article review, remote training, issue traceability, change control, replenishment planning
 
 Cold-climate suitability is confirmed system by system. Frame depth, thermal-break width, or material conductivity alone is not used to infer whole-window performance.
+
+## FRP Window Selection Guides (English and Russian)
+- /{en,ru}/engineering/fiberglass-windows: construction, cost inputs, limits and evidence.
+- /{en,ru}/engineering/warmest-windows: compare Uw, air leakage, glass edge and installation, not material alone.
+- /{en,ru}/engineering/warm-panoramic-sliding-doors: glass mass, seals, sill, drainage and winter-terrace installation.
+- /{en,ru}/engineering/windows-below-minus-39: SP 538.1325800.2024 low-temperature deformation, heat-transfer and air-leakage checks; GOST 33344-2015 is a profile standard, not finished-window approval.
 
 ## Certifications & Testing
 - ISO 9001: Quality Management

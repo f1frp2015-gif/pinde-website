@@ -44,13 +44,18 @@ export default function ColdClimateFrpSystemPage({ locale, content }: Props) {
   const productJsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
+    "@id": `${canonical}#product`,
     name: content.title,
+    sku: content.designation,
     description: content.seo.description,
     image: `https://pindesys.com${content.image.src}`,
     url: canonical,
+    inLanguage: locale,
     category: category.title,
+    material: locale === "ru" ? "Пултрузионный стеклопластик (FRP/GFRP)" : "Pultruded glass-fibre reinforced polymer (FRP/GFRP)",
     brand: { "@type": "Brand", name: "PINDÉ" },
-    isPartOf: { "@type": "CollectionPage", name: category.title, url: categoryUrl },
+    manufacturer: { "@id": "https://pindesys.com/#organization" },
+    isPartOf: { "@type": "CollectionPage", "@id": `${categoryUrl}#collection`, name: category.title, url: categoryUrl },
     additionalProperty: content.specs.map((spec) => ({
       "@type": "PropertyValue",
       name: spec.label,
@@ -138,7 +143,9 @@ export default function ColdClimateFrpSystemPage({ locale, content }: Props) {
       <section className="bg-surface py-[89px]">
         <div className={container}>
           <div className="mb-[34px] max-w-[860px]">
-            <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.16em] text-red">{content.designation} · cold-climate engineering</p>
+            <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.16em] text-red">
+              {content.designation} · {locale === "ru" ? "инжиниринг для холодного климата" : "cold-climate engineering"}
+            </p>
             <h2 className="mb-[13px] font-[family-name:var(--font-serif)] text-[32px] font-semibold text-alabaster">
               {content.climateTitle}<span className="text-red">.</span>
             </h2>

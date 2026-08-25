@@ -270,9 +270,9 @@ export const systemsFrpContent = {
     lang: "en",
     locale: "en_US",
     seo: {
-      title: "FRP Window Profiles & Composite Systems | PINDÉ",
+      title: "Fiberglass (FRP) Windows, Doors & Profiles | PINDÉ",
       description:
-        "Full-FRP FD90 and FDTL140 systems plus PD75 and PD95 aluminium-composite windows, supplied as qualified profiles or glass-free CKD sets.",
+        "Fiberglass and FRP windows, warm panoramic sliding doors, aluminium-composite systems, profiles and glass-free CKD kits for local fabrication.",
       keywords: [
         "FRP window profiles",
         "pultruded window profiles",
@@ -286,11 +286,14 @@ export const systemsFrpContent = {
         "aluminium GRPU window profile",
         "FD90 cold climate FRP window",
         "FDTL140 FRP sliding door",
+        "fiberglass windows",
+        "warm panoramic sliding doors",
+        "glass-free FRP window kits",
       ],
     },
-    title: "FRP systems for cold-region window and door fabrication.",
+    title: "Fiberglass and FRP windows, doors and profile systems.",
     intro:
-      "FD90 and FDTL140 use pultruded FRP for the load-bearing frame sections. PD75 and PD95 retain aluminium faces and introduce an FRP insulating section. The four systems have different joints, fabrication methods and evidence, so each is qualified from its own reference build rather than treated as a common material substitution.",
+      "FD90 fiberglass windows and FDTL140 warm panoramic sliding doors use pultruded FRP for the load-bearing frame. PD75 and PD95 retain aluminium faces and introduce an insulated composite section. Compare the construction, evidence and supply route of each system before selecting profiles or glass-free CKD kits for local fabrication.",
     supplyStatus: "Project-qualified range · reference build required before supply",
     heroCards: [
       { label: "Full-FRP systems", value: "FD90 + FDTL140" },
@@ -339,6 +342,36 @@ export const systemsFrpContent = {
           "Full-FRP profiles are qualified against the agreed composite-profile and whole-window standards for the destination market. PD75 and PD95, as aluminium-composite window systems, require separate material and product routes plus whole-window testing for the ordered size, glazing, hardware and installation node. EAEU conformity is confirmed separately for Russia, Kazakhstan and Belarus with a local applicant and an agreed sample scope.",
       },
     ],
+    guidesEyebrow: "Selection guides built around real buyer questions",
+    guidesTitle: "Choose the window before choosing the supply format",
+    guidesIntro:
+      "Use these engineering guides to compare complete window configurations, set severe-cold checks and prepare the data needed for a profile or CKD quotation.",
+    guides: [
+      {
+        href: "/engineering/fiberglass-windows",
+        title: "Fiberglass windows: construction, cost and limits",
+        description: "Understand full-FRP frames, price inputs, benefits, limitations and the documents required before purchase.",
+      },
+      {
+        href: "/engineering/warmest-windows",
+        title: "Which windows are warmest?",
+        description: "Compare FRP, PVC, wood and aluminium by whole-window Uw, airtightness, glass edge and installation.",
+      },
+      {
+        href: "/engineering/warm-panoramic-sliding-doors",
+        title: "Warm panoramic sliding doors",
+        description: "Define glass weight, compression seals, sill, drainage and thermal requirements for a winter terrace.",
+      },
+      {
+        href: "/engineering/windows-below-minus-39",
+        title: "Windows below −39°C",
+        description: "Plan low-temperature deformation, heat-transfer and air-leakage verification for severe winter service.",
+      },
+    ],
+    supplyTitle: "Need FRP profiles rather than installed windows?",
+    supplyIntro:
+      "The dedicated fabricator page separates long-profile P1, machined-profile P2 and opening-by-opening glass-free CKD P3 supply, with the qualification inputs for each route.",
+    supplyCta: "Explore FRP profile and CKD supply",
     cta: "Discuss an FRP qualification project",
     note: "PD75, PD95, FD90 and FDTL140 are separate constructions. Catalogue and certificate values apply only to the identified specimen, glazing and report scope. Claims for the destination market require current, project-specific evidence.",
   },
@@ -346,9 +379,9 @@ export const systemsFrpContent = {
     lang: "ru",
     locale: "ru_RU",
     seo: {
-      title: "Стеклокомпозитные оконные профили и системы | PINDÉ",
+      title: "Стеклопластиковые окна, двери и профили FRP | PINDÉ",
       description:
-        "Системы FD90 и FDTL140 из FRP, алюминиево-композитные окна PD75 и PD95, квалифицированные профили и CKD без стеклопакетов.",
+        "Стеклопластиковые окна FD90, тёплые двери FDTL140, системы PD75/PD95, профили FRP и CKD без стеклопакетов для локальной сборки.",
       keywords: [
         "стеклокомпозитный оконный профиль",
         "стеклопластиковый профиль для окон",
@@ -362,11 +395,16 @@ export const systemsFrpContent = {
         "оконный профиль алюминий GRPU",
         "окно FRP FD90 для холодного климата",
         "раздвижная дверь FRP FDTL140",
+        "стеклопластиковые окна",
+        "стеклокомпозитные окна",
+        "панорамные раздвижные двери",
+        "теплые раздвижные двери",
+        "стеклопластиковые окна цена",
       ],
     },
-    title: "Стеклокомпозитные системы для окон и дверей в холодных регионах.",
+    title: "Стеклопластиковые окна, двери и профильные системы FRP.",
     intro:
-      "В FD90 и FDTL140 несущие профили коробки и створки выполнены из пултрузионного стеклокомпозита. PD75 и PD95 сохраняют алюминиевые поверхности и используют стеклокомпозитный теплоизоляционный участок. У четырёх систем разные соединения, технология обработки и доказательная база, поэтому каждая запускается по собственному установочному образцу.",
+      "Стеклопластиковые окна FD90 и тёплые панорамные двери FDTL140 используют пултрузионный FRP в несущей раме. У PD75 и PD95 остаются алюминиевые поверхности и применяется теплоизоляционный композитный участок. До выбора профилей или CKD без стеклопакетов сравните конструкцию, доказательную базу и форму поставки каждой системы.",
     supplyStatus: "Проектная линейка · до поставки требуется установочный образец",
     heroCards: [
       { label: "Полностью стеклокомпозитные системы", value: "FD90 + FDTL140" },
@@ -415,6 +453,36 @@ export const systemsFrpContent = {
           "Полностью FRP-профили квалифицируются по согласованным для целевого рынка стандартам на композитные профили и готовые окна. Для PD75 и PD95 как алюминиево-композитных оконных систем требуются отдельные маршруты по материалам и продукции, а также испытания готового окна для заказанного размера, стеклопакета, фурнитуры и монтажного узла. Соответствие ЕАЭС подтверждается отдельно для России, Казахстана и Беларуси с локальным заявителем и согласованным объёмом образцов.",
       },
     ],
+    guidesEyebrow: "Руководства по реальным вопросам покупателей",
+    guidesTitle: "Сначала выберите окно, затем форму поставки",
+    guidesIntro:
+      "Руководства помогают сравнить готовые конструкции, задать проверки для сильного мороза и подготовить данные для расчёта профилей или CKD.",
+    guides: [
+      {
+        href: "/engineering/fiberglass-windows",
+        title: "Стеклопластиковые окна: конструкция и цена",
+        description: "Полностью FRP рамы, факторы цены, плюсы, ограничения и документы до покупки.",
+      },
+      {
+        href: "/engineering/warmest-windows",
+        title: "Какие окна самые тёплые?",
+        description: "Сравнение FRP, ПВХ, дерева и алюминия по Uw, герметичности, краю стекла и монтажу.",
+      },
+      {
+        href: "/engineering/warm-panoramic-sliding-doors",
+        title: "Тёплые панорамные раздвижные двери",
+        description: "Масса стекла, прижим, порог, дренаж и теплотехника двери для зимней террасы.",
+      },
+      {
+        href: "/engineering/windows-below-minus-39",
+        title: "Окна при температуре ниже −39°C",
+        description: "Проверка деформаций, теплопередачи и воздухопроницаемости для сильного мороза.",
+      },
+    ],
+    supplyTitle: "Нужны профили FRP, а не установленные окна?",
+    supplyIntro:
+      "Специализированная страница для производителей разделяет длинномерные профили P1, обработанные детали P2 и CKD без стекла P3 и перечисляет данные для квалификации.",
+    supplyCta: "Открыть поставку профилей FRP и CKD",
     cta: "Запросить программу опытной партии FRP",
     note: "PD75, PD95, FD90 и FDTL140 — разные конструкции. Каталожные и сертификационные значения относятся только к указанному образцу, стеклопакету и области протокола. Для рынка назначения нужна актуальная проектная доказательная база.",
   },
@@ -542,9 +610,9 @@ export const engineeringContent = {
     lang: "en",
     locale: "en_US",
     seo: {
-      title: "Window Profile Machining & System Engineering | PINDÉ",
+      title: "FRP Window Engineering & Profile Machining | PINDÉ",
       description:
-        "System definition, machining drawings, CNC processing, evidence registers and first-article support for aluminium and FRP window profiles.",
+        "FRP window selection guides, system definition, machining drawings, evidence registers and first-article support for local fabrication.",
       keywords: [
         "window profile machining China",
         "CNC window profile processing",
@@ -552,6 +620,8 @@ export const engineeringContent = {
         "window system engineering",
         "profile extrusion China",
         "window fabrication engineering support",
+        "fiberglass window engineering",
+        "cold climate window selection",
       ],
     },
     title: "Production documents tied to the released construction.",
@@ -611,9 +681,9 @@ export const engineeringContent = {
     lang: "ru",
     locale: "ru_RU",
     seo: {
-      title: "Обработка оконного профиля и инжиниринг | PINDÉ",
+      title: "Инжиниринг окон FRP и обработка профиля | PINDÉ",
       description:
-        "Состав системы, чертежи обработки, ЧПУ, реестр протоколов и поддержка первого образца для алюминиевых и FRP-профилей.",
+        "Выбор окон FRP, состав системы, чертежи обработки, реестр протоколов и поддержка первого образца для локального производства.",
       keywords: [
         "обработка оконного профиля Китай",
         "CNC обработка алюминиевого профиля",
@@ -621,6 +691,8 @@ export const engineeringContent = {
         "инженерная поддержка оконных систем",
         "экструзия алюминиевого профиля Китай",
         "производство оконных систем поддержка",
+        "инжиниринг стеклопластиковых окон",
+        "выбор окон для холодного климата",
       ],
     },
     title: "Производственные документы для согласованной конструкции.",

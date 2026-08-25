@@ -88,6 +88,14 @@ export const frpProductFaqs: Record<FrpProductSlug, Record<ProductPageLocale, Pr
         question: "Can FD90 be supplied for local window fabrication?",
         answer: "Yes, after project qualification. PINDÉ can scope system profiles or glass-free CKD supply with the controlled BOM, connection method, fabrication instructions and evidence pack required for the destination project.",
       },
+      {
+        question: "Are fiberglass, GFRP and FRP different FD90 materials?",
+        answer: "They are market terms for the same glass-fibre reinforced polymer material family used in the FD90 load-bearing profiles. The released resin, reinforcement, profile section and test configuration remain the controlling technical definition.",
+      },
+      {
+        question: "How is an FD90 fiberglass-window price prepared?",
+        answer: "Pricing depends on the opening schedule, glass, spacer, hardware, colour, machining, supply format, packing, test scope and delivery term. PINDÉ quotes profiles or glass-free CKD separately from local glazing, conformity and installation.",
+      },
     ],
     ru: [
       {
@@ -101,6 +109,14 @@ export const frpProductFaqs: Record<FrpProductSlug, Record<ProductPageLocale, Pr
       {
         question: "Можно ли поставлять FD90 для локального производства окон?",
         answer: "Да, после квалификации проекта. PINDÉ может предложить системные профили или CKD без стекла с контролируемым BOM, методом соединения, производственными инструкциями и доказательной базой проекта.",
+      },
+      {
+        question: "Стеклопластик, стеклокомпозит и FRP в FD90 — разные материалы?",
+        answer: "Это рыночные названия одного семейства полимерных композитов со стекловолокном, применяемого в несущих профилях FD90. Технически определяющими остаются утверждённые связующее, армирование, сечение и испытанная конфигурация.",
+      },
+      {
+        question: "Как рассчитывается цена стеклопластикового окна FD90?",
+        answer: "Расчёт зависит от ведомости проёмов, стеклопакета, рамки, фурнитуры, цвета, обработки, формы поставки, упаковки, испытаний и доставки. Профили или CKD без стекла считают отдельно от местного остекления, соответствия и монтажа.",
       },
     ],
   },
@@ -118,6 +134,14 @@ export const frpProductFaqs: Record<FrpProductSlug, Record<ProductPageLocale, Pr
         question: "What must be checked before ordering FDTL140?",
         answer: "PINDÉ verifies opening size, glass weight, rollers, locking hardware, drainage, seals, corner joints, installation node and destination-market test requirements before release.",
       },
+      {
+        question: "Can FDTL140 be used for a heated winter terrace?",
+        answer: "It can be evaluated for a heated terrace when the ordered size, glass, sill, drainage, seals, hardware, Uw, air leakage and installation meet the project requirements. The catalogue reference alone is not a project approval.",
+      },
+      {
+        question: "What makes FDTL140 a warm panoramic sliding door?",
+        answer: "Its full-FRP frame, insulated glass and compression-seal closing route support a cold-climate design. The finished result still depends on the exact opening, glass edge, hardware adjustment, threshold and insulated installation junction.",
+      },
     ],
     ru: [
       {
@@ -131,6 +155,14 @@ export const frpProductFaqs: Record<FrpProductSlug, Record<ProductPageLocale, Pr
       {
         question: "Что проверяется перед заказом FDTL140?",
         answer: "PINDÉ проверяет размер проёма, массу стекла, ролики, замки, дренаж, уплотнения, угловые соединения, монтажный узел и требования к испытаниям целевого рынка.",
+      },
+      {
+        question: "Подходит ли FDTL140 для отапливаемой зимней террасы?",
+        answer: "Систему можно рассматривать, если заказные размеры, стекло, порог, дренаж, уплотнения, фурнитура, Uw, воздухопроницаемость и монтаж соответствуют проекту. Каталожный показатель сам по себе не является допуском проекта.",
+      },
+      {
+        question: "Почему FDTL140 относится к тёплым панорамным дверям?",
+        answer: "Полностью FRP рама, стеклопакет и закрывание с прижимом поддерживают проектирование для холодного климата. Итог также зависит от размера, края стекла, регулировки фурнитуры, порога и утеплённого монтажного узла.",
       },
     ],
   },

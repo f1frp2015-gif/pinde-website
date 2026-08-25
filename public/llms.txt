@@ -4,7 +4,7 @@
 ## Systems
 - /en/systems: Aluminium & FRP window profile systems — overview and comparison
 - /en/systems/aluminium: Thermally broken aluminium window-and-door systems — profiles, components, BOM, launch package. For buyers searching "aluminium window profile systems China", "thermally broken aluminium profiles"
-- /en/systems/frp: FRP family overview — dedicated full-FRP cold-climate category plus the shared PD75 and PD95 aluminium-composite category
+- /en/systems/frp: Fiberglass and FRP windows, doors and profile systems — full-FRP FD90/FDTL140 plus aluminium-composite PD75/PD95
 - /en/systems/frp/cold-climate: Dedicated full-FRP cold-climate category containing only FD90 and FDTL140 — FD90 adds current PHI phB component certification; project qualification remains required
 - /en/systems/frp/fd90: FD90 90mm full-FRP cold-climate casement and tilt-turn window — Passive House Institute component 2491wi03, phB for the cool, temperate climate zone, certified Uw 0.78 W/(m²·K), valid through 31 December 2026
 - /en/systems/frp/fdtl140: FDTL140 140mm full-FRP side-press sliding door — 200kg leaf capacity, Grade 10 catalogue thermal insulation, Uw reference 1.02 W/(m²·K)
@@ -20,12 +20,14 @@
 ## Supply Formats
 - /en/supply: P1 (Complete system kit), P2 (Cut-to-length & machined), P3 (Glass-free CKD kit) — comparison and responsibility matrix
 - /en/supply#p3: CKD window kits — glass-free, machined profiles packed by opening, for buyers searching "CKD window kits", "glass-free window kits"
+- /en/supply/frp-window-profiles and /ru/supply/frp-window-profiles: B2B FRP profiles, machined parts and glass-free CKD kits
 
 ## Logistics
 - /en#rail-route: Yuxinou railway freight corridor from Chongqing to five Central Asian countries and Russia — indicative rail transit approximately 7-20 days by destination; actual timing and freight are confirmed per shipment
 
 ## Engineering & Quality
 - /en/engineering: Engineering before volume — system definition, fabrication package, evidence register, launch support
+- /en/engineering/* and /ru/engineering/*: bilingual FRP guides cover fiberglass-window cost and limits, warmest-window comparison, winter-terrace sliding doors and below −39°C verification
 - /en/process: Fabricator enablement — 4-step controlled route: qualify → reference build → paid pilot → scale
 - /en/certification: ISO 9001, ISO 14001, CE, AS2047, NFRC certifications and destination-market conformity planning
 
@@ -44,6 +46,7 @@
 ## Russian (Русский)
 - /ru: Главная страница — системные материалы для локального производства окон
 - /ru/systems: Алюминиевые и стеклокомпозитные оконные системы
+- /ru/systems/frp: Стеклопластиковые окна, двери и профили FRP — FD90, FDTL140, PD75 и PD95
 - /ru/supply: Форматы поставки P1/P2/P3
 - /ru/certification: Сертификация и соответствие требованиям ЕАЭС
 

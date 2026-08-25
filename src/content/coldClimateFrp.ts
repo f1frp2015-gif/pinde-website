@@ -110,7 +110,7 @@ export const coldClimateFrpSystems: Record<
         alt: "FD90 full-FRP 90 Series cold-climate casement window section",
       },
       seo: {
-        title: "FD90 FRP Window for Cold Regions | PHI Component | PINDÉ",
+        title: "FD90 Fiberglass Window — Uw 0.78, PHI | PINDÉ",
         description:
           "FD90 is a 90 mm full-FRP casement and tilt-and-turn window system. PHI certificate 2491wi03 lists class phB and Uw 0.78 W/(m²·K) for its certified build.",
         keywords: [
@@ -122,12 +122,14 @@ export const coldClimateFrpSystems: Record<
           "PHI phB window component",
           "triple glazed FRP window",
           "pultruded composite window frame",
+          "fiberglass windows for cold climates",
+          "energy efficient fiberglass window",
         ],
       },
-      title: "FD90 full-FRP window system for cold regions",
+      title: "FD90 fiberglass window for cold climates",
       eyebrow: "90 mm full-FRP window · PHI component",
       intro:
-        "FD90 is a 90 mm full-FRP casement and tilt-and-turn window system. Passive House Institute certificate 2491wi03 covers the Fengdu Passive GFRP 90 Series in the cool, temperate climate zone at class phB. The certificate records Uw 0.78 W/(m²·K) for the stated window build; that value does not transfer automatically to other sizes, glass or installation details.",
+        "FD90 is a 90 mm fiberglass, GFRP or full-FRP casement and tilt-and-turn window system. Passive House Institute certificate 2491wi03 covers the Fengdu Passive GFRP 90 Series in the cool, temperate climate zone at class phB. The certificate records Uw 0.78 W/(m²·K) for the stated build; other sizes, glass or installation details require verification.",
       supplyStatus: "PHI certificate 2491wi03 · configuration control required",
       heroCards: [
         { label: "Frame construction depth", value: "90 mm" },
@@ -269,7 +271,7 @@ export const coldClimateFrpSystems: Record<
         alt: "Сечение стеклокомпозитного окна FD90 серии 90 для холодного климата",
       },
       seo: {
-        title: "Окно FRP FD90 для холодного климата | Сертификат PHI | PINDÉ",
+        title: "Стеклопластиковое окно FD90 — Uw 0,78, PHI | PINDÉ",
         description:
           "Сертифицированная PHI система FD90 из FRP глубиной 90 мм для пассивных зданий: класс phB, Uw 0,78 Вт/(м²·K), сертификат действует до конца 2026 года.",
         keywords: [
@@ -281,12 +283,16 @@ export const coldClimateFrpSystems: Record<
           "оконный компонент PHI phB",
           "окно FRP с двухкамерным стеклопакетом",
           "пултрузионная композитная оконная коробка",
+          "стеклопластиковые окна",
+          "стеклокомпозитные окна",
+          "энергоэффективные окна",
+          "самые теплые окна",
         ],
       },
-      title: "Оконная система FD90 из FRP для холодных регионов",
+      title: "Стеклопластиковое окно FD90 90 мм для холодного климата",
       eyebrow: "Оконный блок 90 мм из FRP · компонент PHI",
       intro:
-        "FD90 — поворотная и поворотно-откидная оконная система из FRP с монтажной глубиной 90 мм. Сертификат Passive House Institute 2491wi03 распространяется на Fengdu Passive GFRP 90 Series для прохладной умеренной климатической зоны и указывает класс phB. Значение Uw 0,78 Вт/(м²·K) относится к описанной в сертификате конструкции и не переносится автоматически на другие размеры, стеклопакеты или монтажные узлы.",
+        "FD90 — стеклопластиковое, стеклокомпозитное или FRP-окно с поворотным и поворотно-откидным открыванием и глубиной 90 мм. Сертификат Passive House Institute 2491wi03 на Fengdu Passive GFRP 90 Series указывает класс phB и Uw 0,78 Вт/(м²·K) для описанной конструкции. Другие размеры, стеклопакеты и монтажные узлы проверяют отдельно.",
       supplyStatus: "Сертификат PHI 2491wi03 · требуется контроль конфигурации",
       heroCards: [
         { label: "Монтажная глубина", value: "90 мм" },
@@ -430,7 +436,7 @@ export const coldClimateFrpSystems: Record<
         alt: "FDTL140 full-FRP 140 Series compression-seal sliding door section",
       },
       seo: {
-        title: "FDTL140 FRP Sliding Door | 140mm Cold-Climate Profile | PINDÉ",
+        title: "FDTL140 Warm Panoramic FRP Sliding Door | PINDÉ",
         description:
           "FDTL140 is a 140 mm full-FRP compression-seal sliding door set. The catalogue lists a 200 kg leaf limit and Uw 1.02 W/(m²·K) for one stated build.",
         keywords: [
@@ -440,12 +446,15 @@ export const coldClimateFrpSystems: Record<
           "high insulation FRP patio door",
           "triple glazed composite sliding door",
           "pultruded FRP door system",
+          "warm panoramic sliding doors",
+          "winter terrace sliding door",
+          "energy efficient patio door",
         ],
       },
-      title: "FDTL140 140mm cold-climate FRP sliding door system",
+      title: "FDTL140 warm panoramic sliding door in full-FRP",
       eyebrow: "140 mm full-FRP sliding door set",
       intro:
-        "FDTL140 is a 140 mm full-FRP sliding door set with a closing sequence that compresses the leaf against the seals. The catalogue lists a maximum leaf mass of 200 kg and Uw 1.02 W/(m²·K) for one two-cavity insulating glass build. Ordered dimensions, glass mass, hardware and installation details require project review.",
+        "FDTL140 is a 140 mm full-FRP warm panoramic sliding door for qualified winter terraces and large openings. Its closing sequence compresses the leaf against the seals. The catalogue lists a 200 kg maximum leaf mass and Uw 1.02 W/(m²·K) for one stated glass build; ordered dimensions, glass, hardware, sill and installation require review.",
       supplyStatus: "Catalogue data available · project qualification required",
       heroCards: [
         { label: "Frame construction depth", value: "140 mm" },
@@ -456,7 +465,7 @@ export const coldClimateFrpSystems: Record<
       cardDescription:
         "A 140mm side-press sliding door for large winter openings: Grade 10 thermal insulation, 200kg leaf capacity and listed Uw of 1.02 W/(m²·K).",
       cardCta: "Explore FDTL140",
-      climateTitle: "Large openings without abandoning winter performance",
+      climateTitle: "Warm panoramic openings with controlled sealing",
       climateIntro:
         "The source catalogue positions FDTL140 across high-performance building selections through passive or nearly-zero-energy and zero-energy applications. Project qualification is required for the ordered opening size, glass weight, hardware, drainage, seals and installation node.",
       climateFeatures: [
@@ -552,7 +561,7 @@ export const coldClimateFrpSystems: Record<
         alt: "Сечение раздвижного дверного блока FDTL140 серии 140 из FRP с прижимом створки",
       },
       seo: {
-        title: "Раздвижная дверь FRP FDTL140 140 мм для холодного климата | PINDÉ",
+        title: "Тёплая панорамная дверь FDTL140 из FRP | PINDÉ",
         description:
           "Раздвижной дверной блок FDTL140 из FRP с монтажной глубиной 140 мм: створка до 200 кг и Uw 1,02 Вт/(м²·K) для указанной каталожной конструкции.",
         keywords: [
@@ -562,12 +571,15 @@ export const coldClimateFrpSystems: Record<
           "теплая стеклопластиковая портальная дверь",
           "композитная дверь с двухкамерным стеклопакетом",
           "пултрузионная дверная система FRP",
+          "панорамные раздвижные двери",
+          "теплые раздвижные двери",
+          "раздвижные двери для зимней террасы",
         ],
       },
-      title: "Раздвижной дверной блок FDTL140 из FRP для холодного климата",
+      title: "Тёплая панорамная раздвижная дверь FDTL140 из FRP",
       eyebrow: "Раздвижной дверной блок 140 мм из FRP",
       intro:
-        "FDTL140 — раздвижной дверной блок из FRP с монтажной глубиной 140 мм. При закрывании створка прижимается к уплотнениям. Каталог указывает предельную массу створки 200 кг и Uw 1,02 Вт/(м²·K) для одной конструкции с двухкамерным стеклопакетом. Размеры, масса заполнения, фурнитура и монтажный узел проверяются по проекту.",
+        "FDTL140 — тёплая панорамная раздвижная дверь с полностью FRP коробкой глубиной 140 мм для квалифицированных зимних террас и крупных проёмов. При закрывании створка прижимается к уплотнениям. Каталог указывает массу до 200 кг и Uw 1,02 Вт/(м²·K) для одной конструкции; размеры, стекло, фурнитуру, порог и монтаж проверяют по проекту.",
       supplyStatus: "Каталожные данные доступны · требуется квалификация проекта",
       heroCards: [
         { label: "Монтажная глубина", value: "140 мм" },
@@ -578,7 +590,7 @@ export const coldClimateFrpSystems: Record<
       cardDescription:
         "Раздвижной дверной блок с монтажной глубиной 140 мм и прижимом створки: масса створки до 200 кг, Uw 1,02 Вт/(м²·K) для указанной каталожной конструкции.",
       cardCta: "Открыть FDTL140",
-      climateTitle: "Большие проёмы с зимней энергоэффективностью",
+      climateTitle: "Тёплый панорамный проём с контролируемым прижимом",
       climateIntro:
         "Исходный каталог относит FDTL140 к высокоэффективным зданиям вплоть до пассивных или почти нулевых и нулевых по энергопотреблению. Для размера проёма, массы стекла, фурнитуры, дренажа, уплотнений и монтажного узла требуется проектная квалификация.",
       climateFeatures: [

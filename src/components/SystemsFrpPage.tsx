@@ -5,7 +5,7 @@ import type { PageLocale } from "@/content/pages";
 import { coldClimateFrpSystems, coldClimateFrpSystemSlugs } from "@/content/coldClimateFrp";
 import { pd75Content } from "@/content/pd75";
 import { pd95Content } from "@/content/pd95";
-import { breadcrumbJsonLd } from "@/lib/jsonld";
+import { breadcrumbJsonLd, serializeJsonLd } from "@/lib/jsonld";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type Props = { locale: PageLocale; content: any };
@@ -41,10 +41,31 @@ export default function SystemsFrpPage({ locale, content }: Props) {
     { name: systemsLabel, url: `https://pindesys.com/${locale}/systems` },
     { name: "FRP", url: `https://pindesys.com/${locale}/systems/frp` },
   ]);
+  const canonical = `https://pindesys.com/${locale}/systems/frp`;
+  const collectionJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${canonical}#collection`,
+    name: content.title,
+    description: content.seo.description,
+    url: canonical,
+    inLanguage: locale,
+    about: ["Fiberglass windows", "FRP window profiles", "Cold-climate sliding doors"],
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: 4,
+      itemListElement: ["fd90", "fdtl140", "xd75", "pd95"].map((slug, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        url: `https://pindesys.com/${locale}/systems/frp/${slug}`,
+      })),
+    },
+  };
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(crumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(collectionJsonLd) }} />
       <nav aria-label={locale === "ru" ? "Хлебные крошки" : "Breadcrumb"} className="pt-[104px] py-4 bg-obsidian border-b border-line">
         <div className={`${container} pt-[13px] flex items-center gap-2 text-[11px] tracking-[2px] uppercase text-muted`}>
           <Link href={`/${locale}`} prefetch={false} className="hover:text-alabaster transition-colors">{homeLabel}</Link>
@@ -174,6 +195,37 @@ export default function SystemsFrpPage({ locale, content }: Props) {
                 </div>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+      <section className="bg-surface py-[89px]">
+        <div className={container}>
+          <div className="mb-[34px] max-w-[860px]">
+            <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.16em] text-[#DAAF37]">{content.guidesEyebrow}</p>
+            <h2 className="font-[family-name:var(--font-serif)] text-[36px] font-semibold leading-[1.05] text-alabaster">
+              {content.guidesTitle}<span className="text-red">.</span>
+            </h2>
+            <p className="mt-4 text-[14px] leading-[1.85] text-warm">{content.guidesIntro}</p>
+          </div>
+          <div className="grid gap-[13px] md:grid-cols-2">
+            {content.guides.map((guide: { href: string; title: string; description: string }) => (
+              <Link key={guide.href} href={`/${locale}${guide.href}`} className="group flex min-h-[180px] flex-col border border-line bg-obsidian p-6 transition-colors hover:border-[#DAAF37]/70">
+                <h3 className="text-[19px] font-extrabold text-alabaster">{guide.title}</h3>
+                <p className="mt-3 flex-1 text-[12px] leading-[1.75] text-warm">{guide.description}</p>
+                <span className="mt-5 inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.12em] text-[#DAAF37]">
+                  {locale === "ru" ? "Открыть руководство" : "Open guide"}<ArrowRight size={13} />
+                </span>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-[34px] grid gap-6 border border-[#DAAF37]/40 bg-[#0D2440] p-7 text-white lg:grid-cols-[1fr_auto] lg:items-center">
+            <div>
+              <h2 className="text-[24px] font-extrabold">{content.supplyTitle}</h2>
+              <p className="mt-3 max-w-[780px] text-[13px] leading-[1.75] text-white/70">{content.supplyIntro}</p>
+            </div>
+            <Link href={`/${locale}/supply/frp-window-profiles`} className="inline-flex items-center gap-2 self-start bg-gold px-[26px] py-3 text-[10px] font-semibold uppercase tracking-[0.12em] text-navy hover:brightness-105 lg:self-auto">
+              {content.supplyCta}<ArrowRight size={13} />
+            </Link>
           </div>
         </div>
       </section>
